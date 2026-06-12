@@ -5,7 +5,7 @@ W1 governance-architecture deliverables. Documentation only — no schema, code,
 | Document | W1 deliverable | Status |
 |---|---|---|
 | [`W1-data-boundary-map.md`](W1-data-boundary-map.md) | D1 — Data boundary map: categories, sensitivity classes, trust zones, and the flow-edge whitelist | Accepted by human reviewer, 2026-06-12 |
-| Consent & scope model | D2 | Not started |
+| [`W1-D2-consent-scope-model.md`](W1-D2-consent-scope-model.md) | D2 — Consent & scope model: the consent grammar — grants, scopes, durations, disclosure language, revocation | Accepted by human reviewer, 2026-06-12 |
 | Authority & staleness model | D3 | Not started |
 | Safety surfacing decision | D4 (lands as a decision record in `../decisions/`) | Not started |
 | Threat model | D5 | Not started |
