@@ -8,7 +8,7 @@ W1 governance-architecture deliverables. Documentation only — no schema, code,
 | [`W1-D2-consent-scope-model.md`](W1-D2-consent-scope-model.md) | D2 — Consent & scope model: the consent grammar — grants, scopes, durations, disclosure language, revocation | Accepted by human reviewer, 2026-06-12 |
 | [`W1-D3-authority-staleness-model.md`](W1-D3-authority-staleness-model.md) | D3 — Authority & staleness model: the truth grammar — authority labels, staleness labels, transitions, contradiction handling | Accepted by human reviewer, 2026-06-12 |
 | [`0002-safety-surfacing.md`](../decisions/0002-safety-surfacing.md) | D4 — Safety surfacing decision (lands as a decision record in `../decisions/`, not as an architecture document) | Accepted by human reviewer, 2026-06-12 |
-| Threat model | D5 | Not started |
+| [`W1-D5-threat-model.md`](W1-D5-threat-model.md) | D5 — Threat model: protected assets, trust boundaries, threat catalogue D5-T01–T24, open residual risks | Accepted by human reviewer, 2026-06-12 |
 | Evaluation plan skeleton | D6 | Not started |
 
 All documents here are governed by the [W0 Constitution](../constitution/W0-wellbeing-wing-constitution.md) and accepted decision records in [`../decisions/`](../decisions/).
