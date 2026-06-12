@@ -10,7 +10,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 
 **Deliverable:** [`../constitution/W0-wellbeing-wing-constitution.md`](../constitution/W0-wellbeing-wing-constitution.md)
 
-**Status:** Drafted (v0.1.1, W0.1 cleanup pass applied) — under review.
+**Status:** Accepted by human reviewer, 2026-06-12 (v0.1.1, W0.1 cleanup pass applied) — the binding governance document for all subsequent phases.
 
 **Closes when:** the Constitution is approved as the binding governance document for all subsequent phases.
 
@@ -25,8 +25,16 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 5. **Threat model** — Vault-centred security analysis and the local-first vs hosted decision (Open Question 6), which should be decided **first**, since every other W1 deliverable inherits from it. *Keystone resolved: [ADR 0001](../decisions/0001-local-first-user-held-keys.md) (Accepted) settles the local-first vs hosted decision via user-held keys; remaining W1 deliverables inherit from it.*
 6. **Evaluation plan skeleton** — which constitutional laws map to deterministic tests vs behavioural evaluation (Open Question 12).
 
-**Status:** Planned. Begins when W0 closes.
+**Status:** Closed — all six deliverables accepted by human reviewer, 2026-06-12 (D1–D3, D5, D6 in [`../architecture/`](../architecture/); D4 landed as [ADR 0002](../decisions/0002-safety-surfacing.md); ADR 0001 resolved the keystone). Closure criteria per W1-D6 §8.
 
-## W2 and beyond
+## W2 — Governance Evaluation & Enforcement Foundations
 
-Defined at the close of W1. Schema, agents, and UI are designed only after the governance architecture they must obey exists in writing.
+**Scope:** Translate the W1 corpus into enforceable scaffolding and evaluation readiness — verification only, nothing user-facing. The only code W2 may contain is code that checks rules.
+
+**Runway:** [`W2-alignment-report.md`](W2-alignment-report.md)
+
+**Status:** W2 alignment report accepted as phase runway. It authorises future W2 briefs, not immediate scaffolding.
+
+## W3 and beyond
+
+Defined at the close of W2. Schema, agents, and UI are designed only after the governance architecture they must obey exists in writing — and, per W2, only after it is testable.
