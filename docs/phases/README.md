@@ -22,7 +22,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 2. **Consent and scope model** — the grant object (who, what, why, how long), revocation behaviour, and resolution of Open Question 2 (revocation cascade).
 3. **Authority and staleness model** — authority labels, last-reviewed timestamps, re-review triggers, and supersession (Laws 3 and 7), defined before any schema exists.
 4. **Safety surfacing decision document** — resolution of Open Question 1 (Law 12 mechanics) as its own reviewed decision record.
-5. **Threat model** — Vault-centred security analysis and the local-first vs hosted decision (Open Question 6), which should be decided **first**, since every other W1 deliverable inherits from it.
+5. **Threat model** — Vault-centred security analysis and the local-first vs hosted decision (Open Question 6), which should be decided **first**, since every other W1 deliverable inherits from it. *Keystone resolved: [ADR 0001](../decisions/0001-local-first-user-held-keys.md) (Accepted) settles the local-first vs hosted decision via user-held keys; remaining W1 deliverables inherit from it.*
 6. **Evaluation plan skeleton** — which constitutional laws map to deterministic tests vs behavioural evaluation (Open Question 12).
 
 **Status:** Planned. Begins when W0 closes.

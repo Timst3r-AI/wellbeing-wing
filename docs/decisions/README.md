@@ -11,11 +11,17 @@ A decision record is required whenever a design choice:
 
 Use `0000-template.md` as the starting point.
 
+## Accepted decisions
+
+| # | Decision | Status | Summary |
+|---|----------|--------|---------|
+| [0001](0001-local-first-user-held-keys.md) | Local-first by default, hosted-compatible via user-held keys | Accepted | Local-first by default; hosted-compatible via user-held keys; host treated as untrusted infrastructure; AI processing requires explicit scoped disclosure. |
+
 ## Known decisions required before W1 closes
 
 | # | Decision | Resolves |
 |---|---|---|
 | TBD | Safety surfacing mechanics | Constitution Open Question 1 / Law 12 |
 | TBD | Consent revocation cascade | Constitution Open Question 2 / Law 10 |
-| TBD | Local-first vs hosted storage | Constitution Open Question 6 |
+| ~~TBD~~ [0001](0001-local-first-user-held-keys.md) | Local-first vs hosted storage — **resolved (Accepted)** | Constitution Open Question 6 |
 | TBD | AIAdapter authentication and scoping | Constitution Open Question 10 |
