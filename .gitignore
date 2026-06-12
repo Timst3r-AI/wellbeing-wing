@@ -1,0 +1,23 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Environment & secrets — never committed, in any phase
+.env
+.env.*
+*.local
+
+# Dependency and build output (future phases)
+node_modules/
+.next/
+out/
+dist/
+coverage/
+
+# Logs
+*.log
