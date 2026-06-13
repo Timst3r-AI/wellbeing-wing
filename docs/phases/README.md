@@ -35,6 +35,12 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 
 **Status:** W2 alignment report accepted as phase runway. It authorises future W2 briefs, not immediate scaffolding.
 
+**Deliverables:**
+
+| Deliverable | Document | Status |
+|---|---|---|
+| W2-D1 — W1 Closure Record | [`W2-D1-w1-closure-record.md`](W2-D1-w1-closure-record.md) | Accepted by human reviewer, 2026-06-13 |
+
 ## W3 and beyond
 
 Defined at the close of W2. Schema, agents, and UI are designed only after the governance architecture they must obey exists in writing — and, per W2, only after it is testable.
