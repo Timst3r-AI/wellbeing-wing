@@ -410,7 +410,8 @@
       "governs": [
         "W2-D1",
         "W2-D2",
-        "W2-D3"
+        "W2-D3",
+        "W2-D4"
       ],
       "depends_on": [
         "W0",
@@ -443,7 +444,8 @@
       "role": "Seals W1: accepted corpus list, established baseline, carried-forward open decisions, W2 authority boundary. Authorises nothing to be built.",
       "governs": [
         "W2-D2",
-        "W2-D3"
+        "W2-D3",
+        "W2-D4"
       ],
       "depends_on": [
         "W2-AR",
@@ -530,6 +532,32 @@
           "note": "Rule 9 gained a one-line pointer to ADR 0003 (Relay Landing Ceremony Tiers), which extends the landing protocol. Amendment made via decision record per rule 2; hash recomputed in the same commit."
         }
       ]
+    },
+    {
+      "id": "W2-D4",
+      "aliases": [],
+      "title": "Synthetic Fixture Strategy",
+      "type": "phase-record",
+      "phase": "W2",
+      "deliverable": "D4",
+      "path": "docs/governance/fixtures.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "The binding rules for all evaluation data: synthetic-by-construction, SYNTHETIC marking and marker-block schema, non-realistic identifiers, grammar-placeholder values, grammar-ID mapping, data-never-code, the Stage B hard-case seed list, and the two-stage landing rule (Stage A strategy only; Stage B fixture data after W2-D6 landing-mode scan).",
+      "governs": [],
+      "depends_on": [
+        "W2-AR",
+        "W2-D1",
+        "W1-D5",
+        "W1-D6"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:1e5a65cea75aaf3d00e42fbee49164f3e1f3f718e5ae0279a3cee9560e5a1ed7",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
