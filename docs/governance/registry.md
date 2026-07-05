@@ -47,6 +47,8 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | ADR-0006 | adr | accepted | 2026-07-05 | `docs/decisions/0006-runtime-platform-stack-doctrine.md` |
 | ADR-0007 | adr | accepted | 2026-07-05 | `docs/decisions/0007-development-artifact-policy.md` |
 | ADR-0008 | adr | accepted | 2026-07-05 | `docs/decisions/0008-runtime-stack-final-selection.md` |
+| ADR-0009 | adr | accepted | 2026-07-05 | `docs/decisions/0009-import-file-boundary.md` |
+| ADR-0010 | adr | accepted | 2026-07-05 | `docs/decisions/0010-minimal-review-posture.md` |
 | REGISTRY-JSON | phase-record | accepted | 2026-07-05 | `governance/registry.json` |
 | REGISTRY-MD | phase-record | accepted | 2026-07-05 | `docs/governance/registry.md` |
 | W0 | constitution | accepted | 2026-06-12 | `docs/constitution/W0-wellbeing-wing-constitution.md` |

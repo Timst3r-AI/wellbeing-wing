@@ -265,6 +265,59 @@
       "errata": []
     },
     {
+      "id": "ADR-0009",
+      "aliases": [],
+      "title": "0009 — Import File Boundary",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": "D1",
+      "path": "docs/decisions/0009-import-file-boundary.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Fixes the import boundary (edge E1): bytes plus user-supplied provenance only; zero content interpretation at import; integrity inspection capped at type verification; provisional v1 format list hardening at the engine brief; anything beyond the boundary is processing under grant.",
+      "governs": [],
+      "depends_on": [
+        "W1-D1",
+        "ADR-0004",
+        "ADR-0005",
+        "ADR-0008",
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:7bf4887714f6156b6e195eba808c4862adf1b8dd5e98b417d5deed57f41d6123",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0010",
+      "aliases": [],
+      "title": "0010 — Minimal Review Posture",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": "D1",
+      "path": "docs/decisions/0010-minimal-review-posture.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Fixes the minimal review posture: tests simulate review via structurally unreachable doubles; nothing real becomes Approved before real review surfaces exist; the early caller supports rights-operation categories with review/approve explicitly excluded; no Approved-status item in any non-test store; reversal only by new record.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D3",
+        "ADR-0007",
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:75b644b28e4c44c7c3a137665fdd441677b4c96a9672046e079100aab8c17b08",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",
@@ -747,7 +800,9 @@
         "ADR-0005",
         "ADR-0006",
         "ADR-0007",
-        "ADR-0008"
+        "ADR-0008",
+        "ADR-0009",
+        "ADR-0010"
       ],
       "depends_on": [
         "W0",
