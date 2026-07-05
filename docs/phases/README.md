@@ -40,6 +40,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 | Deliverable | Document | Status |
 |---|---|---|
 | W2-D1 — W1 Closure Record | [`W2-D1-w1-closure-record.md`](W2-D1-w1-closure-record.md) | Accepted by human reviewer, 2026-06-13 |
+| W2-D2 — Governance Registry | [`W2-D2-governance-registry-brief.md`](W2-D2-governance-registry-brief.md) · registry at [`../governance/registry.md`](../governance/registry.md) | Accepted by human reviewer, 2026-07-05 |
 
 ## W3 and beyond
 

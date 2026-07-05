@@ -49,7 +49,9 @@ docs/
 ├── constitution/   # The W0 Constitution — the governing document for all phases
 ├── decisions/      # Design decision records (ADR-style), one decision per file
 ├── architecture/   # W1 governance-architecture deliverables (data boundary map, consent, authority, threat model, evaluation plan)
+├── governance/     # Governance registry (human-readable index) and repo governance docs
 └── phases/         # Phase index, phase runways, and closure records
+governance/         # Machine-readable governance registry (registry.json — canonical)
 ```
 
 ## Reading order

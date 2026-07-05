@@ -1,0 +1,469 @@
+{
+  "registry_version": "1.0",
+  "generated_note": "JSON is canonical; docs/governance/registry.md is its rendering. Source documents win over this registry, always.",
+  "entries": [
+    {
+      "id": "ADR-0000",
+      "aliases": [
+        "adr-template"
+      ],
+      "title": "NNNN — Decision Title",
+      "type": "template",
+      "phase": "W0",
+      "deliverable": null,
+      "path": "docs/decisions/0000-template.md",
+      "status": "template",
+      "accepted_date": null,
+      "role": "Template for new decision records.",
+      "governs": [],
+      "depends_on": [
+        "W0"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:948d3ad06e07749954ea9528871934b0d3e2581b5f23b93fa801f1e11a4cd5af",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0001",
+      "aliases": [],
+      "title": "0001 — Local-first by default, hosted-compatible via user-held keys",
+      "type": "adr",
+      "phase": "W1",
+      "deliverable": null,
+      "path": "docs/decisions/0001-local-first-user-held-keys.md",
+      "status": "accepted",
+      "accepted_date": "2026-06-12",
+      "role": "Fixes key custody: local-first by default, hosted-compatible via user-held keys; host treated as untrusted infrastructure; defines processing disclosure events.",
+      "governs": [
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "ADR-0002",
+        "W1-D5",
+        "W1-D6"
+      ],
+      "depends_on": [
+        "W0"
+      ],
+      "resolves": [
+        "W0-OQ-6"
+      ],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [
+        "backup-recovery-guidance",
+        "hosted-mode-disclosure-language"
+      ],
+      "content_hash": "sha256:d0ecebf124bd3f0543617daf672392c7e46f42f7cb4af7044f0d9260256858ed",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0002",
+      "aliases": [
+        "W1-D4"
+      ],
+      "title": "0002 — Safety Surfacing Doctrine",
+      "type": "adr",
+      "phase": "W1",
+      "deliverable": "D4",
+      "path": "docs/decisions/0002-safety-surfacing.md",
+      "status": "accepted",
+      "accepted_date": "2026-06-12",
+      "role": "Defines the safety surfacing doctrine: speech-integrity model, four doctrines, intensity ladder, language law.",
+      "governs": [
+        "W1-D5",
+        "W1-D6"
+      ],
+      "depends_on": [
+        "W0",
+        "ADR-0001",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3"
+      ],
+      "resolves": [
+        "W0-OQ-1"
+      ],
+      "id_namespaces": [
+        "L0-L3 (surfacing intensity ladder)"
+      ],
+      "implementation_permission": "none",
+      "open_decisions": [
+        "notification-layer-definition-fence"
+      ],
+      "content_hash": "sha256:cda1787b255c03ae2f29f8e2adb8ca8884925e39aa04ba57ee91b7df8a3b2242",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "REGISTRY-JSON",
+      "aliases": [],
+      "title": "Governance Registry (machine-readable manifest)",
+      "type": "phase-record",
+      "phase": "W2",
+      "deliverable": "D2",
+      "path": "governance/registry.json",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "The canonical machine-readable governance registry manifest. Indexes authority; must not mint authority.",
+      "governs": [],
+      "depends_on": [
+        "W2-D2"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": null,
+      "hash_exclusion_reason": "registry artifact — self-reference exclusion",
+      "errata": []
+    },
+    {
+      "id": "REGISTRY-MD",
+      "aliases": [],
+      "title": "Governance Registry (human-readable index)",
+      "type": "phase-record",
+      "phase": "W2",
+      "deliverable": "D2",
+      "path": "docs/governance/registry.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Human-readable rendering of the governance registry; carries the registry doctrine, limits, and authority rules. JSON is canonical; this file is its rendering.",
+      "governs": [],
+      "depends_on": [
+        "W2-D2"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": null,
+      "hash_exclusion_reason": "registry artifact — self-reference exclusion",
+      "errata": []
+    },
+    {
+      "id": "W0",
+      "aliases": [],
+      "title": "W0 — Wellbeing Wing Constitution",
+      "type": "constitution",
+      "phase": "W0",
+      "deliverable": null,
+      "path": "docs/constitution/W0-wellbeing-wing-constitution.md",
+      "status": "accepted",
+      "accepted_date": "2026-06-12",
+      "role": "The governing constitution: purpose, non-goals, core laws, room boundaries, the Health Vault pattern, failure modes, and open questions.",
+      "governs": [
+        "ADR-0001",
+        "ADR-0002",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "W1-D5",
+        "W1-D6",
+        "W2-AR",
+        "W2-D1",
+        "W2-D2"
+      ],
+      "depends_on": [],
+      "resolves": [],
+      "id_namespaces": [
+        "Laws 1-13",
+        "W0-OQ-# (open questions)"
+      ],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:7728da69fa89f68ce628fbf5de56858984eb1ad18c2b188e4500c2b8c9fac9a5",
+      "hash_exclusion_reason": null,
+      "errata": [
+        {
+          "date": "2026-07-05",
+          "note": "Non-semantic header correction during W2-D2 landing, authorised by human reviewer: status line updated from 'Draft for review' to 'Accepted by human reviewer, 2026-06-12', aligning the source header with the acceptance sealed in W2-D1 section 2 and docs/phases/README.md. No other content changed."
+        }
+      ]
+    },
+    {
+      "id": "W1-D1",
+      "aliases": [],
+      "title": "W1-D1 — Data Boundary Map",
+      "type": "architecture",
+      "phase": "W1",
+      "deliverable": "D1",
+      "path": "docs/architecture/W1-data-boundary-map.md",
+      "status": "accepted",
+      "accepted_date": "2026-06-12",
+      "role": "Defines trust zones, sensitivity classes, homes, the category inventory, and the default-deny flow-edge whitelist.",
+      "governs": [
+        "W1-D2",
+        "W1-D3",
+        "ADR-0002",
+        "W1-D5",
+        "W1-D6"
+      ],
+      "depends_on": [
+        "W0",
+        "ADR-0001"
+      ],
+      "resolves": [],
+      "id_namespaces": [
+        "E# (flow edges)",
+        "M# (Meditation Room edges)",
+        "L# (ledger edges)",
+        "Z# (trust zones)",
+        "C#/CM (sensitivity classes)"
+      ],
+      "implementation_permission": "none",
+      "open_decisions": [
+        "aiadapter-adr"
+      ],
+      "content_hash": "sha256:49fb736f5cddd3afb4d8fb6ab04dd1544e0d550e83834c21492c48e2336b1bcb",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W1-D2",
+      "aliases": [],
+      "title": "W1-D2 — Consent & Scope Model",
+      "type": "architecture",
+      "phase": "W1",
+      "deliverable": "D2",
+      "path": "docs/architecture/W1-D2-consent-scope-model.md",
+      "status": "accepted",
+      "accepted_date": "2026-06-12",
+      "role": "Defines the consent grammar: grant elements, grant types, anti-blanket rules, disclosure language, revocation immediate effects.",
+      "governs": [
+        "W1-D3",
+        "ADR-0002",
+        "W1-D5",
+        "W1-D6"
+      ],
+      "depends_on": [
+        "W0",
+        "ADR-0001",
+        "W1-D1"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [
+        "revocation-cascade"
+      ],
+      "content_hash": "sha256:da35da2f23fa90a55f1ce3848260935d9e47753730a774a75445c8a39207c7db",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W1-D3",
+      "aliases": [],
+      "title": "W1-D3 — Authority & Staleness Model",
+      "type": "architecture",
+      "phase": "W1",
+      "deliverable": "D3",
+      "path": "docs/architecture/W1-D3-authority-staleness-model.md",
+      "status": "accepted",
+      "accepted_date": "2026-06-12",
+      "role": "Defines the authority and staleness grammar: labels, transitions, contradiction handling, room consumption rules.",
+      "governs": [
+        "ADR-0002",
+        "W1-D5",
+        "W1-D6"
+      ],
+      "depends_on": [
+        "W0",
+        "ADR-0001",
+        "W1-D1",
+        "W1-D2"
+      ],
+      "resolves": [],
+      "id_namespaces": [
+        "D3-T# (authority transitions)"
+      ],
+      "implementation_permission": "none",
+      "open_decisions": [
+        "staleness-intervals-by-data-type"
+      ],
+      "content_hash": "sha256:41dd522efac59b946a1595f5e1118238e5e9bd959d111b9fcce52593684aa808",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W1-D5",
+      "aliases": [],
+      "title": "W1-D5 — Threat Model",
+      "type": "architecture",
+      "phase": "W1",
+      "deliverable": "D5",
+      "path": "docs/architecture/W1-D5-threat-model.md",
+      "status": "accepted",
+      "accepted_date": "2026-06-12",
+      "role": "Names the protected assets, trust boundaries, governance threat catalogue with mitigations, and open residual risks.",
+      "governs": [
+        "W1-D6"
+      ],
+      "depends_on": [
+        "W0",
+        "ADR-0001",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "ADR-0002"
+      ],
+      "resolves": [],
+      "id_namespaces": [
+        "D5-T## (threats)",
+        "OR-# (open residual risks)"
+      ],
+      "implementation_permission": "none",
+      "open_decisions": [
+        "queue-design-rules",
+        "ui-surface-design-standard",
+        "export-warning-language",
+        "aiadapter-adr",
+        "vendoradapter-adr"
+      ],
+      "content_hash": "sha256:a676e4c0b710d4d5c3a61d951d1fa793234c5b7f9c922d77563a36deb402b89d",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W1-D6",
+      "aliases": [],
+      "title": "W1-D6 — Evaluation Plan Skeleton",
+      "type": "architecture",
+      "phase": "W1",
+      "deliverable": "D6",
+      "path": "docs/architecture/W1-D6-evaluation-plan-skeleton.md",
+      "status": "accepted",
+      "accepted_date": "2026-06-12",
+      "role": "Defines the evaluation plan skeleton: principles, deterministic and behavioural test categories, required failure examples, W1 closure criteria.",
+      "governs": [
+        "W2-AR"
+      ],
+      "depends_on": [
+        "W0",
+        "ADR-0001",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "ADR-0002",
+        "W1-D5"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [
+        "evaluation-harness-implementation"
+      ],
+      "content_hash": "sha256:845d437deb48dbc86e9160765c5b221343cfc63d0958e378fb53cceab608f718",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W2-AR",
+      "aliases": [
+        "W2-runway"
+      ],
+      "title": "W2 — Governance Evaluation & Enforcement Foundations (Phase Alignment Report)",
+      "type": "phase-record",
+      "phase": "W2",
+      "deliverable": null,
+      "path": "docs/phases/W2-alignment-report.md",
+      "status": "accepted",
+      "accepted_date": "2026-06-12",
+      "role": "The W2 phase runway: A-D decision, fences, deliverable plan for governance evaluation and enforcement foundations. Authorises future W2 briefs, not immediate scaffolding.",
+      "governs": [
+        "W2-D1",
+        "W2-D2"
+      ],
+      "depends_on": [
+        "W0",
+        "ADR-0001",
+        "ADR-0002",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "W1-D5",
+        "W1-D6"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "verification-only",
+      "open_decisions": [],
+      "content_hash": "sha256:237f94aa64f86945485c7d271a1156ab437fd475bc029f39944c68f01de3b5d6",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W2-D1",
+      "aliases": [],
+      "title": "W2-D1 — W1 Closure Record",
+      "type": "phase-record",
+      "phase": "W2",
+      "deliverable": "D1",
+      "path": "docs/phases/W2-D1-w1-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-06-13",
+      "role": "Seals W1: accepted corpus list, established baseline, carried-forward open decisions, W2 authority boundary. Authorises nothing to be built.",
+      "governs": [
+        "W2-D2"
+      ],
+      "depends_on": [
+        "W2-AR",
+        "W0",
+        "ADR-0001",
+        "ADR-0002",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "W1-D5",
+        "W1-D6"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:eee0b701c47072a22746bf33d4e8302c95f7a6739c600141ba710cd9cfd0cc05",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W2-D2",
+      "aliases": [],
+      "title": "W2-D2 — Governance Registry / Accepted Document Index (Alignment Brief)",
+      "type": "phase-brief",
+      "phase": "W2",
+      "deliverable": "D2",
+      "path": "docs/phases/W2-D2-governance-registry-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "The accepted alignment brief for the governance registry: format, fields, directory scope, authority and conflict rules, hash rules.",
+      "governs": [
+        "REGISTRY-JSON",
+        "REGISTRY-MD"
+      ],
+      "depends_on": [
+        "W2-AR",
+        "W2-D1",
+        "W0",
+        "ADR-0001",
+        "ADR-0002",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "W1-D5",
+        "W1-D6"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:c885cb21c2ce595f10690f7a4bb0f6178d7821882f28d11149e23500fb8f1360",
+      "hash_exclusion_reason": null,
+      "errata": []
+    }
+  ]
+}

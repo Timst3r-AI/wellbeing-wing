@@ -1,6 +1,6 @@
 # W0 — Wellbeing Wing Constitution
 
-**Status:** Draft for review · **Version:** 0.1.1 (W0.1 cleanup pass) · **Date:** June 2026
+**Status:** Accepted by human reviewer, 2026-06-12 · **Version:** 0.1.1 (W0.1 cleanup pass) · **Date:** June 2026
 **Scope:** Governing document. No code, schema, or UI is authorised by this document. W0 defines what the Wellbeing Wing is, what it must never become, and the laws every later phase must satisfy.
 
 ---
