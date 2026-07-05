@@ -238,6 +238,33 @@
       "errata": []
     },
     {
+      "id": "ADR-0008",
+      "aliases": [],
+      "title": "0008 — Runtime Stack — Final Selection",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": "D1",
+      "path": "docs/decisions/0008-runtime-stack-final-selection.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Selects the engine spine's runtime and crypto binding on first-pass spike evidence: the local-process class (Python 3 with the PyNaCl libsodium binding); rejects the bundled-runtime class for the spine while leaving future surface reconsideration open; defers the native-shell class to the review-package phase; states Windows-class single-OS sufficiency for spine selection; binds the key-handling caveat and its W3-D2 mitigations; the first binding installation remains a future fence-crossing not authorised by this record.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0004",
+        "ADR-0005",
+        "ADR-0006",
+        "ADR-0007",
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:05ba827cb5493328851a599fe0d70500ee7c59d66261e12eff5dc5a49da2eb49",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",
@@ -719,7 +746,8 @@
         "ADR-0004",
         "ADR-0005",
         "ADR-0006",
-        "ADR-0007"
+        "ADR-0007",
+        "ADR-0008"
       ],
       "depends_on": [
         "W0",
