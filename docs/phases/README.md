@@ -53,7 +53,13 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 
 **Runway:** [`W3-runway-health-vault-profile-foundations.md`](W3-runway-health-vault-profile-foundations.md)
 
-**Status:** Runway accepted by human reviewer, 2026-07-05. **First W3 deliverable brief still pending; no W3 implementation started.** Per the entry gate: three documents, three acceptances — closure ✔, runway ✔, first brief pending.
+**Status:** Entry gate complete — W2 closure accepted and published ✔, W3 runway accepted and published ✔, first W3 deliverable accepted ✔ (W3-D1, 2026-07-05). W3 is open in doctrine/evidence posture. **No implementation started.**
+
+**Deliverables:**
+
+| Deliverable | Documents | Status |
+|---|---|---|
+| W3-D1 — Plaintext Residue and Vault Encryption Doctrine (pair) | [`0004-plaintext-residue-policy.md`](../decisions/0004-plaintext-residue-policy.md) · [`0005-vault-encryption-stack-doctrine.md`](../decisions/0005-vault-encryption-stack-doctrine.md) | Accepted by human reviewer, 2026-07-05 — one atomic landing; neither record authorises implementation on its own |
 
 ## W4 and beyond
 

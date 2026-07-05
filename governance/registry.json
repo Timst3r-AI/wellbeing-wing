@@ -133,6 +133,59 @@
       "errata": []
     },
     {
+      "id": "ADR-0004",
+      "aliases": [],
+      "title": "0004 — Plaintext Residue Policy",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": "D1",
+      "path": "docs/decisions/0004-plaintext-residue-policy.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Fixes plaintext residue doctrine: default-deny persistence of decrypted content past task end; plaintext-free logs in every build configuration; enumerated forbidden artifact classes; exceptions only by decision record; platform residue documented, never denied.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0001",
+        "W1-D1",
+        "W1-D5",
+        "W2-D4",
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:64eb42e69cedc2816be1082ed8dd6d432ecc070b723613b39cfd3453030ac4d4",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0005",
+      "aliases": [],
+      "title": "0005 — Vault Encryption Stack Doctrine",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": "D1",
+      "path": "docs/decisions/0005-vault-encryption-stack-doctrine.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Fixes vault cryptography doctrine: no custom cryptography; authenticated encryption only; memory-hard key derivation; versioned format with escrow-free user-side migration; keychain integration deferred; final library selection deferred to spike evidence.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0001",
+        "W1-D5",
+        "ADR-0004",
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:591d7fc2e79486ed757077d8b1ab7faff8e5c17e064d7938a79517ad49eb9efc",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",
@@ -610,7 +663,10 @@
       "status": "accepted",
       "accepted_date": "2026-07-05",
       "role": "The W3 phase runway: the no-AI product spine (vault, draft profile, approved profile, user review before active context), deliverable sequence D1-D7, required decision records, non-goals, and the entry gate. Authorises future W3 briefs, not implementation.",
-      "governs": [],
+      "governs": [
+        "ADR-0004",
+        "ADR-0005"
+      ],
       "depends_on": [
         "W0",
         "ADR-0001",
