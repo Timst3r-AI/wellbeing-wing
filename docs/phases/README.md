@@ -53,7 +53,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 
 **Runway:** [`W3-runway-health-vault-profile-foundations.md`](W3-runway-health-vault-profile-foundations.md)
 
-**Status:** Entry gate complete — W2 closure accepted and published ✔, W3 runway accepted and published ✔, first W3 deliverable accepted ✔ (W3-D1, 2026-07-05). **The W3-D1 cluster is complete (8/8 records, 2026-07-05): the W3-D2 engine brief is now writable.** The first product fence-crossings ahead (engine directory; first dependency) still require separate explicit authorisation. **No implementation started.**
+**Status:** Entry gate complete — W2 closure accepted and published ✔, W3 runway accepted and published ✔, first W3 deliverable accepted ✔ (W3-D1, 2026-07-05). The W3-D1 cluster is complete (8/8 records, 2026-07-05). W3-D2 implementation is underway through authorised milestones: Milestone 1 (store skeleton, Tier F) is published; Milestone 2 (import path, Tier J) is this landing. Later milestones and any new fence-crossings remain separately authorised.
 
 **Deliverables:**
 
@@ -65,6 +65,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 | W3-D1 — Import Boundary and Minimal Review Posture (pair, Landing B) | [`0009-import-file-boundary.md`](../decisions/0009-import-file-boundary.md) · [`0010-minimal-review-posture.md`](../decisions/0010-minimal-review-posture.md) | Accepted by human reviewer, 2026-07-05 — one atomic landing; the engine brief consumes the pair together; neither record authorises implementation on its own |
 | W3-D1 — Backup Guidance and Key-Loss Wording (trust-sentences pair, Landing C) | [`0011-local-backup-guidance.md`](../decisions/0011-local-backup-guidance.md) · [`0012-key-loss-onboarding-wording.md`](../decisions/0012-key-loss-onboarding-wording.md) | Accepted by human reviewer, 2026-07-05 — one atomic landing; consequence and remedy in one breath; completes the W3-D1 cluster (8/8); neither record authorises implementation on its own |
 | W3-D2 — Engine Milestone 1: store skeleton (first product landing) | [`../../engine/`](../../engine/) · [`../../requirements.txt`](../../requirements.txt) | Accepted by human reviewer, 2026-07-05 — Tier F: one product directory, one exact-pinned dependency set, self-testing fence amendment; test-supplied keys only; import, derivation, custody, and export deferred to their milestones |
+| W3-D2 — Engine Milestone 2: import path | [`../../engine/`](../../engine/) · [`0009-import-file-boundary.md`](../decisions/0009-import-file-boundary.md) | Accepted by human reviewer, 2026-07-05 — Tier J: intake operation per ADR 0009 (bytes plus user-supplied provenance in, one sealed record out; type verification capped at magic-number/shape depth; provisional 25 MB operational cap, not doctrine); interpretation of every kind, vault layout/naming/indexing, envelope finalisation, key custody, and export remain deferred to their own decisions |
 
 ## W4 and beyond
 
