@@ -5,6 +5,18 @@ behaviour (cryptography, storage, time, the ledger) enters only
 through the ports package.
 """
 
+from engine.core.custody import (
+    CustodyError,
+    change_passphrase,
+    create_vault_key,
+    unlock,
+)
+from engine.core.envelope import (
+    ENVELOPE_VERSION,
+    EnvelopeError,
+    decode_envelope,
+    encode_envelope,
+)
 from engine.core.header import (
     HEADER_SIZE,
     HeaderError,
@@ -43,4 +55,12 @@ __all__ = [
     "ImportRefused",
     "import_record",
     "verify_type",
+    "ENVELOPE_VERSION",
+    "EnvelopeError",
+    "encode_envelope",
+    "decode_envelope",
+    "CustodyError",
+    "create_vault_key",
+    "unlock",
+    "change_passphrase",
 ]
