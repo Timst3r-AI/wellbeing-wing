@@ -2,7 +2,7 @@
 
 A modular, AI-assisted personal wellbeing environment built governance-first.
 
-**Status:** Phase W0 — Constitution. No code exists yet, deliberately.
+**Status:** Phase W2 — Governance Evaluation & Enforcement Foundations (runway accepted). W0 and W1 closed. No code exists yet, deliberately.
 
 ---
 
@@ -37,9 +37,10 @@ Not a medical device. Not a treatment platform. Not an AI therapist. Not an enga
 
 | Phase | Scope | Status |
 |---|---|---|
-| **W0** | Constitution — laws, boundaries, risks, open questions | ✅ Drafted (under review) |
-| **W1** | Governance architecture and data boundary design | Planned |
-| W2+ | Defined at the close of W1 | — |
+| **W0** | Constitution — laws, boundaries, risks, open questions | ✅ Accepted (2026-06-12) |
+| **W1** | Governance architecture and data boundary design | ✅ Closed — all deliverables accepted (2026-06-12) |
+| **W2** | Governance evaluation & enforcement foundations — making the governance testable, nothing user-facing | Runway accepted; deliverables in progress |
+| W3+ | Defined at the close of W2 | — |
 
 ## Repository structure
 
@@ -47,14 +48,16 @@ Not a medical device. Not a treatment platform. Not an AI therapist. Not an enga
 docs/
 ├── constitution/   # The W0 Constitution — the governing document for all phases
 ├── decisions/      # Design decision records (ADR-style), one decision per file
-└── phases/         # Phase index and per-phase deliverable documents
+├── architecture/   # W1 governance-architecture deliverables (data boundary map, consent, authority, threat model, evaluation plan)
+└── phases/         # Phase index, phase runways, and closure records
 ```
 
 ## Reading order
 
 1. [`docs/constitution/W0-wellbeing-wing-constitution.md`](docs/constitution/W0-wellbeing-wing-constitution.md) — start here; everything else is downstream of it
-2. [`docs/phases/README.md`](docs/phases/README.md) — phase plan and W1 deliverables
-3. [`docs/decisions/`](docs/decisions/) — decision records as they accumulate
+2. [`docs/phases/README.md`](docs/phases/README.md) — phase plan, runways, and closure records
+3. [`docs/architecture/`](docs/architecture/) — the W1 governance corpus (data boundary map, consent, authority, threat model, evaluation plan)
+4. [`docs/decisions/`](docs/decisions/) — decision records as they accumulate
 
 ## License
 
