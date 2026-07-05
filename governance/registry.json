@@ -186,6 +186,58 @@
       "errata": []
     },
     {
+      "id": "ADR-0006",
+      "aliases": [],
+      "title": "0006 — Runtime / Platform Stack Doctrine",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": "D1",
+      "path": "docs/decisions/0006-runtime-platform-stack-doctrine.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Fixes platform doctrine and the evaluation spike plan: verifiably telemetry-silent by observation, no background processes, user-initiated updates, accessibility as scored criterion; spike disposable and outside the repo with output hygiene rules; stack selection deferred to a final-selection record with evidence attached.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0004",
+        "ADR-0005",
+        "ADR-0007",
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:adede568cd86a9b17b5cca57f33070421dc9c0c6529efdc0da001d8664fe7b46",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0007",
+      "aliases": [],
+      "title": "0007 — Development-Artifact Policy",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": "D1",
+      "path": "docs/decisions/0007-development-artifact-policy.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Fixes development-artifact law from the first runnable artifact: synthetic-only everywhere including local debugging; paste-is-publication; spike output hygiene with no machine-identifying detail beyond OS class; spike artifacts never become product artifacts; crash and debug artifacts local and human-shared only.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0004",
+        "ADR-0006",
+        "W2-D4",
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:b5aa72015bcaf68c1e153afa20d60c1e542d3ee2719532f87b7ec2d6a9ec3012",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",
@@ -665,7 +717,9 @@
       "role": "The W3 phase runway: the no-AI product spine (vault, draft profile, approved profile, user review before active context), deliverable sequence D1-D7, required decision records, non-goals, and the entry gate. Authorises future W3 briefs, not implementation.",
       "governs": [
         "ADR-0004",
-        "ADR-0005"
+        "ADR-0005",
+        "ADR-0006",
+        "ADR-0007"
       ],
       "depends_on": [
         "W0",

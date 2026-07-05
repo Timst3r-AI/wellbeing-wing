@@ -60,6 +60,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 | Deliverable | Documents | Status |
 |---|---|---|
 | W3-D1 — Plaintext Residue and Vault Encryption Doctrine (pair) | [`0004-plaintext-residue-policy.md`](../decisions/0004-plaintext-residue-policy.md) · [`0005-vault-encryption-stack-doctrine.md`](../decisions/0005-vault-encryption-stack-doctrine.md) | Accepted by human reviewer, 2026-07-05 — one atomic landing; neither record authorises implementation on its own |
+| W3-D1 — Platform Stack Doctrine and Development-Artifact Policy (pair, Landing A) | [`0006-runtime-platform-stack-doctrine.md`](../decisions/0006-runtime-platform-stack-doctrine.md) · [`0007-development-artifact-policy.md`](../decisions/0007-development-artifact-policy.md) | Accepted by human reviewer, 2026-07-05 — one atomic landing; the evaluation spike becomes runnable only after publication, outside the repo, under the landed rules |
 
 ## W4 and beyond
 
