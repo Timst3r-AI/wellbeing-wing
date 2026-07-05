@@ -53,7 +53,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 
 **Runway:** [`W3-runway-health-vault-profile-foundations.md`](W3-runway-health-vault-profile-foundations.md)
 
-**Status:** Entry gate complete — W2 closure accepted and published ✔, W3 runway accepted and published ✔, first W3 deliverable accepted ✔ (W3-D1, 2026-07-05). W3 is open in doctrine/evidence posture. **No implementation started.**
+**Status:** Entry gate complete — W2 closure accepted and published ✔, W3 runway accepted and published ✔, first W3 deliverable accepted ✔ (W3-D1, 2026-07-05). **The W3-D1 cluster is complete (8/8 records, 2026-07-05): the W3-D2 engine brief is now writable.** The first product fence-crossings ahead (engine directory; first dependency) still require separate explicit authorisation. **No implementation started.**
 
 **Deliverables:**
 
@@ -63,6 +63,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 | W3-D1 — Platform Stack Doctrine and Development-Artifact Policy (pair, Landing A) | [`0006-runtime-platform-stack-doctrine.md`](../decisions/0006-runtime-platform-stack-doctrine.md) · [`0007-development-artifact-policy.md`](../decisions/0007-development-artifact-policy.md) | Accepted by human reviewer, 2026-07-05 — one atomic landing; the evaluation spike becomes runnable only after publication, outside the repo, under the landed rules |
 | W3-D1 — Runtime Stack Final Selection | [`0008-runtime-stack-final-selection.md`](../decisions/0008-runtime-stack-final-selection.md) | Accepted by human reviewer, 2026-07-05 — engine-spine selection on first-pass evidence (local-process class); the first binding installation remains a future, separately authorised fence-crossing |
 | W3-D1 — Import Boundary and Minimal Review Posture (pair, Landing B) | [`0009-import-file-boundary.md`](../decisions/0009-import-file-boundary.md) · [`0010-minimal-review-posture.md`](../decisions/0010-minimal-review-posture.md) | Accepted by human reviewer, 2026-07-05 — one atomic landing; the engine brief consumes the pair together; neither record authorises implementation on its own |
+| W3-D1 — Backup Guidance and Key-Loss Wording (trust-sentences pair, Landing C) | [`0011-local-backup-guidance.md`](../decisions/0011-local-backup-guidance.md) · [`0012-key-loss-onboarding-wording.md`](../decisions/0012-key-loss-onboarding-wording.md) | Accepted by human reviewer, 2026-07-05 — one atomic landing; consequence and remedy in one breath; completes the W3-D1 cluster (8/8); neither record authorises implementation on its own |
 
 ## W4 and beyond
 

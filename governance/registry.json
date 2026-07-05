@@ -318,6 +318,60 @@
       "errata": []
     },
     {
+      "id": "ADR-0011",
+      "aliases": [],
+      "title": "0011 — Local Backup Guidance",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": "D1",
+      "path": "docs/decisions/0011-local-backup-guidance.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Fixes the backup story without escrow: ciphertext backup may travel anywhere, the key travels nowhere; one-action encrypted export with symmetric user-performed restore; offered once beside the key-loss sentence, one restatement on skip, never nagged; no Wing-operated destination, no automatic backup, no background sync; recovery codes deferred to their own record.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0001",
+        "ADR-0004",
+        "ADR-0005",
+        "ADR-0007",
+        "ADR-0012",
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:2bbff451482ee06d3312b84608203ab5e0c798ec96e70e9bd6c05795638b1600",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0012",
+      "aliases": [],
+      "title": "0012 — Key-Loss Onboarding Wording",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": "D1",
+      "path": "docs/decisions/0012-key-loss-onboarding-wording.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Fixes the vetted key-loss sentence (the Wing's own inability named explicitly) and its doctrine: before vault creation, one deliberate acknowledgment, plain-not-frightening and never softened into false reassurance; said once then discoverable, never pushed; wording governed because the meaning is the wording; completion-rate concerns never drive softer language.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0001",
+        "ADR-0002",
+        "ADR-0011",
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:3a592204c1f992d90a5c3a57dcf69a6a1b8b9b8df9ae5165eb5978d36b16bfee",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",
@@ -802,7 +856,9 @@
         "ADR-0007",
         "ADR-0008",
         "ADR-0009",
-        "ADR-0010"
+        "ADR-0010",
+        "ADR-0011",
+        "ADR-0012"
       ],
       "depends_on": [
         "W0",
