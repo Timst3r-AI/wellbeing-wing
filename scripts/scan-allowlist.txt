@@ -29,6 +29,7 @@ docs/governance/registry.md | companion-framing | no companion framing | section
 docs/phases/W2-D1-w1-closure-record.md | compliance-claim | never compliance claims | anti-claim summary of the public-safety requirements
 docs/phases/W2-D1-w1-closure-record.md | companion-framing | no companion framing | section 7 public-safety note stating the prohibition
 docs/phases/W2-closure-record.md | companion-framing | no companion framing | section 9 public-safety note stating the prohibition
+docs/phases/W3-runway-health-vault-profile-foundations.md | companion-framing | no companion framing | section 8 public-safety note stating the prohibition
 
 docs/phases/W2-D2-governance-registry-brief.md | companion-framing | no companion framing | public-safety rule text in sections 8 and 12
 docs/phases/W2-D2-governance-registry-brief.md | compliance-claim | No compliance claims | section 8 anti-claim rule for registry fields

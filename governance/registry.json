@@ -445,7 +445,9 @@
       "status": "accepted",
       "accepted_date": "2026-07-05",
       "role": "Seals W2: accepted deliverables with commit references, closure criteria assessment, verification summary, incident and learning log, deferred items, and the W3 phase gate. Authorises nothing to be built.",
-      "governs": [],
+      "governs": [
+        "W3-AR"
+      ],
       "depends_on": [
         "W2-AR",
         "W2-D1",
@@ -592,6 +594,40 @@
       "implementation_permission": "none",
       "open_decisions": [],
       "content_hash": "sha256:1e5a65cea75aaf3d00e42fbee49164f3e1f3f718e5ae0279a3cee9560e5a1ed7",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W3-AR",
+      "aliases": [
+        "W3-runway"
+      ],
+      "title": "W3 — Health Vault and Health Profile Foundations (Phase Runway / Alignment Report)",
+      "type": "phase-record",
+      "phase": "W3",
+      "deliverable": null,
+      "path": "docs/phases/W3-runway-health-vault-profile-foundations.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "The W3 phase runway: the no-AI product spine (vault, draft profile, approved profile, user review before active context), deliverable sequence D1-D7, required decision records, non-goals, and the entry gate. Authorises future W3 briefs, not implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "ADR-0001",
+        "ADR-0002",
+        "ADR-0003",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "W1-D5",
+        "W1-D6",
+        "W2-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "future-governed",
+      "open_decisions": [],
+      "content_hash": "sha256:22028908ef2d2a56fd789fcd0f9345f5227f0420a631e8bd45790c0f36e57e90",
       "hash_exclusion_reason": null,
       "errata": []
     }

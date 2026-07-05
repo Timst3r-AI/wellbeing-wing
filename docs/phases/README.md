@@ -47,6 +47,14 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 | W2-D5 — Deterministic Test Skeleton | [`../../tests/README.md`](../../tests/README.md) (tooling; three tiers + skip ledger) | Accepted by human reviewer, 2026-07-05 |
 | W2 Closure Record | [`W2-closure-record.md`](W2-closure-record.md) | Accepted by human reviewer, 2026-07-05 |
 
-## W3 and beyond
+## W3 — Health Vault and Health Profile Foundations
 
-Defined at the close of W2. Schema, agents, and UI are designed only after the governance architecture they must obey exists in writing — and, per W2, only after it is testable.
+**Scope:** The first product-spine phase: the Health Vault as evidence layer, the Draft Health Profile as derived review layer, the Approved Health Profile as working context — built on the no-AI authority path, with user review before anything becomes active. No adapters, no models, no clinical logic, no notifications, no hosted anything.
+
+**Runway:** [`W3-runway-health-vault-profile-foundations.md`](W3-runway-health-vault-profile-foundations.md)
+
+**Status:** Runway accepted by human reviewer, 2026-07-05. **First W3 deliverable brief still pending; no W3 implementation started.** Per the entry gate: three documents, three acceptances — closure ✔, runway ✔, first brief pending.
+
+## W4 and beyond
+
+Defined as W3 progresses. Rooms, adapters, and surfaces are designed only after the spine they must obey exists — and only through their own gates.
