@@ -33,7 +33,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 
 **Runway:** [`W2-alignment-report.md`](W2-alignment-report.md)
 
-**Status:** W2 alignment report accepted as phase runway. It authorises future W2 briefs, not immediate scaffolding.
+**Status:** Closed — all deliverables landed and published; sealed by [`W2-closure-record.md`](W2-closure-record.md), accepted by human reviewer, 2026-07-05.
 
 **Deliverables:**
 
@@ -45,6 +45,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 | W2-D4 — Synthetic Fixture Strategy | [`../governance/fixtures.md`](../governance/fixtures.md) · seed set in [`../../fixtures/`](../../fixtures/) | Stages A and B accepted by human reviewer, 2026-07-05 (Stage B landed after the W2-D6 landing-mode scan) |
 | W2-D6 — Public-Safety Scan | [`../../scripts/README.md`](../../scripts/README.md) (tooling; executes before W2-D5, IDs stable) | Accepted by human reviewer, 2026-07-05 |
 | W2-D5 — Deterministic Test Skeleton | [`../../tests/README.md`](../../tests/README.md) (tooling; three tiers + skip ledger) | Accepted by human reviewer, 2026-07-05 |
+| W2 Closure Record | [`W2-closure-record.md`](W2-closure-record.md) | Accepted by human reviewer, 2026-07-05 |
 
 ## W3 and beyond
 

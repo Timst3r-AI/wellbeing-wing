@@ -51,6 +51,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | W1-D5 | architecture | accepted | 2026-06-12 | `docs/architecture/W1-D5-threat-model.md` |
 | W1-D6 | architecture | accepted | 2026-06-12 | `docs/architecture/W1-D6-evaluation-plan-skeleton.md` |
 | W2-AR | phase-record | accepted | 2026-06-12 | `docs/phases/W2-alignment-report.md` |
+| W2-CR | phase-record | accepted | 2026-07-05 | `docs/phases/W2-closure-record.md` |
 | W2-D1 | phase-record | accepted | 2026-06-13 | `docs/phases/W2-D1-w1-closure-record.md` |
 | W2-D2 | phase-brief | accepted | 2026-07-05 | `docs/phases/W2-D2-governance-registry-brief.md` |
 | W2-D3 | phase-record | accepted | 2026-07-05 | `docs/governance/checklist.md` |

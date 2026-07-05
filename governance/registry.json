@@ -411,7 +411,8 @@
         "W2-D1",
         "W2-D2",
         "W2-D3",
-        "W2-D4"
+        "W2-D4",
+        "W2-CR"
       ],
       "depends_on": [
         "W0",
@@ -432,6 +433,36 @@
       "errata": []
     },
     {
+      "id": "W2-CR",
+      "aliases": [
+        "W2-closure"
+      ],
+      "title": "W2 Closure Record",
+      "type": "phase-record",
+      "phase": "W2",
+      "deliverable": null,
+      "path": "docs/phases/W2-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Seals W2: accepted deliverables with commit references, closure criteria assessment, verification summary, incident and learning log, deferred items, and the W3 phase gate. Authorises nothing to be built.",
+      "governs": [],
+      "depends_on": [
+        "W2-AR",
+        "W2-D1",
+        "W2-D2",
+        "W2-D3",
+        "W2-D4",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:aa580501ba36e98be965b660c867e969d15d04aac7c1f1dab27c6e9e97a6b6eb",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "W2-D1",
       "aliases": [],
       "title": "W2-D1 — W1 Closure Record",
@@ -445,7 +476,8 @@
       "governs": [
         "W2-D2",
         "W2-D3",
-        "W2-D4"
+        "W2-D4",
+        "W2-CR"
       ],
       "depends_on": [
         "W2-AR",
