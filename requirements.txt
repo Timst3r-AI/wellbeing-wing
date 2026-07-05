@@ -1,0 +1,7 @@
+# The engine's entire third-party runtime surface, exact-pinned.
+# Any addition or change is a named fence-crossing requiring explicit
+# human authorisation (checklist rule 5); the deterministic suite
+# asserts this file's content matches the approved set exactly.
+PyNaCl==1.6.2
+cffi==2.0.0
+pycparser==3.0

@@ -22,12 +22,20 @@ SCOPE_DIRS = [
 ]
 REGISTRY_ARTIFACT_IDS = {"REGISTRY-JSON", "REGISTRY-MD"}
 EXCLUSION_REASON = "registry artifact — self-reference exclusion"
+# Amended under the W3-D2 milestone-1 Tier F authorisation: admits
+# exactly the engine directory and the single pinned manifest, nothing
+# else. Any further product directory or dependency is a new named
+# fence-crossing requiring its own record-backed amendment here.
 ALLOWED_TOP_LEVEL = {"docs", "governance", "tests", "fixtures", "scripts",
+                     "engine",
                      "README.md", ".gitignore", ".git",
+                     "requirements.txt",
                      ".public-safety.local.txt"}
+APPROVED_MANIFEST = "requirements.txt"
+APPROVED_MANIFEST_LINES = {"PyNaCl==1.6.2", "cffi==2.0.0", "pycparser==3.0"}
 FORBIDDEN_MANIFESTS = {
     "package.json", "package-lock.json", "yarn.lock", "pnpm-lock.yaml",
-    "requirements.txt", "Pipfile", "Pipfile.lock", "pyproject.toml",
+    "Pipfile", "Pipfile.lock", "pyproject.toml",
     "poetry.lock", "Cargo.toml", "go.mod", "Gemfile",
 }
 FORBIDDEN_TOP_DIRS = {"src", "app", "ui", ".github", ".circleci", "node_modules"}
@@ -113,12 +121,24 @@ class DirectoryFence(unittest.TestCase):
         for name in FORBIDDEN_TOP_DIRS:
             self.assertFalse((ROOT / name).exists(), f"forbidden directory exists: {name}")
 
-    def test_no_dependency_manifests_anywhere(self):
+    def test_no_dependency_manifests_beyond_the_approved_one(self):
         for f in ROOT.rglob("*"):
             if ".git" in f.parts:
                 continue
             self.assertNotIn(f.name, FORBIDDEN_MANIFESTS,
                              f"dependency manifest present: {f.relative_to(ROOT)}")
+            if f.name == APPROVED_MANIFEST:
+                self.assertEqual(f.parent, ROOT,
+                                 f"manifest outside root: {f.relative_to(ROOT)}")
+
+    def test_approved_manifest_contains_exactly_the_authorised_lines(self):
+        manifest = ROOT / APPROVED_MANIFEST
+        self.assertTrue(manifest.exists(), "approved manifest missing")
+        lines = {ln.strip() for ln in manifest.read_text(encoding="utf-8").splitlines()
+                 if ln.strip() and not ln.strip().startswith("#")}
+        self.assertEqual(lines, APPROVED_MANIFEST_LINES,
+                         "manifest deviates from the authorised pinned set - "
+                         "any change is a named fence-crossing")
 
     def test_no_test_files_outside_the_test_tree(self):
         for f in ROOT.rglob("test_*.py"):

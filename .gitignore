@@ -20,5 +20,8 @@ out/
 dist/
 coverage/
 
+# Python bytecode (engine and tests)
+__pycache__/
+
 # Logs
 *.log
