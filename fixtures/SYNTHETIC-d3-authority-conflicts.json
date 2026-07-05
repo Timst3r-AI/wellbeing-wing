@@ -1,0 +1,68 @@
+{
+  "synthetic_marker": {
+    "synthetic": true,
+    "notice": "SYNTHETIC fixture authored for governance testing. Corresponds to no real person. Values are grammar placeholders, not medical content.",
+    "exercises": ["D3-T2", "D3-T3", "D3-T4", "D3-T6", "D3-T7", "D5-T05", "D5-T06", "D5-T08"],
+    "persona": "Persona-M3"
+  },
+  "intent": "d3 authority grammar: contradictions held visibly, never hidden; unknown is bounded and never becomes a negative claim; only the user mints truth; agent-origin content cannot self-promote; repetition is not confirmation.",
+  "contradiction_cases": [
+    {
+      "case": "record-vs-record",
+      "side_a": {"source": "Record-R1", "claims": "Medication-A17 dosage form alpha", "provenance": "vault record, date-tag t1"},
+      "side_b": {"source": "Record-R2", "claims": "Medication-A17 dosage form beta", "provenance": "vault record, date-tag t2"},
+      "expected": "both stand as evidence; derived profile item flagged contradicted and suspended from settled-truth use; both sides visible with provenance and date-tags; clinician question drafted; system never adjudicates"
+    },
+    {
+      "case": "user-vs-record",
+      "side_a": {"source": "Record-R1", "claims": "Condition-Q noted"},
+      "side_b": {"source": "Persona-M3 self-report", "claims": "Condition-Q resolved"},
+      "expected": "neither auto-wins; both surfaced with provenance; user decides what enters the profile; resolution recorded with user note; d3-t6 suspension until resolved"
+    },
+    {
+      "case": "suspension-not-hidden",
+      "setup": "confirmed item for Allergen-X flagged contradicted by new extraction",
+      "attempt": "display layer collapses the suspended item into hidden",
+      "expected": "refused-suspended-items-remain-visible-as-unresolved-conflict"
+    }
+  ],
+  "unknown_vs_negative_cases": [
+    {
+      "case": "confirmed-negative",
+      "item": {"claim": "no known allergy to Allergen-X", "authority_label": "confirmed by user", "staleness_label": "current"},
+      "expected": "usable as confirmed negative with labels surfaced"
+    },
+    {
+      "case": "bounded-unknown",
+      "item": {"claim": "allergy status unknown", "scope": "records reviewed", "source_set": ["Record-R1", "Record-R2"], "as_of": "review-tag t3"},
+      "expected": "served as unknown with scope and as-of stated; never converted to a negative claim; most-protective framing where safety-relevant"
+    },
+    {
+      "case": "silence-is-not-absence",
+      "attempt": "render no record found in the reviewed documents as not present",
+      "expected": "refused-absence-of-evidence-is-never-evidence-of-absence"
+    }
+  ],
+  "prohibited_transition_cases": [
+    {"case": "agent-attempts-t2", "attempt": "agent promotes pending extraction of Medication-A17 to confirmed by record", "transition": "D3-T2", "actor": "agent", "expected": "refused-only-user-review-performs-t2"},
+    {"case": "agent-attempts-t4", "attempt": "agent promotes user-reported note to confirmed by user", "transition": "D3-T4", "actor": "agent", "expected": "refused-only-user-review-performs-t4"},
+    {"case": "agent-attempts-t7", "attempt": "agent applies a correction as if user-authored", "transition": "D3-T7", "actor": "agent", "expected": "refused-only-the-user-corrects"},
+    {"case": "agent-assigns-confirmed-label", "attempt": "agent writes authority_label confirmed by record onto its own output", "expected": "refused-agents-assign-only-their-own-two-labels"},
+    {"case": "chained-output-as-evidence", "attempt": "downstream agent treats upstream agent summary of Record-R1 as evidence", "violates": "d3-s8-9", "expected": "refused-model-output-is-suggestion-forever"}
+  ],
+  "repetition_cases": [
+    {
+      "case": "mention-three-times",
+      "events": [
+        {"entry": "Persona-M3 mentions taking Medication-A18", "occurrence": 1},
+        {"entry": "Persona-M3 mentions taking Medication-A18", "occurrence": 2},
+        {"entry": "Persona-M3 mentions taking Medication-A18", "occurrence": 3}
+      ],
+      "expected": "authority label remains user-reported after every occurrence; frequency is not evidence; no promotion, no drift toward certainty"
+    }
+  ],
+  "user_authority_cases": [
+    {"case": "t3-on-entry", "event": "Persona-M3 logs a note about Condition-Q", "transition": "D3-T3", "expected": "labelled user-reported automatically; room-scoped use only; never profile truth"},
+    {"case": "t7-immediate-override", "event": "user corrects the Medication-A17 entry", "transition": "D3-T7", "expected": "correction takes effect at once; corrected item superseded; correction enters as confirmed by user; user never queued behind the system"}
+  ]
+}

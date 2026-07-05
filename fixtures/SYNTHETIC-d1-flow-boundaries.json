@@ -1,0 +1,32 @@
+{
+  "synthetic_marker": {
+    "synthetic": true,
+    "notice": "SYNTHETIC fixture authored for governance testing. Corresponds to no real person. Values are grammar placeholders, not medical content.",
+    "exercises": ["E1", "E2", "E5", "E6", "E7", "E8", "E10", "M1", "M2", "L1", "L2", "D5-T01"],
+    "persona": "Persona-K1"
+  },
+  "intent": "d1 edge whitelist and anti-map: permitted flows validate; every anti-map row is attempted and must be refused. absence of an edge is prohibition, not oversight.",
+  "permitted_flow_cases": [
+    {"case": "e1-upload", "edge": "E1", "flow": {"source": "user", "destination": "vault", "payload_class": "C4", "payload": "Record-R1"}, "expected": "valid"},
+    {"case": "e2-sole-vault-read", "edge": "E2", "flow": {"source": "vault", "destination": "z3-processing", "payload_class": "C4", "payload": "Record-R1", "grant": "Grant-G1"}, "expected": "valid-with-grant"},
+    {"case": "e6-kitchen-scoped-read", "edge": "E6", "flow": {"source": "approved-profile", "destination": "kitchen", "scope": ["allergies"], "payload": "Allergen-X item", "grant": "Grant-G2"}, "expected": "valid-with-grant"},
+    {"case": "e7-gym-scoped-read", "edge": "E7", "flow": {"source": "approved-profile", "destination": "gym", "scope": ["confirmed-injury-notes"], "payload": "Condition-Q note", "grant": "Grant-G3"}, "expected": "valid-with-grant"},
+    {"case": "e8-user-own-records", "edge": "E8", "flow": {"source": "user", "destination": "any-own-record"}, "expected": "valid-right-never-gated"},
+    {"case": "e10-vendor-list-only", "edge": "E10", "flow": {"source": "kitchen", "destination": "z4-vendor", "payload": ["Ingredient-X", "Ingredient-Y"], "grant": "Grant-G4"}, "expected": "valid-with-grant-minimum-payload"},
+    {"case": "m1-user-meditation", "edge": "M1", "flow": {"source": "user", "destination": "meditation-room-records"}, "expected": "valid"},
+    {"case": "m2-meditation-processing", "edge": "M2", "flow": {"source": "meditation-room", "destination": "z3-processing", "payload_class": "CM", "grant": "Grant-G5", "user_initiated": true}, "expected": "valid-with-grant-no-output-elsewhere"},
+    {"case": "l1-governed-event", "edge": "L1", "flow": {"source": "any-governed-event", "destination": "ledger"}, "expected": "valid-append-only"},
+    {"case": "l2-ledger-to-user", "edge": "L2", "flow": {"source": "ledger", "destination": "user"}, "expected": "valid-right-never-gated"}
+  ],
+  "anti_map_cases": [
+    {"case": "vault-to-room-display", "attempt": {"source": "vault", "destination": "wellness-room-display", "payload": "Record-R1"}, "violates": ["W0-s6", "ADR-0001"], "expected": "refused-no-edge"},
+    {"case": "vault-to-adapter", "attempt": {"source": "vault", "destination": "z4-vendor", "payload": "Record-R1"}, "violates": ["W0-s6", "ADR-0001"], "expected": "refused-no-edge"},
+    {"case": "draft-profile-to-room", "attempt": {"source": "draft-profile", "destination": "kitchen", "payload": "pending item for Allergen-X"}, "violates": ["Law-3"], "expected": "refused-no-edge"},
+    {"case": "room-to-room-any", "attempt": {"source": "kitchen", "destination": "gym", "payload": "any"}, "violates": ["Law-4", "failure-mode-2"], "expected": "refused-no-edge"},
+    {"case": "meditation-beyond-m1-m2", "attempt": {"source": "meditation-room", "destination": "approved-profile", "payload": "any"}, "violates": ["Law-9"], "expected": "refused-no-edge"},
+    {"case": "profile-content-to-vendor", "attempt": {"source": "approved-profile", "destination": "z4-vendor", "payload": "Allergen-X item as rationale"}, "violates": ["W0-s8-6", "failure-mode-10"], "expected": "refused-no-edge"},
+    {"case": "ledger-to-processing", "attempt": {"source": "ledger", "destination": "z3-processing", "payload": "grant history"}, "violates": ["Law-8", "L2-note"], "expected": "refused-no-edge"},
+    {"case": "agent-inference-to-record", "attempt": {"source": "agent-derived-inference", "destination": "any-record", "payload": "possible Condition-Q", "user_confirmation": false}, "violates": ["Law-3", "Law-8"], "expected": "refused-no-edge"},
+    {"case": "key-material-outbound", "attempt": {"source": "key-material", "destination": "anywhere", "payload": "key"}, "violates": ["ADR-0001"], "expected": "refused-no-edge"}
+  ]
+}

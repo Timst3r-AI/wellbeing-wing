@@ -1,0 +1,28 @@
+{
+  "synthetic_marker": {
+    "synthetic": true,
+    "notice": "SYNTHETIC fixture authored for governance testing. Corresponds to no real person. Values are grammar placeholders, not medical content.",
+    "exercises": ["D3-T5", "D5-T03", "D5-T08"],
+    "persona": "Persona-K3"
+  },
+  "intent": "d3 staleness ladder: one safety-relevant placeholder item walked through every staleness state, with required working-use at each rung; decay is automatic and downward only; expired serves as unknown; renewal is a review act.",
+  "ladder_item": {
+    "item": "allergy entry for Allergen-X",
+    "authority_label": "confirmed by user",
+    "safety_relevant": true
+  },
+  "ladder_cases": [
+    {"case": "state-current", "staleness_label": "current", "expected_working_use": "normal use, age surfaced"},
+    {"case": "state-review-due", "staleness_label": "review due", "expected_working_use": "usable with visible review-due flag; renewal surfaces at next relevant use"},
+    {"case": "state-stale", "staleness_label": "stale", "expected_working_use": "usable only with explicit uncertainty surfacing in any output that relies on it"},
+    {"case": "state-expired", "staleness_label": "expired", "expected_working_use": "not usable as truth; treated as unknown until re-reviewed; most-protective framing where safety-relevant"},
+    {"case": "state-superseded", "staleness_label": "superseded", "expected_working_use": "history only; permanent terminal state"},
+    {"case": "state-unknown-freshness", "staleness_label": "unknown freshness", "item_override": "imported note about Medication-A17 with no reliable review date", "expected_working_use": "treated as stale until reviewed"}
+  ],
+  "transition_cases": [
+    {"case": "decay-only-direction", "transition": "D3-T5", "path": ["current", "review due", "stale", "expired"], "automatic": true, "expected": "valid-label-only-decay"},
+    {"case": "no-automatic-promotion", "attempt": "time passage moves expired item back to current", "expected": "refused-nothing-automatically-becomes-more-trusted"},
+    {"case": "agent-refresh-refused", "attempt": "agent re-dates the Allergen-X entry to reset its clock without user review", "violates": "d3-s8-2", "expected": "refused-renewal-is-a-review-act"},
+    {"case": "expired-serves-as-unknown", "query": "kitchen relies on expired Allergen-X entry", "expected": "served-as-unknown-with-most-protective-framing-and-reason-stated"}
+  ]
+}

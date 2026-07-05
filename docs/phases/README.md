@@ -42,7 +42,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 | W2-D1 — W1 Closure Record | [`W2-D1-w1-closure-record.md`](W2-D1-w1-closure-record.md) | Accepted by human reviewer, 2026-06-13 |
 | W2-D2 — Governance Registry | [`W2-D2-governance-registry-brief.md`](W2-D2-governance-registry-brief.md) · registry at [`../governance/registry.md`](../governance/registry.md) | Accepted by human reviewer, 2026-07-05 |
 | W2-D3 — Phase Entry Checklist | [`../governance/checklist.md`](../governance/checklist.md) | Accepted by human reviewer, 2026-07-05 |
-| W2-D4 — Synthetic Fixture Strategy | [`../governance/fixtures.md`](../governance/fixtures.md) | Stage A accepted by human reviewer, 2026-07-05; Stage B (fixture data) pending W2-D6 |
+| W2-D4 — Synthetic Fixture Strategy | [`../governance/fixtures.md`](../governance/fixtures.md) · seed set in [`../../fixtures/`](../../fixtures/) | Stages A and B accepted by human reviewer, 2026-07-05 (Stage B landed after the W2-D6 landing-mode scan) |
 | W2-D6 — Public-Safety Scan | [`../../scripts/README.md`](../../scripts/README.md) (tooling; executes before W2-D5, IDs stable) | Accepted by human reviewer, 2026-07-05 |
 
 ## W3 and beyond

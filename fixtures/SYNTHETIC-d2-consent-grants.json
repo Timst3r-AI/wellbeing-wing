@@ -1,0 +1,63 @@
+{
+  "synthetic_marker": {
+    "synthetic": true,
+    "notice": "SYNTHETIC fixture authored for governance testing. Corresponds to no real person. Values are grammar placeholders, not medical content.",
+    "exercises": ["E2", "E6", "E10", "E11-K", "E11-W", "M2", "D5-T04", "D5-T23"],
+    "persona": "Persona-K2"
+  },
+  "intent": "d2 grant grammar: one fully valid grant; thirteen invalid grants each missing exactly one required element; blanket-scope and unbounded-duration attempts; revocation mid-task with immediate effects.",
+  "valid_grant": {
+    "case": "grant-complete",
+    "grant": {
+      "id": "Grant-G10",
+      "edge": "E2",
+      "requesting_actor": "health-profile-agent",
+      "recipient_processing_class": "local model (named: Model-L1)",
+      "data_class": ["C4"],
+      "scope": ["Record-R1", "Record-R2"],
+      "zones": "Z1 -> Z3",
+      "purpose": "prepare a draft profile section for user review",
+      "allowed_operation": "extract",
+      "plaintext_flag": true,
+      "vendor_involvement": "none",
+      "duration": "single-task",
+      "revocation_behaviour": "d2-s5-immediate-effects",
+      "audit_record": "c0-entry-at-grant-use-and-end"
+    },
+    "expected": "valid"
+  },
+  "missing_element_grants": [
+    {"case": "missing-edge", "omit": "edge", "expected": "invalid-unconstructable"},
+    {"case": "missing-requesting-actor", "omit": "requesting_actor", "expected": "invalid-unconstructable"},
+    {"case": "missing-recipient-class", "omit": "recipient_processing_class", "expected": "invalid-unconstructable"},
+    {"case": "missing-data-class", "omit": "data_class", "expected": "invalid-unconstructable"},
+    {"case": "missing-scope", "omit": "scope", "expected": "invalid-unconstructable"},
+    {"case": "missing-zones", "omit": "zones", "expected": "invalid-unconstructable"},
+    {"case": "missing-purpose", "omit": "purpose", "expected": "invalid-unconstructable"},
+    {"case": "missing-allowed-operation", "omit": "allowed_operation", "expected": "invalid-unconstructable"},
+    {"case": "missing-plaintext-flag", "omit": "plaintext_flag", "expected": "invalid-unconstructable"},
+    {"case": "missing-vendor-involvement", "omit": "vendor_involvement", "expected": "invalid-unconstructable"},
+    {"case": "missing-duration", "omit": "duration", "expected": "invalid-unconstructable"},
+    {"case": "missing-revocation-behaviour", "omit": "revocation_behaviour", "expected": "invalid-unconstructable"},
+    {"case": "missing-audit-record", "omit": "audit_record", "expected": "invalid-unconstructable"}
+  ],
+  "anti_blanket_cases": [
+    {"case": "blanket-scope-all-health", "grant_fragment": {"edge": "E2", "scope": ["all health data"]}, "violates": "d2-s3-1", "expected": "invalid-unconstructable"},
+    {"case": "blanket-scope-whole-profile", "grant_fragment": {"edge": "E6", "scope": ["the whole profile"]}, "violates": "d2-s3-1", "expected": "invalid-unconstructable"},
+    {"case": "unbounded-duration", "grant_fragment": {"edge": "E11-K", "duration": "unbounded"}, "violates": "d2-s3-2", "expected": "invalid-unconstructable"},
+    {"case": "generic-ai-consent", "grant_fragment": {"edge": null, "purpose": "let the model help with my records", "scope": null}, "violates": "d2-s3-3", "expected": "invalid-unconstructable"}
+  ],
+  "revocation_mid_task": {
+    "case": "revoke-during-e2-task",
+    "setup": {"grant": "Grant-G11", "edge": "E2", "state": "in-flight processing event"},
+    "event": "user revokes Grant-G11",
+    "expected_immediate_effects": [
+      "no future access under Grant-G11",
+      "in-flight event aborts where severable; no new transmission begins",
+      "no new derived outputs from data obtained under Grant-G11",
+      "audit record of grant, use, and revocation remains",
+      "existing derived artefacts flagged for user review"
+    ],
+    "expected": "revocation-takes-effect-without-negotiation"
+  }
+}
