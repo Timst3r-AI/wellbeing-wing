@@ -377,7 +377,8 @@
       "role": "The W2 phase runway: A-D decision, fences, deliverable plan for governance evaluation and enforcement foundations. Authorises future W2 briefs, not immediate scaffolding.",
       "governs": [
         "W2-D1",
-        "W2-D2"
+        "W2-D2",
+        "W2-D3"
       ],
       "depends_on": [
         "W0",
@@ -409,7 +410,8 @@
       "accepted_date": "2026-06-13",
       "role": "Seals W1: accepted corpus list, established baseline, carried-forward open decisions, W2 authority boundary. Authorises nothing to be built.",
       "governs": [
-        "W2-D2"
+        "W2-D2",
+        "W2-D3"
       ],
       "depends_on": [
         "W2-AR",
@@ -462,6 +464,31 @@
       "implementation_permission": "none",
       "open_decisions": [],
       "content_hash": "sha256:c885cb21c2ce595f10690f7a4bb0f6178d7821882f28d11149e23500fb8f1360",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W2-D3",
+      "aliases": [],
+      "title": "Phase Entry Checklist",
+      "type": "phase-record",
+      "phase": "W2",
+      "deliverable": "D3",
+      "path": "docs/governance/checklist.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "The repo governance checklist: status authority, two-tier change rule, registry atomicity, directory and root-file fences, dependency fence, public-safety rule, D5 definition fences, phase entry gate, landing protocol, errata location.",
+      "governs": [],
+      "depends_on": [
+        "W2-AR",
+        "W2-D1",
+        "W2-D2"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:5377d0bd7a107b2553d68c8cdb64764e403c65684c04b8e75f75d8be438929c2",
       "hash_exclusion_reason": null,
       "errata": []
     }
