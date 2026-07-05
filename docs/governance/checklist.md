@@ -60,6 +60,8 @@ Three documents, three acceptances, no exceptions.
 
 Every landing task enumerates its files in advance. Files not on the list are not created or modified. **Discovering a needed file mid-landing is a review question, not an improvisation** — the landing pauses on that point, the reviewer decides, and the decision is recorded (the W0 header erratum during the W2-D2 landing is the founding precedent: discovered, surfaced, held for authorisation, then landed atomically).
 
+*Landing ceremony tiers are defined in [ADR 0003](../decisions/0003-relay-landing-ceremony-tiers.md), which extends this rule (accepted 2026-07-05).*
+
 ### 10. Errata location
 
 Errata live in the affected document's registry entry (`errata` field), summarised in the registry index's errata section. There is no separate errata ledger — one home, no drift.

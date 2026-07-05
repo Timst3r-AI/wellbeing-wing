@@ -101,6 +101,38 @@
       "errata": []
     },
     {
+      "id": "ADR-0003",
+      "aliases": [
+        "W2-process-tiers"
+      ],
+      "title": "W2 Process Decision — Relay Landing Ceremony Tiers",
+      "type": "adr",
+      "phase": "W2",
+      "deliverable": null,
+      "path": "docs/decisions/0003-relay-landing-ceremony-tiers.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Defines the relay landing ceremony tiers (Mechanical / Judgment / Fence-crossing), the anchor and commit-boundary rules, review vocabulary, standing erratum permission, sequencing latitude, non-negotiables, and the suggestion-forever clause; extends checklist rule 9.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D2",
+        "W1-D3",
+        "W1-D5",
+        "W2-D2",
+        "W2-D3"
+      ],
+      "resolves": [],
+      "id_namespaces": [
+        "Tier M/J/F (landing ceremony tiers)"
+      ],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:32ed47719135819ee11e5fcb36551292a22eeaad8c9bad48734b897e3619be92",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",
@@ -478,7 +510,9 @@
       "status": "accepted",
       "accepted_date": "2026-07-05",
       "role": "The repo governance checklist: status authority, two-tier change rule, registry atomicity, directory and root-file fences, dependency fence, public-safety rule, D5 definition fences, phase entry gate, landing protocol, errata location.",
-      "governs": [],
+      "governs": [
+        "ADR-0003"
+      ],
       "depends_on": [
         "W2-AR",
         "W2-D1",
@@ -488,9 +522,14 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:5377d0bd7a107b2553d68c8cdb64764e403c65684c04b8e75f75d8be438929c2",
+      "content_hash": "sha256:1f8166ca3d24f16e6f1a77f47df1d6e7ba53a5d0397d02beed42149a6aa33c8a",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-07-05",
+          "note": "Rule 9 gained a one-line pointer to ADR 0003 (Relay Landing Ceremony Tiers), which extends the landing protocol. Amendment made via decision record per rule 2; hash recomputed in the same commit."
+        }
+      ]
     }
   ]
 }

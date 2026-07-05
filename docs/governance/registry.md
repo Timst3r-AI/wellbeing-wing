@@ -41,6 +41,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | ADR-0000 | template | template | — | `docs/decisions/0000-template.md` |
 | ADR-0001 | adr | accepted | 2026-06-12 | `docs/decisions/0001-local-first-user-held-keys.md` |
 | ADR-0002 | adr | accepted | 2026-06-12 | `docs/decisions/0002-safety-surfacing.md` |
+| ADR-0003 | adr | accepted | 2026-07-05 | `docs/decisions/0003-relay-landing-ceremony-tiers.md` |
 | REGISTRY-JSON | phase-record | accepted | 2026-07-05 | `governance/registry.json` |
 | REGISTRY-MD | phase-record | accepted | 2026-07-05 | `docs/governance/registry.md` |
 | W0 | constitution | accepted | 2026-06-12 | `docs/constitution/W0-wellbeing-wing-constitution.md` |
@@ -59,6 +60,7 @@ Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) liv
 ## 6. Known errata
 
 - **W0** (logged 2026-07-05): non-semantic header correction during W2-D2 landing, authorised by the human reviewer — the constitution's status line was updated from *"Draft for review"* to *"Accepted by human reviewer, 2026-06-12"*, aligning the source header with the acceptance sealed in W2-D1 §2 and `docs/phases/README.md`. No other W0 content changed; the W0 content hash was recomputed in the same commit.
+- **W2-D3** (logged 2026-07-05): checklist rule 9 gained a one-line pointer to [ADR 0003](../decisions/0003-relay-landing-ceremony-tiers.md) (Relay Landing Ceremony Tiers), which extends the landing protocol. Amendment made via decision record per rule 2; the W2-D3 content hash was recomputed in the same commit.
 
 ## 7. Public-safety note
 
