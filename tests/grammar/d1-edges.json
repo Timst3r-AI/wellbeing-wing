@@ -1,0 +1,36 @@
+{
+  "transcription_header": {
+    "source_document": "docs/architecture/W1-data-boundary-map.md",
+    "registry_id": "W1-D1",
+    "source_sections": ["1", "5"],
+    "rule": "source document wins, always. a transcription conflicting with its source is a transcription defect, fixed against the document, never with it. this file exists for tests only and carries no authority."
+  },
+  "permitted_edges": {
+    "E1": {"source": "user", "destination": "vault"},
+    "E2": {"source": "vault", "destination": "z3-processing", "grant_required": true, "sole_vault_outbound": true},
+    "E3": {"source": "z3-processing", "destination": "draft-profile", "output_label": "agent-extracted, pending review"},
+    "E4": {"source": "draft-profile", "destination": "approved-profile", "authority_transition_not_data_movement": true, "user_review_required": true},
+    "E5": {"source": "approved-profile", "destination": "wellness-room-display", "labels_surfaced": true},
+    "E6": {"source": "approved-profile", "destination": "kitchen", "scope_limit": ["allergies", "confirmed-dietary-requirements"], "grant_required": true},
+    "E7": {"source": "approved-profile", "destination": "gym", "scope_limit": ["confirmed-injury-notes"], "grant_required": true},
+    "E8": {"source": "user", "destination": "any-own-record", "right_never_gated": true},
+    "E9": {"source": "wellness-room", "destination": "clinician-export", "user_initiated_only": true},
+    "E10": {"source": "kitchen", "destination": "z4-vendor", "payload_limit": "grocery-staples-list-only", "grant_required": true},
+    "E11-W": {"source": "wellness-room", "destination": "z3-processing", "grant_required": true, "user_initiated_only": true},
+    "E11-K": {"source": "kitchen", "destination": "z3-processing", "grant_required": true, "user_initiated_only": true},
+    "E11-G": {"source": "gym", "destination": "z3-processing", "grant_required": true, "user_initiated_only": true},
+    "M1": {"source": "user", "destination": "meditation-room-records", "right_never_gated": true},
+    "M2": {"source": "meditation-room", "destination": "z3-processing", "grant_required": true, "user_initiated_only": true, "no_output_elsewhere": true},
+    "L1": {"source": "any-governed-event", "destination": "ledger", "append_only": true},
+    "L2": {"source": "ledger", "destination": "user", "right_never_gated": true}
+  },
+  "reserved_edges": {
+    "E12": {"status": "reserved-not-defined", "rule": "no z5 flows exist until the adapter decision record defines them"}
+  },
+  "rules": {
+    "default_deny": "a flow that does not appear in the permitted set does not exist; absence of an edge is prohibition, not oversight",
+    "e11_is_a_rule_not_a_flow": true,
+    "key_material_has_no_outbound_edges": true,
+    "ledger_has_no_processing_edges": true
+  }
+}

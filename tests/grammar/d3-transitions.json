@@ -1,0 +1,37 @@
+{
+  "transcription_header": {
+    "source_document": "docs/architecture/W1-D3-authority-staleness-model.md",
+    "registry_id": "W1-D3",
+    "source_sections": ["1", "2", "4", "5", "8"],
+    "rule": "source document wins, always. a transcription conflicting with its source is a transcription defect, fixed against the document, never with it. this file exists for tests only and carries no authority."
+  },
+  "transitions": {
+    "D3-T1": {"allowed_actor": "agent-under-e2-grant", "output_label": "agent-extracted, pending review"},
+    "D3-T2": {"allowed_actor": "user-review-only"},
+    "D3-T3": {"allowed_actor": "system-on-user-entry", "output_label": "user-reported"},
+    "D3-T4": {"allowed_actor": "user-review-only"},
+    "D3-T5": {"allowed_actor": "time-automatic", "direction": "decay-only"},
+    "D3-T6": {"allowed_actor": "system-flags-user-resolves", "suspension": "visible-never-hidden"},
+    "D3-T7": {"allowed_actor": "user-only", "effect": "immediate"},
+    "D3-T8": {"allowed_actor": "user-review", "history": "retained-never-silently-deleted"}
+  },
+  "agent_forbidden_transitions": ["D3-T2", "D3-T4", "D3-T7"],
+  "staleness_order": ["current", "review due", "stale", "expired"],
+  "terminal_states": ["superseded"],
+  "treated_as": {
+    "expired": "unknown",
+    "contradicted": "suspended-from-settled-truth-use-visible",
+    "unknown freshness": "stale"
+  },
+  "truth_labels": ["confirmed by record", "confirmed by user"],
+  "agent_assignable_labels": ["agent-extracted, pending review", "possible pattern, not confirmed"],
+  "rules": {
+    "only_the_user_mints_truth": true,
+    "repetition_promotes_authority": false,
+    "absence_is_negative_evidence": false,
+    "model_output_is_evidence": false,
+    "automatic_transitions_only_lower_trust": true,
+    "renewal_is_a_review_act_not_a_refresh": true,
+    "bounded_unknown_requires": ["scope", "source_set", "as_of"]
+  }
+}
