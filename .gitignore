@@ -11,6 +11,7 @@ Thumbs.db
 .env
 .env.*
 *.local
+.public-safety.local.txt
 
 # Dependency and build output (future phases)
 node_modules/

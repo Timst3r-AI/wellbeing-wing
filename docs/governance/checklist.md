@@ -42,6 +42,8 @@ Any new dependency manifest or package is a named fence-crossing requiring expli
 
 Every commit is checked against the public-safety scan — by human review until W2-D6 lands, by script **plus** review after. The script supplements human review; it never replaces it. No private names, no private system references, no companion framing, no personal health details, no project lineage beyond this repository, no real health data — in any file, any commit, ever.
 
+*The scripted layer exists as of W2-D6 (2026-07-05): [`scripts/public-safety-scan.py`](../../scripts/public-safety-scan.py), documented in [`scripts/README.md`](../../scripts/README.md). Script plus human review applies from that date.*
+
 ### 7. Definition fences carried from the threat model
 
 Anything that contacts the user outside an active session is the notification layer, whatever it is called (D5-T16) — and no notification layer exists or may be built without its own decision record, from zero inheritance. Any feature touching the Z1 trust boundary requires a constitutional check in its decision record (D5-T18).

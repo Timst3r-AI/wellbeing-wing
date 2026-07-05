@@ -1,0 +1,44 @@
+# Public-safety scan allowlist.
+# Format: path | category | fingerprint | justification
+# Rules: path-scoped (no globs); category-scoped; fingerprint is a phrase the
+# matched line contains; justification is one public-safe line; no private
+# terms anywhere in this file; a new different match needs its own entry.
+
+README.md | compliance-claim | does not claim HIPAA | root README anti-claim sentence: alignment, never compliance
+README.md | claim-strength | does not claim HIPAA | same anti-claim sentence names the regimes it declines to claim
+
+docs/constitution/W0-wellbeing-wing-constitution.md | compliance-claim | demonstrate compliance with the laws | self-compliance with the constitution's own laws, not a legal claim
+docs/constitution/W0-wellbeing-wing-constitution.md | compliance-claim | does not claim certified compliance | Non-Goal 7 anti-claim statement
+docs/constitution/W0-wellbeing-wing-constitution.md | claim-strength | does not claim certified compliance | Non-Goal 7 anti-claim names the regimes it declines to claim
+docs/constitution/W0-wellbeing-wing-constitution.md | compliance-claim | as alignment rather than compliance | section 9 anti-claim framing
+docs/constitution/W0-wellbeing-wing-constitution.md | claim-strength | as alignment rather than compliance | section 9 anti-claim names the reference frameworks
+docs/constitution/W0-wellbeing-wing-constitution.md | compliance-claim | not *compliant* | section 9 aligned-not-compliant distinction, an anti-claim
+docs/constitution/W0-wellbeing-wing-constitution.md | compliance-claim | compliance with its own constitution | self-compliance of the system with its own rules
+
+docs/architecture/W1-D5-threat-model.md | compliance-claim | tuning language toward compliance | D5-T17: behavioural sense (user compliance), not a legal claim
+docs/architecture/W1-D5-threat-model.md | compliance-claim | technically compliant, functionally hidden | D5-T24: UI-conformance sense, not a legal claim
+docs/architecture/W1-D5-threat-model.md | compliance-claim | verify a vendor's compliance | OR-2: vendor-retention conformance sense, not a legal claim
+docs/architecture/W1-D5-threat-model.md | companion-framing | no companion framing | section 9 public-safety note stating the prohibition
+
+docs/architecture/W1-D6-evaluation-plan-skeleton.md | companion-framing | companion framing | scan-rule definitions and public-safety note stating the prohibition
+
+docs/governance/checklist.md | companion-framing | no companion framing | rule 6 public-safety prohibition text
+docs/governance/fixtures.md | companion-framing | no companion framing | section 9 public-safety note stating the prohibition
+docs/governance/registry.md | companion-framing | no companion framing | section 7 public-safety note stating the prohibition
+
+docs/phases/W2-D1-w1-closure-record.md | compliance-claim | never compliance claims | anti-claim summary of the public-safety requirements
+docs/phases/W2-D1-w1-closure-record.md | companion-framing | no companion framing | section 7 public-safety note stating the prohibition
+
+docs/phases/W2-D2-governance-registry-brief.md | companion-framing | no companion framing | public-safety rule text in sections 8 and 12
+docs/phases/W2-D2-governance-registry-brief.md | compliance-claim | No compliance claims | section 8 anti-claim rule for registry fields
+
+docs/phases/W2-alignment-report.md | companion-framing | companion framing, or project lineage | section 4 prohibition list
+docs/phases/W2-alignment-report.md | companion-framing | companion-framing terms | section 5 W2-D6 scan design text
+docs/phases/W2-alignment-report.md | compliance-claim | compliance-claim detection | section 5 W2-D6 scan design names this category
+
+scripts/public-safety-scan.py | compliance-claim | ("compliance-claim", re.compile | pattern definition names its own category
+scripts/public-safety-scan.py | compliance-claim | bcertified | claim-strength pattern definition contains the claim words it detects
+scripts/public-safety-scan.py | companion-framing | ("companion-framing", re.compile | pattern definition names its own category
+
+scripts/README.md | compliance-claim | the words "compliant"/"compliance" | category table describes what the category flags
+scripts/README.md | companion-framing | the generic category term | category table describes what the category flags
