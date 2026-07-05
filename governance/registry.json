@@ -372,6 +372,35 @@
       "errata": []
     },
     {
+      "id": "ADR-0013",
+      "aliases": [],
+      "title": "0013 — Key Derivation, Custody, and Envelope Selection",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": "D2",
+      "path": "docs/decisions/0013-kdf-custody-envelope-selection.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-05",
+      "role": "Closes ADR 0005 named opens and fixes the v1 key architecture: moderate KDF profile as evidence-based review-dated provisional (named profiles only, parameters and salt recorded in the versioned key envelope); passphrase-alone custody with no escrow or recovery path in any form; two-layer wrap (records under a random master key, passphrase-derived key seals only the master); per-record sealed envelopes with cardinality/size leakage named for the threat register; the sealed key envelope travels with backups as ciphertext, restore requiring the passphrase; envelope resides in its own small versioned file. Authorises no implementation.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0004",
+        "ADR-0005",
+        "ADR-0008",
+        "ADR-0009",
+        "ADR-0011",
+        "ADR-0012",
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:9ae31fb3332de9675603019f1b6b121333da90fd443f31ee97be53a4727237c4",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",
