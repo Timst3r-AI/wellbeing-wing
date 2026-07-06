@@ -424,6 +424,38 @@
       "errata": []
     },
     {
+      "id": "ADR-0015",
+      "aliases": [],
+      "title": "0015 — Durable Ledger Doctrine",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": null,
+      "path": "docs/decisions/0015-durable-ledger.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-06",
+      "role": "Decides that the durable ledger exists and how: sealed under the master-key custody boundary because governance metadata is privacy-sensitive by pattern; independently sealed append frames as the doctrine direction; event scope doctrine-wide with v1 implementation limited to existing transition events (import/custody emission a named future extension, not mandated); the ledger joins the backup unit as sealed ciphertext; erasure is the user knowing act only, whole-ledger in v1, never a side effect of profile erasure; append-only with torn-tail one-event blast radius honestly stated. Sequences a small dedicated implementation milestone before the D6 brief. Authorises no implementation.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0004",
+        "ADR-0005",
+        "ADR-0010",
+        "ADR-0013",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "W3-AR",
+        "W3-D4-CR",
+        "W3-D5-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:62c64c57d581906d1fa48d8e72f5187b7434d568af01de3993622226bcf79ba1",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",
