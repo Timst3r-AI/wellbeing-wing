@@ -1084,6 +1084,38 @@
       "content_hash": "sha256:e8fb3fa0d4ef50ea2fd0ca574e958e4d86234b2a6631de1db71c0dabe01d88c9",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W3-D6-CR",
+      "aliases": [],
+      "title": "W3-D6 Closure Record",
+      "type": "phase-record",
+      "phase": "W3",
+      "deliverable": "D6",
+      "path": "docs/phases/W3-D6-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-06",
+      "role": "Seals W3-D6, export/backup/restore: the published chain (M1 backup and restore symmetry, M2 export-as-right) cited by commit; the seven planning rulings (headlined by the WBWB circularity correction: the key envelope rides reachable, never trapped inside what it unlocks) and the two M2 rulings restated; the consumed ADR 0015 inputs named; the WBWB container shape, five-step restore validation order, and export-right contract carried in ink at structural level; verification at closure; honest findings (in-memory assembly, uninventoriable-without-passphrase, never-silent sidecar, erasure cannot reach user-taken copies, torn-tail honesty travels); and the deferred list. States plainly that W3-D7 has not started. Authorises nothing to be built.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0004",
+        "ADR-0009",
+        "ADR-0010",
+        "ADR-0011",
+        "ADR-0012",
+        "ADR-0013",
+        "ADR-0015",
+        "W1-D2",
+        "W3-AR",
+        "W3-D5-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:385fba4a014222a14412e53a33d55c4301d8e9929250fe1a70aa117cf710f3c0",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

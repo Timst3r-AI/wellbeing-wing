@@ -51,3 +51,4 @@ LICENSE | compliance-claim | except in compliance with the License | canonical A
 LICENSE | external-link | http://www.apache.org/licenses/LICENSE-2.0 | canonical Apache-2.0 appendix text, unmodified by ADR 0014 decision
 NOTICE | companion-framing | or companion software | public-safety boundary statement stating the prohibition
 docs/decisions/0014-licence-selection.md | companion-framing | or companion software | decision text stating the prohibition carried by NOTICE
+docs/phases/W3-D6-closure-record.md | companion-framing | or companion behaviour | closure deferred-list public-safety prohibition statement
