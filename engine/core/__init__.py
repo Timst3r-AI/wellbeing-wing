@@ -11,6 +11,7 @@ from engine.core.backup import (
     export_backup,
     restore_backup,
 )
+from engine.core.export import ExportError, export_record
 from engine.core.custody import (
     CustodyError,
     change_passphrase,
@@ -161,4 +162,6 @@ __all__ = [
     "BackupError",
     "export_backup",
     "restore_backup",
+    "ExportError",
+    "export_record",
 ]
