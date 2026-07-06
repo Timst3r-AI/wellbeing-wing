@@ -961,6 +961,36 @@
       "content_hash": "sha256:3a05dc3e6454e2a37bccb856454dbad594e6ba7393cd7d1d8a9e24c7d27e8ae0",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W3-D3-CR",
+      "aliases": [],
+      "title": "W3-D3 Closure Record",
+      "type": "phase-record",
+      "phase": "W3",
+      "deliverable": "D3",
+      "path": "docs/phases/W3-D3-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-06",
+      "role": "Seals W3-D3, the Health Profile object model: the published chain (M1 shapes, M2 sealed persistence) cited by commit, the seven accepted planning rulings restated as the deliverable decision anchor, verification state at closure (139 tests, scan pass, registry and manifest untouched by the milestones), honest findings carried forward (evidence-by-absence, truth-label persistence refusal, in-payload typing, no interval defaults, deferred persistence of transition-era shapes), and the full deferred list. States plainly that D3 is the object model, not a transition engine, and that W3-D4 has not started. Authorises nothing to be built.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0004",
+        "ADR-0005",
+        "ADR-0009",
+        "ADR-0010",
+        "ADR-0013",
+        "W1-D3",
+        "W3-AR",
+        "W3-D2-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:84150de7e72009789075b9a848534fca6b070136ee1f15009c4b1dd3d14286b0",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
