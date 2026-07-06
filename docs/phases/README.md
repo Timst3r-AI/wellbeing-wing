@@ -53,7 +53,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 
 **Runway:** [`W3-runway-health-vault-profile-foundations.md`](W3-runway-health-vault-profile-foundations.md)
 
-**Status:** Entry gate complete — W2 closure accepted and published ✔, W3 runway accepted and published ✔, first W3 deliverable accepted ✔ (W3-D1, 2026-07-05). The W3-D1 cluster is complete (8/8 records, 2026-07-05). W3-D2 implementation is underway through authorised milestones: Milestone 1 (store skeleton, Tier F) is published; Milestone 2 (import path, Tier J) is this landing. Later milestones and any new fence-crossings remain separately authorised.
+**Status:** Entry gate complete — W2 closure accepted and published ✔, W3 runway accepted and published ✔, first W3 deliverable accepted ✔ (W3-D1, 2026-07-05). The W3-D1 cluster is complete (8/8 records, 2026-07-05). **W3-D2 — the engine spine — is complete and closed** (ADR 0013 plus four milestones, sealed by [`W3-D2-closure-record.md`](W3-D2-closure-record.md), 2026-07-06). W3-D3 has not started; later deliverables and any new fence-crossings remain separately authorised.
 
 **Deliverables:**
 
@@ -69,6 +69,7 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 | W3-D2 — KDF, Custody, and Envelope Selection | [`0013-kdf-custody-envelope-selection.md`](../decisions/0013-kdf-custody-envelope-selection.md) | Accepted by human reviewer, 2026-07-05 — closes ADR 0005's two named opens: moderate KDF profile (evidence-based, micro-spike, review-dated provisional), passphrase-alone custody with no recovery path in any form, two-layer wrap architecture, per-record envelopes; the implementing milestone remains separately authorised |
 | W3-D2 — Engine Milestone 3: key custody | [`../../engine/`](../../engine/) · [`0013-kdf-custody-envelope-selection.md`](../decisions/0013-kdf-custody-envelope-selection.md) | Accepted by human reviewer, 2026-07-06 — Tier J: ADR 0013 as code — versioned key envelope (own file, caller-chosen path), two-layer wrap, moderate-profile derivation, passphrase change re-sealing the envelope only; no keyfile, no recovery path in any form; first-run wording, strength posture, vault layout, and backup/export mechanics remain deferred |
 | W3-D2 — Engine Milestone 4 (Landing 1): residue at scale and format seam | [`../../tests/`](../../tests/) · [`../../engine/README.md`](../../engine/README.md) | Accepted by human reviewer, 2026-07-06 — Tier J: synthetic vault at scale (all-ciphertext property proven at every checkpoint, including after a killed process), cross-format refusal matrices, and the engine's in-ink documentation (honest residuals, threat-register entries, non-atomic-write finding); atomic write remains a possible future decision; D2 closure follows as its own landing |
+| W3-D2 — Closure Record (Landing 2) | [`W3-D2-closure-record.md`](W3-D2-closure-record.md) | Accepted by human reviewer, 2026-07-06 — Tier J: seals the engine spine — published chain cited by commit, verification state at closure, honest findings carried forward, deferred list preserved; authorises nothing to be built; W3-D3 not started |
 
 ## W4 and beyond
 

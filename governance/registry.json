@@ -908,6 +908,36 @@
       "content_hash": "sha256:22028908ef2d2a56fd789fcd0f9345f5227f0420a631e8bd45790c0f36e57e90",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W3-D2-CR",
+      "aliases": [],
+      "title": "W3-D2 Closure Record",
+      "type": "phase-record",
+      "phase": "W3",
+      "deliverable": "D2",
+      "path": "docs/phases/W3-D2-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-06",
+      "role": "Seals W3-D2, the engine spine: the published chain (ADR 0013 plus milestones 1-4) cited by commit, verification state at closure (105 tests, scan pass, registry and manifest untouched by product landings), honest findings carried forward (key-copy residual, cardinality leakage, weak-passphrase honesty, non-atomic write), and the full deferred list. Authorises nothing to be built; W3-D3 not started.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0004",
+        "ADR-0005",
+        "ADR-0008",
+        "ADR-0009",
+        "ADR-0010",
+        "ADR-0012",
+        "ADR-0013",
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:3a05dc3e6454e2a37bccb856454dbad594e6ba7393cd7d1d8a9e24c7d27e8ae0",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
