@@ -60,6 +60,13 @@ from engine.core.record import (
     decode_record,
     encode_record,
 )
+from engine.core.transitions import (
+    CLASSIFICATION_STATUSES,
+    REASONS,
+    RUNNABLE_MATRIX,
+    TRANSITION_CATALOGUE,
+    classify_transition,
+)
 from engine.core.store import StoreIntegrityError, seal, unseal
 
 __all__ = [
@@ -107,4 +114,9 @@ __all__ = [
     "load_item",
     "persist_unknown",
     "load_unknown",
+    "TRANSITION_CATALOGUE",
+    "RUNNABLE_MATRIX",
+    "CLASSIFICATION_STATUSES",
+    "REASONS",
+    "classify_transition",
 ]
