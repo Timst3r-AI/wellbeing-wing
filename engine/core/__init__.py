@@ -23,6 +23,13 @@ from engine.core.header import (
     build_header,
     parse_header,
 )
+from engine.core.ledger_store import (
+    LEDGER_VERSION,
+    LedgerError,
+    append_event,
+    erase_ledger,
+    read_events,
+)
 from engine.core.intake import (
     ACCEPTED_TYPES,
     MAX_IMPORT_BYTES,
@@ -139,4 +146,9 @@ __all__ = [
     "apply_confirm_by_user",
     "apply_correction",
     "apply_supersession",
+    "LEDGER_VERSION",
+    "LedgerError",
+    "append_event",
+    "read_events",
+    "erase_ledger",
 ]

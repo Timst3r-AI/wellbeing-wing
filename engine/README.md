@@ -10,7 +10,7 @@ The local headless engine spine: an encrypted store that forgets nothing it hold
 - **Profile model** (`core/profile.py`, `core/profile_records.py`) — the authority/staleness grammar (W1-D3) as data shapes, and their sealed persistence. See the profile-layer section below.
 - **Ports** (`ports/`) — crypto, storage, clock, and ledger behind interfaces; the doctrine core stays pure and every worldly behaviour is swappable and testable. The crypto port is the single worldly crypto door.
 
-## The three versioned formats
+## The versioned formats
 
 Every format is versioned from its first byte and refuses unknown versions, malformed layouts, and (where the format owns its length) truncation and trailing bytes. No format silently accepts ambiguity.
 
@@ -19,6 +19,7 @@ Every format is versioned from its first byte and refuses unknown versions, malf
 | Store header | `core/header.py` | `WBWG` | 16 bytes: magic 4 + version 2 + reserved 10; prefixes every sealed blob |
 | Record | `core/record.py` | — (see note) | version 2 + length-prefixed provenance JSON + length-prefixed payload; exact-length enforced |
 | Key envelope | `core/envelope.py` | `WBWK` | magic 4 + version 2 + profile name + parameters + salt + sealed master; exact-length enforced |
+| Ledger | `core/ledger_store.py` | `WBWL` | 16-byte header (magic 4 + version 2 + reserved 10), then length-prefixed frames, each frame its own small ciphertext decrypting to one event; torn tail refused with intact history preserved |
 
 **Honest note on the record format:** the inner record carries no magic of its own. This is accepted and documented, not hidden: record bytes exist only inside sealed store plaintext, so context disambiguates, and the leading version field refuses foreign bytes — the cross-decoder tests prove each format's bytes are refused by every other format's decoder. The store header is a prefix format by design (the bytes after it are ciphertext), so a trailing-bytes refusal does not apply to it.
 
@@ -36,14 +37,14 @@ The profile object model exists (`core/profile.py`): the W1-D3 grammar as pure s
 
 - **In-payload typing, no format change.** A profile record declares its class and payload version inside the inner record's provenance JSON; the byte-level encoding is untouched and there is **no record format v2**. Imported evidence records remain exactly as published and carry no record class — **evidence-by-absence** is the accepted v1 distinguishability rule, stated here honestly; a future record class would force the format-evolution decision this design deliberately defers.
 - **Truth labels do not persist.** The only profile write path refuses confirmed items, because no review path exists and none may be improvised (the minimal-review-posture record). Confirmed shapes exist in memory for grammar completeness and tests only. Loading reconstructs through the object-model constructors, so an illegal persisted state refuses on the way out too.
-- **Still absent, by decision:** no transition engine (a later deliverable behind its own gates), no review or approval path, no extraction, no model contact, no durable ledger (event shapes are data-only; durability belongs to the deliverable that creates events).
+- **Still absent, by decision:** no review or approval path, no extraction, no model contact. (The transition engine and the durable ledger have since arrived through their own gates — see the transition-layer section below.)
 
 ## The transition layer (W3-D4)
 
 The transition catalogue, runnable matrix, and pure validator exist (`core/transitions.py`, M1): all eight W1-D3 transitions are catalogued — understanding, never permission — and a whitelist matrix permits only this era's executable rows, refusing everything else by absence. **T1 (agent extraction under grant) is catalogued but dormant**: any T1-shaped request is refused as unavailable — a distinct status, not illegal — until grant machinery exists by its own future authority. The applier exists (M2): per-transition functions that validate through the classifier first, mutate nothing, build every successor through the object-model constructors, and take no storage, crypto, port, or file arguments.
 
 - **User acts are data, and — within this repository's enforcement — test-tree only.** Gated transitions (T2/T4/T7/T8, the truth-minting and history-writing ones) require a `UserAct`; the suite walks the application tree's syntax and fails on any construction site, no production factory exists, and the shape is not re-exported. T3 (user entry), T5 (staleness decay, one adjacent step per application, authority untouched, injected intervals only — still no defaults), and T6 (contradiction flagging, both sides visibly retained) run without acts because they only enter or lower.
-- **Events are emitted, not stored.** Every successful application returns exactly one data-only ledger event; durable ledger storage is deferred to its own future decision, and until it exists the honest statement is: transition events are produced and provable, not yet durably recorded.
+- **Events are emitted by the appliers and kept by the caller-side ledger store** (`core/ledger_store.py`, per the durable-ledger doctrine record): independently sealed append frames under the master key, append-only (prior bytes byte-identical after every append), torn tail refused with intact history preserved (one-event blast radius on this platform's non-atomic appends), whole-ledger erasure as the user's explicit act only. The appliers remain pure and never see the store. v1 keeps the events that exist today; import/custody emission is a named future extension.
 - **Truth labels remain unpersistable.** The applier can compute confirmed states in memory during gated synthetic tests; the profile write path refuses them regardless, and no non-test store receives a truth label. No review surface, no approval surface, no extraction, no model contact.
 - **T8 performs supersession only** — the old item is retained and relabelled, the successor linked; there is no reactivation, no undo, and no removal of history, per the grammar's terminal-state rule.
 
