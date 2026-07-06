@@ -2,7 +2,7 @@
 
 A modular, AI-assisted personal wellbeing environment built governance-first.
 
-**Status:** Phase W2 — Governance Evaluation & Enforcement Foundations (runway accepted). W0 and W1 closed. No code exists yet, deliberately.
+**Status:** Phase W3 — Health Vault and Health Profile Foundations. W0, W1, W2, W3-D1 (engine doctrine), and W3-D2 (engine spine) are closed. The engine spine exists and is published — encrypted store, import path, key custody, residue-at-scale proof, format-seam confirmation — and the repository remains headless: no UI, no CLI, no model contact, no profile model yet, no backup/export mechanics yet, no licence decision yet. W3-D3 (profile model) has not started.
 
 ---
 
@@ -39,8 +39,9 @@ Not a medical device. Not a treatment platform. Not an AI therapist. Not an enga
 |---|---|---|
 | **W0** | Constitution — laws, boundaries, risks, open questions | ✅ Accepted (2026-06-12) |
 | **W1** | Governance architecture and data boundary design | ✅ Closed — all deliverables accepted (2026-06-12) |
-| **W2** | Governance evaluation & enforcement foundations — making the governance testable, nothing user-facing | Runway accepted; deliverables in progress |
-| W3+ | Defined at the close of W2 | — |
+| **W2** | Governance evaluation & enforcement foundations — making the governance testable, nothing user-facing | ✅ Closed (2026-07-05) |
+| **W3** | Health Vault and Health Profile foundations | In progress — D1 engine doctrine closed (2026-07-05); D2 engine spine closed (2026-07-06); D3 profile model not started |
+| W4+ | Rooms, adapters, and surfaces — defined as W3 progresses, each through its own gate | — |
 
 ## Repository structure
 
@@ -50,16 +51,23 @@ docs/
 ├── decisions/      # Design decision records (ADR-style), one decision per file
 ├── architecture/   # W1 governance-architecture deliverables (data boundary map, consent, authority, threat model, evaluation plan)
 ├── governance/     # Governance registry (human-readable index) and repo governance docs
-└── phases/         # Phase index, phase runways, and closure records
+├── phases/         # Phase index, phase runways, and closure records
+└── wellbeing-wing-concept-overview.md   # Plain-language overview: what exists, what deliberately doesn't yet
+engine/             # The engine spine (headless): encrypted store, import path, key custody — see engine/README.md
+tests/              # Deterministic test suite: repo-state checks and engine tests
+fixtures/           # Synthetic fixtures only — no real data, ever
+scripts/            # Public-safety scan and its allowlist
 governance/         # Machine-readable governance registry (registry.json — canonical)
+requirements.txt    # The engine's entire third-party surface, exact-pinned
 ```
 
 ## Reading order
 
-1. [`docs/constitution/W0-wellbeing-wing-constitution.md`](docs/constitution/W0-wellbeing-wing-constitution.md) — start here; everything else is downstream of it
-2. [`docs/phases/README.md`](docs/phases/README.md) — phase plan, runways, and closure records
-3. [`docs/architecture/`](docs/architecture/) — the W1 governance corpus (data boundary map, consent, authority, threat model, evaluation plan)
-4. [`docs/decisions/`](docs/decisions/) — decision records as they accumulate
+1. [`docs/wellbeing-wing-concept-overview.md`](docs/wellbeing-wing-concept-overview.md) — a plain-language overview: what exists, what deliberately doesn't yet
+2. [`docs/constitution/W0-wellbeing-wing-constitution.md`](docs/constitution/W0-wellbeing-wing-constitution.md) — the governing laws; everything else is downstream of it
+3. [`docs/phases/README.md`](docs/phases/README.md) — phase plan, runways, and closure records
+4. [`docs/architecture/`](docs/architecture/) — the W1 governance corpus (data boundary map, consent, authority, threat model, evaluation plan)
+5. [`docs/decisions/`](docs/decisions/) — decision records as they accumulate
 
 ## License
 
