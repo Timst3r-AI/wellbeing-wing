@@ -7,6 +7,7 @@ The local headless engine spine: an encrypted store that forgets nothing it hold
 - **Store** (`core/header.py`, `core/store.py`) — seal/unseal of one blob under a caller-supplied key, authenticated encryption via the audited library (ADR 0005, ADR 0008). Keys are per-operation arguments in the narrowest scope; no module retains a key; nothing here logs or prints, by structural test.
 - **Import** (`core/intake.py`, `core/record.py`) — bytes plus user-supplied provenance in, one sealed record out (ADR 0009). Zero content interpretation: inspection is capped at magic-number / file-shape depth, enforced structurally (the core can import only `json` and itself — it cannot parse what it cannot import). A refused import writes nothing. Provenance is stored verbatim; absent source and date are labelled *unprovenanced by user* inside the sealed record.
 - **Custody** (`core/envelope.py`, `core/custody.py`) — the two-layer wrap (ADR 0013): records are sealed under a random master key; the passphrase-derived key seals only the master, inside the key envelope. Passphrase change re-seals the one small envelope; no record is ever re-encrypted by a custody event. Creating an envelope where one exists is refused — destruction of access is never a silent side effect.
+- **Profile model** (`core/profile.py`, `core/profile_records.py`) — the authority/staleness grammar (W1-D3) as data shapes, and their sealed persistence. See the profile-layer section below.
 - **Ports** (`ports/`) — crypto, storage, clock, and ledger behind interfaces; the doctrine core stays pure and every worldly behaviour is swappable and testable. The crypto port is the single worldly crypto door.
 
 ## The three versioned formats
@@ -28,6 +29,14 @@ Passphrase-only in v1. The key-derivation function is the library's memory-hard 
 The sealed key envelope lives in its own small file beside the records, at a caller-chosen path (vault layout, naming, listing, indexing, and search are deferred to their own reviewed decisions). It travels with backups: it is ciphertext, not the user-held secret, and a restored backup opens only with the passphrase (ADR 0013 decision 5, reasoning recorded there in full).
 
 **There is no recovery path and none may ever be added.** No keyfile in v1, no escrow, no recovery service, no secret questions, no cloud recovery, no hidden path of any kind. Losing the passphrase makes the master unreachable and the vault unrecoverable — not by the user, not by the Wing, not by anyone — exactly as the published key-loss wording (ADR 0012) promises.
+
+## The profile layer (W3-D3)
+
+The profile object model exists (`core/profile.py`): the W1-D3 grammar as pure shapes — inseparable authority/staleness label pairs, bounded unknowns, contradiction and supersession structures, ledger event shapes, and staleness as a pure function over **injected** intervals (no clinical judgment is encoded as a constant anywhere; intervals arrive by their own future reviewed decision). Sealed profile persistence exists (`core/profile_records.py`) for profile items and bounded unknowns, through the store path unchanged.
+
+- **In-payload typing, no format change.** A profile record declares its class and payload version inside the inner record's provenance JSON; the byte-level encoding is untouched and there is **no record format v2**. Imported evidence records remain exactly as published and carry no record class — **evidence-by-absence** is the accepted v1 distinguishability rule, stated here honestly; a future record class would force the format-evolution decision this design deliberately defers.
+- **Truth labels do not persist.** The only profile write path refuses confirmed items, because no review path exists and none may be improvised (the minimal-review-posture record). Confirmed shapes exist in memory for grammar completeness and tests only. Loading reconstructs through the object-model constructors, so an illegal persisted state refuses on the way out too.
+- **Still absent, by decision:** no transition engine (a later deliverable behind its own gates), no review or approval path, no extraction, no model contact, no durable ledger (event shapes are data-only; durability belongs to the deliverable that creates events).
 
 ## Honest residuals (in ink, per ADR 0008)
 

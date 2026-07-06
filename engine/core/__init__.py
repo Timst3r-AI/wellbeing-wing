@@ -46,6 +46,14 @@ from engine.core.profile import (
     Supersession,
     staleness_of,
 )
+from engine.core.profile_records import (
+    PROFILE_PAYLOAD_VERSION,
+    ProfileRecordError,
+    load_item,
+    load_unknown,
+    persist_item,
+    persist_unknown,
+)
 from engine.core.record import (
     RECORD_VERSION,
     RecordError,
@@ -93,4 +101,10 @@ __all__ = [
     "Supersession",
     "LedgerEvent",
     "staleness_of",
+    "PROFILE_PAYLOAD_VERSION",
+    "ProfileRecordError",
+    "persist_item",
+    "load_item",
+    "persist_unknown",
+    "load_unknown",
 ]
