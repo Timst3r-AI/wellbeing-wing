@@ -139,11 +139,17 @@ class PostureAssertions(unittest.TestCase):
                 self.assertNotIn(token, text,
                                  f"review-shaped token in application tree: {src.name}")
 
-    def test_no_approved_status_anywhere_in_application_tree(self):
+    def test_no_approved_status_outside_the_shape_module(self):
+        # The approved layer's *shape* lives in profile.py by the
+        # W3-D3 M1 ruling; the minimal-review-posture record's real
+        # assertion stands: no Approved instance in any non-test
+        # store, and no path in the application tree can make one.
         for src, text in self._engine_text().items():
+            if src.name == "profile.py":
+                continue
             self.assertNotIn("Approved", text,
-                             f"approved-status vocabulary in application tree: "
-                             f"{src.name} (no profile layer exists in this milestone)")
+                             f"approved-status vocabulary outside the "
+                             f"shape module: {src.name}")
 
 
 if __name__ == "__main__":
