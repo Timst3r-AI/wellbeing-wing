@@ -1021,6 +1021,37 @@
       "content_hash": "sha256:06c799835f838815ccd18493a914391914ec51127113281ce24b8b4de698b7d5",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W3-D5-CR",
+      "aliases": [],
+      "title": "W3-D5 Closure Record",
+      "type": "phase-record",
+      "phase": "W3",
+      "deliverable": "D5",
+      "path": "docs/phases/W3-D5-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-06",
+      "role": "Seals W3-D5, local storage / residue rules, as a deliverable satisfied by absorption: the full ADR 0004 clause-by-clause mapping carried in the record itself with proof names and commit anchors (default-deny persistence tested on every operation incl. kill and at-scale; logs plaintext-free by structure; forbidden artifact classes by structure and absence; no exceptions taken; platform residual documented in ink; user copies handed to D6 as rights), two honest notes (single-configuration triviality; by-absence protections inherited at the surface era), the absorbed-not-skipped statement under the runway resequencing clause, and the forward gates (durable-ledger decision before the D6 brief; D6 as the next build arc). Authorises nothing to be built.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0004",
+        "ADR-0008",
+        "ADR-0009",
+        "ADR-0010",
+        "ADR-0013",
+        "W1-D3",
+        "W1-D5",
+        "W3-AR",
+        "W3-D4-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:e8fb3fa0d4ef50ea2fd0ca574e958e4d86234b2a6631de1db71c0dabe01d88c9",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
