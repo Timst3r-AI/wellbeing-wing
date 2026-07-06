@@ -401,6 +401,29 @@
       "errata": []
     },
     {
+      "id": "ADR-0014",
+      "aliases": [],
+      "title": "0014 — Licence Selection",
+      "type": "adr",
+      "phase": "W3",
+      "deliverable": null,
+      "path": "docs/decisions/0014-licence-selection.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-06",
+      "role": "Selects the Apache License 2.0 for v1, standard and unmodified, with the public repository owner as copyright holder: broad reuse (commercial and closed-source included) is intentional; copyleft rejected as mission-fit not principle; custom and moral-use licensing rejected firmly; NOTICE is an informational redistribution notice carrying the copyright line, fork non-endorsement, and public-safety boundary statements without adding licence terms; governance intent lives in documentation; forks inherit code, never endorsement or certification. Project-level decision, not an engine-track deliverable.",
+      "governs": [],
+      "depends_on": [
+        "W3-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:e8d0f3caf0f26ee57d99fc628879f436bda3a5b47397375de203f0d61a0d1573",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",

@@ -69,6 +69,8 @@ requirements.txt    # The engine's entire third-party surface, exact-pinned
 4. [`docs/architecture/`](docs/architecture/) — the W1 governance corpus (data boundary map, consent, authority, threat model, evaluation plan)
 5. [`docs/decisions/`](docs/decisions/) — decision records as they accumulate
 
-## License
+## License and adopters
 
-Not yet selected — to be decided before the repository accepts external contributions. (Tracked as a setup task, not a constitutional question.)
+Licensed under the [Apache License 2.0](LICENSE), with an accompanying [NOTICE](NOTICE). Broad reuse — including commercial and closed-source — is intentional: the pattern is meant to travel. See [ADR 0014](docs/decisions/0014-licence-selection.md) for the reasoning.
+
+Forks and adaptations must not imply endorsement by, or equivalence to, this repository. The governance records here certify only this repository's own process, never a derivative. No medical, therapeutic, diagnostic, safety-intervention, or crisis-response claim is made.

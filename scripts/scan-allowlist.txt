@@ -46,3 +46,8 @@ scripts/README.md | compliance-claim | the words "compliant"/"compliance" | cate
 scripts/README.md | companion-framing | the generic category term | category table describes what the category flags
 docs/wellbeing-wing-concept-overview.md | companion-framing | not an AI companion | section 1 identity boundary stating the prohibition
 docs/wellbeing-wing-concept-overview.md | companion-framing | not a companion and has no persona | section 8 public-safety note stating the prohibition
+LICENSE | external-link | http://www.apache.org/licenses/ | canonical Apache-2.0 text, unmodified by ADR 0014 decision
+LICENSE | compliance-claim | except in compliance with the License | canonical Apache-2.0 appendix text, unmodified by ADR 0014 decision
+LICENSE | external-link | http://www.apache.org/licenses/LICENSE-2.0 | canonical Apache-2.0 appendix text, unmodified by ADR 0014 decision
+NOTICE | companion-framing | or companion software | public-safety boundary statement stating the prohibition
+docs/decisions/0014-licence-selection.md | companion-framing | or companion software | decision text stating the prohibition carried by NOTICE

@@ -52,6 +52,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | ADR-0011 | adr | accepted | 2026-07-05 | `docs/decisions/0011-local-backup-guidance.md` |
 | ADR-0012 | adr | accepted | 2026-07-05 | `docs/decisions/0012-key-loss-onboarding-wording.md` |
 | ADR-0013 | adr | accepted | 2026-07-05 | `docs/decisions/0013-kdf-custody-envelope-selection.md` |
+| ADR-0014 | adr | accepted | 2026-07-06 | `docs/decisions/0014-licence-selection.md` |
 | REGISTRY-JSON | phase-record | accepted | 2026-07-05 | `governance/registry.json` |
 | REGISTRY-MD | phase-record | accepted | 2026-07-05 | `docs/governance/registry.md` |
 | W0 | constitution | accepted | 2026-06-12 | `docs/constitution/W0-wellbeing-wing-constitution.md` |

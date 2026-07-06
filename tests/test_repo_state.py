@@ -24,12 +24,14 @@ REGISTRY_ARTIFACT_IDS = {"REGISTRY-JSON", "REGISTRY-MD"}
 EXCLUSION_REASON = "registry artifact — self-reference exclusion"
 # Amended under the W3-D2 milestone-1 Tier F authorisation: admits
 # exactly the engine directory and the single pinned manifest, nothing
-# else. Any further product directory or dependency is a new named
-# fence-crossing requiring its own record-backed amendment here.
+# else. Amended again under the licence-selection record's Tier F
+# authorisation: admits exactly LICENSE and NOTICE. Any further root
+# entry is a new named fence-crossing requiring its own record-backed
+# amendment here.
 ALLOWED_TOP_LEVEL = {"docs", "governance", "tests", "fixtures", "scripts",
                      "engine",
                      "README.md", ".gitignore", ".git",
-                     "requirements.txt",
+                     "requirements.txt", "LICENSE", "NOTICE",
                      ".public-safety.local.txt"}
 APPROVED_MANIFEST = "requirements.txt"
 APPROVED_MANIFEST_LINES = {"PyNaCl==1.6.2", "cffi==2.0.0", "pycparser==3.0"}
