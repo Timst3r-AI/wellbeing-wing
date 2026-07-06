@@ -48,3 +48,29 @@ class FileStorage:
 
     def exists(self) -> bool:
         return self._path.exists()
+
+
+class DirectoryTarget:
+    """Restore's write target: an empty directory, member files by name.
+
+    is_empty() exists only as the empty-target refusal guard - reading
+    emptiness to refuse is not discovery. There is no listing, no
+    crawling, no merge, and no overwrite here: member names come from
+    the caller's validated manifest, never from the filesystem, and a
+    name must be a plain file name (no separators, no traversal).
+    """
+
+    def __init__(self, path: str | Path) -> None:
+        self._path = Path(path)
+
+    def is_empty(self) -> bool:
+        if not self._path.exists():
+            return True
+        return next(self._path.iterdir(), None) is None
+
+    def child(self, name: str) -> FileStorage:
+        if (not name or Path(name).name != name
+                or name in (".", "..")):
+            raise ValueError("member name must be a plain file name")
+        self._path.mkdir(parents=True, exist_ok=True)
+        return FileStorage(self._path / name)

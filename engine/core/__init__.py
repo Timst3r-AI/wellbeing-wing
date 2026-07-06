@@ -5,6 +5,12 @@ behaviour (cryptography, storage, time, the ledger) enters only
 through the ports package.
 """
 
+from engine.core.backup import (
+    BACKUP_VERSION,
+    BackupError,
+    export_backup,
+    restore_backup,
+)
 from engine.core.custody import (
     CustodyError,
     change_passphrase,
@@ -151,4 +157,8 @@ __all__ = [
     "append_event",
     "read_events",
     "erase_ledger",
+    "BACKUP_VERSION",
+    "BackupError",
+    "export_backup",
+    "restore_backup",
 ]

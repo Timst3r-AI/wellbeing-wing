@@ -20,6 +20,7 @@ Every format is versioned from its first byte and refuses unknown versions, malf
 | Record | `core/record.py` | — (see note) | version 2 + length-prefixed provenance JSON + length-prefixed payload; exact-length enforced |
 | Key envelope | `core/envelope.py` | `WBWK` | magic 4 + version 2 + profile name + parameters + salt + sealed master; exact-length enforced |
 | Ledger | `core/ledger_store.py` | `WBWL` | 16-byte header (magic 4 + version 2 + reserved 10), then length-prefixed frames, each frame its own small ciphertext decrypting to one event; torn tail refused with intact history preserved |
+| Backup | `core/backup.py` | `WBWB` | 16-byte public header + length-prefixed reachable key envelope (WBWK ciphertext) + sealed payload authenticated under the restored master, holding manifest, sealed records, and ledger — no names, cardinality, or structure outside the sealed payload |
 
 **Honest note on the record format:** the inner record carries no magic of its own. This is accepted and documented, not hidden: record bytes exist only inside sealed store plaintext, so context disambiguates, and the leading version field refuses foreign bytes — the cross-decoder tests prove each format's bytes are refused by every other format's decoder. The store header is a prefix format by design (the bytes after it are ciphertext), so a trailing-bytes refusal does not apply to it.
 
@@ -47,6 +48,10 @@ The transition catalogue, runnable matrix, and pure validator exist (`core/trans
 - **Events are emitted by the appliers and kept by the caller-side ledger store** (`core/ledger_store.py`, per the durable-ledger doctrine record): independently sealed append frames under the master key, append-only (prior bytes byte-identical after every append), torn tail refused with intact history preserved (one-event blast radius on this platform's non-atomic appends), whole-ledger erasure as the user's explicit act only. The appliers remain pure and never see the store. v1 keeps the events that exist today; import/custody emission is a named future extension.
 - **Truth labels remain unpersistable.** The applier can compute confirmed states in memory during gated synthetic tests; the profile write path refuses them regardless, and no non-test store receives a truth label. No review surface, no approval surface, no extraction, no model contact.
 - **T8 performs supersession only** — the old item is retained and relabelled, the successor linked; there is no reactivation, no undo, and no removal of history, per the grammar's terminal-state rule.
+
+## Backup (W3-D6, in progress)
+
+Backup export and restore symmetry exist (`core/backup.py`, M1): one portable ciphertext file in the WBWB shape above — the key envelope rides *reachable* (restore must derive the master from it before anything else can open; it is never trapped inside the payload it unlocks). Restore is file-plus-passphrase into an **empty target only** — no merge, no overwrite — with the five-step validation order (magic/version, envelope unwrap via the published custody path, payload authentication, structural manifest validation, and only then writes). **No health-record plaintext is decrypted in the restore path**; sealed members move verbatim. Member sets are caller-supplied, always — the engine never crawls, guesses, or discovers files. Single-record export-as-right (M2) and the D6 closure (M3) remain ahead under their own gates; whole-vault plaintext export is deferred to its own future record.
 
 ## Honest residuals (in ink, per ADR 0008)
 
