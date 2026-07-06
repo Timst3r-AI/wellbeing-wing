@@ -7,7 +7,20 @@ a missing test is invisible. run `python -m unittest discover -s tests -v`
 to review the ledger.
 """
 
+import json
+import sys
+import tempfile
 import unittest
+from itertools import product
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from engine.core import (  # noqa: E402
+    AUTHORITY_LABELS, classify_transition, seal, unseal,
+)
+from engine.ports import FileStorage, PyNaClCrypto  # noqa: E402
 
 
 def pending(owner, unblocks_when):
@@ -15,15 +28,57 @@ def pending(owner, unblocks_when):
 
 
 class DeterministicPendingImplementation(unittest.TestCase):
-    @pending("w3 build phase", "the vault data layer and transition engine exist")
+    # Converted from the pending ledger, 2026-07-06: the vault data
+    # layer and transition engine exist (W3-D3, W3-D4 M1/M2), so the
+    # stub's promise is now a running proof.
     def test_D3_transitions_enforced_by_real_engine(self):
         """the real transition engine refuses every illegal path the
         grammar refuses on paper (extends tier 2 to running code)."""
+        grammar = json.loads(
+            (ROOT / "tests" / "grammar" / "d3-transitions.json")
+            .read_text(encoding="utf-8"))
+        labels = sorted(AUTHORITY_LABELS) + [None]
+        truth = grammar["truth_labels"]
+        # paper: agents are forbidden T2/T4/T7 — the running engine
+        # refuses every agent-actored shape of those transitions.
+        for tid in grammar["agent_forbidden_transitions"]:
+            for f, t in product(labels, labels):
+                status = classify_transition(
+                    tid, f, t, "agent-under-e2-grant")["status"]
+                self.assertNotIn(status, ("runnable", "gated"),
+                                 f"paper forbids agents {tid}; engine allowed it")
+        # paper: only the user mints truth — no agent, system, or time
+        # actor reaches a truth label through any catalogued transition.
+        self.assertTrue(grammar["rules"]["only_the_user_mints_truth"])
+        self.assertTrue(grammar["rules"]["automatic_transitions_only_lower_trust"])
+        for actor in ("agent-under-e2-grant", "system-on-user-entry",
+                      "system-flags-user-resolves", "time-automatic"):
+            for tid, f, t in product(grammar["transitions"], labels, truth):
+                status = classify_transition(tid, f, t, actor)["status"]
+                self.assertNotIn(status, ("runnable", "gated"),
+                                 f"paper truth label reached by {actor} via {tid}")
 
-    @pending("w3 build phase", "the residue policy record is accepted and decrypting code exists")
+    # Converted from the pending ledger, 2026-07-06: the residue
+    # policy record is accepted (ADR 0004) and decrypting code exists
+    # (the sealed store, since W3-D2). Heavyweight residue proofs live
+    # in the engine suites; this is the ledger's own compact promise.
     def test_D5_T01_plaintext_residue_none_after_task(self):
         """create, use, terminate: no readable governed content remains
         outside encrypted stores."""
+        marker = b"SYNTHETIC-RESIDUE-MARKER-Persona-K9-Allergen-X"
+        with tempfile.TemporaryDirectory() as ws:
+            storage = FileStorage(Path(ws) / "store.bin")
+            crypto = PyNaClCrypto()
+            key = crypto.random_key()
+            seal(storage, crypto, key,
+                 marker + b" governed synthetic content")   # create
+            self.assertIn(marker, unseal(storage, crypto, key))   # use
+            files = [p for p in Path(ws).rglob("*") if p.is_file()]
+            self.assertEqual([p.name for p in files], ["store.bin"],
+                             "task left more than the sealed store")
+            for f in files:                                   # terminate: sweep
+                self.assertNotIn(marker, f.read_bytes(),
+                                 "readable governed content outside the store")
 
     @pending("w5 adapter phase", "the payload-equality standard record is accepted and an assembler exists")
     def test_D5_T15_T23_payload_equality_at_z3_z4(self):
