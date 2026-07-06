@@ -69,6 +69,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | W2-D3 | phase-record | accepted | 2026-07-05 | `docs/governance/checklist.md` |
 | W2-D4 | phase-record | accepted | 2026-07-05 | `docs/governance/fixtures.md` |
 | W3-AR | phase-record | accepted | 2026-07-05 | `docs/phases/W3-runway-health-vault-profile-foundations.md` |
+| W3-CR | phase-record | accepted | 2026-07-06 | `docs/phases/W3-closure-record.md` |
 | W3-D2-CR | phase-record | accepted | 2026-07-06 | `docs/phases/W3-D2-closure-record.md` |
 | W3-D3-CR | phase-record | accepted | 2026-07-06 | `docs/phases/W3-D3-closure-record.md` |
 | W3-D4-CR | phase-record | accepted | 2026-07-06 | `docs/phases/W3-D4-closure-record.md` |

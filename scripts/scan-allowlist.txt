@@ -52,3 +52,5 @@ LICENSE | external-link | http://www.apache.org/licenses/LICENSE-2.0 | canonical
 NOTICE | companion-framing | or companion software | public-safety boundary statement stating the prohibition
 docs/decisions/0014-licence-selection.md | companion-framing | or companion software | decision text stating the prohibition carried by NOTICE
 docs/phases/W3-D6-closure-record.md | companion-framing | or companion behaviour | closure deferred-list public-safety prohibition statement
+docs/phases/W3-closure-record.md | companion-framing | or companion behaviour | phase-closure deferred-list public-safety prohibition statement
+README.md | companion-framing | or companion product | front-page status public-safety prohibition statement

@@ -965,6 +965,36 @@
       "errata": []
     },
     {
+      "id": "W3-CR",
+      "aliases": [],
+      "title": "W3 Closure Record",
+      "type": "phase-record",
+      "phase": "W3",
+      "deliverable": "D7",
+      "path": "docs/phases/W3-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-06",
+      "role": "Seals W3, Health Vault and Health Profile Foundations, satisfying W3-D7: the six deliverable seals cited by commit with phase-level records noted; every deliverable assessed against the runway (including the D5 absorption disposition); verification at phase closure (218 tests, unmasked scan pass, three pins unchanged since first product code, governance/product boundary held through every landing); the nine future-owned pending stubs named and honestly carried; the incident log (wrong-workspace scare, two Downloads losses, stale relay refused, exit-masking slip caught by the suite); the honest-findings roll-up; the W4/W5 gate naming next-era draft material without reviewing or pre-deciding it; and the deferred list. W4 has not started and must open through its own runway and gate. Authorises nothing to be built.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0013",
+        "ADR-0015",
+        "W3-AR",
+        "W3-D2-CR",
+        "W3-D3-CR",
+        "W3-D4-CR",
+        "W3-D5-CR",
+        "W3-D6-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:1151ccd8ec057deb56c51fc62a529ec20e11b6afd16432a9cd7b60846a331bc7",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "W3-D2-CR",
       "aliases": [],
       "title": "W3-D2 Closure Record",

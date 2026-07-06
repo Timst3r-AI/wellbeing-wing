@@ -2,7 +2,7 @@
 
 A modular, AI-assisted personal wellbeing environment built governance-first.
 
-**Status:** Phase W3 — Health Vault and Health Profile Foundations. W0, W1, W2, W3-D1 (engine doctrine), and W3-D2 (engine spine) are closed. The engine spine exists and is published — encrypted store, import path, key custody, residue-at-scale proof, format-seam confirmation — and the repository remains headless: no UI, no CLI, no model contact, no profile model yet, no backup/export mechanics yet, no licence decision yet. W3-D3 (profile model) has not started.
+**Status:** The current published state is a governed, headless engine foundation. W3 — Health Vault and Health Profile Foundations — is complete and closed as of 2026-07-06: the vault store, import path, key custody, health profile object model, transition engine, residue evidence accounting, durable ledger store, encrypted backup/restore, and single-record export-as-right are all published and sealed. There is still no user interface, command-line tool, hosted sync, assistant, medical/therapeutic/diagnostic/crisis function, or companion product. W4 has not started and must open through its own runway/gate.
 
 ---
 
@@ -40,8 +40,8 @@ Not a medical device. Not a treatment platform. Not an AI therapist. Not an enga
 | **W0** | Constitution — laws, boundaries, risks, open questions | ✅ Accepted (2026-06-12) |
 | **W1** | Governance architecture and data boundary design | ✅ Closed — all deliverables accepted (2026-06-12) |
 | **W2** | Governance evaluation & enforcement foundations — making the governance testable, nothing user-facing | ✅ Closed (2026-07-05) |
-| **W3** | Health Vault and Health Profile foundations | In progress — D1 engine doctrine closed (2026-07-05); D2 engine spine closed (2026-07-06); D3 profile model not started |
-| W4+ | Rooms, adapters, and surfaces — defined as W3 progresses, each through its own gate | — |
+| **W3** | Health Vault and Health Profile foundations | ✅ Closed (2026-07-06) — Health Vault and Health Profile Foundations complete and sealed. |
+| W4+ | Rooms, adapters, and surfaces — each through its own gate | Next phase — gated; not started. |
 
 ## Repository structure
 
