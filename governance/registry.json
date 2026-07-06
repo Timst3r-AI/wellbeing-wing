@@ -991,6 +991,36 @@
       "content_hash": "sha256:84150de7e72009789075b9a848534fca6b070136ee1f15009c4b1dd3d14286b0",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W3-D4-CR",
+      "aliases": [],
+      "title": "W3-D4 Closure Record",
+      "type": "phase-record",
+      "phase": "W3",
+      "deliverable": "D4",
+      "path": "docs/phases/W3-D4-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-06",
+      "role": "Seals W3-D4, the transition engine: the published chain (M1 catalogue/matrix/validator, M2 applier with user-act gating, the pending-ledger cleanup) cited by commit, the planning-brief and in-flight rulings restated as the deliverable decision anchor, verification state at closure (180 tests, scan pass, registry and manifest untouched by the milestones, truth-label persistence refusal cross-checked live), honest findings carried forward (repository-scoped UserAct guarantees, events emitted not stored, truth labels unpersistable, clockless T5 marker, T1 dormant, T8 terminal), and the deferred list. States plainly that W3-D5 and later deliverables are unstarted. Authorises nothing to be built.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0004",
+        "ADR-0005",
+        "ADR-0009",
+        "ADR-0010",
+        "ADR-0013",
+        "W1-D3",
+        "W3-AR",
+        "W3-D3-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:06c799835f838815ccd18493a914391914ec51127113281ce24b8b4de698b7d5",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
