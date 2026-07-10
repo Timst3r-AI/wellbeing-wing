@@ -62,3 +62,5 @@ docs/decisions/0016-room-contract-template.md | companion-framing | or companion
 docs/decisions/0016-room-contract-template.md | companion-framing | No companion framing appears except where a sentence names a prohibition | ADR 0016 public-safety prohibition statement
 docs/decisions/0017-room-isolation-model.md | companion-framing | or companion behaviour | ADR 0017 non-goals public-safety prohibition statement
 docs/decisions/0017-room-isolation-model.md | companion-framing | No companion framing appears except where a sentence names a prohibition | ADR 0017 public-safety prohibition statement
+docs/decisions/0018-read-write-scope-confirmation.md | companion-framing | or companion behaviour | ADR 0018 non-goals public-safety prohibition statement
+docs/decisions/0018-read-write-scope-confirmation.md | companion-framing | No companion framing except where a sentence names a prohibition | ADR 0018 public-safety prohibition statement

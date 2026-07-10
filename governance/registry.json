@@ -512,6 +512,36 @@
       "errata": []
     },
     {
+      "id": "ADR-0018",
+      "aliases": [],
+      "title": "0018 — Read/Write Scope Confirmation",
+      "type": "adr",
+      "phase": "W4",
+      "deliverable": "W4-D1",
+      "path": "docs/decisions/0018-read-write-scope-confirmation.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-10",
+      "role": "Confirms W1-D1 as the sole source of truth for every room's read and write scope and fixes the fidelity mechanism: contracts carry scope only through the paired form — an exact W1-D1 reference (record, section, edge/scope id) as controlling authority plus a complete verbatim quotation (punctuation and qualifiers preserved) for legibility; a quotation/reference mismatch fails review; paraphrase is prohibited; the source-backed blur-word set (generally, such as, including, including but not limited to) and the broader anti-drift rule bind within scope clauses; scope amendments land in W1-D1 first and contracts follow, never lead; absence of a D1 edge means absence of authority and consent cannot create an absent edge; rooms write only their own authorised record classes with the D3-T3 label-on-entry by reference; no room writes into another room's jurisdiction. Records that direct reading of live W1-D1 exposed wording drift in the W4 pack and runway summaries — D1 wins, those are planning materials not scope authority. Fills ADR 0016's Read/Write Scope slots; complementary to ADR 0017's isolation. Confirms and transmits scope, mints none. Authorises no implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "ADR-0003",
+        "ADR-0016",
+        "ADR-0017",
+        "W4-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:f0d82383474f527e8ec72eec6f727b29d0840aa88dd5a562727967fe075b3f9f",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",

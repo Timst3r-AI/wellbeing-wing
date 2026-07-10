@@ -56,6 +56,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | ADR-0015 | adr | accepted | 2026-07-06 | `docs/decisions/0015-durable-ledger.md` |
 | ADR-0016 | adr | accepted | 2026-07-10 | `docs/decisions/0016-room-contract-template.md` |
 | ADR-0017 | adr | accepted | 2026-07-10 | `docs/decisions/0017-room-isolation-model.md` |
+| ADR-0018 | adr | accepted | 2026-07-10 | `docs/decisions/0018-read-write-scope-confirmation.md` |
 | REGISTRY-JSON | phase-record | accepted | 2026-07-05 | `governance/registry.json` |
 | REGISTRY-MD | phase-record | accepted | 2026-07-05 | `docs/governance/registry.md` |
 | W0 | constitution | accepted | 2026-06-12 | `docs/constitution/W0-wellbeing-wing-constitution.md` |
