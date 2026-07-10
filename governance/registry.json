@@ -1146,6 +1146,40 @@
       "content_hash": "sha256:385fba4a014222a14412e53a33d55c4301d8e9929250fe1a70aa117cf710f3c0",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W4-AR",
+      "aliases": [
+        "W4-runway"
+      ],
+      "title": "W4 — Room Contracts (Phase Runway / Alignment Brief)",
+      "type": "phase-record",
+      "phase": "W4",
+      "deliverable": null,
+      "path": "docs/phases/W4-runway-room-contracts.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-10",
+      "role": "The W4 phase runway: four room-contract jurisdictions (Wellness, Kitchen, Gym, Meditation); the six required doctrine records (DR-W4-01 through DR-W4-06); deliverable sequence W4-D1 through W4-D7; explicit non-goals; forward dependencies (W5 adapter isolation enforcement, W6 governed string catalogue) named and carried, not blocking; and the entry gate (three documents, three acceptances). Authorises future W4 briefs, not scaffolding and not implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "ADR-0001",
+        "ADR-0002",
+        "ADR-0003",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "W1-D5",
+        "W1-D6",
+        "W3-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "future-governed",
+      "open_decisions": [],
+      "content_hash": "sha256:8e48a161ce3cd6d4d49b5bf996a50118c26bdd82e60c8e73376a55dc93f57baf",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

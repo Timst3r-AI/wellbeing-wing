@@ -54,3 +54,7 @@ docs/decisions/0014-licence-selection.md | companion-framing | or companion soft
 docs/phases/W3-D6-closure-record.md | companion-framing | or companion behaviour | closure deferred-list public-safety prohibition statement
 docs/phases/W3-closure-record.md | companion-framing | or companion behaviour | phase-closure deferred-list public-safety prohibition statement
 README.md | companion-framing | or companion product | front-page status public-safety prohibition statement
+docs/phases/W4-runway-room-contracts.md | companion-framing | or companion behaviour | W4 runway north-star public-safety prohibition statement
+docs/phases/W4-runway-room-contracts.md | companion-framing | or companion behaviour of any kind | W4 runway explicit non-goals public-safety prohibition statement
+docs/phases/W4-runway-room-contracts.md | companion-framing | no companion framing beyond naming a prohibition | W4 runway public-safety note prohibition statement
+docs/phases/W4-runway-room-contracts.md | companion-framing | except where the sentence names the prohibition itself | W4 runway prohibition-statement class note

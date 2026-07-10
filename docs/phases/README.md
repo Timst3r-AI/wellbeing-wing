@@ -84,6 +84,14 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 | W3-D6 — Closure Record | [`W3-D6-closure-record.md`](W3-D6-closure-record.md) | Accepted by human reviewer, 2026-07-06 — Tier J: seals export/backup/restore — published chain cited by commit; the seven planning rulings (headlined by the WBWB circularity correction) and two M2 rulings restated; consumed ADR 0015 inputs named; the WBWB container shape, five-step restore validation order, and export-right contract carried in ink; honest findings and deferred list preserved; authorises nothing to be built; W3-D7 not started |
 | W3-D7 — W3 Closure Record | [`W3-closure-record.md`](W3-closure-record.md) | Accepted by human reviewer, 2026-07-06 — Tier J: seals the phase — the six deliverable seals cited by commit, criteria assessed against the runway, verification state, the nine future-owned pending stubs named, the incident log (five entries with lessons), the honest-findings roll-up, the W4/W5 gate naming next-era draft material without pre-deciding it, and the deferred list; authorises nothing to be built; W4 not started |
 
-## W4 and beyond
+## W4 — Room Contracts
 
-Defined as W3 progresses. Rooms, adapters, and surfaces are designed only after the spine they must obey exists — and only through their own gates.
+**Scope:** The first jurisdiction phase: four room contracts — Wellness, Kitchen, Gym, Meditation — each a written, testable statement of what a room may read, may write, must never infer, and how it behaves when relied-on context is unknown, stale, or contradicted. Built on the sealed engine spine and the W1 data-boundary map. No adapters, no models, no review surfaces, no UI — the contracts constrain future capability; they are not capability.
+
+**Runway:** [`W4-runway-room-contracts.md`](W4-runway-room-contracts.md)
+
+**Status:** **Runway accepted by human reviewer, 2026-07-10 — gate document two of the entry gate** (the W3 closure record is document one; the first W4 deliverable brief, DR-W4-01, is document three and remains pending). **W4 is not open.** Acceptance of the runway authorises W4 *briefs only*, each prepared and landed through its own review/gate ceremony; it authorises no scaffolding and no implementation. Proposed deliverable sequence W4-D1 (six room-contract doctrine records) through W4-D7 (closure), with forward dependencies on the W5 adapter layer (isolation enforcement) and the W6 governed string catalogue (wording routing) named and carried, not blocking.
+
+## W5 and beyond
+
+Defined as W4 progresses. Adapters and review surfaces are designed only after the room contracts they must obey exist — and only through their own runways and gates.
