@@ -483,6 +483,35 @@
       "errata": []
     },
     {
+      "id": "ADR-0017",
+      "aliases": [],
+      "title": "0017 — Room Isolation Model",
+      "type": "adr",
+      "phase": "W4",
+      "deliverable": "W4-D1",
+      "path": "docs/decisions/0017-room-isolation-model.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-10",
+      "role": "Sets the room-isolation standard that fills every room contract's Processing Boundary section: architectural isolation as doctrine — each room's processing interaction occurs in a context that has never contained another room's content; one processing grant binds exactly one room and the context derives from the grant; no interface accepts content from two rooms; cross-room content is unreachable, not merely forbidden; filtering or output controls alone are insufficient; grant scoping and isolation are separate complementary walls; W5 must later realise the property while W4 specifies no mechanism; behavioural evaluations still apply; any future exception requires its own accepted record with fixed minimum contents and no silent downgrade to policy isolation; the Meditation Room receives the uniform standard while its no-outward-signal property is left to DR-W4-04. The display-vs-processing-context split and per-room context-cost evidence are deferred to W5. Authorises no implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W1-D5",
+        "ADR-0003",
+        "ADR-0016",
+        "W4-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:1ffac9f9a73833f94a7b6689d55b3927ca5295a7572d20f5a231442454bee589",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",

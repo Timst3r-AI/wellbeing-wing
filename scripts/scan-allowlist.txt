@@ -60,3 +60,5 @@ docs/phases/W4-runway-room-contracts.md | companion-framing | no companion frami
 docs/phases/W4-runway-room-contracts.md | companion-framing | except where the sentence names the prohibition itself | W4 runway prohibition-statement class note
 docs/decisions/0016-room-contract-template.md | companion-framing | or companion behaviour | ADR 0016 non-goals public-safety prohibition statement
 docs/decisions/0016-room-contract-template.md | companion-framing | No companion framing appears except where a sentence names a prohibition | ADR 0016 public-safety prohibition statement
+docs/decisions/0017-room-isolation-model.md | companion-framing | or companion behaviour | ADR 0017 non-goals public-safety prohibition statement
+docs/decisions/0017-room-isolation-model.md | companion-framing | No companion framing appears except where a sentence names a prohibition | ADR 0017 public-safety prohibition statement
