@@ -90,7 +90,13 @@ A phase is closed when its deliverables are complete, reviewed, and checked agai
 
 **Runway:** [`W4-runway-room-contracts.md`](W4-runway-room-contracts.md)
 
-**Status:** **Runway accepted by human reviewer, 2026-07-10 — gate document two of the entry gate** (the W3 closure record is document one; the first W4 deliverable brief, DR-W4-01, is document three and remains pending). **W4 is not open.** Acceptance of the runway authorises W4 *briefs only*, each prepared and landed through its own review/gate ceremony; it authorises no scaffolding and no implementation. Proposed deliverable sequence W4-D1 (six room-contract doctrine records) through W4-D7 (closure), with forward dependencies on the W5 adapter layer (isolation enforcement) and the W6 governed string catalogue (wording routing) named and carried, not blocking.
+**Status:** **The three-document W4 entry gate is complete:** the W3 closure record is gate document one, the W4 runway is gate document two, and the accepted DR-W4-01 first-deliverable brief is gate document three. **ADR 0016 (Room Contract Template) is the first landed W4 doctrine record.** **W4 is open for governed doctrine and brief work only.** This authorises no scaffolding, no room-contract files, no validator implementation, no adapter work, no review surfaces, no engine changes, and no W5/W6 implementation. Every later W4 record and deliverable still requires its own brief, review, and ceremony. *Opening is effective on publication:* while the ADR-0016 commit remains local it is not yet in force; W4's opening takes effect only once ADR-0016 is published on `origin/main` and verified. The proposed deliverable sequence runs W4-D1 (six room-contract doctrine records) through W4-D7 (closure), with forward dependencies on the W5 adapter layer (isolation enforcement) and the W6 governed string catalogue (wording routing) named and carried, not blocking.
+
+**Deliverables:**
+
+| Deliverable | Documents | Status |
+|---|---|---|
+| W4-D1 — Room Contract Template (DR-W4-01) | [`../decisions/0016-room-contract-template.md`](../decisions/0016-room-contract-template.md) | Accepted by human reviewer, 2026-07-10 — Tier J: the fixed eleven-section room-contract template (fixed order and numbering, every section present and non-blank, "not applicable" written with a reason, a mandatory eleventh open-questions section reading "None at acceptance." when empty, and the Meditation reads-nothing case as the worked N/A example); decides the skeleton only — it fills no room's sections and gates the four room contracts (W4-D2…D5) and the conformance validator (W4-D6); no contract, validator, adapter, surface, or engine code; wording sections route to the future W6 governed string catalogue as review-of-record |
 
 ## W5 and beyond
 

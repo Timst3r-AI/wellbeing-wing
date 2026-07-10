@@ -456,6 +456,33 @@
       "errata": []
     },
     {
+      "id": "ADR-0016",
+      "aliases": [],
+      "title": "0016 — Room Contract Template",
+      "type": "adr",
+      "phase": "W4",
+      "deliverable": "W4-D1",
+      "path": "docs/decisions/0016-room-contract-template.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-10",
+      "role": "Fixes the room-contract template: eleven required sections in fixed order and numbering, each present and non-blank, 'not applicable' written with a reason, a mandatory eleventh open-questions section reading 'None at acceptance.' when empty, and the Meditation reads-nothing case as the worked N/A example (no bespoke exception). Decides the skeleton only; fills no room's sections. Gates the four room contracts (W4-D2 through W4-D5) and the contract-conformance validator (W4-D6). Wording sections route to the future W6 governed string catalogue as review-of-record. Authorises no scaffolding and no implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D3",
+        "ADR-0003",
+        "W4-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:2769b40940e6c2aaa66992e597cf08efd53b4699d34e19a818b1c791f823beaf",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",

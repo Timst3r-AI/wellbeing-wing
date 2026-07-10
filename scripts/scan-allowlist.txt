@@ -58,3 +58,5 @@ docs/phases/W4-runway-room-contracts.md | companion-framing | or companion behav
 docs/phases/W4-runway-room-contracts.md | companion-framing | or companion behaviour of any kind | W4 runway explicit non-goals public-safety prohibition statement
 docs/phases/W4-runway-room-contracts.md | companion-framing | no companion framing beyond naming a prohibition | W4 runway public-safety note prohibition statement
 docs/phases/W4-runway-room-contracts.md | companion-framing | except where the sentence names the prohibition itself | W4 runway prohibition-statement class note
+docs/decisions/0016-room-contract-template.md | companion-framing | or companion behaviour | ADR 0016 non-goals public-safety prohibition statement
+docs/decisions/0016-room-contract-template.md | companion-framing | No companion framing appears except where a sentence names a prohibition | ADR 0016 public-safety prohibition statement
