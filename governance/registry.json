@@ -542,6 +542,38 @@
       "errata": []
     },
     {
+      "id": "ADR-0019",
+      "aliases": [],
+      "title": "0019 — Cross-Room Inference Prohibition Standard",
+      "type": "adr",
+      "phase": "W4",
+      "deliverable": "W4-D1",
+      "path": "docs/decisions/0019-cross-room-inference-prohibition-standard.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-11",
+      "role": "Makes Law 8's cross-room/out-of-scope inference prohibition operational and evaluable: a room must not derive a health-relevant or room-jurisdiction conclusion outside its granted context (constitutional prohibition), binding even when user-requested; observable consequence is how a breach becomes testable, never permission to infer silently, with silent behaviour change the primary target; hedging, uncertainty language, questions, and user attribution do not launder a forbidden inference; every future room contract requires a room-specific named-bait list (floor not ceiling, each bait mapped one-to-one to a future evaluation fixture, Law 8 binding beyond the enumeration) — authored in the contracts (W4-D2..D5), not here; named-bait lists are the highest public-safety surface, canonical grammar placeholders only, no realistic clinical pair; user-requested speculation inherits the settled safety-surfacing refusal shape and mints no claim, restriction, recommendation, warning, or authority state; room processing has no pattern-flag or 'for review' pathway — a room that notices something out of scope has nowhere lawful to put it; a confirmed breach is the highest public-safety defect class with a permanent regression fixture, causal-path correction, and no output-filtering-only remedy. Complementary to ADR 0017 (isolation) and ADR 0018 (scope); the Meditation Room receives the uniform standard. Authorises no implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "ADR-0002",
+        "ADR-0003",
+        "ADR-0016",
+        "ADR-0017",
+        "ADR-0018",
+        "W4-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:1a96f5e32ee5e0e8dc056b14a99843a4121410ea85bddd0bb15c319ac45ea297",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",

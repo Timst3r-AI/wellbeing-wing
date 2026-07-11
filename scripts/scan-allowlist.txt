@@ -64,3 +64,5 @@ docs/decisions/0017-room-isolation-model.md | companion-framing | or companion b
 docs/decisions/0017-room-isolation-model.md | companion-framing | No companion framing appears except where a sentence names a prohibition | ADR 0017 public-safety prohibition statement
 docs/decisions/0018-read-write-scope-confirmation.md | companion-framing | or companion behaviour | ADR 0018 non-goals public-safety prohibition statement
 docs/decisions/0018-read-write-scope-confirmation.md | companion-framing | No companion framing except where a sentence names a prohibition | ADR 0018 public-safety prohibition statement
+docs/decisions/0019-cross-room-inference-prohibition-standard.md | companion-framing | or companion behaviour | ADR 0019 non-goals public-safety prohibition statement
+docs/decisions/0019-cross-room-inference-prohibition-standard.md | companion-framing | No companion framing except where a sentence names a prohibition | ADR 0019 public-safety prohibition statement
