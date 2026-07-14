@@ -574,6 +574,37 @@
       "errata": []
     },
     {
+      "id": "ADR-0020",
+      "aliases": [],
+      "title": "0020 — Unknown/Stale/Contradicted Behaviour Standard",
+      "type": "adr",
+      "phase": "W4",
+      "deliverable": "W4-D1",
+      "path": "docs/decisions/0020-unknown-stale-contradicted-behaviour-standard.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-11",
+      "role": "Fixes the one shared unknown/stale/expired/contradicted behaviour table for all four rooms, with W1-D3 as the controlling source: all six state labels (current, review due, stale, expired, superseded, unknown freshness) with their verbatim semantics; the table carried into every contract by exact reference plus complete verbatim quotation, never re-derived or paraphrased; rooms instantiate wording, not rules; unknown means unknown — absence is never confirmation and gaps are never filled from another room, earlier interaction, or behavioural pattern; contradiction is held honestly with both sources, dates, and provenance surfaced, and newer is not truer until the user says so — no room resolves an authority dispute; for the safety-relevant set (allergy, medication, condition, injury, per W1-D3 6.3) the inline uncertainty sentence is always shown, not grace-conditioned; most-protective framing is surfacing and verbal only and mints no claim, diagnosis, inference, restriction, recommendation, unsupported warning, status, substituted value, consent state, or authority state; for safety-relevant expired/contradicted/unknown context the room acknowledges the state and reason inline before continuing — a surfacing-order requirement, explicitly not a functional block; the W1-D3 10.6 block-vs-warn question remains open with the 6.4 floor carried in every row (no room may present stale or unknown health context as stable truth, ever); ADR 0002 is consulted as precedent only; final room-register strings and catalogue IDs belong to W6, this record serving as review of record until the governed string catalogue exists. Authorises no implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "ADR-0003",
+        "ADR-0016",
+        "ADR-0018",
+        "ADR-0019",
+        "W4-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:1b7bcefb42f83a1b5c5a0004915d7ab43fcfe36f178de4967652990f3c8c6af8",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",

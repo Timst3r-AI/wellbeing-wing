@@ -66,3 +66,5 @@ docs/decisions/0018-read-write-scope-confirmation.md | companion-framing | or co
 docs/decisions/0018-read-write-scope-confirmation.md | companion-framing | No companion framing except where a sentence names a prohibition | ADR 0018 public-safety prohibition statement
 docs/decisions/0019-cross-room-inference-prohibition-standard.md | companion-framing | or companion behaviour | ADR 0019 non-goals public-safety prohibition statement
 docs/decisions/0019-cross-room-inference-prohibition-standard.md | companion-framing | No companion framing except where a sentence names a prohibition | ADR 0019 public-safety prohibition statement
+docs/decisions/0020-unknown-stale-contradicted-behaviour-standard.md | companion-framing | or companion behaviour | ADR 0020 non-goals public-safety prohibition statement
+docs/decisions/0020-unknown-stale-contradicted-behaviour-standard.md | companion-framing | No companion framing except where a sentence names a prohibition | ADR 0020 public-safety prohibition statement
