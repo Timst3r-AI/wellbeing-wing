@@ -59,6 +59,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | ADR-0018 | adr | accepted | 2026-07-10 | `docs/decisions/0018-read-write-scope-confirmation.md` |
 | ADR-0019 | adr | accepted | 2026-07-11 | `docs/decisions/0019-cross-room-inference-prohibition-standard.md` |
 | ADR-0020 | adr | accepted | 2026-07-11 | `docs/decisions/0020-unknown-stale-contradicted-behaviour-standard.md` |
+| ADR-0021 | adr | accepted | 2026-07-15 | `docs/decisions/0021-contract-validator-requirements.md` |
 | REGISTRY-JSON | phase-record | accepted | 2026-07-05 | `governance/registry.json` |
 | REGISTRY-MD | phase-record | accepted | 2026-07-05 | `docs/governance/registry.md` |
 | W0 | constitution | accepted | 2026-06-12 | `docs/constitution/W0-wellbeing-wing-constitution.md` |

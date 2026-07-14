@@ -605,6 +605,36 @@
       "errata": []
     },
     {
+      "id": "ADR-0021",
+      "aliases": [],
+      "title": "0021 — Contract Validator Requirements",
+      "type": "adr",
+      "phase": "W4",
+      "deliverable": "W4-D1",
+      "path": "docs/decisions/0021-contract-validator-requirements.md",
+      "status": "accepted",
+      "accepted_date": "2026-07-15",
+      "role": "Draws the contract-validator line by decidability, not implementation cost: a term is mechanically checkable if and only if its correctness is decidable from deterministic repository artefacts without interpretation — a judging validator is doctrine minting by machinery and is not built; every Validator hooks entry classifies its term as exactly mechanical or review-only with compound terms decomposed and no ambiguous middle; fixes thirteen mechanical validator classes (structure, order, non-blankness, N/A-reason presence, open-questions wording, hooks completeness, exact reference-and-quotation fidelity, load-bearing and blur-word checks, shared-table fidelity, named-bait declaration structure, placeholder token mechanics, cross-reference and anti-map coherence, catalogue-dormancy declaration) and twelve review-only classes (adequacy, aptness, completeness, register, constitutional soundness, semantic minting, runtime matters, clinical judgement); contract validators inspect documents only — behavioural and runtime checks are evaluation territory and no runtime validator is authorised; failure evidence is minimal and public-safe (hashes, counts, identifiers, bounded values; no contract dumps); a mechanical pass never equals acceptance, safety, completeness, or implementation permission, and a failure amends nothing; validators extend the one existing deterministic suite with phase-named tests; DR-W4-06 doctrine is distinct from the later W4-D6 plan/build, and validator implementation is gated until all four room contracts are accepted — built against accepted contracts, never drafts; the catalogue-ID class is W6-dependent, dormant, and dependency-named with no fake, provisional, or temporary IDs. Adds no new room rule. Authorises no implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "ADR-0003",
+        "ADR-0016",
+        "ADR-0017",
+        "ADR-0018",
+        "ADR-0019",
+        "ADR-0020",
+        "W4-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:627f5fc7aea4a969f456086c940cbd4e5f486bf9c506d44a51d710749f3a0df6",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
       "id": "REGISTRY-JSON",
       "aliases": [],
       "title": "Governance Registry (machine-readable manifest)",
