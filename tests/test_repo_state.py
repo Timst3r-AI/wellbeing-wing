@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "governance" / "registry.json"
 SCOPE_DIRS = [
     "docs/constitution", "docs/decisions", "docs/architecture",
-    "docs/phases", "docs/governance",
+    "docs/phases", "docs/governance", "docs/rooms",
 ]
 REGISTRY_ARTIFACT_IDS = {"REGISTRY-JSON", "REGISTRY-MD"}
 EXCLUSION_REASON = "registry artifact — self-reference exclusion"
