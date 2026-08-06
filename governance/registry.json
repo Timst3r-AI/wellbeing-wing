@@ -1394,6 +1394,41 @@
       "content_hash": "sha256:c82221e15a3d0651cb5facf0ad8224cb3b1ebd7cd29df5216203f7758470d9db",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W4-D3",
+      "aliases": [],
+      "title": "W4-D3 — Kitchen Room Contract",
+      "type": "room-contract",
+      "phase": "W4",
+      "deliverable": "W4-D3",
+      "path": "docs/rooms/kitchen-room-contract.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-04",
+      "role": "The second room contract: the Kitchen Room's laws in the exact accepted words of their sources. Eleven ADR-0016 sections; read scope (E6, allergies and confirmed dietary requirements only), write scope (C1 records — recipes/preferences #9, grocery/staples #10, meal plans #11), and the E10 outward vendor boundary all carried by ADR-0018's paired form; category #11 embeds E6 under a C3-handling rule while remaining C1; a five-item named-bait floor (KITCH-B1 through KITCH-B5, a floor not a ceiling, each declaring exactly one future W4-D6 evaluation fixture that does not yet exist); ADR-0020's one shared behaviour table carried verbatim across all six W1-D3 states plus contradicted context, with allergy the live safety-relevant read and confirmed dietary requirements non-safety by default; ADR-0017 isolation declared, not operationally enforced (W5); the E10 payload is bare item identity only, declared as a boundary only; the contract establishes no VendorAdapter, connector, or enforcement, claims none has been implemented or verified, and authorises none. Wording strings route to the future W6 governed string catalogue as review-of-record. Carries inherited matters (W1-D3 §10.6; E6 display/processing as a W5 dependency; W6 binding) but owns and resolves none. Authorises no scaffolding, no implementation, and no transmission.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "ADR-0002",
+        "ADR-0003",
+        "ADR-0016",
+        "ADR-0017",
+        "ADR-0018",
+        "ADR-0019",
+        "ADR-0020",
+        "ADR-0021",
+        "W4-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:66439446401490ebbe11dad5b99ac108c066904c169bec1d2d775ff4030e9446",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

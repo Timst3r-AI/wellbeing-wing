@@ -72,3 +72,5 @@ docs/decisions/0021-contract-validator-requirements.md | companion-framing | or 
 docs/decisions/0021-contract-validator-requirements.md | companion-framing | No companion framing except where a sentence names a prohibition | ADR 0021 public-safety prohibition statement
 docs/rooms/wellness-room-contract.md | companion-framing | clinician, or companion | section 1 identity public-safety prohibition statement, not companion behaviour (the room is expressly not a companion)
 docs/rooms/wellness-room-contract.md | companion-framing | companion, therapeutic, or clinical framing | section 7 speech public-safety prohibition statement, not companion behaviour (the room never adopts companion framing)
+docs/rooms/kitchen-room-contract.md | companion-framing | an agent, or a companion | section 1 identity public-safety prohibition statement, not companion behaviour (the room expressly denies agent and companion identity)
+docs/rooms/kitchen-room-contract.md | companion-framing | companion, therapeutic, or clinical framing | section 7 speech public-safety prohibition statement, not companion behaviour (the room expressly denies companion framing)
