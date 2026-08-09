@@ -80,6 +80,8 @@ Doctrine-level classes, each source-verified as decidable. Common columns, state
 | M12 | Anti-map consistency — forbidden items intersect no granted edge; the Meditation contract asserts exactly its complete edge list | ADR 0018 | Section 8 vs section 2 | Set intersection over enumerated identifiers | Empty intersection; Meditation set exact | The intersecting or missing identifier |
 | M13 | Catalogue-ID dormancy — no catalogue-ID check claimed active before W6 | W4-AR ruling; §19 | Declared validator classes | The deferral declaration is itself an artefact | Class declared dormant with its named dependency and activation condition | An active claim before W6 |
 
+*The M10 and M12 requirements in this matrix are corrected by [ADR 0022](0022-contract-validator-m10-m12-correction.md) (accepted 2026-08-09).*
+
 **Nothing above is mechanical merely because a regex is possible:** each row rests on a closed word list, a fixed template position, an exact source text, an enumerable identifier set, or a counted structural declaration.
 
 **M9 boundary (ruled):** the mechanical check covers the **declaration only.** It must not determine whether the future fixture currently exists before fixtures are authorised; whether the fixture is behaviourally adequate; whether the bait is substantively complete; whether a model takes the bait; whether forbidden inference occurs at runtime; or whether a proposed scenario is clinically or semantically appropriate. Fixture existence, fixture-format activation, and behavioural adequacy belong to the future W4-D6 plan and evaluation work.

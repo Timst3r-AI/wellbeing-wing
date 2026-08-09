@@ -630,9 +630,14 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:627f5fc7aea4a969f456086c940cbd4e5f486bf9c506d44a51d710749f3a0df6",
+      "content_hash": "sha256:de685b23f646c7883b1f0ed4f215d3db5428e78d7a2fb46af3dc90b6e4d5456e",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-08-09",
+          "note": "The section 11 mechanical validator requirements matrix gained a one-line pointer to ADR 0022 (Contract Validator M10/M12 Decidability Correction), which corrects the M10 and M12 requirements. Non-semantic: no corrected rule is restated in this document. Amendment made via decision record per checklist rule 2; hash recomputed in the same commit."
+        }
+      ]
     },
     {
       "id": "REGISTRY-JSON",
@@ -1497,6 +1502,41 @@
       "implementation_permission": "none",
       "open_decisions": [],
       "content_hash": "sha256:66e94399af45512a2c00ccfebb90e88f629a25ab00540ab7115de63f930b3077",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0022",
+      "aliases": [],
+      "title": "0022 — Contract Validator M10/M12 Decidability Correction",
+      "type": "adr",
+      "phase": "W4",
+      "deliverable": "W4-D6",
+      "path": "docs/decisions/0022-contract-validator-m10-m12-correction.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-09",
+      "role": "The M10/M12 decidability correction to ADR 0021, arising from W4-D6 Lane A implementation. Corrects two mechanical validator classes that could not be satisfied as written: M12's anti-map clause, whose empty-intersection pass condition failed all four accepted room contracts because every accepted section 8 names its granted boundary relationally rather than enumerating forbidden identifiers; and M10's rejected-token clause, for which no accepted source enumerates a token and whose closed canonical set already decides membership. Restates M12 as M12a anti-map identifier fidelity against a frozen per-contract expectation plus the unchanged M12b Meditation exact-edge rule, and M10 as closed-set contract placeholder membership with a governed contract-token recognition grammar bounded away from fixtures. Carries the corrected Lane A arithmetic and the discovery history. Amends ADR 0021 by correction, not bypass; amends no room contract; authorises no implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W2-D3",
+        "W2-D4",
+        "ADR-0003",
+        "ADR-0016",
+        "ADR-0018",
+        "ADR-0019",
+        "ADR-0021",
+        "W4-AR",
+        "W4-D2",
+        "W4-D3",
+        "W4-D4",
+        "W4-D5"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:5ca7dd6eb9eff73105f749074cb61484fdf9636659bf5ae5f451a052db40a79b",
       "hash_exclusion_reason": null,
       "errata": []
     }

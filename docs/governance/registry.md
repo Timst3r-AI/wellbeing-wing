@@ -60,6 +60,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | ADR-0019 | adr | accepted | 2026-07-11 | `docs/decisions/0019-cross-room-inference-prohibition-standard.md` |
 | ADR-0020 | adr | accepted | 2026-07-11 | `docs/decisions/0020-unknown-stale-contradicted-behaviour-standard.md` |
 | ADR-0021 | adr | accepted | 2026-07-15 | `docs/decisions/0021-contract-validator-requirements.md` |
+| ADR-0022 | adr | accepted | 2026-08-09 | `docs/decisions/0022-contract-validator-m10-m12-correction.md` |
 | REGISTRY-JSON | phase-record | accepted | 2026-07-05 | `governance/registry.json` |
 | REGISTRY-MD | phase-record | accepted | 2026-07-05 | `docs/governance/registry.md` |
 | W0 | constitution | accepted | 2026-06-12 | `docs/constitution/W0-wellbeing-wing-constitution.md` |
@@ -94,6 +95,8 @@ Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) liv
 - **W0** (logged 2026-07-05): non-semantic header correction during W2-D2 landing, authorised by the human reviewer — the constitution's status line was updated from *"Draft for review"* to *"Accepted by human reviewer, 2026-06-12"*, aligning the source header with the acceptance sealed in W2-D1 §2 and `docs/phases/README.md`. No other W0 content changed; the W0 content hash was recomputed in the same commit.
 - **W2-D3** (logged 2026-07-05): checklist rule 9 gained a one-line pointer to [ADR 0003](../decisions/0003-relay-landing-ceremony-tiers.md) (Relay Landing Ceremony Tiers), which extends the landing protocol. Amendment made via decision record per rule 2; the W2-D3 content hash was recomputed in the same commit.
 - **W2-D3** (logged 2026-07-05): checklist rule 6 gained an erratum-level note citing the W2-D6 scripted scan layer (`scripts/public-safety-scan.py`); script plus human review applies from 2026-07-05. Non-semantic — the rule already provided for this transition. Hash recomputed in the same commit.
+
+- **ADR-0021** (logged 2026-08-09): the section 11 mechanical validator requirements matrix gained a one-line pointer to [ADR 0022](../decisions/0022-contract-validator-m10-m12-correction.md) (Contract Validator M10/M12 Decidability Correction), which corrects the M10 and M12 requirements. Non-semantic: no corrected rule is restated in ADR-0021. Amendment made via decision record per checklist rule 2; hash recomputed in the same commit.
 
 ## 7. Public-safety note
 
