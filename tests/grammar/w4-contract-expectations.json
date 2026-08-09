@@ -1,0 +1,740 @@
+{
+  "expectation_version": 3,
+  "governing_records": {
+    "base": "ADR-0021 (Contract Validator Requirements)",
+    "correction": "ADR-0022 (Contract Validator M10/M12 Decidability Correction)",
+    "note": "M10 and M12 follow ADR-0022; all other classes follow ADR-0021. Corrected Lane A matrix: 47 mechanical instances."
+  },
+  "note": "Frozen Lane A expectations, derived once from the accepted baseline and committed as validator data. The validator never re-derives these from the artefact under test.",
+  "baseline": {
+    "registry_path": "governance/registry.json",
+    "contract_set_anchor_commit": "d237f2b54f8a5db6bf31afb73729260d79763987",
+    "contract_set_anchor_meaning": "The accepted commit at which the complete four-contract set first existed together. Not a substitute for each room's own acceptance provenance."
+  },
+  "shared": {
+    "expected_section_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "open_questions_empty_body": "None at acceptance.",
+    "open_questions_empty_body_source": "ADR-0016 decision 5",
+    "fixture_declaration_text": "Exactly one future evaluation-fixture reference is required for this bait. Identifier syntax and fixture format are deferred to W4-D6. No fixture currently exists or is implied.",
+    "canonical_placeholder_set": [
+      "Allergen-X",
+      "Condition-Q",
+      "Medication-A17",
+      "Persona-K9"
+    ],
+    "canonical_placeholder_source": "ADR-0022 decision 9; ADR-0019 d.6; W4-AR",
+    "contract_token_grammar": "\\b[A-Z][a-z]+-[A-Z][0-9]*\\b",
+    "contract_token_grammar_source": "ADR-0022 decision 10",
+    "contract_token_grammar_scope": "M10 contract-token recognition only. Not a Wing-wide definition of placeholder syntax and does not govern fixtures; docs/governance/fixtures.md (W2-D4) keeps its own separately governed vocabulary. The closed canonical set decides membership, so no rejected-token literal is enumerated anywhere.",
+    "prohibited_blur_phrases": [
+      "generally",
+      "such as",
+      "including",
+      "including but not limited to"
+    ],
+    "prohibited_blur_phrases_source": "ADR-0018 decision 5",
+    "shared_table_source": "docs/decisions/0020-unknown-stale-contradicted-behaviour-standard.md",
+    "isolation_citation_required": "ADR-0017",
+    "catalogue_dormancy_dependency": "W6 governed string catalogue"
+  },
+  "contracts": [
+    {
+      "deliverable": "W4-D2",
+      "room": "Wellness",
+      "path": "docs/rooms/wellness-room-contract.md",
+      "accepted_commit": "96ed013ef862602ad34e8371a1f078b1feaf4dec",
+      "accepted_content_hash": "sha256:c82221e15a3d0651cb5facf0ad8224cb3b1ebd7cd29df5216203f7758470d9db",
+      "governed_baseline_commit": "f9085d17d63607aff274fa9b9510c00e054ff034",
+      "governed_content_hash": "sha256:8255c6cd1e52e1cfae35db970cfeb3324abc40cc6ecdae58e78095d2e80a6c69",
+      "section_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "open_questions_empty": false,
+      "na_construct_present": false,
+      "na_sections": [],
+      "bait_prefix": "WELL-B",
+      "bait_labels": [
+        "WELL-B1",
+        "WELL-B2",
+        "WELL-B3",
+        "WELL-B4",
+        "WELL-B5"
+      ],
+      "bait_count": 5,
+      "declarations_per_bait_expected": 1,
+      "placeholders_used": true,
+      "placeholders_present": [
+        "Allergen-X",
+        "Condition-Q"
+      ],
+      "room_register_string_count": 11,
+      "section2_edge_ids": [
+        "E11-W",
+        "E5"
+      ],
+      "anti_map_identifier_expectation": [
+        "E11-W",
+        "E9"
+      ],
+      "edge_set_exactness_required": false,
+      "asserted_edge_set": null,
+      "load_bearing_words": [
+        "scoped sections",
+        "authority labels",
+        "section age"
+      ],
+      "section9_layout": {
+        "style": "bold_label",
+        "mechanical": "**Mechanical (decidable from repository artefacts without interpretation):**",
+        "review_only": "**Review-only (requires judgement):**",
+        "boundary": "**Evaluation / deferred (not a contract-document check):**"
+      },
+      "section9_inventory": {
+        "mechanical": [
+          {
+            "key": "e052c18be45",
+            "entry": "section presence, numbering, and order; every section non-blank;"
+          },
+          {
+            "key": "e5b2b3fcc8c",
+            "entry": "room identity = exactly one room (Wellness); no duplicate room;"
+          },
+          {
+            "key": "e8f1fb25256",
+            "entry": "exact source IDs and paths resolve (E5, E11-W, E9, C2/C3 classes, ADRs, W1 records);"
+          },
+          {
+            "key": "e771663d6fc",
+            "entry": "**E5 quotation fidelity** — verbatim match to W1-D1 §5 · E5;"
+          },
+          {
+            "key": "ee2581859f3",
+            "entry": "**write-scope quotation fidelity** — **byte-level verbatim match for every section-3 paired-form source unit**: the W1-D1 §3 Wellness home row; the W1-D1 §4 categories #5–#8 rows; the W1-D3 transition T3 line; the W1-D3 *User-reported* label row; and W1-D1 §5 · E9 (not reference-resolution only);"
+          },
+          {
+            "key": "e07bb199458",
+            "entry": "load-bearing wording present (*scoped sections, display, only, user-initiated*);"
+          },
+          {
+            "key": "e3b95169238",
+            "entry": "blur-word exclusions in scope clauses;"
+          },
+          {
+            "key": "e8b0d28d2f1",
+            "entry": "**ADR-0020 table fidelity** — verbatim match; all **six states** present; **pause phrase absent**; **§10.6 wording and `Open (§10.6)` cells** intact;"
+          },
+          {
+            "key": "ead381f3cf6",
+            "entry": "named-bait-list structural presence; **WELL-B1…WELL-B5 present and label-unique**;"
+          },
+          {
+            "key": "e7a93072597",
+            "entry": "canonical placeholder token mechanics; rejected token absent;"
+          },
+          {
+            "key": "e255afd5662",
+            "entry": "**no bait item contains two health placeholders**;"
+          },
+          {
+            "key": "e33dd672006",
+            "entry": "**exactly one future-fixture declaration per bait**;"
+          },
+          {
+            "key": "e5e3230f8db",
+            "entry": "open-questions section present;"
+          },
+          {
+            "key": "e35afde718e",
+            "entry": "dependency references resolve;"
+          },
+          {
+            "key": "e1c7d36bb14",
+            "entry": "**no active catalogue-ID claim** (dormant class only)."
+          }
+        ],
+        "review_only": [
+          {
+            "key": "ea3786c007e",
+            "entry": "identity/purpose fitness; correct scope selection;"
+          },
+          {
+            "key": "e3864d48de9",
+            "entry": "bait completeness and aptness; realistic-pair and taught-association risk;"
+          },
+          {
+            "key": "ec8ae36cc12",
+            "entry": "speech-rule quality; anti-map completeness; constitutional soundness;"
+          },
+          {
+            "key": "eb8ce29f2d4",
+            "entry": "semantic scope expansion; authority-minting through meaning;"
+          },
+          {
+            "key": "e2eceb778df",
+            "entry": "room-register clarity and appropriateness."
+          }
+        ],
+        "boundary_declarations": [
+          {
+            "key": "ec5afea2d5d",
+            "entry": "future fixture existence and adequacy;"
+          },
+          {
+            "key": "ef4fa5a9a74",
+            "entry": "runtime forbidden inference; model obedience;"
+          },
+          {
+            "key": "e3d6ef2e8f7",
+            "entry": "operational isolation (W5);"
+          },
+          {
+            "key": "e2457cf9393",
+            "entry": "W6 catalogue binding of the room-register strings."
+          }
+        ]
+      }
+    },
+    {
+      "deliverable": "W4-D3",
+      "room": "Kitchen",
+      "path": "docs/rooms/kitchen-room-contract.md",
+      "accepted_commit": "61b530552d220fd0c6129b46df0c87cf1620270f",
+      "accepted_content_hash": "sha256:66439446401490ebbe11dad5b99ac108c066904c169bec1d2d775ff4030e9446",
+      "governed_baseline_commit": "61b530552d220fd0c6129b46df0c87cf1620270f",
+      "governed_content_hash": "sha256:66439446401490ebbe11dad5b99ac108c066904c169bec1d2d775ff4030e9446",
+      "section_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "open_questions_empty": true,
+      "na_construct_present": false,
+      "na_sections": [],
+      "bait_prefix": "KITCH-B",
+      "bait_labels": [
+        "KITCH-B1",
+        "KITCH-B2",
+        "KITCH-B3",
+        "KITCH-B4",
+        "KITCH-B5"
+      ],
+      "bait_count": 5,
+      "declarations_per_bait_expected": 1,
+      "placeholders_used": false,
+      "placeholders_present": [],
+      "room_register_string_count": 11,
+      "section2_edge_ids": [
+        "E6"
+      ],
+      "anti_map_identifier_expectation": [
+        "E10",
+        "E6"
+      ],
+      "edge_set_exactness_required": false,
+      "asserted_edge_set": null,
+      "load_bearing_words": [
+        "only",
+        "confirmed",
+        "standing consent",
+        "section age surfaced on every use"
+      ],
+      "section9_layout": {
+        "style": "bold_label",
+        "mechanical": "**Mechanically checkable (document-decidable):**",
+        "review_only": "**Review-only (human judgement):**",
+        "boundary": "**Evaluation / later enforcement (deferred, not a contract-validator target):**"
+      },
+      "section9_inventory": {
+        "mechanical": [
+          {
+            "key": "e5828215656",
+            "entry": "eleven-section structure, order, numbering, and non-blank bodies;"
+          },
+          {
+            "key": "e13d949261d",
+            "entry": "Kitchen identity present (section 1);"
+          },
+          {
+            "key": "ea0664507e5",
+            "entry": "exact source references present for E6, the home row, categories #9/#10/#11, T3, User-reported, E10, E11-K, and ADR-0020;"
+          },
+          {
+            "key": "e12bfba1d97",
+            "entry": "byte-level verbatim quotation fidelity for E6, the Kitchen home row, categories #9/#10/#11, W1-D3 T3, the User-reported row, E10, the W1-D2 vendor-disclosure grant row, E11-K, and the complete ADR-0020 shared-table quotation;"
+          },
+          {
+            "key": "eaf17a65a11",
+            "entry": "C1 class fidelity for the Kitchen home and categories;"
+          },
+          {
+            "key": "eae5fc18103",
+            "entry": "preservation of the load-bearing E6 word `only`;"
+          },
+          {
+            "key": "e3a7e5ac1b5",
+            "entry": "the category-#11 C3-handling wording present and unchanged;"
+          },
+          {
+            "key": "e3d42511aec",
+            "entry": "the E10 load-bearing words `only`, `minimum payload`, `never`, `the list, full stop`, `per transmission`, and `actual payload` preserved;"
+          },
+          {
+            "key": "ed4d4f7a0a1",
+            "entry": "the five `KITCH-B` labels present and unique;"
+          },
+          {
+            "key": "e00f1ee8a66",
+            "entry": "exactly five future-fixture declarations, one per bait;"
+          },
+          {
+            "key": "ee8d8e0f2a6",
+            "entry": "no fixture identifiers; no catalogue identifiers; no placeholder token; no realistic clinical/food-health pair;"
+          },
+          {
+            "key": "e58c675a68f",
+            "entry": "ADR-0020 quotation fidelity; all six W1-D3 states present; eleven room-register strings each carrying the W6 review-of-record mark;"
+          },
+          {
+            "key": "ee40083bb49",
+            "entry": "the allowed E10 payload class (bare item identity only) stated; the prohibited direct and indirect payload classes stated;"
+          },
+          {
+            "key": "e090e9fd2f9",
+            "entry": "an explicit stated distinction between the transmitted payload and the internal governance log;"
+          },
+          {
+            "key": "ee005784a4e",
+            "entry": "no connector, schema, API, or existence claim;"
+          },
+          {
+            "key": "edb3808374b",
+            "entry": "the section 11 open-questions body present."
+          }
+        ],
+        "review_only": [
+          {
+            "key": "e67f2a3f023",
+            "entry": "identity fitness and that no unearned capability is advertised;"
+          },
+          {
+            "key": "e6423e227dd",
+            "entry": "scope-selection correctness and E6-widening risk;"
+          },
+          {
+            "key": "efbc8b030ed",
+            "entry": "bait aptness and association-teaching risk;"
+          },
+          {
+            "key": "e572c992ad0",
+            "entry": "ordinary-preference medicalisation risk; restriction / disordered-eating risk;"
+          },
+          {
+            "key": "e610ed827f5",
+            "entry": "room-register wording quality; neutral item-name judgement;"
+          },
+          {
+            "key": "e4f1bc54042",
+            "entry": "whether an item identity indirectly reveals E6, preference, or other context;"
+          },
+          {
+            "key": "e8ed44755cb",
+            "entry": "whether any ordering carries semantic meaning;"
+          },
+          {
+            "key": "e46bec1f317",
+            "entry": "whether the proposed E10 surface is genuinely minimal;"
+          },
+          {
+            "key": "ef7306f15ce",
+            "entry": "speech quality and indirect leakage; constitutional soundness; semantic authority minting."
+          }
+        ],
+        "boundary_declarations": [
+          {
+            "key": "eb91a3eaa4f",
+            "entry": "fixture existence and behaviour; runtime inference; model obedience;"
+          },
+          {
+            "key": "e44868483a7",
+            "entry": "operational isolation; actual payload inspection; runtime field filtering;"
+          },
+          {
+            "key": "e0df4718762",
+            "entry": "connector behaviour; network transmission; authentication; vendor response handling;"
+          },
+          {
+            "key": "e13e2ffdd5c",
+            "entry": "ordering implementation; logging implementation; exfiltration testing;"
+          },
+          {
+            "key": "e9447e289dc",
+            "entry": "W5 enforcement; W6 catalogue binding."
+          }
+        ]
+      }
+    },
+    {
+      "deliverable": "W4-D4",
+      "room": "Gym",
+      "path": "docs/rooms/gym-room-contract.md",
+      "accepted_commit": "d8087262e0f293decccb10f263e77b82d82b400b",
+      "accepted_content_hash": "sha256:d32119ff2c7d01cee43530cb27a9c5754ec4ccdef8a606b5c9a9a87c3e788373",
+      "governed_baseline_commit": "d8087262e0f293decccb10f263e77b82d82b400b",
+      "governed_content_hash": "sha256:d32119ff2c7d01cee43530cb27a9c5754ec4ccdef8a606b5c9a9a87c3e788373",
+      "section_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "open_questions_empty": true,
+      "na_construct_present": false,
+      "na_sections": [],
+      "bait_prefix": "GYM-B",
+      "bait_labels": [
+        "GYM-B1",
+        "GYM-B2",
+        "GYM-B3",
+        "GYM-B4",
+        "GYM-B5",
+        "GYM-B6"
+      ],
+      "bait_count": 6,
+      "declarations_per_bait_expected": 1,
+      "placeholders_used": false,
+      "placeholders_present": [],
+      "room_register_string_count": 11,
+      "section2_edge_ids": [
+        "E6",
+        "E7"
+      ],
+      "anti_map_identifier_expectation": [
+        "E7"
+      ],
+      "edge_set_exactness_required": false,
+      "asserted_edge_set": null,
+      "load_bearing_words": [
+        "confirmed",
+        "only",
+        "Same conditions as E6"
+      ],
+      "section9_layout": {
+        "style": "bold_label",
+        "mechanical": "**Mechanically checkable (document-decidable):**",
+        "review_only": "**Review-only (human judgement):**",
+        "boundary": "**Evaluation / later enforcement (deferred, not a contract-validator target):**"
+      },
+      "section9_inventory": {
+        "mechanical": [
+          {
+            "key": "e5828215656",
+            "entry": "eleven-section structure, order, numbering, and non-blank bodies;"
+          },
+          {
+            "key": "ec9e2003dc7",
+            "entry": "Gym identity present (section 1);"
+          },
+          {
+            "key": "e5200da9a79",
+            "entry": "byte-level verbatim quotation fidelity for E7, the Gym home row, categories #12/#13, W1-D3 T3, the User-reported row, E11-G, and the complete ADR-0020 shared-table quotation;"
+          },
+          {
+            "key": "e9f4c095e10",
+            "entry": "C1 + C2 class fidelity for the Gym home and categories;"
+          },
+          {
+            "key": "ed076c67500",
+            "entry": "preservation of the load-bearing E7 words `confirmed` and `only`;"
+          },
+          {
+            "key": "efc9440dd13",
+            "entry": "the accepted user-reported sleep fields present;"
+          },
+          {
+            "key": "e07552de1c0",
+            "entry": "no device-intake, device-provenance, device-adapter, or device-sleep claim; no outward-edge or connector claim;"
+          },
+          {
+            "key": "e4cb7f11f0c",
+            "entry": "the six `GYM-B` labels present and unique;"
+          },
+          {
+            "key": "ec072538736",
+            "entry": "exactly six future-fixture declarations, one per bait; no fixture identifiers; no catalogue identifiers; no placeholder token; no realistic clinical/movement pair;"
+          },
+          {
+            "key": "e82ee2846cb",
+            "entry": "ADR-0020 quotation fidelity; all six W1-D3 states present; exactly eleven Gym room-register strings; one W6 review-of-record mark per string;"
+          },
+          {
+            "key": "edb3808374b",
+            "entry": "the section 11 open-questions body present."
+          }
+        ],
+        "review_only": [
+          {
+            "key": "e67f2a3f023",
+            "entry": "identity fitness and that no unearned capability is advertised;"
+          },
+          {
+            "key": "e2233f79fc3",
+            "entry": "E7-narrowing quality (confirmed injury/physical notes only);"
+          },
+          {
+            "key": "efbc8b030ed",
+            "entry": "bait aptness and association-teaching risk;"
+          },
+          {
+            "key": "e6d66c46894",
+            "entry": "indirect medicalisation of movement;"
+          },
+          {
+            "key": "e9386d03c55",
+            "entry": "compulsive-exercise reinforcement risk; rehabilitation creep;"
+          },
+          {
+            "key": "e4f23495e6e",
+            "entry": "sleep clinical-line quality;"
+          },
+          {
+            "key": "e2c1d18633a",
+            "entry": "whether any wording implies device authority;"
+          },
+          {
+            "key": "e7fa5138b14",
+            "entry": "whether any prohibition accidentally creates authority."
+          }
+        ],
+        "boundary_declarations": [
+          {
+            "key": "ef6c6490989",
+            "entry": "fixture existence and behaviour; runtime inference; model obedience; operational isolation; W5 enforcement; W6 catalogue binding; any future device-intake behaviour."
+          }
+        ]
+      }
+    },
+    {
+      "deliverable": "W4-D5",
+      "room": "Meditation",
+      "path": "docs/rooms/meditation-room-contract.md",
+      "accepted_commit": "d237f2b54f8a5db6bf31afb73729260d79763987",
+      "accepted_content_hash": "sha256:66e94399af45512a2c00ccfebb90e88f629a25ab00540ab7115de63f930b3077",
+      "governed_baseline_commit": "d237f2b54f8a5db6bf31afb73729260d79763987",
+      "governed_content_hash": "sha256:66e94399af45512a2c00ccfebb90e88f629a25ab00540ab7115de63f930b3077",
+      "section_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "open_questions_empty": true,
+      "na_construct_present": true,
+      "na_sections": [
+        "2"
+      ],
+      "bait_prefix": "MED-B",
+      "bait_labels": [
+        "MED-B1",
+        "MED-B2",
+        "MED-B3",
+        "MED-B4",
+        "MED-B5",
+        "MED-B6",
+        "MED-B7"
+      ],
+      "bait_count": 7,
+      "declarations_per_bait_expected": 1,
+      "placeholders_used": false,
+      "placeholders_present": [],
+      "room_register_string_count": 0,
+      "section2_edge_ids": [
+        "M1",
+        "M2"
+      ],
+      "anti_map_identifier_expectation": [
+        "M1",
+        "M2"
+      ],
+      "edge_set_exactness_required": true,
+      "asserted_edge_set": [
+        "M1",
+        "M2"
+      ],
+      "load_bearing_words": [
+        "only",
+        "Read, write, practice, reflect"
+      ],
+      "section9_layout": {
+        "style": "subsection",
+        "mechanical": "### 9.1 Mechanically checkable",
+        "review_only": "### 9.2 Review-only",
+        "boundary": null
+      },
+      "section9_inventory": {
+        "mechanical": [
+          {
+            "key": "e21ddf4dbd1",
+            "entry": "**Contract identity and section structure** — one room identity; eleven sections present, in fixed order, under fixed numbering, each non-blank."
+          },
+          {
+            "key": "e80e8050632",
+            "entry": "**\"Not applicable\" carries a reason** — presence of non-empty reason text at §2.1 (adequacy of that reason is review-only, below)."
+          },
+          {
+            "key": "e7725ab0705",
+            "entry": "**Open-questions section** — present; where empty, body matches the exact accepted wording."
+          },
+          {
+            "key": "ebf26130e78",
+            "entry": "**Validator-hooks completeness** — every governed term in this section carries exactly one classification."
+          },
+          {
+            "key": "e6bd0da1cc9",
+            "entry": "**Scope integrity** — every exact reference in sections 2, 3, 5, and 6 resolves, and every verbatim quotation matches its cited source text."
+          },
+          {
+            "key": "ef04cf58478",
+            "entry": "**Load-bearing words present; source-backed blur-words absent** in every scope clause."
+          },
+          {
+            "key": "e8c080b8fc1",
+            "entry": "**Shared-table fidelity** — the ADR-0020 quotation at section 5 is intact; all six states present; the rejected pause phrase absent; inherited §10.6 wording unaltered."
+          },
+          {
+            "key": "e82cc227094",
+            "entry": "**Named-bait mapping — declaration only** — seven baits present, each with exactly one declared future evaluation-fixture reference, none with zero and none with multiple."
+          },
+          {
+            "key": "ebc6f77c196",
+            "entry": "**Placeholder mechanics** — placeholder tokens, where any are used, drawn from the canonical set; rejected tokens absent."
+          },
+          {
+            "key": "e45b633fd55",
+            "entry": "**Cross-reference coherence** — dependency identifiers and source paths resolve; the isolation clause at section 6 cites its record."
+          },
+          {
+            "key": "ecab1e1831a",
+            "entry": "**Anti-map consistency, and the exact Meditation edge set** — the forbidden list at section 8 intersects no granted edge, and **this contract asserts its complete edge list exactly: M1 and M2, in section 2 and section 8 alike, with no divergence between them.**"
+          },
+          {
+            "key": "ee29ec7034a",
+            "entry": "**Catalogue-identifier dormancy** — no catalogue-identifier check is claimed active; this room routes zero strings and the class stands dormant with its named dependency."
+          }
+        ],
+        "review_only": [
+          {
+            "key": "ee914a4a3e0",
+            "entry": "**Named-bait substantive completeness and aptness** — no artefact enumerates the full risk space; Law 8 and Law 9 bind beyond the enumeration."
+          },
+          {
+            "key": "edfc5c6fdee",
+            "entry": "**Whether each bait captures its intended risk without becoming an inference engine**, and the realistic-pairing risk."
+          },
+          {
+            "key": "e089c6a54a1",
+            "entry": "**Spiritual-association realism risk** — whether any bait wording could teach a practice-to-spiritual-state association. This risk is specific to this room and has no precedent in the accepted corpus."
+          },
+          {
+            "key": "eddd11fc14a",
+            "entry": "**Doctrinal adequacy of the §2.1 \"Not applicable\" reason.**"
+          },
+          {
+            "key": "e9b84163313",
+            "entry": "**Identity and purpose fitness** (§1)."
+          },
+          {
+            "key": "ef0336afffd",
+            "entry": "**Speech-rule application quality** (§7), including whether the silent-practice rule stays bounded to the user's own instruction rather than generalising."
+          },
+          {
+            "key": "ede8cdda935",
+            "entry": "**The transient-choice versus persistent-preference line** (§3.2) — whether the boundary holds in practice as written."
+          },
+          {
+            "key": "e07846b67f1",
+            "entry": "**Content-supply boundary wording** (§8) — in particular, whether the exclusion can be read as narrowing the authorised user-curated library."
+          },
+          {
+            "key": "ee8c5e2eefd",
+            "entry": "**Source-and-authenticity risk** (§6) — whether generated M2 discussion could be taken for the user's source material, canonical text, translation, or authoritative teaching."
+          },
+          {
+            "key": "ec2e17690dd",
+            "entry": "**The zero-string derivation** (§5.2) — whether the derivation is sound and whether zero remains correct."
+          },
+          {
+            "key": "e69734fb958",
+            "entry": "**Constitutional-explanation soundness** (§10)."
+          },
+          {
+            "key": "e20f3b59a29",
+            "entry": "**Semantic scope expansion or authority minting beyond literal identifiers.**"
+          },
+          {
+            "key": "ec34e861462",
+            "entry": "**Completeness of behavioural prohibitions.**"
+          },
+          {
+            "key": "e31802146f8",
+            "entry": "**Runtime obedience, operational isolation, and runtime forbidden inference** — not repository artefacts; later-phase evaluation territory."
+          },
+          {
+            "key": "e9b63c00a5c",
+            "entry": "**Any clinical, diagnostic, medical, or therapeutic judgement** — never machine-decided, and never decided by this project's validators at all."
+          }
+        ],
+        "boundary_declarations": [
+          {
+            "key": "ec511af3ce8",
+            "entry": "**No validator and no fixture exists.** Every mechanical class above is a *definition* of what would be checkable; its per-contract execution is gated to a later authorised unit, and human review after any mechanical pass is always required. This contract declares no fixture identifier, no fixture format, and no catalogue identifier."
+          }
+        ]
+      }
+    }
+  ],
+  "provenance_model": "Dual provenance (PR-R1). Per contract: accepted_commit/accepted_content_hash identify the original acceptance event and the bytes accepted at it — immutable forever; a later erratum or amendment never changes them. governed_baseline_commit/governed_content_hash identify the published commit that most recently lawfully changed the contract's bytes and their hash — moved only by a governed validator-data update. Where no post-acceptance change exists the pairs are equal, and that equality is meaningful data. Runtime drift compares observed bytes against governed_content_hash (PR-R4)."
+}
