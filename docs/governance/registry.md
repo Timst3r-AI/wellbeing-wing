@@ -98,6 +98,8 @@ Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) liv
 
 - **ADR-0021** (logged 2026-08-09): the section 11 mechanical validator requirements matrix gained a one-line pointer to [ADR 0022](../decisions/0022-contract-validator-m10-m12-correction.md) (Contract Validator M10/M12 Decidability Correction), which corrects the M10 and M12 requirements. Non-semantic: no corrected rule is restated in ADR-0021. Amendment made via decision record per checklist rule 2; hash recomputed in the same commit.
 
+- **W4-D2** (logged 2026-08-09): the Wellness contract's section 2 E5 verbatim quotation regained the source-owned leading list marker ("- ") dropped in transcription, restoring byte-for-byte agreement with [W1-D1 §5](../architecture/W1-data-boundary-map.md). Non-semantic: two characters added, no clause content changed. Hash recomputed in the same commit.
+
 ## 7. Public-safety note
 
 This registry contains no private names, no private system references, no companion framing, no personal health details, and no project lineage beyond this repository. Entries describe documents about governance, never people.

@@ -18,7 +18,7 @@ Carried under ADR-0018's paired form — exact reference plus complete verbatim 
 
 **Verbatim quotation (W1-D1 §5 · E5):**
 
-> **E5. Approved Profile (scoped sections) → Wellness Room display.** With authority labels and section age surfaced.
+> - **E5. Approved Profile (scoped sections) → Wellness Room display.** With authority labels and section age surfaced.
 
 **Bounded contract declaration.** The above is **display-authorised context**: E5 authorises the Wellness Room to *display* the Approved Profile's **scoped sections**, with their **authority labels** and **section age surfaced**. "Scoped sections" is a subset of the Approved Profile, never the whole profile. This edge is a **display** edge: it does **not** itself authorise processing of the displayed content. Processing authority is governed separately by edge E11-W and section 6 of this contract. Nothing in this section widens "scoped sections," drops "display," or converts displayed context into processing input.
 

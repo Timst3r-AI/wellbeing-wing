@@ -1396,9 +1396,14 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:c82221e15a3d0651cb5facf0ad8224cb3b1ebd7cd29df5216203f7758470d9db",
+      "content_hash": "sha256:8255c6cd1e52e1cfae35db970cfeb3324abc40cc6ecdae58e78095d2e80a6c69",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-08-09",
+          "note": "Non-semantic transcription correction authorised by the human reviewer (ruling M6-R1, 2026-08-09): the section 2 E5 verbatim quotation regained the source-owned leading list marker (\"- \") dropped in transcription, restoring the quoted line to byte-for-byte agreement with W1-D1 §5. Two characters added; no word, identifier, in-clause punctuation, ordering, authority, edge, class, meaning, or permission changed. Hash recomputed in the same commit."
+        }
+      ]
     },
     {
       "id": "W4-D3",
