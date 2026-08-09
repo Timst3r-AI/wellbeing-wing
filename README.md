@@ -2,7 +2,7 @@
 
 A modular, AI-assisted personal wellbeing environment built governance-first.
 
-**Status:** The current published state is a governed, headless engine foundation. W3 — Health Vault and Health Profile Foundations — is complete and closed as of 2026-07-06: the vault store, import path, key custody, health profile object model, transition engine, residue evidence accounting, durable ledger store, encrypted backup/restore, and single-record export-as-right are all published and sealed. There is still no user interface, command-line tool, hosted sync, assistant, medical/therapeutic/diagnostic/crisis function, or companion product. W4 has not started and must open through its own runway/gate.
+**Status:** The current published state is a governed, headless engine foundation. W3 — Health Vault and Health Profile Foundations — is complete and closed as of 2026-07-06: the vault store, import path, key custody, health profile object model, transition engine, residue evidence accounting, durable ledger store, encrypted backup/restore, and single-record export-as-right are all published and sealed. There is still no user interface, command-line tool, hosted sync, assistant, medical/therapeutic/diagnostic/crisis function, or companion product. W4 — Room Contracts — is open: the four room contracts (Wellness, Kitchen, Gym, Meditation) are accepted and published as governed documents. No room implementation exists; the remaining W4 deliverables are unopened, and W5 and W6 have not started.
 
 ---
 
@@ -41,7 +41,7 @@ Not a medical device. Not a treatment platform. Not an AI therapist. Not an enga
 | **W1** | Governance architecture and data boundary design | ✅ Closed — all deliverables accepted (2026-06-12) |
 | **W2** | Governance evaluation & enforcement foundations — making the governance testable, nothing user-facing | ✅ Closed (2026-07-05) |
 | **W3** | Health Vault and Health Profile foundations | ✅ Closed (2026-07-06) — Health Vault and Health Profile Foundations complete and sealed. |
-| W4+ | Rooms, adapters, and surfaces — each through its own gate | Next phase — gated; not started. |
+| W4+ | Rooms, adapters, and surfaces — each through its own gate | W4 open — the four room contracts are accepted and published (2026-08-09); remaining W4 deliverables unopened; W5+ not started. |
 
 ## Repository structure
 
