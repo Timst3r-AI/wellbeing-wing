@@ -1429,6 +1429,41 @@
       "content_hash": "sha256:66439446401490ebbe11dad5b99ac108c066904c169bec1d2d775ff4030e9446",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W4-D4",
+      "aliases": [],
+      "title": "W4-D4 — Gym Room Contract",
+      "type": "room-contract",
+      "phase": "W4",
+      "deliverable": "W4-D4",
+      "path": "docs/rooms/gym-room-contract.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-09",
+      "role": "The third room contract: the Gym Room's laws in the exact accepted words of their sources. The manual-first, mixed-class room. Eleven ADR-0016 sections; read scope (E7, confirmed injury/physical notes only, standing scoped read with section age surfaced on every use), write scope (own records only — Workout plans #12 at C1, Movement/rest/recovery logs #13 at C2), and the User-reported label on entry carried by ADR-0018's paired form; user-entered non-clinical sleep observations accepted as instances of category #13 rest/recovery (User-reported, room-scoped, never profile truth); a six-item named-bait floor (GYM-B1 through GYM-B6, a floor not a ceiling, each declaring exactly one future W4-D6 evaluation fixture that does not yet exist), with GYM-B5 (injury-absence-to-all-clear) the highest-priority protection, complementary to the shared behaviour table; ADR-0020's one shared behaviour table carried verbatim across all six W1-D3 states plus contradicted context, with injury the live safety-relevant E7 read and a retrospective safety framing (an expired injury note may still apply and is never treated as healed; absence is never all-clear), instantiated across exactly eleven room-register strings; ADR-0017 isolation declared, not operationally enforced (W5). Manual-first: current device-originated ingestion, synchronisation, import, adapters, provenance labels, device sleep data, and derived scores are excluded; the contract establishes no device provenance, adapter, or integration authority, claims none has been implemented or verified, and authorises none. Gym has no outward edge. Wording strings route to the future W6 governed string catalogue as review-of-record. Carries inherited matters (W1-D3 §10.6; device intake/provenance/epistemic-status handling as deferred external doctrine; W6 binding) but owns and resolves none. Authorises no scaffolding, no implementation, and no transmission.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "ADR-0002",
+        "ADR-0003",
+        "ADR-0016",
+        "ADR-0017",
+        "ADR-0018",
+        "ADR-0019",
+        "ADR-0020",
+        "ADR-0021",
+        "W4-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:d32119ff2c7d01cee43530cb27a9c5754ec4ccdef8a606b5c9a9a87c3e788373",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
