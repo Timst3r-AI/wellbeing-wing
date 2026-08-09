@@ -1464,6 +1464,41 @@
       "content_hash": "sha256:d32119ff2c7d01cee43530cb27a9c5754ec4ccdef8a606b5c9a9a87c3e788373",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W4-D5",
+      "aliases": [],
+      "title": "W4-D5 — Meditation Room Contract",
+      "type": "room-contract",
+      "phase": "W4",
+      "deliverable": "W4-D5",
+      "path": "docs/rooms/meditation-room-contract.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-09",
+      "role": "The fourth and final room contract: the Meditation Room's laws in the exact accepted words of their sources. The CM contemplative jurisdiction — sensitivity peer of C4 but a separate category behind a structural wall (Law 9), never a rung of the health ladder. Eleven ADR-0016 sections; read scope carried from the room's complete edge list M1–M2 plus the “no other edges” clause in ADR-0018's paired form, with the template's worked N/A case for inbound other-room reads written with its reason — this room has no authorised inbound Profile or cross-room read edge, while M1 (user ↔ their own Meditation records: read, write, practice, reflect) remains a right, not a grant; write scope own records only — Meditation practice records #14, Reflections & contemplative notes #15, and Contemplative library & annotations #16 (User-curated), all CM, with the User-reported label on entry (D3-T3), room-scoped and never profile truth. Silent or no-guidance practice writes nothing by default; a user may explicitly record a completed silent sit as #14; breath awareness and natural-breath attention only, with no wider breathwork authority claimed; persistent preferences are out of scope and current-session choices are instructions, not records; the room acquires no movement, rest, recovery, or sleep category. A seven-item named-bait floor (MED-B1 through MED-B7 — a floor, not a ceiling, each declaring exactly one future W4-D6 evaluation fixture that does not yet exist), with MED-B3 (Meditation-derived outward signal in any direction) and MED-B7 (absent-edge or cross-room-context reliance) making the Law 9 wall testable in both directions, and MED-B7 expressly preserving the lawfulness of the user's own free-text reflection whatever subject it mentions. ADR-0020's one shared behaviour table carried verbatim across all six W1-D3 states, with a structurally different instantiation stated as such: the room relies on no health context, the table applies only to its own records' freshness, no source-authorised CM review interval, grace period, or hard limit exists, a date is not a freshness state, and therefore zero current Meditation-specific room-register strings are derived — a present source-derived finding, not a permanent claim. No live safety-relevant Profile context can enter through M1–M2; the absence of a staleness case is not an absence of risk, the room's primary risk surface being Law 8 inference and Law 9 outward signalling. M2 is the only processing edge — user-initiated, scoped CM payload, processing disclosure, nothing persisting outside the room and no output written to any other room; ADR-0017 isolation declared, not operationally enforced (W5); M2 output remains AI assistance and is never represented as the user's source material or as authoritative source text. The user-curated teaching or scripture library is authorised; the content-supply surface — room-initiated external fetching, third-party canonical-content ingestion, room-supplied translations, room-curated tradition collections, external source feeds, and a formal bibliographic or source-provenance regime — remains deferred, and the contract makes no content-rights determination. Wording strings route to the future W6 governed string catalogue, with zero currently routed. Carries inherited matters (W1-D3 §10.1 review intervals; W1-D3 §10.6 block-versus-warn; W6 binding) but owns and resolves none. Authorises no scaffolding, no implementation, and no transmission.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "ADR-0002",
+        "ADR-0003",
+        "ADR-0016",
+        "ADR-0017",
+        "ADR-0018",
+        "ADR-0019",
+        "ADR-0020",
+        "ADR-0021",
+        "W4-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:66e94399af45512a2c00ccfebb90e88f629a25ab00540ab7115de63f930b3077",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
