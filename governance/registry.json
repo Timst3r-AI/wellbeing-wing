@@ -1544,6 +1544,32 @@
       "content_hash": "sha256:5ca7dd6eb9eff73105f749074cb61484fdf9636659bf5ae5f451a052db40a79b",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W4-D6-EASR",
+      "aliases": [
+        "external-assurance-source-register"
+      ],
+      "title": "External Assurance Source Register",
+      "type": "assurance-register",
+      "phase": "W4",
+      "deliverable": "W4-D6",
+      "path": "docs/governance/external-assurance-source-register.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-10",
+      "role": "The External Assurance Source Register: the governed provenance-and-currency register for the external authoritative sources consulted by the Wing's privacy and health-data assurance work (W4-D6 Lane C). Records fourteen primary official sources across the constitutionally named alignment families and the voluntary engineering baseline, each under a fixed twelve-field schema distinguishing what a source is (law or rule, regulator guidance, engineering standard, proposed rule) from whether it currently stands, with immutable allocation identifiers, explicit null/empty semantics, visible supersession routing, and re-verification-before-use maintenance rules. Registration records evidence provenance only: it certifies nothing, determines no applicability, and delegates no legal authority to the Wing, which makes no legal-certification claim. Consumed by the future Privacy & Health-Data Assurance Record; creates no data category, edge, class, authority state, permission, or implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:a527efe035539d976fc74137eccd096d765dd05569a545fe8a7d7fcb2c0b6b41",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
