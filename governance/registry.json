@@ -1557,7 +1557,7 @@
       "path": "docs/governance/external-assurance-source-register.md",
       "status": "accepted",
       "accepted_date": "2026-08-10",
-      "role": "The External Assurance Source Register: the governed provenance-and-currency register for the external authoritative sources consulted by the Wing's privacy and health-data assurance work (W4-D6 Lane C). Records fourteen primary official sources across the constitutionally named alignment families and the voluntary engineering baseline, each under a fixed twelve-field schema distinguishing what a source is (law or rule, regulator guidance, engineering standard, proposed rule) from whether it currently stands, with immutable allocation identifiers, explicit null/empty semantics, visible supersession routing, and re-verification-before-use maintenance rules. Registration records evidence provenance only: it certifies nothing, determines no applicability, and delegates no legal authority to the Wing, which makes no legal-certification claim. Consumed by the future Privacy & Health-Data Assurance Record; creates no data category, edge, class, authority state, permission, or implementation.",
+      "role": "The External Assurance Source Register: the governed provenance-and-currency register for the external authoritative sources consulted by the Wing's privacy and health-data assurance work (W4-D6 Lane C). Records fourteen primary official sources across the constitutionally named alignment families and the voluntary engineering baseline, each under a fixed twelve-field schema distinguishing what a source is (law or rule, regulator guidance, engineering standard, proposed rule) from whether it currently stands, with immutable allocation identifiers, explicit null/empty semantics, visible supersession routing, and re-verification-before-use maintenance rules. Registration records evidence provenance only: it certifies nothing, determines no applicability, and delegates no legal authority to the Wing, which makes no legal-certification claim. Consumed by the Privacy & Health-Data Assurance Record (W4-D6-PHDAR); creates no data category, edge, class, authority state, permission, or implementation.",
       "governs": [],
       "depends_on": [
         "W0",
@@ -1567,7 +1567,34 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:a527efe035539d976fc74137eccd096d765dd05569a545fe8a7d7fcb2c0b6b41",
+      "content_hash": "sha256:74cf3046914f4e0a78730951332e66b0872695a29e64c9763b42be491b25cc86",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W4-D6-PHDAR",
+      "aliases": [
+        "privacy-health-data-assurance-record"
+      ],
+      "title": "Privacy & Health-Data Assurance Record",
+      "type": "assurance-record",
+      "phase": "W4",
+      "deliverable": "W4-D6",
+      "path": "docs/governance/privacy-health-data-assurance-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-10",
+      "role": "The Privacy & Health-Data Assurance Record: the governed evidence-mapping record for the Wing's privacy and health-data assurance work (W4-D6 Lane C). Maps sixty-five assurance rows — thirteen framework-neutral core rows, thirty-nine alignment-overlay rows across the four constitutionally named families, and thirteen voluntary engineering-baseline rows — to repository evidence under a sixteen-field stored schema whose assurance vocabulary is derived at presentation and never stored; carries four applicability records, all unresolved with no role or basis asserted; separates repository evidence, runtime-deferred evidence, and external organisational evidence by timing tier; and consumes the External Assurance Source Register as its sole external-source authority. Evidence mapping only: it certifies nothing, resolves no applicability, asserts no requirement as satisfied, and creates no data category, edge, class, authority state, permission, or implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "ADR-0003",
+        "W4-D6-EASR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:402b8aecb47659701683fb728f407c10863b44a50806ead6866eead214d093cc",
       "hash_exclusion_reason": null,
       "errata": []
     }

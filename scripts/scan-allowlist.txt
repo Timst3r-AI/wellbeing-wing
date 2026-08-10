@@ -94,3 +94,6 @@ docs/governance/external-assurance-source-register.md | external-link | https://
 docs/governance/external-assurance-source-register.md | compliance-claim | does not certify compliance | governing-boundary anti-claim: the register prohibits certification claims, it does not make one
 docs/governance/external-assurance-source-register.md | compliance-claim | certified-compliance claim | governing-boundary anti-claim sentence: the Wing makes no such claim; prohibition, not assertion
 docs/governance/external-assurance-source-register.md | companion-framing | no companion framing | public-safety note names companion framing solely to prohibit it in the public Wing
+docs/governance/privacy-health-data-assurance-record.md | compliance-claim | not compliance certification | governing-boundary anti-claim: the record refuses certification status, it does not claim it
+docs/governance/privacy-health-data-assurance-record.md | compliance-claim | certified-compliance claim | governing-boundary anti-claim sentence: the Wing makes no such claim; prohibition, not assertion
+docs/governance/privacy-health-data-assurance-record.md | compliance-claim | never evidence of compliance | honesty-rule negation: absence of evidence is never evidence of compliance; negation, not assertion

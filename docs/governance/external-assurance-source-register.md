@@ -56,7 +56,9 @@ Each entry carries exactly twelve fields: `source_id`, `authority_publisher`, `t
    "jurisdiction_framework": "US-federal / HIPAA-aligned", "source_kind": "law_or_rule",
    "currency_status": "current", "publication_version_date": "eCFR current codification as at 2026-08-09",
    "retrieval_date": "2026-08-09", "reverification_date": "2026-08-09",
-   "supersession": null, "dependent_rows": []},
+   "supersession": null,
+   "dependent_rows": ["AR-HIPAA-01", "AR-HIPAA-02", "AR-HIPAA-04", "AR-HIPAA-05", "AR-HIPAA-06",
+    "AR-HIPAA-07", "AR-HIPAA-08", "AR-HIPAA-09", "AR-HIPAA-10", "AR-HIPAA-16"]},
 
   {"source_id": "SRC-HIPAA-03", "authority_publisher": "HHS/OCR",
    "title": "Summary of the HIPAA Privacy Rule",
@@ -64,7 +66,9 @@ Each entry carries exactly twelve fields: `source_id`, `authority_publisher`, `t
    "jurisdiction_framework": "US-federal / HIPAA-aligned", "source_kind": "regulator_guidance",
    "currency_status": "current", "publication_version_date": "guidance page; underlying rule published 2000-12-28, modified 2002-08-14",
    "retrieval_date": "2026-08-09", "reverification_date": "2026-08-09",
-   "supersession": null, "dependent_rows": []},
+   "supersession": null,
+   "dependent_rows": ["AR-HIPAA-02", "AR-HIPAA-11", "AR-HIPAA-12", "AR-HIPAA-13", "AR-HIPAA-17",
+    "AR-HIPAA-18", "AR-HIPAA-19"]},
 
   {"source_id": "SRC-HIPAA-04", "authority_publisher": "HHS/OCR",
    "title": "Minimum Necessary Requirement guidance (45 CFR 164.502(b), 164.514(d))",
@@ -72,7 +76,7 @@ Each entry carries exactly twelve fields: `source_id`, `authority_publisher`, `t
    "jurisdiction_framework": "US-federal / HIPAA-aligned", "source_kind": "regulator_guidance",
    "currency_status": "current", "publication_version_date": "guidance page (undated)",
    "retrieval_date": "2026-08-09", "reverification_date": "2026-08-09",
-   "supersession": null, "dependent_rows": []},
+   "supersession": null, "dependent_rows": ["AR-HIPAA-03"]},
 
   {"source_id": "SRC-HIPAA-05", "authority_publisher": "HHS/OCR",
    "title": "Guidance Regarding Methods for De-identification of PHI (45 CFR 164.514(a)-(c))",
@@ -80,7 +84,7 @@ Each entry carries exactly twelve fields: `source_id`, `authority_publisher`, `t
    "jurisdiction_framework": "US-federal / HIPAA-aligned", "source_kind": "regulator_guidance",
    "currency_status": "current", "publication_version_date": "guidance issued 2012-11-26",
    "retrieval_date": "2026-08-09", "reverification_date": "2026-08-09",
-   "supersession": null, "dependent_rows": []},
+   "supersession": null, "dependent_rows": ["AR-HIPAA-15"]},
 
   {"source_id": "SRC-HIPAA-06", "authority_publisher": "HHS/OCR",
    "title": "Breach Notification Rule guidance",
@@ -88,7 +92,7 @@ Each entry carries exactly twelve fields: `source_id`, `authority_publisher`, `t
    "jurisdiction_framework": "US-federal / HIPAA-aligned", "source_kind": "regulator_guidance",
    "currency_status": "current", "publication_version_date": "guidance page; underlying rule 2009 (HITECH), as codified",
    "retrieval_date": "2026-08-09", "reverification_date": "2026-08-09",
-   "supersession": null, "dependent_rows": []},
+   "supersession": null, "dependent_rows": ["AR-HIPAA-14"]},
 
   {"source_id": "SRC-HIPAA-07", "authority_publisher": "HHS/OCR via Federal Register",
    "title": "HIPAA Security Rule To Strengthen the Cybersecurity of Electronic Protected Health Information (NPRM)",
@@ -104,7 +108,8 @@ Each entry carries exactly twelve fields: `source_id`, `authority_publisher`, `t
    "jurisdiction_framework": "US-federal / FTC-HBNR", "source_kind": "law_or_rule",
    "currency_status": "current", "publication_version_date": "2024 amendments effective 2024-07-29 (final rule published 2024-05-30)",
    "retrieval_date": "2026-08-09", "reverification_date": "2026-08-09",
-   "supersession": null, "dependent_rows": []},
+   "supersession": null,
+   "dependent_rows": ["AR-HBNR-01", "AR-HBNR-02", "AR-HBNR-03", "AR-HBNR-04"]},
 
   {"source_id": "SRC-HBNR-02", "authority_publisher": "FTC",
    "title": "Complying with FTC's Health Breach Notification Rule",
@@ -112,7 +117,7 @@ Each entry carries exactly twelve fields: `source_id`, `authority_publisher`, `t
    "jurisdiction_framework": "US-federal / FTC-HBNR", "source_kind": "regulator_guidance",
    "currency_status": "current", "publication_version_date": "post-2024-amendment guidance",
    "retrieval_date": "2026-08-09", "reverification_date": "2026-08-09",
-   "supersession": null, "dependent_rows": []},
+   "supersession": null, "dependent_rows": ["AR-HBNR-01"]},
 
   {"source_id": "SRC-APP-01", "authority_publisher": "Federal Register of Legislation (AU)",
    "title": "Privacy Act 1988 (Cth), Schedule 1 — Australian Privacy Principles",
@@ -120,7 +125,9 @@ Each entry carries exactly twelve fields: `source_id`, `authority_publisher`, `t
    "jurisdiction_framework": "AU-Commonwealth / APP-aligned", "source_kind": "law_or_rule",
    "currency_status": "current", "publication_version_date": "Compilation No. 104 (C2026C00227), in force 2026-06-04, registered 2026-06-17",
    "retrieval_date": "2026-08-09", "reverification_date": "2026-08-09",
-   "supersession": null, "dependent_rows": []},
+   "supersession": null,
+   "dependent_rows": ["AR-APP-01", "AR-APP-02", "AR-APP-03", "AR-APP-04", "AR-APP-05",
+    "AR-APP-06", "AR-APP-07", "AR-APP-08"]},
 
   {"source_id": "SRC-APP-02", "authority_publisher": "OAIC",
    "title": "Australian Privacy Principles Guidelines",
@@ -128,7 +135,9 @@ Each entry carries exactly twelve fields: `source_id`, `authority_publisher`, `t
    "jurisdiction_framework": "AU-Commonwealth / APP-aligned", "source_kind": "regulator_guidance",
    "currency_status": "current", "publication_version_date": "progressively updated; Chapter 3 updated 2026-05-13",
    "retrieval_date": "2026-08-09", "reverification_date": "2026-08-09",
-   "supersession": null, "dependent_rows": []},
+   "supersession": null,
+   "dependent_rows": ["AR-APP-01", "AR-APP-02", "AR-APP-03", "AR-APP-04", "AR-APP-05",
+    "AR-APP-06", "AR-APP-07", "AR-APP-08"]},
 
   {"source_id": "SRC-APP-03", "authority_publisher": "Federal Register of Legislation (AU)",
    "title": "Privacy and Other Legislation Amendment Act 2024 (Cth)",
@@ -144,7 +153,9 @@ Each entry carries exactly twelve fields: `source_id`, `authority_publisher`, `t
    "jurisdiction_framework": "EU / GDPR-style", "source_kind": "law_or_rule",
    "currency_status": "current", "publication_version_date": "2016-04-27; consolidated text CELEX 02016R0679-20160504",
    "retrieval_date": "2026-08-09", "reverification_date": "2026-08-09",
-   "supersession": null, "dependent_rows": []},
+   "supersession": null,
+   "dependent_rows": ["AR-GDPR-01", "AR-GDPR-02", "AR-GDPR-03", "AR-GDPR-04", "AR-GDPR-05",
+    "AR-GDPR-06", "AR-GDPR-07", "AR-GDPR-08"]},
 
   {"source_id": "SRC-NIST-01", "authority_publisher": "NIST CSRC",
    "title": "NIST SP 800-122 — Guide to Protecting the Confidentiality of Personally Identifiable Information (PII)",
@@ -152,7 +163,10 @@ Each entry carries exactly twelve fields: `source_id`, `authority_publisher`, `t
    "jurisdiction_framework": "US-NIST / engineering baseline", "source_kind": "engineering_standard",
    "currency_status": "current", "publication_version_date": "Final, 2010-04",
    "retrieval_date": "2026-08-09", "reverification_date": "2026-08-09",
-   "supersession": null, "dependent_rows": []}
+   "supersession": null,
+   "dependent_rows": ["AR-NIST-01", "AR-NIST-02", "AR-NIST-03", "AR-NIST-04", "AR-NIST-05",
+    "AR-NIST-06", "AR-NIST-07", "AR-NIST-08", "AR-NIST-09", "AR-NIST-10",
+    "AR-NIST-11", "AR-NIST-12", "AR-NIST-13"]}
 ]
 ```
 
