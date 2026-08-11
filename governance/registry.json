@@ -1597,6 +1597,39 @@
       "content_hash": "sha256:402b8aecb47659701683fb728f407c10863b44a50806ead6866eead214d093cc",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W4-D6-BEF",
+      "aliases": [
+        "behavioural-evaluation-fixtures"
+      ],
+      "title": "Behavioural Evaluation Fixture Strategy",
+      "type": "phase-record",
+      "phase": "W4",
+      "deliverable": "W4-D6",
+      "path": "docs/governance/behavioural-evaluation-fixtures.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-11",
+      "role": "The Behavioural Evaluation Fixture Strategy: the governed Lane B strategy extension that the Synthetic Fixture Strategy (W2-D4) names in its non-scope section, defining how behavioural-evaluation fixtures for the four room contracts' twenty-three named-bait declarations are structured, identified, mapped, validated, and honestly labelled — cardinality law (one fixture artefact per bait, derived not targeted), reference-locus law (the sealed contracts are never amended; this document's map is the authoritative live record of fixture existence), the FIX identifier namespace with immutable allocation semantics, the evaluation-fixture schema with fixture-local probes and the silent-channel contract, six family values, the deterministic corpus-validation contract, single-value W4 execution status, maintenance rules, and the Lane B closure criterion. At acceptance the live bait-to-fixture map is empty: no fixture artefact exists, no FIX identifier is allocated, and no behavioural evaluation has occurred or is claimed. Extends W2-D4, never replaces it; creates no fixture, no data category, edge, class, authority state, permission, or implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "ADR-0003",
+        "W2-D4",
+        "W4-D2",
+        "W4-D3",
+        "W4-D4",
+        "W4-D5"
+      ],
+      "resolves": [],
+      "id_namespaces": [
+        "FIX-WELL/KITCH/GYM/MED-## (behavioural-evaluation fixtures)"
+      ],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:e5e9f115f38a61004742bd80fecf564296766a663d5c93d17877b55a69d5ee82",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
