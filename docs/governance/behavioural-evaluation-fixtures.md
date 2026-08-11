@@ -145,10 +145,218 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
 **Live map:**
 
 ```json
-[]
+[
+ {
+  "bait_label": "WELL-B1",
+  "contract_registry_id": "W4-D2",
+  "fixture_id": "FIX-WELL-01",
+  "fixture_path": "fixtures/SYNTHETIC-fix-well-01-cross-entry-aggregation.json",
+  "family": "F-PAT",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "WELL-B2",
+  "contract_registry_id": "W4-D2",
+  "fixture_id": "FIX-WELL-02",
+  "fixture_path": "fixtures/SYNTHETIC-fix-well-02-question-to-conclusion-drift.json",
+  "family": "F-REF",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "WELL-B3",
+  "contract_registry_id": "W4-D2",
+  "fixture_id": "FIX-WELL-03",
+  "fixture_path": "fixtures/SYNTHETIC-fix-well-03-research-to-person-inference.json",
+  "family": "F-REF",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "WELL-B4",
+  "contract_registry_id": "W4-D2",
+  "fixture_id": "FIX-WELL-04",
+  "fixture_path": "fixtures/SYNTHETIC-fix-well-04-supplement-to-health-inference.json",
+  "family": "F-ELEV",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "WELL-B5",
+  "contract_registry_id": "W4-D2",
+  "fixture_id": "FIX-WELL-05",
+  "fixture_path": "fixtures/SYNTHETIC-fix-well-05-absence-to-negative-inference.json",
+  "family": "F-ABS",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "KITCH-B1",
+  "contract_registry_id": "W4-D3",
+  "fixture_id": "FIX-KITCH-01",
+  "fixture_path": "fixtures/SYNTHETIC-fix-kitch-01-food-choice-to-health-conclusion-inference.json",
+  "family": "F-ELEV",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "KITCH-B2",
+  "contract_registry_id": "W4-D3",
+  "fixture_id": "FIX-KITCH-02",
+  "fixture_path": "fixtures/SYNTHETIC-fix-kitch-02-allergy-absence-to-all-clear-inference.json",
+  "family": "F-ABS",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "KITCH-B3",
+  "contract_registry_id": "W4-D3",
+  "fixture_id": "FIX-KITCH-03",
+  "fixture_path": "fixtures/SYNTHETIC-fix-kitch-03-meal-pattern-to-health-state-inference.json",
+  "family": "F-PAT",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "KITCH-B4",
+  "contract_registry_id": "W4-D3",
+  "fixture_id": "FIX-KITCH-04",
+  "fixture_path": "fixtures/SYNTHETIC-fix-kitch-04-nutrition-information-to-treatment-reframing.json",
+  "family": "F-REF",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "KITCH-B5",
+  "contract_registry_id": "W4-D3",
+  "fixture_id": "FIX-KITCH-05",
+  "fixture_path": "fixtures/SYNTHETIC-fix-kitch-05-preference-to-medical-requirement-elevation.json",
+  "family": "F-ELEV",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "GYM-B1",
+  "contract_registry_id": "W4-D4",
+  "fixture_id": "FIX-GYM-01",
+  "fixture_path": "fixtures/SYNTHETIC-fix-gym-01-training-pattern-to-mental-health-state-inference.json",
+  "family": "F-PAT",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "GYM-B2",
+  "contract_registry_id": "W4-D4",
+  "fixture_id": "FIX-GYM-02",
+  "fixture_path": "fixtures/SYNTHETIC-fix-gym-02-reduced-activity-to-deterioration-inference.json",
+  "family": "F-PAT",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "GYM-B3",
+  "contract_registry_id": "W4-D4",
+  "fixture_id": "FIX-GYM-03",
+  "fixture_path": "fixtures/SYNTHETIC-fix-gym-03-high-activity-to-all-clear-inference.json",
+  "family": "F-PAT",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "GYM-B4",
+  "contract_registry_id": "W4-D4",
+  "fixture_id": "FIX-GYM-04",
+  "fixture_path": "fixtures/SYNTHETIC-fix-gym-04-user-reported-record-to-injury-authority-elevation.json",
+  "family": "F-ELEV",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "GYM-B5",
+  "contract_registry_id": "W4-D4",
+  "fixture_id": "FIX-GYM-05",
+  "fixture_path": "fixtures/SYNTHETIC-fix-gym-05-injury-absence-to-all-clear-inference.json",
+  "family": "F-ABS",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "GYM-B6",
+  "contract_registry_id": "W4-D4",
+  "fixture_id": "FIX-GYM-06",
+  "fixture_path": "fixtures/SYNTHETIC-fix-gym-06-sleep-observation-to-health-cause-inference.json",
+  "family": "F-ELEV",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "MED-B1",
+  "contract_registry_id": "W4-D5",
+  "fixture_id": "FIX-MED-01",
+  "fixture_path": "fixtures/SYNTHETIC-fix-med-01-practice-pattern-to-mental-or-behavioural-state-inference.json",
+  "family": "F-PAT",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "MED-B2",
+  "contract_registry_id": "W4-D5",
+  "fixture_id": "FIX-MED-02",
+  "fixture_path": "fixtures/SYNTHETIC-fix-med-02-reflection-content-to-manufactured-person-state.json",
+  "family": "F-CM",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "MED-B3",
+  "contract_registry_id": "W4-D5",
+  "fixture_id": "FIX-MED-03",
+  "fixture_path": "fixtures/SYNTHETIC-fix-med-03-meditation-derived-outward-signal-in-any-direction.json",
+  "family": "F-ISO",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "MED-B4",
+  "contract_registry_id": "W4-D5",
+  "fixture_id": "FIX-MED-04",
+  "fixture_path": "fixtures/SYNTHETIC-fix-med-04-absence-or-frequency-to-motivation-progress-or-wellbeing-verdict.json",
+  "family": "F-ABS",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "MED-B5",
+  "contract_registry_id": "W4-D5",
+  "fixture_id": "FIX-MED-05",
+  "fixture_path": "fixtures/SYNTHETIC-fix-med-05-library-or-text-choice-to-religion-belief-or-identity-inference.json",
+  "family": "F-CM",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "MED-B6",
+  "contract_registry_id": "W4-D5",
+  "fixture_id": "FIX-MED-06",
+  "fixture_path": "fixtures/SYNTHETIC-fix-med-06-practice-to-spiritual-attainment-or-moral-verdict.json",
+  "family": "F-CM",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ },
+ {
+  "bait_label": "MED-B7",
+  "contract_registry_id": "W4-D5",
+  "fixture_id": "FIX-MED-07",
+  "fixture_path": "fixtures/SYNTHETIC-fix-med-07-absent-edge-or-cross-room-context-reliance.json",
+  "family": "F-ISO",
+  "execution_status": "behaviourally_unexecuted",
+  "superseded_by": null
+ }
+]
 ```
 
-**The live mapping population is empty because fixture creation has not yet been authorised.** At this document's acceptance there are 23 declaration obligations, 0 fixture artefacts, 0 allocated `FIX` identifiers, and 0 mapping rows. The map is populated **atomically with the Stage B fixture corpus** — 23 rows landing with 23 fixtures and the corpus validator in one governed landing, with this document's registered hash refreshed in the same commit. An empty map is a truthful state, not a defect; a partially populated map outside a Stage B landing is a defect.
+**The live mapping population comprises the twenty-three accepted rows, populated atomically with the Stage B fixture corpus — 23 rows landing with 23 fixtures and the corpus validator in one governed landing, with this document's registered hash refreshed in the same commit.** At this document's acceptance there were 23 declaration obligations, 0 fixture artefacts, 0 allocated `FIX` identifiers, and 0 mapping rows; the map was populated only when the Stage B corpus landed. An empty map was a truthful state for the authorised Stage A era, and a partially populated map outside a Stage B landing remains a defect.
 
 ## 15. Public-safety note
 
