@@ -1630,6 +1630,43 @@
       "content_hash": "sha256:87bb23ca8a4dd9d52f78d770eadfebcc2eb0131a4f77dd7a0411db9c96310f27",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W4-CR",
+      "aliases": [],
+      "title": "W4 Closure Record",
+      "type": "phase-record",
+      "phase": "W4",
+      "deliverable": "W4-D7",
+      "path": "docs/phases/W4-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-12",
+      "role": "Seals W4, Room Contracts, satisfying W4-D7: the deliverable chain cited by commit; every runway obligation assessed — north star, seven deliverables, six decision records with their folded rulings, ten non-goals, and the entry gate — with each outcome classified satisfied, intentionally deferred under named doctrine, or external dependency honestly recorded; verification at phase closure (281 tests with the two phase-named validator surfaces the phase added, unmasked scan pass, registry and boundary discipline held); the nine future-owned pending stubs named with zero W4-owned items remaining; the incident log with four incidents closed and the landing-hygiene practice carried forward; the honest-findings roll-up bounding Lane A to mechanical document conformance, Lane B to a corpus that is referenced, validated, and honestly unexecuted, and Lane C to complete and honest, not universally green; the W5 gate named with its inherited obligations and not pre-decided; and the deferred inventory separating W5-owned, W6-owned, and external matters. W4 closure authorises nothing new and resolves no deferred item. W5 has not started and must open through its own runway and gate. Authorises nothing to be built.",
+      "governs": [],
+      "depends_on": [
+        "W4-AR",
+        "ADR-0016",
+        "ADR-0017",
+        "ADR-0018",
+        "ADR-0019",
+        "ADR-0020",
+        "ADR-0021",
+        "W4-D2",
+        "W4-D3",
+        "W4-D4",
+        "W4-D5",
+        "ADR-0022",
+        "W4-D6-EASR",
+        "W4-D6-PHDAR",
+        "W4-D6-BEF"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:9b13552563264e9193ca354537d08474ee1811494f8fd5a44bc3d82d01690a17",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

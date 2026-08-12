@@ -90,6 +90,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | W4-D6-EASR | assurance-register | accepted | 2026-08-10 | `docs/governance/external-assurance-source-register.md` |
 | W4-D6-PHDAR | assurance-record | accepted | 2026-08-10 | `docs/governance/privacy-health-data-assurance-record.md` |
 | W4-D6-BEF | phase-record | accepted | 2026-08-11 | `docs/governance/behavioural-evaluation-fixtures.md` |
+| W4-CR | phase-record | accepted | 2026-08-12 | `docs/phases/W4-closure-record.md` |
 
 Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) lives in the canonical manifest. Type enum: `constitution` / `adr` / `architecture` / `phase-record` / `phase-brief` / `template` / `room-contract`. Implementation-permission enum: `none` / `verification-only` / `future-governed`.
 
