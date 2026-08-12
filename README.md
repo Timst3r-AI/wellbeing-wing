@@ -2,7 +2,7 @@
 
 A modular, AI-assisted personal wellbeing environment built governance-first.
 
-**Status:** The current published state is a governed, headless engine foundation. W3 — Health Vault and Health Profile Foundations — is complete and closed as of 2026-07-06: the vault store, import path, key custody, health profile object model, transition engine, residue evidence accounting, durable ledger store, encrypted backup/restore, and single-record export-as-right are all published and sealed. There is still no user interface, command-line tool, hosted sync, assistant, medical/therapeutic/diagnostic/crisis function, or companion product. W4 — Room Contracts — remains open pending publication and authoritative remote verification of the accepted W4-D7 closure record: W4-D1 through W4-D6 are complete — the four room contracts (Wellness, Kitchen, Gym, Meditation), the contract and fixture-corpus validators, the behavioural-evaluation fixture corpus, and the assurance records are accepted and published as governed documents — and W4-D7 has been accepted and landed locally. No room implementation exists, and W5 and W6 have not started.
+**Status:** The current published state is a governed, headless engine foundation. W3 — Health Vault and Health Profile Foundations — is complete and closed as of 2026-07-06: the vault store, import path, key custody, health profile object model, transition engine, residue evidence accounting, durable ledger store, encrypted backup/restore, and single-record export-as-right are all published and sealed. There is still no user interface, command-line tool, hosted sync, assistant, medical/therapeutic/diagnostic/crisis function, or companion product. W4 — Room Contracts — is complete and closed: the four room contracts (Wellness, Kitchen, Gym, Meditation), the contract and fixture-corpus validators, the behavioural-evaluation fixture corpus, and the assurance records are accepted and published as governed documents. No room implementation exists, no behavioural evaluation has been run, and W5 and W6 have not started.
 
 ---
 
@@ -41,7 +41,8 @@ Not a medical device. Not a treatment platform. Not an AI therapist. Not an enga
 | **W1** | Governance architecture and data boundary design | ✅ Closed — all deliverables accepted (2026-06-12) |
 | **W2** | Governance evaluation & enforcement foundations — making the governance testable, nothing user-facing | ✅ Closed (2026-07-05) |
 | **W3** | Health Vault and Health Profile foundations | ✅ Closed (2026-07-06) — Health Vault and Health Profile Foundations complete and sealed. |
-| W4+ | Rooms, adapters, and surfaces — each through its own gate | W4 — all deliverables complete; the W4-D7 closure record is accepted and landed locally, with closure publication and authoritative remote verification pending; W5+ not started. |
+| **W4** | Room Contracts — four rooms made enforceable jurisdictions, nothing user-facing | ✅ Closed (2026-08-12) — four governed room jurisdictions: contracts, the contract and fixture-corpus validators, the behavioural-evaluation fixture corpus, and the assurance records; no room implementation. |
+| W5+ | Adapters and surfaces — each through its own gate | Not started. |
 
 ## Repository structure
 
