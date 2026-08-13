@@ -1741,6 +1741,55 @@
       "content_hash": "sha256:44138d9a3986c8356c715e72003cf1dea623f1a308c95b79b372cf69736b9213",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0024",
+      "aliases": [],
+      "title": "0024 — AIAdapter / Processing-Context Boundary",
+      "type": "adr",
+      "phase": "W5",
+      "deliverable": "W5-D1",
+      "path": "docs/decisions/0024-aiadapter-processing-context-boundary.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-13",
+      "role": "The first W5 doctrine record and the AIAdapter ADR the sealed corpus has required since W1 (W0 Open Question 10; W1-D1 section 5's E12 reservation; W1-D5 section 8; W1-D6 section 9 item 4). Decides the processing boundary as a mechanism-independent property: one governed seam; no content accepted independently of a grant and no free-text interface; the boundary outside the sealed engine with separation both ways and a future external composition root permitted; grant-derived context construction with one-room binding structural and no two-room composition point; no hidden processing-state continuity, while lawful retrieval under a fresh grant remains open; context lifetime bounded by the grant with no processing-side state surviving it; display context separated from processing context, answering ADR 0017's first carried question; four-surface observability by construction with propagation claims bounded at the recipient boundary; Z5 kept distinct while W5 activates no Z5 flow; all three E12 prerequisites settled at doctrine level — scoping, authentication and impersonation prevention — with E12 expressly remaining reserved; the ledger obligation at the boundary; structural refusal with the content-free audit distinction preserved; and ADR 0017's exception discipline extended to the whole record. Six architecture questions are carried with named owners, including the ADR 0004 residue applicability check assigned to a W5-D1 unit before any W5-D2 implementation. Authorises no implementation, no directory, no dependency, no model contact, no payload, no transmission, no harness and no fixture execution.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "W1-D5",
+        "W1-D6",
+        "ADR-0001",
+        "ADR-0002",
+        "ADR-0003",
+        "ADR-0009",
+        "ADR-0015",
+        "ADR-0016",
+        "ADR-0017",
+        "ADR-0018",
+        "ADR-0019",
+        "ADR-0020",
+        "ADR-0021",
+        "ADR-0022",
+        "ADR-0023",
+        "W4-D2",
+        "W4-D3",
+        "W4-D4",
+        "W4-D5",
+        "W4-D6-BEF",
+        "W5-AR"
+      ],
+      "resolves": [
+        "W0-OQ-10"
+      ],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:06df2272d8a7603a75016366503c5b93779f06aa52d4a3dbef2351acb51ee604",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
