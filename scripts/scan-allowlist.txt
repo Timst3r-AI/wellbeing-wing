@@ -103,3 +103,6 @@ docs/phases/W5-runway-runtime-enforcement-evaluation.md | companion-framing | no
 docs/decisions/0023-aiadapter-import-citation-correction.md | companion-framing | or companion behaviour of any kind | ADR 0023 non-goals public-safety prohibition statement
 docs/decisions/0024-aiadapter-processing-context-boundary.md | companion-framing | or companion behaviour of any kind | ADR 0024 non-goals public-safety prohibition statement
 docs/decisions/0024-aiadapter-processing-context-boundary.md | companion-framing | Companion framing appears only where a sentence names the prohibition itself | ADR 0024 public-safety note prohibition-statement class
+docs/decisions/0025-provisional-freshness-governance-qualification.md | compliance-claim | no certified-compliance claim | ADR 0025 constitutional-references anti-claim
+docs/decisions/0025-provisional-freshness-governance-qualification.md | compliance-claim | no certified-compliance or validation claim is made anywhere | ADR 0025 constitutional-check anti-claim statement
+docs/decisions/0025-provisional-freshness-governance-qualification.md | companion-framing | or companion behaviour of any kind | ADR 0025 non-goals public-safety prohibition statement
