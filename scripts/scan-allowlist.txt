@@ -97,3 +97,6 @@ docs/governance/external-assurance-source-register.md | companion-framing | no c
 docs/governance/privacy-health-data-assurance-record.md | compliance-claim | not compliance certification | governing-boundary anti-claim: the record refuses certification status, it does not claim it
 docs/governance/privacy-health-data-assurance-record.md | compliance-claim | certified-compliance claim | governing-boundary anti-claim sentence: the Wing makes no such claim; prohibition, not assertion
 docs/governance/privacy-health-data-assurance-record.md | compliance-claim | never evidence of compliance | honesty-rule negation: absence of evidence is never evidence of compliance; negation, not assertion
+docs/phases/W5-runway-runtime-enforcement-evaluation.md | compliance-claim | verify a vendor's compliance | OR-2 quotation: vendor-retention conformance sense carried verbatim, not a legal claim
+docs/phases/W5-runway-runtime-enforcement-evaluation.md | companion-framing | or companion behaviour of any kind | W5 runway explicit non-goals public-safety prohibition statement
+docs/phases/W5-runway-runtime-enforcement-evaluation.md | companion-framing | no companion framing beyond naming a prohibition | W5 runway public-safety note prohibition statement

@@ -1667,6 +1667,40 @@
       "content_hash": "sha256:9b13552563264e9193ca354537d08474ee1811494f8fd5a44bc3d82d01690a17",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W5-AR",
+      "aliases": [
+        "W5-runway"
+      ],
+      "title": "W5 \u2014 Runtime Enforcement and Behavioural Evaluation (Phase Runway / Alignment Brief)",
+      "type": "phase-record",
+      "phase": "W5",
+      "deliverable": null,
+      "path": "docs/phases/W5-runway-runtime-enforcement-evaluation.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-13",
+      "role": "The W5 phase runway: realising at runtime the boundaries W4 declared and measuring whether they hold, including on channels that produce no output; two governed eras \u2014 adapter/runtime enforcement and behavioural evaluation \u2014 carried as an explicit seam; deliverable sequence W5-D1 through W5-D6; seven candidate W5-D1 doctrine records (DR-W5-01 through DR-W5-07), with per-room context-cost evidence held as a disposable out-of-repository evidence spike rather than a reserved record; four-surface observability as a runtime-design constraint; the directory, dependency, import, model-access and notification-layer fences named and not authorised; inherited matters with named owners; explicit non-goals; and the entry gate (three documents, three acceptances). Authorises future W5 briefs, not capability and not implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "ADR-0001",
+        "ADR-0002",
+        "ADR-0003",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "W1-D5",
+        "W1-D6",
+        "W4-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "future-governed",
+      "open_decisions": [],
+      "content_hash": "sha256:3511e886de883d5adc9fbdf78150bb9ff43c47ef84be1c21d46c662bbfc9a340",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
