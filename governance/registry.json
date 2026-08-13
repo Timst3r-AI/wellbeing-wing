@@ -864,9 +864,14 @@
         "aiadapter-adr",
         "vendoradapter-adr"
       ],
-      "content_hash": "sha256:a676e4c0b710d4d5c3a61d951d1fa793234c5b7f9c922d77563a36deb402b89d",
+      "content_hash": "sha256:4a71903417afbd101919bdcb426737eceaa8ef8e520aadac0093de1e677986e1",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-08-13",
+          "note": "The section 8 required-decision-records list gained a corrected pointer for the AIAdapter ADR's import obligation, authorised by ADR 0023. The citation instructed importing this threat model's \"Z3/Z5 rows\" wholesale; this document contains a Z3 boundary row and no Z5 row, so the obligation could not be discharged as written. The corrected wording names the Z3 boundary row here together with the Z5 zone definition in W1-D1 section 1. Non-semantic: the obligation's subjects and strength are unchanged, and no threat row, residual, asset, principle or test obligation is altered. Amendment made via decision record per checklist rule 2; hash recomputed in the same commit."
+        }
+      ]
     },
     {
       "id": "W1-D6",
@@ -897,9 +902,14 @@
       "open_decisions": [
         "evaluation-harness-implementation"
       ],
-      "content_hash": "sha256:845d437deb48dbc86e9160765c5b221343cfc63d0958e378fb53cceab608f718",
+      "content_hash": "sha256:d3eefc256b5f8446633d63dbf83c09ce248a216d454bbe7ea5426addb5bd95a5",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-08-13",
+          "note": "The section 9 item 4 AIAdapter ADR entry gained the same corrected pointer, authorised by ADR 0023. It instructed importing D5's \"Z3/Z5 rows\" wholesale; W1-D5 contains a Z3 boundary row and no Z5 row. The corrected wording names D5's Z3 boundary row, the Z5 zone definition in W1-D1 section 1, and this document's grammar. Non-semantic: the obligation's subjects and strength are unchanged. Amendment made via decision record per checklist rule 2; hash recomputed in the same commit."
+        }
+      ]
     },
     {
       "id": "W2-AR",
@@ -1699,6 +1709,36 @@
       "implementation_permission": "future-governed",
       "open_decisions": [],
       "content_hash": "sha256:3511e886de883d5adc9fbdf78150bb9ff43c47ef84be1c21d46c662bbfc9a340",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0023",
+      "aliases": [],
+      "title": "0023 — AIAdapter Import-Citation Correction (W1-D5, W1-D6)",
+      "type": "adr",
+      "phase": "W5",
+      "deliverable": null,
+      "path": "docs/decisions/0023-aiadapter-import-citation-correction.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-13",
+      "role": "The AIAdapter import-citation correction to W1-D5 section 8 and W1-D6 section 9 item 4, arising from DR-W5-01 drafting. Both records instructed the future AIAdapter ADR to import this threat model's \"Z3/Z5 rows\" wholesale; W1-D5 contains a Z3 boundary row and no Z5 row, so the obligation could not be discharged as written. Rules that no Z5 threat-analysis row is missing — W1-D1 binds Z5 to Z3's rules, W1-D5 section 4 tabulates boundaries rather than zones, and a Z5 crossing is an AI-processing crossing already described by the Z3 row — so the defect is confined to the pointer. Restates the corrected obligation with wholesale governing the whole list, authorises exactly two narrow pointer corrections and no others, and forbids inventing a Z5 row, substituting Z4, adding residuals to the mandatory import, or widening or narrowing the obligation. W1-D1 is not amended. The published W5 runway's quotation of the prior wording is preserved intentionally as acceptance-time evidence and W5-AR is untouched. No wider citation audit is opened. Dependent DR-W5-01 work is held until this record is published and remotely verified. This record is not a W5 deliverable and its publication does not open W5. Authorises no implementation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D5",
+        "W1-D6",
+        "W2-D3",
+        "ADR-0003",
+        "ADR-0021",
+        "ADR-0022"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:44138d9a3986c8356c715e72003cf1dea623f1a308c95b79b372cf69736b9213",
       "hash_exclusion_reason": null,
       "errata": []
     }

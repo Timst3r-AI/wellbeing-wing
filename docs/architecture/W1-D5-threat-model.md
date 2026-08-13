@@ -106,7 +106,7 @@ Severity: L/M/H/C (critical). Status: **M** mitigated by accepted design · **PM
 
 ## 8. Future required decisions and tests
 
-**Decision records required:** staleness intervals by data type (D3 OQ 1); backup/recovery guidance (against ADR 0001, before public availability); queue-design rules (D5-T20); the AIAdapter ADR (E12 — which must import this threat model's Z3/Z5 rows wholesale); revocation cascade (D2 §5.5); notification-layer definition fence (D5-T16).
+**Decision records required:** staleness intervals by data type (D3 OQ 1); backup/recovery guidance (against ADR 0001, before public availability); queue-design rules (D5-T20); the AIAdapter ADR (E12 — which must import the following wholesale: this threat model's Z3 boundary row and the Z5 zone definition in W1-D1 §1); revocation cascade (D2 §5.5); notification-layer definition fence (D5-T16).
 
 **Tests required (feeding W1-D6):** deterministic — edge whitelist enforcement (D5-T01), authority transitions (D5-T02, D5-T04), label travel and surfacing presence (D5-T03, D5-T09), payload equality at Z3 and Z4 boundaries (D5-T15, D5-T23). Behavioural — repetition-as-confirmation resistance (D5-T05), authority-laundering through agent chains (D5-T06), cross-room and in-room silent inference (D5-T12, D5-T13), surfacing language in both failure directions (D5-T07, D5-T08, D5-T17). Grader calibration must score *underclaim and overclaim symmetrically*: a system penalised for honest "unknown" will learn to stop saying it.
 

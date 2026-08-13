@@ -138,7 +138,7 @@ Carried out of W1 as named, required future work — none blocks W1 closure; all
 1. **Staleness intervals by data type** (D3 OQ 1; D5-T03) — before any profile serves context in W2.
 2. **Backup/recovery guidance** (ADR 0001; D5-T19, D5-T21) — argued against ADR 0001, before public availability.
 3. **Queue-design rules** (D5-T20) — before any review surface is designed.
-4. **AIAdapter ADR** (E12; OQ 10) — before any Z5 connection exists; imports D5's Z3/Z5 rows and this document's grammar wholesale.
+4. **AIAdapter ADR** (E12; OQ 10) — before any Z5 connection exists; imports the following wholesale: D5's Z3 boundary row, the Z5 zone definition in W1-D1 §1, and this document's grammar.
 5. **VendorAdapter ADR** — before any Z4 integration beyond the E10 grocery-list edge; payload-equality tests are its acceptance gate.
 6. **Revocation cascade** (D2 §5.5; W0 OQ 2) — final disposition of artefacts derived under revoked consent.
 7. **Notification-layer definition fence** (D5-T16) — anything contacting the user outside an active session is the notification layer, whatever it is called; needs its own record before existing.

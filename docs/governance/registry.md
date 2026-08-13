@@ -92,6 +92,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | W4-D6-BEF | phase-record | accepted | 2026-08-11 | `docs/governance/behavioural-evaluation-fixtures.md` |
 | W4-CR | phase-record | accepted | 2026-08-12 | `docs/phases/W4-closure-record.md` |
 | W5-AR | phase-record | accepted | 2026-08-13 | `docs/phases/W5-runway-runtime-enforcement-evaluation.md` |
+| ADR-0023 | adr | accepted | 2026-08-13 | `docs/decisions/0023-aiadapter-import-citation-correction.md` |
 
 Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) lives in the canonical manifest. Type enum: `constitution` / `adr` / `architecture` / `phase-record` / `phase-brief` / `template` / `room-contract`. Implementation-permission enum: `none` / `verification-only` / `future-governed`.
 
@@ -104,6 +105,10 @@ Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) liv
 - **ADR-0021** (logged 2026-08-09): the section 11 mechanical validator requirements matrix gained a one-line pointer to [ADR 0022](../decisions/0022-contract-validator-m10-m12-correction.md) (Contract Validator M10/M12 Decidability Correction), which corrects the M10 and M12 requirements. Non-semantic: no corrected rule is restated in ADR-0021. Amendment made via decision record per checklist rule 2; hash recomputed in the same commit.
 
 - **W4-D2** (logged 2026-08-09): the Wellness contract's section 2 E5 verbatim quotation regained the source-owned leading list marker ("- ") dropped in transcription, restoring byte-for-byte agreement with [W1-D1 §5](../architecture/W1-data-boundary-map.md). Non-semantic: two characters added, no clause content changed. Hash recomputed in the same commit.
+
+- **W1-D5** (logged 2026-08-13): the section 8 required-decision-records list gained a corrected pointer for the AIAdapter ADR's import obligation, authorised by [ADR 0023](../decisions/0023-aiadapter-import-citation-correction.md). The citation instructed importing this threat model's "Z3/Z5 rows" wholesale; the document contains a Z3 boundary row and no Z5 row. Non-semantic: subjects and strength unchanged, no threat row or residual altered. Hash recomputed in the same commit.
+
+- **W1-D6** (logged 2026-08-13): the section 9 item 4 AIAdapter ADR entry gained the same corrected pointer, authorised by [ADR 0023](../decisions/0023-aiadapter-import-citation-correction.md). Non-semantic: subjects and strength unchanged. Hash recomputed in the same commit.
 
 ## 7. Public-safety note
 

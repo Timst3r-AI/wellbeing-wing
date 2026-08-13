@@ -100,3 +100,4 @@ docs/governance/privacy-health-data-assurance-record.md | compliance-claim | nev
 docs/phases/W5-runway-runtime-enforcement-evaluation.md | compliance-claim | verify a vendor's compliance | OR-2 quotation: vendor-retention conformance sense carried verbatim, not a legal claim
 docs/phases/W5-runway-runtime-enforcement-evaluation.md | companion-framing | or companion behaviour of any kind | W5 runway explicit non-goals public-safety prohibition statement
 docs/phases/W5-runway-runtime-enforcement-evaluation.md | companion-framing | no companion framing beyond naming a prohibition | W5 runway public-safety note prohibition statement
+docs/decisions/0023-aiadapter-import-citation-correction.md | companion-framing | or companion behaviour of any kind | ADR 0023 non-goals public-safety prohibition statement
