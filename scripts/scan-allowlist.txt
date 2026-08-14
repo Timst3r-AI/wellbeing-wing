@@ -107,3 +107,4 @@ docs/decisions/0025-provisional-freshness-governance-qualification.md | complian
 docs/decisions/0025-provisional-freshness-governance-qualification.md | compliance-claim | no certified-compliance or validation claim is made anywhere | ADR 0025 constitutional-check anti-claim statement
 docs/decisions/0025-provisional-freshness-governance-qualification.md | companion-framing | or companion behaviour of any kind | ADR 0025 non-goals public-safety prohibition statement
 docs/decisions/0026-safety-relevant-set-citation-correction.md | companion-framing | or companion behaviour of any kind | ADR 0026 non-goals public-safety prohibition statement
+docs/decisions/0027-safety-relevant-set-reconciliation.md | companion-framing | or companion behaviour of any kind | ADR 0027 non-goals public-safety prohibition statement

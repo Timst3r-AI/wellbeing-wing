@@ -1857,6 +1857,37 @@
       "content_hash": "sha256:648c72d4e5194c0f614c0f51fb091aff60184b97c9fc296db1b23052aa69f0d6",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0027",
+      "aliases": [],
+      "title": "0027 — Safety-Relevant Set Reconciliation and Freshness Coverage",
+      "type": "adr",
+      "phase": "W5",
+      "deliverable": null,
+      "path": "docs/decisions/0027-safety-relevant-set-reconciliation.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-14",
+      "role": "The reconciliation that lifts the block on DR-W5-02. Four accepted sources use high-stakes and safety-relevant vocabulary with four different memberships: W0 section 7's five-member individual-confirmation set at approval, W1-D3 section 6.3's four-member room-consumption set within section 6's own E6 and E7 scope, ADR 0002's six-member surfacing-ladder set, and W1-D3 section 10.7's re-authentication list, which remains an open question and is not an accepted fourth authority. This record establishes that the sets are scoped by governance function and are non-transferable, that membership of one never implies membership of another, and that no canonical universal safety-relevant set exists or is created. It adjudicates no membership: ADR 0002's six are neither validated nor re-justified, and ADR 0026 is not read as having settled them. It also withdraws an earlier reading that ADR 0002's Kitchen and Gym per-case row delegated the whole room layer to section 6.3, since the row names two rooms, section 6 is itself scoped to E6 and E7, and ADR 0002 cites section 6.3 for most-protective framing at L3 over its own six-member set. What survives is a composition question rather than a conflict: ADR 0002's L2 and L3 surfacing mechanism over six members and ADR 0020's always-shown inline mechanism over four both operate at room surfaces, and no accepted record states how they interact for pregnancy status and clinician instructions, which are covered only by ADR 0002's set. Both records remain simultaneously valid and unamended; no precedence, supersession or winning set is created, and no preliminary room-scoped record is required. The record further reports, without closing, that pregnancy status and clinician instructions are in no accepted freshness taxonomy and so can never become review-due, stale or expired through ageing, and that freshness data type has no accepted definition anywhere in the corpus; neither item is mapped into condition, preference or any existing category. DR-W5-02 owns the composition question, freshness coverage, and the definition of freshness data type. Publication and independent remote verification of this record lift the block on DR-W5-02. An ADR 0002 L3 acknowledgement remains not a renewal and resets no freshness clock, and ADR 0025 safeguard 14 is untouched. Not a W5 deliverable and creating no W5 planning slot. Amends no law and no record, resolves W1-D3 section 10.6 and section 10.7 not at all, and authorises no implementation, directory, dependency, model contact, payload, transmission, harness or fixture execution.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D3",
+        "ADR-0002",
+        "ADR-0003",
+        "ADR-0020",
+        "ADR-0025",
+        "ADR-0026",
+        "W5-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:32e622d9fd9f2177264b182a5275e1131e46ff84082c48c52059eb65c4ecf5f1",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
