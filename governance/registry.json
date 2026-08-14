@@ -1956,6 +1956,37 @@
       "content_hash": "sha256:a31e48fd6908d983b1c5dec54aa1f3a65adc2c87d2596ec3f11a88dd402e89cc",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0030",
+      "aliases": [],
+      "title": "0030 — Grant Machinery, Consent Duration and Re-authentication (DR-W5-03)",
+      "type": "adr",
+      "phase": "W5",
+      "deliverable": "W5-D1",
+      "path": "docs/decisions/0030-grant-machinery-consent-duration-reauthentication.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-15",
+      "role": "Defines lawful grant construction, grant lifecycle, consent duration and re-authentication for W5 runtime, the third of the seven W5-D1 doctrine records. It resolves in body W1-D2 section 8.1 (consent duration defaults) and W1-D2 section 8.2 with W1-D3 section 10.7 (re-authentication for high-stakes grants), whose posture W5-AR records as proposed and never decided after W1-D5 placed authentication flows out of scope. Part A makes W1-D2's grammar structurally normative: a grant is constructable only with all thirteen required elements over one already-declared W1-D1 edge, and a missing element, an undeclared edge, a blanket scope, or multiple independent edges or purposes make it unconstructable; a grant is an immutable delegation that can never create an edge, establish truth, refresh information, raise authority, transfer or delegate itself, widen itself, mutate, silently reactivate or become ambient permission. The lifecycle is proposed, declined, active, awaiting required re-authentication, review-due, expired and revoked; no freshness vocabulary is used for grants and stale is barred, W1-D2's inherited stale-grant wording being reported rather than reproduced and W1-D2 not amended; suspended is deliberately omitted for want of a distinct source-grounded meaning; and review-due is a surfacing state only, never shortening the governed validity interval nor making an active grant unusable before expiry. Re-affirmation never extends or renews a grant in place because duration is a governed element: it creates a successor grant with a new identity, a new validity interval and an inspectable predecessor lineage, the predecessor keeping its original scope and history; a successor grant is new permission arising from new explicit consent, not resurrection, and neither an expired nor a revoked grant ever reactivates. Material change to edge, actor, recipient or processing class, data class or scope, source or destination zone, purpose, operation, plaintext status, vendor involvement, or duration where it would alter the delegation requires a newly constructed grant rather than mutation. Part B fixes durations: Vault extraction single-task only with fresh re-authentication at grant time, profile scoped read standing with a maximum validity of 180 days as a hard ceiling after which the grant expires and silence neither renews it nor creates a successor, AI processing single-task default and session maximum, vendor disclosure per transmission, export preparation single-task, and no unbounded duration. A session is a narrow user-initiated active authority window that cannot silently revive; inactivity-based termination is non-operative until a later governed decision supplies a numeric threshold, and no implementation may supply that number by discretion. Re-authentication proves only present user control for the exact grant proposal being activated, in a fixed order of construct, make inspectable, re-authenticate, confirm consent, activate; it creates no consent, scope, edge, duration or permission, never becomes a reusable ambient recently-authenticated flag, and any material change after it invalidates that activation path. Vendor-hosted C3 and C4 plaintext disclosure carries a conditional re-authentication requirement only, and this record authorises no such path. Part C makes the runtime consequence structural: where a grant is unconstructable, declined, expired, revoked, missing required re-authentication, or materially mismatched, only the dependent delegated operation is withheld or degraded, never blocking the person, closing the room, withdrawing unrelated functionality or gating a right, with refusal content-free per ADR 0024. Grant and audit lifecycle records remain C0 governance metadata with no processing edges and must never become analytics, profiling, inference or scoring. Authentication is not consent, consent is not trust, trust is not truth, and a grant is never authority beyond its declared edge; available is not permitted, permitted is not true, fresh is not authorised and authorised is not fresh, and no runtime may collapse these into one ambient trusted or granted state. Deterministic obligations are separated from behavioural proof, and the pending grant-machinery stub remains pending. Authorises no implementation, runtime directory, software/package dependency, UI, authentication mechanism, session-manager implementation, model access, vendor-hosted access, payload construction, transmission mechanics, fixture execution, pending-ledger change, Lane C, W6 or W5-D2 milestone, and amends no record.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W1-D3",
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0024",
+        "ADR-0029",
+        "W5-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:b6951aad2be5ef2920f05cd0f19707d500a5c0a6fc8f190550e1b6985936d13e",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
