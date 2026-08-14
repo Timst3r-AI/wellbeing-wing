@@ -95,6 +95,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | ADR-0023 | adr | accepted | 2026-08-13 | `docs/decisions/0023-aiadapter-import-citation-correction.md` |
 | ADR-0024 | adr | accepted | 2026-08-13 | `docs/decisions/0024-aiadapter-processing-context-boundary.md` |
 | ADR-0025 | adr | accepted | 2026-08-13 | `docs/decisions/0025-provisional-freshness-governance-qualification.md` |
+| ADR-0026 | adr | accepted | 2026-08-14 | `docs/decisions/0026-safety-relevant-set-citation-correction.md` |
 
 Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) lives in the canonical manifest. Type enum: `constitution` / `adr` / `architecture` / `phase-record` / `phase-brief` / `template` / `room-contract`. Implementation-permission enum: `none` / `verification-only` / `future-governed`.
 
@@ -111,6 +112,8 @@ Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) liv
 - **W1-D5** (logged 2026-08-13): the section 8 required-decision-records list gained a corrected pointer for the AIAdapter ADR's import obligation, authorised by [ADR 0023](../decisions/0023-aiadapter-import-citation-correction.md). The citation instructed importing this threat model's "Z3/Z5 rows" wholesale; the document contains a Z3 boundary row and no Z5 row. Non-semantic: subjects and strength unchanged, no threat row or residual altered. Hash recomputed in the same commit.
 
 - **W1-D6** (logged 2026-08-13): the section 9 item 4 AIAdapter ADR entry gained the same corrected pointer, authorised by [ADR 0023](../decisions/0023-aiadapter-import-citation-correction.md). Non-semantic: subjects and strength unchanged. Hash recomputed in the same commit.
+
+- **ADR-0002** (logged 2026-08-14): the intensity-ladder safety-relevant definition had its provenance clause corrected, authorised by [ADR 0026](../decisions/0026-safety-relevant-set-citation-correction.md). The clause called ADR-0002's six-member safety-relevant set *"the same high-stakes set W0 §7 requires individual confirmation for"*; W0 §7's list has five members and excludes injuries. The corrected clause names W0 §7's five high-stakes fields together with injuries. The six-member set is not adjudicated and is unchanged; the ladder, per-case table, doctrines and language law are untouched. Amendment made via decision record per checklist rule 2; hash recomputed in the same commit.
 
 ## 7. Public-safety note
 

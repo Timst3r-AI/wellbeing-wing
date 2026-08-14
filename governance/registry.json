@@ -96,9 +96,14 @@
       "open_decisions": [
         "notification-layer-definition-fence"
       ],
-      "content_hash": "sha256:cda1787b255c03ae2f29f8e2adb8ca8884925e39aa04ba57ee91b7df8a3b2242",
+      "content_hash": "sha256:2e3df34e2897f26540c019f2c68876a7ec45faa9bef7783bae3fd4b51221c759",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-08-14",
+          "note": "The intensity-ladder safety-relevant definition had its provenance clause corrected, authorised by ADR 0026. The clause described this record's six-member safety-relevant set as \"the same high-stakes set W0 section 7 requires individual confirmation for\"; W0 section 7's list has five members and does not include injuries, so the identity claim was false as written. The corrected clause names W0 section 7's five high-stakes fields together with injuries. The six-member set is not adjudicated and is unchanged, and the L0 to L3 ladder, the per-case table, the four doctrines, the language law and the open questions are untouched. Amendment made via decision record per checklist rule 2; hash recomputed in the same commit."
+        }
+      ]
     },
     {
       "id": "ADR-0003",
@@ -1821,6 +1826,35 @@
       "implementation_permission": "none",
       "open_decisions": [],
       "content_hash": "sha256:5d977edd986dee826d50cebbd02bc602af80cce853cd0166e89d12a7a1faeaf6",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0026",
+      "aliases": [],
+      "title": "0026 — Safety-Relevant Set Citation Correction (ADR 0002)",
+      "type": "adr",
+      "phase": "W5",
+      "deliverable": null,
+      "path": "docs/decisions/0026-safety-relevant-set-citation-correction.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-14",
+      "role": "The correction that makes the safety-set reconciliation record writable. ADR 0002 defined its six-member safety-relevant set as the same high-stakes set W0 section 7 requires individual confirmation for; W0 section 7's list has five members and does not include injuries, so the identity claim is false as written. This record corrects that claim only. ADR 0002's six-member set is not adjudicated and is not changed, its membership remains exactly as accepted, and no member is validated or re-justified. The L0 to L3 ladder, the per-case table, the four doctrines and the language law are untouched; W0 section 7 and W1-D3 section 6.3 are unamended; and the W0 section 7 pointer is confirmed correct and may not be sharpened, since W0 section 7 has no numbered subsections and a section 7.2 address does not exist. The correction is material under checklist rule 2 and lands as a decision record with one narrow source edit, ADR 0002's first erratum and a recomputed content hash, atomically per rule 3. No canonical merged set is created and no statement is made about which set governs which layer — that is the reconciliation record's question and is deliberately not answered here, so the category conflation survives this correction by design. Dependent work is held until publication and independent remote verification. Not a W5 deliverable, creates no W5 planning slot, opens no wider citation audit, reserves no decision-record number for any future record, and authorises no implementation, directory, dependency, model contact, payload, transmission, harness or fixture execution.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "ADR-0002",
+        "ADR-0003",
+        "ADR-0021",
+        "ADR-0022",
+        "ADR-0023",
+        "W2-D3"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:648c72d4e5194c0f614c0f51fb091aff60184b97c9fc296db1b23052aa69f0d6",
       "hash_exclusion_reason": null,
       "errata": []
     }

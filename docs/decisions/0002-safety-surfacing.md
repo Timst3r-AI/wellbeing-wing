@@ -41,7 +41,7 @@ Law 1 holds in full. No proactive outreach, no notifications, no reminders. Flag
 | **L2** | Inline | The current task *relies on* safety-relevant context that is review-due, stale, or user-vs-record conflicted | One plain sentence, before the output, with label, age, and provenance; output proceeds with uncertainty framing |
 | **L3** | Pause-and-acknowledge | The current task relies on safety-relevant context that is **expired, contradicted, or unknown** (the D3 treat-as-unknown states) | The Wing pauses, states the governance fact, and asks the user to acknowledge before producing output that would otherwise rest on unsound ground. Proceeding is always available; the output then carries most-protective framing (D3 §6.3) |
 
-**Safety-relevant** means, initially: allergies, medications, diagnosed conditions, injuries, pregnancy status, and clinician instructions — the same high-stakes set W0 §7 requires individual confirmation for. Extending the set is a future decision, not a runtime judgment.
+**Safety-relevant** means, initially: allergies, medications, diagnosed conditions, injuries, pregnancy status, and clinician instructions — W0 §7's five high-stakes fields for individual confirmation, together with injuries. Extending the set is a future decision, not a runtime judgment.
 
 Per-case treatment, mapping the governed states to the ladder:
 
