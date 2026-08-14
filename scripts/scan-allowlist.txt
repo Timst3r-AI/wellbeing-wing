@@ -109,3 +109,4 @@ docs/decisions/0025-provisional-freshness-governance-qualification.md | companio
 docs/decisions/0026-safety-relevant-set-citation-correction.md | companion-framing | or companion behaviour of any kind | ADR 0026 non-goals public-safety prohibition statement
 docs/decisions/0027-safety-relevant-set-reconciliation.md | companion-framing | or companion behaviour of any kind | ADR 0027 non-goals public-safety prohibition statement
 docs/decisions/0028-w5-runway-open-cell-count-correction.md | companion-framing | or companion behaviour of any kind | ADR 0028 non-goals public-safety prohibition statement
+docs/decisions/0029-runtime-freshness-unknown-stale-behaviour.md | companion-framing | or companion behaviour of any kind | ADR 0029 non-goals public-safety prohibition statement

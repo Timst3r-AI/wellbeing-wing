@@ -1924,6 +1924,38 @@
       "content_hash": "sha256:67084811b3b3be86a20eb928b103eacac5ad8eefc6e168a0f4f2cadd2cbcd04d",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0029",
+      "aliases": [],
+      "title": "0029 — Runtime Freshness and Unknown/Stale Behaviour (DR-W5-02)",
+      "type": "adr",
+      "phase": "W5",
+      "deliverable": "W5-D1",
+      "path": "docs/decisions/0029-runtime-freshness-unknown-stale-behaviour.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-14",
+      "role": "Establishes W5 runtime freshness and unknown/stale behaviour doctrine, the second of the seven W5-D1 doctrine records. Part A fixes freshness semantics: a freshness data type is a governance policy key, not a clinical taxonomy, not a sensitivity class, not a substitute for W1-D1's category inventory and implying no safety-set membership; there is one key shape only, carrying normative R, G and H with S = R + G derived and never governed independently; no per-field override exists; the unit is the fixed-duration day of exactly 24 elapsed hours; and seven governed policy keys are closed by this record — medication, allergy, condition, injury, pregnancy status, clinician instructions and preference. Every threshold value is a provisional governance default — not clinically validated, carried wherever a value is reproduced or summarised, and representations drawn from the six equal keys additionally carry the non-equivalence rule that their equality is a uniform provisional governance simplification and not evidence of clinical equivalence; the published chain permits provisional threshold-setting but validates no specific number. A governance review horizon falls at W5 closure or six months after acceptance, whichever comes first, and is never a clinical cadence; provisional status ends only by supersession or explicit re-affirmation, never by silence. Freshness must be valid at every governed reliance, evaluated at minimum before the first governed reliance in each relevant user-initiated interaction, with no background polling and all five W1-D3 section 7 triggers retained; acknowledgement is surfacing only and never renewal, writing no review timestamp and changing no freshness, authority, provenance, contradiction, supersession or pending-review state. Part B fixes runtime consequence: expired is retained as the freshness label while the assertion is consumed as unknown, with last-known assertion, provenance and age retained; a bounded unknown never means absence, resolution or reassurance; safeguard 14 is predicate-based rather than label-based and a stale item can meet the predicate; a fail-closed withholds only the dependent operation or output, never gating the person and never closing the room, with independent room operations remaining available; three assertion postures — positive safety constraint, ordinary positive fact and explicit absence assertion — are derived at evaluation from claim polarity, current authority and freshness treatment, and applicable scoped-set membership, and are never persisted; and ADR 0002's surfacing ladder and ADR 0020's always-shown inline mechanism apply independently within their own scoped memberships, with no precedence, no supersession, no winning set and no inferred fallback rule for non-members. W1-D3 section 10.1 and section 10.6 are resolved in the body, section 10.6 at the dependent-operation and output boundary with its own constitutional check, while the historical room-contract Open (section 10.6) text is not edited, superseded or amended and remains source text until a separately governed documentation update. Deterministic obligations for W5-D2 are separated from behavioural proof, which is deferred to DR-W5-07 and W5-D3 to W5-D4 and is not claimed here. Authorises no implementation, runtime directory, software/package dependency, model contact, payload construction, transmission, harness or fixture execution.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D3",
+        "ADR-0002",
+        "ADR-0003",
+        "ADR-0020",
+        "ADR-0024",
+        "ADR-0025",
+        "ADR-0027",
+        "W5-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:a31e48fd6908d983b1c5dec54aa1f3a65adc2c87d2596ec3f11a88dd402e89cc",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

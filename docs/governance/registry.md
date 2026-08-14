@@ -98,6 +98,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | ADR-0026 | adr | accepted | 2026-08-14 | `docs/decisions/0026-safety-relevant-set-citation-correction.md` |
 | ADR-0027 | adr | accepted | 2026-08-14 | `docs/decisions/0027-safety-relevant-set-reconciliation.md` |
 | ADR-0028 | adr | accepted | 2026-08-14 | `docs/decisions/0028-w5-runway-open-cell-count-correction.md` |
+| ADR-0029 | adr | accepted | 2026-08-14 | `docs/decisions/0029-runtime-freshness-unknown-stale-behaviour.md` |
 
 Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) lives in the canonical manifest. Type enum: `constitution` / `adr` / `architecture` / `phase-record` / `phase-brief` / `template` / `room-contract`. Implementation-permission enum: `none` / `verification-only` / `future-governed`.
 
