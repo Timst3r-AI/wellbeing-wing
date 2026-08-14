@@ -1713,9 +1713,14 @@
       "id_namespaces": [],
       "implementation_permission": "future-governed",
       "open_decisions": [],
-      "content_hash": "sha256:3511e886de883d5adc9fbdf78150bb9ff43c47ef84be1c21d46c662bbfc9a340",
+      "content_hash": "sha256:eb59a69cc8939ebf8506c2c237f1b8052127933d36060fd75633d1a7d38eb295",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-08-14",
+          "note": "The section 6.1 open-cell count was corrected, authorised by ADR 0028. The sentence read \"Six behaviour-table cells in every room contract read `Open (section 10.6)` and carry the floor only\"; ADR 0020's shared behaviour table carries that token on five of its six rows (row 1, Current, carries none) and each of the four room contracts reproduces five such cells, so the corrected sentence reads \"Five\". One word changed on one line; no other byte altered. Count and source fidelity only: no behaviour semantics, no ADR 0020 amendment, no room-contract text, no section 10.1 or section 10.6 assignment, no phase structure and no implementation permission changed. Amendment made via decision record per checklist rule 2; hash recomputed in the same commit."
+        }
+      ]
     },
     {
       "id": "ADR-0023",
@@ -1886,6 +1891,37 @@
       "implementation_permission": "none",
       "open_decisions": [],
       "content_hash": "sha256:32e622d9fd9f2177264b182a5275e1131e46ff84082c48c52059eb65c4ecf5f1",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0028",
+      "aliases": [],
+      "title": "0028 — W5 Runway Open-Cell Count Source-Fidelity Correction",
+      "type": "adr",
+      "phase": "W5",
+      "deliverable": null,
+      "path": "docs/decisions/0028-w5-runway-open-cell-count-correction.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-14",
+      "role": "The source-fidelity correction of the W5 runway's open-cell count. W5-AR section 6.1 asserted that six behaviour-table cells in every room contract read Open (section 10.6); ADR 0020's shared table carries that token on five of its six rows, row 1 Current carrying none, and all four room contracts reproduce five such cells each. The assertion was false when W5-AR was accepted, verified against the room contracts at W5-AR's own landing commit, so this is not later drift. One word changes in W5-AR section 6.1, six to five, and nothing else. Twenty behaviour-table cells and twenty-one textual occurrences are different measurements: the Wellness contract additionally mentions the token once in a fidelity note that is not a table cell, and the corrected sentence counts cells per contract. ADR 0020's behaviour semantics are unchanged and ADR 0020 is not amended; no room contract is amended in body, entry, erratum or hash; W5-AR's assignment of W1-D3 section 10.1 and section 10.6 to DR-W5-02, its four obligations on that record, its phase structure, its deliverable set and its future-governed permission are all unchanged. Section 10.6 remains open in the historical room-contract cells under current repository authority: DR-W5-02 is accepted in Downloads but is not repository authority, and this record confers it none and does not resolve section 10.6. ADR 0023 decision 7's no-edit fence was scoped to that record's import-citation correction and protected a faithful quotation of another document's then-current wording; the present defect is W5-AR's own factual assertion and was false when made, so this correction neither reverses nor contradicts it. The correction pattern is extended to a phase-record body for the first time, without a special exemption or a new mutation class. No cell may be added to any contract to make the original count true. Correction-first sequencing governs: nothing is reserved, and DR-W5-02 derives its own number only after this correction is published and independently remote-verified. Not a W5 deliverable, creating no W5 planning slot and no W5-D1 identity, opening no wider count audit, and authorising no implementation, runtime behaviour, model contact, fixture execution or evaluation.",
+      "governs": [],
+      "depends_on": [
+        "W5-AR",
+        "ADR-0020",
+        "W4-D2",
+        "W4-D3",
+        "W4-D4",
+        "W4-D5",
+        "ADR-0023",
+        "ADR-0003",
+        "W2-D3"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:67084811b3b3be86a20eb928b103eacac5ad8eefc6e168a0f4f2cadd2cbcd04d",
       "hash_exclusion_reason": null,
       "errata": []
     }

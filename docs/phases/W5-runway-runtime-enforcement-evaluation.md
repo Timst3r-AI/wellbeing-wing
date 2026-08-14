@@ -122,7 +122,7 @@ The purpose of this section is that W5 must not end as it began — holding inhe
 
 **Owner: DR-W5-02 — Runtime Freshness and Unknown/Stale Behaviour.** The question, verbatim from its accepted source: *"Block vs warn. Whether expired safety-relevant context should ever hard-block a room function (e.g., Kitchen meal-planning against expired allergy data) or always warn-and-degrade (§6.4 floor)."*
 
-The **§6.4 floor remains binding until resolution**, verbatim: *"no room may present stale or unknown health context as stable truth, ever."* Six behaviour-table cells in every room contract read `Open (§10.6)` and carry the floor only.
+The **§6.4 floor remains binding until resolution**, verbatim: *"no room may present stale or unknown health context as stable truth, ever."* Five behaviour-table cells in every room contract read `Open (§10.6)` and carry the floor only.
 
 **§10.6 and §10.1 (§6.2) are distinct questions but operationally coupled** — a room cannot decide what to do about staleness without knowing what makes something stale — which is why both are owned by the one record.
 

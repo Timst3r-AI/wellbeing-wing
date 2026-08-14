@@ -97,6 +97,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | ADR-0025 | adr | accepted | 2026-08-13 | `docs/decisions/0025-provisional-freshness-governance-qualification.md` |
 | ADR-0026 | adr | accepted | 2026-08-14 | `docs/decisions/0026-safety-relevant-set-citation-correction.md` |
 | ADR-0027 | adr | accepted | 2026-08-14 | `docs/decisions/0027-safety-relevant-set-reconciliation.md` |
+| ADR-0028 | adr | accepted | 2026-08-14 | `docs/decisions/0028-w5-runway-open-cell-count-correction.md` |
 
 Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) lives in the canonical manifest. Type enum: `constitution` / `adr` / `architecture` / `phase-record` / `phase-brief` / `template` / `room-contract`. Implementation-permission enum: `none` / `verification-only` / `future-governed`.
 
@@ -115,6 +116,8 @@ Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) liv
 - **W1-D6** (logged 2026-08-13): the section 9 item 4 AIAdapter ADR entry gained the same corrected pointer, authorised by [ADR 0023](../decisions/0023-aiadapter-import-citation-correction.md). Non-semantic: subjects and strength unchanged. Hash recomputed in the same commit.
 
 - **ADR-0002** (logged 2026-08-14): the intensity-ladder safety-relevant definition had its provenance clause corrected, authorised by [ADR 0026](../decisions/0026-safety-relevant-set-citation-correction.md). The clause called ADR-0002's six-member safety-relevant set *"the same high-stakes set W0 §7 requires individual confirmation for"*; W0 §7's list has five members and excludes injuries. The corrected clause names W0 §7's five high-stakes fields together with injuries. The six-member set is not adjudicated and is unchanged; the ladder, per-case table, doctrines and language law are untouched. Amendment made via decision record per checklist rule 2; hash recomputed in the same commit.
+
+- **W5-AR** (logged 2026-08-14): the section 6.1 open-cell count was corrected, authorised by [ADR 0028](../decisions/0028-w5-runway-open-cell-count-correction.md). The sentence read *"Six behaviour-table cells in every room contract read `Open (§10.6)` and carry the floor only"*; ADR-0020's shared table carries that token on five of its six rows and each room contract reproduces five such cells. One word changed on one line. Count and source fidelity only: no behaviour semantics, no room-contract text, no assignment and no permission changed. Hash recomputed in the same commit.
 
 ## 7. Public-safety note
 
