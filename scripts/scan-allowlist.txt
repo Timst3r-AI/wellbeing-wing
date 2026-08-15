@@ -112,3 +112,6 @@ docs/decisions/0028-w5-runway-open-cell-count-correction.md | companion-framing 
 docs/decisions/0029-runtime-freshness-unknown-stale-behaviour.md | companion-framing | or companion behaviour of any kind | ADR 0029 non-goals public-safety prohibition statement
 docs/decisions/0030-grant-machinery-consent-duration-reauthentication.md | companion-framing | or companion behaviour of any kind | ADR 0030 non-goals public-safety prohibition statement
 docs/decisions/0031-payload-assembly-and-payload-equality.md | companion-framing | or companion behaviour of any kind | ADR 0031 non-goals public-safety prohibition statement
+docs/decisions/0032-transmission-and-disclosure-mechanics.md | compliance-claim | cannot verify a vendor's compliance from outside | OR-2 verbatim anti-claim quoted in controlling law
+docs/decisions/0032-transmission-and-disclosure-mechanics.md | compliance-claim | cannot verify vendor retention compliance from outside | decision 12 carrying OR-2's anti-claim unsoftened
+docs/decisions/0032-transmission-and-disclosure-mechanics.md | companion-framing | or companion behaviour of any kind | ADR 0032 non-goals public-safety prohibition statement
