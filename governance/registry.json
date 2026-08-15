@@ -1987,6 +1987,39 @@
       "content_hash": "sha256:b6951aad2be5ef2920f05cd0f19707d500a5c0a6fc8f190550e1b6985936d13e",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0031",
+      "aliases": [],
+      "title": "0031 — Payload Assembly and Payload Equality (DR-W5-04)",
+      "type": "adr",
+      "phase": "W5",
+      "deliverable": "W5-D1",
+      "path": "docs/decisions/0031-payload-assembly-and-payload-equality.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-15",
+      "role": "Governs payload constructability, authorised assembly and payload equality for W5 runtime, the fourth of the seven W5-D1 doctrine records. A payload is the content and governed metadata assembled for one operation under one grant at one boundary, and it has no independent judgment: permission is not enough, and the assembled payload must match the authorised scope. A payload is lawful only if assembled from the exact authorised scope for the exact grant, matching its edge, actor, recipient or processing class, purpose, operation, duration, source zone, destination zone, plaintext status and vendor-involvement posture; the granted scope is the whole payload, in W1-D6's own words, and nothing may be added for helpfulness, safety, convenience, continuity, room coherence, model quality, SDK defaults or implementation ease. Forbidden inclusion is enumerated: SDK extras, device identifiers, helpful context, room state, conversation history beyond the grant, cross-room context, cached context, adjacent context, inferred enrichment, derived enrichment, system prompts or hidden instructions carrying user, room or content state beyond the grant, and anything included merely because it is already available; availability is not authorisation, enrichment may not be reintroduced as summarising or normalising, and a payload assembled from more than one grant is unconstructable. Metadata is permitted only where governed and required to enforce scope, freshness, authority, refusal, audit or equality, with authority labels, ADR-0029 freshness labels, grant identity, edge, purpose, operation, actor, recipient class, zones, plaintext status, vendor-involvement posture and content-free comparison metadata permitted, and device identifiers, SDK defaults, behavioural-profiling, room-state, user-scoring, authority-scoring, consent-pressure and ambient shadow-profile metadata barred absent a future governed record; metadata must never become hidden enrichment. No payload is assembled outside a user-initiated granted operation, and none is pre-assembled, warmed, speculatively built or retained for reuse. Payload equality means the authorised and displayed grant scope and the assembled or used payload are equal under the governed comparison form for that boundary: byte-level equality applies where applicable at the last controllable point, and where byte equality is not meaningful the comparison is canonical, structural, field-level and deterministic. Semantic similarity, intention-equivalence, output-equivalence, same-effect, same-visible-answer and close-enough never satisfy equality, and a difference in governed content, required metadata, authorised scope, boundary-relevant field or comparison surface does not become lawful because it is said not to matter; representation differences may be ignored only where the governed canonical comparison form says they are irrelevant, never by runtime discretion. Three comparisons are obligations: granted or displayed scope against assembled payload, assembled payload against the payload at the last controllable point, and pre-adapter against post-adapter payload where a transformation exists; equality binds at the last controllable point per boundary edge, not at assembly time alone, and beyond that point the Wing makes no claim about recipient behaviour. The local controllable payload boundary is governed now, which is the Z3 limb. Z4 remains dormant: the Z4 limb of the payload-equality obligation stays visibly pending, W5 may not claim the Z4 obligation discharged, E10 is not activated, no VendorAdapter ADR is authored or pre-empted, and no vendor-hosted access or vendor disclosure is authorised; the equality doctrine is written to be boundary-general so a future governed vendor boundary must satisfy it, which is not activation. A content-free comparison result or fingerprint may be recorded only if it reveals no payload content, becomes no processing edge, permits no reconstruction, is used only to prove equality, refusal, lifecycle or audit discipline, and remains C0 governance metadata; no hash function, storage field, schema, table, index, retention period or query mechanism is prescribed, and a fingerprint is never a substitute for the prohibition. ADR-0029 labels travel with content where required and freshness never justifies payload expansion: fresh is not authorised and authorised is not fresh. Where payload equality cannot be proven the dependent delegated operation does not proceed, unproven is not presumed-equal, the refusal is structural and content-free and writes no user, room, profile or vault state, only the dependent operation is withheld or degraded, never blocking the person, closing the room, gating a right or withdrawing unrelated lawful functionality, and a refusal is never resolved by narrowing the proof. Deterministic obligations are separated from behavioural proof, which remains DR-W5-07 and W5-D3 to W5-D4's. This record is a prerequisite for the pending payload-equality test and does not unblock it, because the live condition also requires that an assembler exists and because the Z4 limb remains pending; no pending-ledger change, stub conversion or test enablement follows. Boundaries against DR-W5-05 transmission and disclosure mechanics, DR-W5-06 model access and DR-W5-07 behavioural evaluation are preserved. Authorises no implementation, runtime directory, software/package dependency, payload assembler, serialisation format, canonicalisation algorithm, hash function, comparison mechanism, schema, table, index, storage mechanism, UI, copy catalogue, model access, vendor-hosted access, transmission mechanics, actual disclosure, E10 activation, VendorAdapter ADR, fixture execution, pending-ledger change, Lane C, W6 or W5-D2 milestone, and amends no record.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W1-D5",
+        "W1-D6",
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0024",
+        "ADR-0029",
+        "ADR-0030",
+        "W5-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:1ccf54af23770366a0940388dfe8122b5f6fb4a2985e5214969298257ae9055c",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
