@@ -119,3 +119,8 @@ docs/decisions/0033-model-access.md | compliance-claim | cannot verify a vendor'
 docs/decisions/0033-model-access.md | companion-framing | not a companion, not a source of truth | decision 2 names the prohibition itself, per corpus precedent
 docs/decisions/0033-model-access.md | companion-framing | companion behaviour | ADR 0033 non-goals public-safety prohibition statement
 docs/decisions/0033-model-access.md | companion-framing | Companion framing appears only where a sentence names the prohibition itself | ADR 0033 public-safety note prohibition-statement class
+docs/decisions/0034-behavioural-evaluation-architecture.md | compliance-claim | no claim of regulatory compliance or certification | W0 Non-Goal 7 anti-claim quoted as controlling law
+docs/decisions/0034-behavioural-evaluation-architecture.md | compliance-claim | no evaluation result is a compliance, safety, health or certification claim | decision 28 barred-readings anti-claim
+docs/decisions/0034-behavioural-evaluation-architecture.md | compliance-claim | no compliance, safety or certification claim arises from any evaluation | constitutional check restating W0 Non-Goal 7
+docs/decisions/0034-behavioural-evaluation-architecture.md | companion-framing | companion behaviour | ADR 0034 non-goals public-safety prohibition statement
+docs/decisions/0034-behavioural-evaluation-architecture.md | companion-framing | Companion framing appears only where a sentence names the prohibition itself | ADR 0034 public-safety note prohibition-statement class
