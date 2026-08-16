@@ -2127,6 +2127,42 @@
       "content_hash": "sha256:650d51c916a74618a9967b9238d5acd727ba7d5b2c1362d94ed92255d906e982",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0035",
+      "aliases": [],
+      "title": "0035 — Plaintext Residue Applicability at the W5 Runtime Boundary",
+      "type": "adr",
+      "phase": "W5",
+      "deliverable": null,
+      "path": "docs/decisions/0035-plaintext-residue-applicability-w5-runtime-boundary.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "Records the applicability finding that ADR-0004's plaintext-residue doctrine substantially reaches the Wing-controlled side of the transient Z3 processing boundary W5-D2 will implement — the finding ADR-0024 open question 6 requires, completed and recorded after the W5-D1 doctrine set and before any W5-D2 implementation, discharging the mandatory pre-W5-D2 gate. Default-deny persistence binds every Wing-written artefact of a Z3 operation — payload buffers, adapter working state, temporary copies — because a local-class processing context runs on the user's own device inside Z1, composing with ADR-0024's rule that no processing-side state survives a processing context; plaintext-free logs bind every W5-D2 component in every build configuration, with a debug flag never a grant; the forbidden artefact classes bind at the boundary, with content caches and ADR-0024's forbidden continuity list prohibiting the same object from two directions; and user-initiated copies remain rights, not residue. ADR-0004 does not govern Z3 vendor-side retention by its own stated non-goal, and that is congruence with the corpus rather than a gap: the recipient side is governed by disclosure honesty, OR-2 is carried unsoftened, and no claim is made past the last controllable point. A local model process's working memory is dispositioned as an ADR-0004 decision-5 class — platform- and runtime-contingent residue, mitigated where the platform or runtime offers mitigation, honestly documented in the threat model's own terms, never denied, and never used to claim total residue control — with any concrete model runtime remaining behind its own Tier F dependency crossing under ADR-0033, each crossing carrying its own residue story. The task, processing-context and operation vocabularies of ADR-0004, ADR-0024 and ADR-0030 are mapped and compose without conflict: a processing context is grant-bounded within a user-initiated task, residue obligations attach at any governing end condition — completion, cancellation, failure, abandonment, expiry, or revocation — no new vocabulary is minted, and session remains deliberately non-controlling. ADR-0034 is recorded as the decision-4-shaped record for evaluation artefacts, so no unrecorded ADR-0004 exception exists for evaluation-record persistence; no evaluation record is created and W5-D4 is not opened. W5-D2 inherits the residue-test obligations as acceptance conditions: for every boundary operation that transiently holds governed plaintext — payload assembly, context creation and end, crossing attempt, and abort — create synthetic content, run the operation, terminate normally and by kill, and sweep with no readable governed content outside the encrypted stores; abort and crash-path behaviour documented; residue test failure output reporting location and category only, never content; and the residue-test tax binding every W5-D2 milestone, so a boundary feature without its residue tests does not merge. No test is created or edited. This record clears ADR-0024 open question 6 for W5-D2 in body, authorises no implementation, creates no runtime directory and confers no runtime authority; W5-D2 milestone-brief drafting may proceed after acceptance while implementation still requires its own accepted brief, Tier F crossings and ceremony. Nothing unrelated is resolved: W0 Open Question 2 remains open with its trigger-bound deadline, the pending ledger is untouched, no test is converted, no model contact is opened, W5-D3 and W5-D4 are not opened, and no fixture changes status. Not a W5 deliverable and creates no planning slot; authorises no implementation, runtime directory, dependency, model contact, credential, prompt, telemetry implementation, schema, storage, fixture execution, observation-record materialisation, pending-ledger change, Lane C, W6, E10 activation, Z4 discharge, VendorAdapter ADR or E12/Z5 activation, and amends no record.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W1-D5",
+        "ADR-0001",
+        "ADR-0003",
+        "ADR-0004",
+        "ADR-0024",
+        "ADR-0030",
+        "ADR-0031",
+        "ADR-0032",
+        "ADR-0033",
+        "ADR-0034",
+        "W5-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:a1cc084953f8dd804b5003e13d303d8ae7f5a0b564f97999df17308d77f4e75c",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
