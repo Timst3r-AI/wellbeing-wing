@@ -201,14 +201,14 @@ in this record narrows that; deciding facts await a deployment profile that does
   "source_ref": [],
   "applicability_ref": null,
   "classification": "review-only",
-  "decidability_basis": "no transmission surface exists; nothing runtime to inspect",
-  "evidence_status": "deferred_named_dependency",
+  "decidability_basis": "the only existing transmission surface is the W5-D2 crossing, landed under previously accepted doctrine; its structural proofs are deterministic and run in the suite",
+  "evidence_status": "evidenced",
   "evidence_timing": 2,
-  "evidence_pointer": null,
-  "dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics)",
-  "safe_wording": "deferred to W5",
+  "evidence_pointer": "ADR-0031; ADR-0032; runtime/transmission.py; tests/test_runtime_transmission.py",
+  "dependency": null,
+  "safe_wording": "control evidence present in accepted doctrine artefacts",
   "prohibited_overclaim": "asserting the mapped requirement is legally satisfied",
-  "review_note": "E10 unimplemented; E12 reserved; in-transit protection is W5 evidence"
+  "review_note": "W5-D5 maintenance: the governed-before-existing property is evidenced by doctrine acceptance preceding the landed crossing and by its structural proofs; in-process crossing mechanics only — E10 unopened, E12 reserved; deployed in-transit posture is a deployment fact"
  },
  {
   "row_id": "AR-CORE-08",
@@ -280,7 +280,7 @@ in this record narrows that; deciding facts await a deployment profile that does
   "dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics)",
   "safe_wording": "deferred to W5",
   "prohibited_overclaim": "asserting the mapped requirement is legally satisfied",
-  "review_note": "E10 payload doctrine accepted; vendor conduct is runtime-plus-organisational"
+  "review_note": "E10 payload doctrine accepted; vendor conduct is runtime-plus-organisational. W5-D5 maintenance: the W5 runtime landed with vendor involvement structurally refused and payload minimisation proven, but no third-party surface exists to evidence — E10 dormant; deferred stands with residual scope a future vendor surface under its own governed record"
  },
  {
   "row_id": "AR-CORE-12",
@@ -390,14 +390,14 @@ in this record narrows that; deciding facts await a deployment profile that does
   ],
   "applicability_ref": "APR-HIPAA",
   "classification": "review-only",
-  "decidability_basis": "custody design exists; enforcement is runtime",
-  "evidence_status": "deferred_named_dependency",
+  "decidability_basis": "custody design exists and grant-gated one-room context enforcement is now a deterministic runtime artefact with structural proofs",
+  "evidence_status": "evidenced",
   "evidence_timing": 2,
-  "evidence_pointer": "ADR-0013 custody",
-  "dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics)",
-  "safe_wording": "deferred to W5",
+  "evidence_pointer": "ADR-0013 custody; runtime/context.py; runtime/composition.py; tests/test_runtime_context.py",
+  "dependency": null,
+  "safe_wording": "control evidence present in accepted doctrine artefacts",
   "prohibited_overclaim": "asserting the mapped requirement is legally satisfied",
-  "review_note": null
+  "review_note": "W5-D5 maintenance: structural access enforcement evidenced by the W5-D2 runtime proofs; deployed access control remains a deployment fact"
  },
  {
   "row_id": "AR-HIPAA-05",
@@ -417,7 +417,7 @@ in this record narrows that; deciding facts await a deployment profile that does
   "dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics)",
   "safe_wording": "deferred to W5",
   "prohibited_overclaim": "asserting the mapped requirement is legally satisfied",
-  "review_note": null
+  "review_note": "W5-D5 maintenance: grant re-authentication machinery landed (ADR-0030; re-authentication proofs bind to grant identity), but person and entity authentication at deployment remains absent; deferred stands with residual scope deployment authentication evidence"
  },
  {
   "row_id": "AR-HIPAA-06",
@@ -477,7 +477,7 @@ in this record narrows that; deciding facts await a deployment profile that does
   "dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics)",
   "safe_wording": "deferred to W5",
   "prohibited_overclaim": "asserting the mapped requirement is legally satisfied",
-  "review_note": null
+  "review_note": "W5-D5 maintenance: the W5-D2 crossing landed with refusal-before-boundary disclosure mechanics, but no data-in-motion surface exists (network-free by structural proof); deferred stands with residual scope a real outward surface — E10 unopened"
  },
  {
   "row_id": "AR-HIPAA-09",
@@ -985,7 +985,7 @@ in this record narrows that; deciding facts await a deployment profile that does
   "dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics)",
   "safe_wording": "deferred to W5",
   "prohibited_overclaim": "asserting the mapped requirement is legally satisfied",
-  "review_note": "decomposed from AR-GDPR-07: format property is Tier 1 repository evidence, transmission is W5 runtime evidence and must not share its row"
+  "review_note": "decomposed from AR-GDPR-07: format property is Tier 1 repository evidence, transmission is W5 runtime evidence and must not share its row. W5-D5 maintenance: the landed W5-D2 transmission mechanics are in-process only; no transmit-to-another-controller capability exists or is claimed; deferred stands with residual scope an outward transfer surface — E10 unopened"
  },
  {
   "row_id": "AR-GDPR-05",
@@ -1086,7 +1086,7 @@ in this record narrows that; deciding facts await a deployment profile that does
   "dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics)",
   "safe_wording": "deferred to W5",
   "prohibited_overclaim": "asserting the mapped requirement is legally satisfied",
-  "review_note": null
+  "review_note": "W5-D5 maintenance: boundary residue discipline landed (ADR-0035; registered boundary operations swept on every termination path) as W5 evidence toward secured status; the qualifying-technology determination and key-compromise state remain implementation and incident evidence; deferred stands"
  },
  {
   "row_id": "AR-HBNR-04",
@@ -1179,14 +1179,14 @@ in this record narrows that; deciding facts await a deployment profile that does
   ],
   "applicability_ref": null,
   "classification": "review-only",
-  "decidability_basis": "structural walls declared; enforcement is runtime",
-  "evidence_status": "deferred_named_dependency",
+  "decidability_basis": "structural walls declared and now enforced by deterministic runtime artefacts with isolation proofs",
+  "evidence_status": "evidenced",
   "evidence_timing": 2,
-  "evidence_pointer": "ADR-0017 isolation declarations",
-  "dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics)",
-  "safe_wording": "deferred to W5",
+  "evidence_pointer": "ADR-0017 isolation declarations; runtime/composition.py; tests/test_runtime_composition.py",
+  "dependency": null,
+  "safe_wording": "control evidence present in accepted doctrine artefacts",
   "prohibited_overclaim": "asserting the mapped requirement is legally satisfied",
-  "review_note": null
+  "review_note": "W5-D5 maintenance: structural enforcement evidenced — one grant, one context, one payload, at most one crossing, no cross-context path; operational access in deployment remains a deployment fact"
  },
  {
   "row_id": "AR-NIST-05",
@@ -1206,7 +1206,7 @@ in this record narrows that; deciding facts await a deployment profile that does
   "dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics)",
   "safe_wording": "deferred to W5",
   "prohibited_overclaim": "asserting the mapped requirement is legally satisfied",
-  "review_note": "Lane B holds 23 declarations, 0 fixtures"
+  "review_note": "W5-D5 maintenance, reassessing the accepted 2026-08-10 currency note: Lane B now holds twenty-three fixtures with twenty-three map rows and a green corpus validator, all behaviourally_executed under the deterministic W5-D4-RUN-01 execution event; structural prevention is runtime-evidenced, but the behavioural component of inappropriate use remains honestly unmeasured — the deterministic run records its generative-era questions as unknown-not-absent, and no evaluation observation is assurance evidence; deferred stands with residual scope generative-era behavioural evidence under its own future gate"
  },
  {
   "row_id": "AR-NIST-06",
@@ -1219,14 +1219,14 @@ in this record narrows that; deciding facts await a deployment profile that does
   ],
   "applicability_ref": null,
   "classification": "review-only",
-  "decidability_basis": "anti-map and payload minimisation declared; conduct is runtime",
-  "evidence_status": "deferred_named_dependency",
+  "decidability_basis": "anti-map and payload minimisation declared and now structurally enforced by deterministic runtime artefacts",
+  "evidence_status": "evidenced",
   "evidence_timing": 2,
-  "evidence_pointer": "W1-D1 anti-map; E10 doctrine",
-  "dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics)",
-  "safe_wording": "deferred to W5",
+  "evidence_pointer": "W1-D1 anti-map; ADR-0031; ADR-0032; runtime/payload.py; runtime/transmission.py",
+  "dependency": null,
+  "safe_wording": "control evidence present in accepted doctrine artefacts",
   "prohibited_overclaim": "asserting the mapped requirement is legally satisfied",
-  "review_note": null
+  "review_note": "W5-D5 maintenance: structural disclosure conduct evidenced — whole-scope no-padding payloads, refusal before the boundary, honest partial-crossing records; generative-era behavioural conduct is not claimed, and no evaluation observation is assurance evidence"
  },
  {
   "row_id": "AR-NIST-07",
@@ -1326,7 +1326,7 @@ in this record narrows that; deciding facts await a deployment profile that does
   "dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics)",
   "safe_wording": "deferred to W5",
   "prohibited_overclaim": "asserting the mapped requirement is legally satisfied",
-  "review_note": null
+  "review_note": "W5-D5 maintenance: the W5 runtime landed with vendor involvement structurally refused, but no third-party surface exists to evidence — E10 dormant; deferred stands"
  },
  {
   "row_id": "AR-NIST-12",
@@ -1385,7 +1385,7 @@ core/baseline row → the underlying evidence status.
 | AR-CORE-04 | P4 | none | evidenced | 1 | **evidenced** |
 | AR-CORE-05 | P5 | none | evidenced | 1 | **evidenced** |
 | AR-CORE-06 | P6 | none | evidenced | 1 | **evidenced** |
-| AR-CORE-07 | P7 | none | deferred_named_dependency | 2 | **deferred — named dependency** |
+| AR-CORE-07 | P7 | none | evidenced | 2 | **evidenced** |
 | AR-CORE-08 | P8 | none | evidenced | 1 | **evidenced** |
 | AR-CORE-09 | P9 | none | not_evidenced | 1 | **not evidenced** |
 | AR-CORE-10 | P10 | none | evidenced | 1 | **evidenced** |
@@ -1395,7 +1395,7 @@ core/baseline row → the underlying evidence status.
 | AR-HIPAA-01 | P1 | HIPAA-aligned | evidenced | 1 | **applicability unresolved** |
 | AR-HIPAA-02 | P5 | HIPAA-aligned | evidenced | 1 | **applicability unresolved** |
 | AR-HIPAA-03 | P3 | HIPAA-aligned | evidenced | 1 | **applicability unresolved** |
-| AR-HIPAA-04 | P3 | HIPAA-aligned | deferred_named_dependency | 2 | **applicability unresolved** |
+| AR-HIPAA-04 | P3 | HIPAA-aligned | evidenced | 2 | **applicability unresolved** |
 | AR-HIPAA-05 | P3 | HIPAA-aligned | deferred_named_dependency | 2 | **applicability unresolved** |
 | AR-HIPAA-06 | P8 | HIPAA-aligned | evidenced | 1 | **applicability unresolved** |
 | AR-HIPAA-07 | P6 | HIPAA-aligned | evidenced | 1 | **applicability unresolved** |
@@ -1434,9 +1434,9 @@ core/baseline row → the underlying evidence status.
 | AR-NIST-01 | P1 | NIST SP 800-122 | evidenced | 1 | **evidenced** |
 | AR-NIST-02 | P2 | NIST SP 800-122 | evidenced | 1 | **evidenced** |
 | AR-NIST-03 | P1 | NIST SP 800-122 | evidenced | 1 | **evidenced** |
-| AR-NIST-04 | P3 | NIST SP 800-122 | deferred_named_dependency | 2 | **deferred — named dependency** |
+| AR-NIST-04 | P3 | NIST SP 800-122 | evidenced | 2 | **evidenced** |
 | AR-NIST-05 | P5 | NIST SP 800-122 | deferred_named_dependency | 2 | **deferred — named dependency** |
-| AR-NIST-06 | P5 | NIST SP 800-122 | deferred_named_dependency | 2 | **deferred — named dependency** |
+| AR-NIST-06 | P5 | NIST SP 800-122 | evidenced | 2 | **evidenced** |
 | AR-NIST-07 | P3 | NIST SP 800-122 | evidenced | 1 | **evidenced** |
 | AR-NIST-08 | P9 | NIST SP 800-122 | not_evidenced | 1 | **not evidenced** |
 | AR-NIST-09 | P12 | NIST SP 800-122 | external_evidence_required | 3 | **external evidence required** |
@@ -1448,9 +1448,9 @@ core/baseline row → the underlying evidence status.
 ## 6. Honest-state summary
 
 - **Rows: 65** — CORE 13 · HIPAA-aligned 19 · APP-aligned 8 · GDPR-style 8 · FTC-HBNR 4 · NIST SP 800-122 13
-- **Stored evidence_status:** {'deferred_named_dependency': 11, 'evidenced': 35, 'external_evidence_required': 11, 'not_evidenced': 8}
+- **Stored evidence_status:** {'deferred_named_dependency': 7, 'evidenced': 39, 'external_evidence_required': 11, 'not_evidenced': 8}
 - **Timing tiers:** {1: 43, 2: 11, 3: 11}
-- **Derived presentation:** {'applicability unresolved': 39, 'deferred — named dependency': 6, 'evidenced': 15, 'external evidence required': 2, 'not evidenced': 3} — every one of the 39 overlay rows presents as *applicability
+- **Derived presentation:** {'applicability unresolved': 39, 'deferred — named dependency': 3, 'evidenced': 18, 'external evidence required': 2, 'not evidenced': 3} — every one of the 39 overlay rows presents as *applicability
   unresolved* today, exactly as the architecture requires; the underlying evidence work is neither
   hidden nor overclaimed.
 - **Deliberate honesty rows:** retention defaults and the destruction trigger are `not_evidenced`
@@ -1459,8 +1459,9 @@ core/baseline row → the underlying evidence status.
   portability's format property is `not_evidenced` (AR-GDPR-07) while its transmission capability
   is `deferred_named_dependency` to W5 with no present-capability claim (AR-GDPR-08); APP 11.3 organisational
   measures are `external_evidence_required` and never greened by technical evidence (AR-APP-06);
-  de-identification is `not_evidenced` with no claim made (AR-HIPAA-15/AR-NIST-10); Lane B's 23/0/0
-  state is cited as declaration-only evidence (AR-NIST-05).
+  de-identification is `not_evidenced` with no claim made (AR-HIPAA-15/AR-NIST-10); the AR-NIST-05
+  currency note was reassessed by the W5-D5 maintenance act: Lane B now holds twenty-three executed
+  fixtures, the behavioural component stays deferred, and no evaluation observation is assurance evidence.
 
 ## 7. Register consumption
 

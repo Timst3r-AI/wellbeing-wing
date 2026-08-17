@@ -1609,7 +1609,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:402b8aecb47659701683fb728f407c10863b44a50806ead6866eead214d093cc",
+      "content_hash": "sha256:1ecb04cf0d2f7d9edb0797a57dcdcf389b2546766f1b5df7e04644ab7f948be4",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -2229,6 +2229,34 @@
       "implementation_permission": "w5-d4-single-execution-run",
       "open_decisions": [],
       "content_hash": "sha256:8ca46b7dee71eec0201f0a52e8c2b4a3d4e64cb7e3f1467704410db3f1adbe76",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W5-D5-LCM",
+      "aliases": [],
+      "title": "W5-D5 — Lane C Tier 2 Evidence Maintenance Record",
+      "type": "phase-record",
+      "phase": "W5",
+      "deliverable": "W5-D5",
+      "path": "docs/phases/W5-D5-lane-c-maintenance-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The one governed Lane C maintenance act W5-AR section 4 assigns to W5-D5, bounded by its sections 6.4 and 6.5: an individual review of the eleven Tier 2 assurance rows of the Privacy and Health-Data Assurance Record against landed repository artefacts. Four rows move to evidenced on their own cited artefacts — the governed transmission crossing (AR-CORE-07), grant-gated context access enforcement (AR-HIPAA-04), structural isolation walls (AR-NIST-04), and structural disclosure conduct (AR-NIST-06) — each keeping its tier value, and never on phase completion. Seven rows stay deferred with the reassessment recorded in place: vendor and third-party surfaces do not exist (AR-CORE-11, AR-NIST-11), deployment authentication is absent (AR-HIPAA-05), no data-in-motion surface exists (AR-HIPAA-08), no outward transfer capability exists (AR-GDPR-08), secured-status determination remains implementation and incident evidence (AR-HBNR-03), and the W5-AR section 6.4 currency item AR-NIST-05 is explicitly reassessed as assigned — its Lane B note superseded in place by the executed-corpus state, with the behavioural component of inappropriate use kept honestly deferred because no evaluation observation is assurance evidence. No Tier 3 row touched, no applicability resolved, all four applicability records unresolved, vocabulary closed and unchanged, tier counts invariant, the eight Tier 1 honesty rows untouched, the source register untouched, and the assurance record's registered hash refreshed in the same commit. Certifies nothing; no mapped requirement is asserted legally satisfied; W5-D6 and W6 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "W4-D6-PHDAR",
+        "W4-D6-EASR",
+        "W5-AR",
+        "ADR-0003",
+        "ADR-0034",
+        "ADR-0037"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:b8281bd181656105afd7462b0f54092a339d53a4ab82741762eefd16fb0673b0",
       "hash_exclusion_reason": null,
       "errata": []
     }
