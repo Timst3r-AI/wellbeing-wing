@@ -25,9 +25,12 @@ RUNTIME = ROOT / "runtime"
 # under the accepted combined-pipeline authorisation and its landing
 # scope). Any further file is a new milestone's to authorise here, by
 # record.
+# W5-D2-M07: composition.py (isolation realisation, the Meditation
+# runtime, and the composition root, under the accepted
+# combined-pipeline authorisation and its landing scope).
 AUTHORISED_RUNTIME_FILES = ["__init__.py", "grants.py",
                             "freshness.py", "context.py", "payload.py",
-                            "transmission.py"]
+                            "transmission.py", "composition.py"]
 NETWORK_FACILITY_PREFIXES = (
     "socket", "ssl", "http", "urllib", "ftplib", "smtplib", "poplib",
     "imaplib", "xmlrpc", "requests", "aiohttp", "websockets", "grpc",
@@ -77,6 +80,7 @@ class RuntimeSkeleton(unittest.TestCase):
         ("processing-context-lifecycle", "W5-D2-M04"),
         ("payload-assembly", "W5-D2-M05"),
         ("transmission-crossing", "W5-D2-M06"),
+        ("composed-operation-lifecycle", "W5-D2-M07"),
     )
 
     def test_residue_scaffolding_registers_exactly_the_authorised(self):
