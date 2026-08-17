@@ -12,8 +12,14 @@ Sweep results report location and category only, never content.
 
 from pathlib import Path
 
-# (operation_name, milestone_id) pairs; empty at W5-D2-M01 by design.
-REGISTERED_BOUNDARY_OPERATIONS = ()
+# (operation_name, milestone_id) pairs — amended by record per
+# milestone. Empty at W5-D2-M01 by design. W5-D2-M04 registers the
+# processing-context lifecycle: the first boundary operation that
+# transiently holds governed plaintext, carrying the full ADR 0035
+# tax (create / run / terminate normally and by kill / sweep).
+REGISTERED_BOUNDARY_OPERATIONS = (
+    ("processing-context-lifecycle", "W5-D2-M04"),
+)
 
 
 def sweep_locations(root, marker):

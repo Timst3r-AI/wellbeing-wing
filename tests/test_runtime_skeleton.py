@@ -16,9 +16,12 @@ RUNTIME = ROOT / "runtime"
 # top-level fence pattern. W5-D2-M01: the capability-empty skeleton.
 # W5-D2-M02: grants.py (grant machinery, under its accepted opening
 # brief and landing scope). W5-D2-M03: freshness.py (freshness runtime
-# wiring, under its accepted opening brief and landing scope). Any
+# wiring, under its accepted opening brief and landing scope).
+# W5-D2-M04: context.py (processing context, under the accepted
+# combined-pipeline authorisation and its landing scope). Any
 # further file is a new milestone's to authorise here, by record.
-AUTHORISED_RUNTIME_FILES = ["__init__.py", "grants.py", "freshness.py"]
+AUTHORISED_RUNTIME_FILES = ["__init__.py", "grants.py",
+                            "freshness.py", "context.py"]
 NETWORK_FACILITY_PREFIXES = (
     "socket", "ssl", "http", "urllib", "ftplib", "smtplib", "poplib",
     "imaplib", "xmlrpc", "requests", "aiohttp", "websockets", "grpc",
@@ -61,9 +64,16 @@ class RuntimeSkeleton(unittest.TestCase):
                         name.split(".")[0] in NETWORK_FACILITY_PREFIXES,
                         f"network facility import in runtime tree: {name}")
 
-    def test_residue_scaffolding_registers_no_boundary_operation_yet(self):
+    # Amended by record: W5-D2-M04 registers the processing-context
+    # lifecycle with its full ADR 0035 residue tax. Any further
+    # registration is a new milestone's to authorise here, by record.
+    AUTHORISED_BOUNDARY_OPERATIONS = (
+        ("processing-context-lifecycle", "W5-D2-M04"),
+    )
+
+    def test_residue_scaffolding_registers_exactly_the_authorised(self):
         from residue_scaffolding import REGISTERED_BOUNDARY_OPERATIONS
-        self.assertEqual(REGISTERED_BOUNDARY_OPERATIONS, (),
-                         "W5-D2-M01 registers no boundary operation; "
-                         "registration arrives with the milestone that "
-                         "lands the operation and its residue tests")
+        self.assertEqual(REGISTERED_BOUNDARY_OPERATIONS,
+                         self.AUTHORISED_BOUNDARY_OPERATIONS,
+                         "boundary operations must match the "
+                         "record-authorised set")
