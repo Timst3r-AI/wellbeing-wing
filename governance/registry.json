@@ -2295,6 +2295,35 @@
       "content_hash": "sha256:ec3f4e1d13bab876db31ada3482712cbc7f4b076cb0a20219168aaf8b570b2e5",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-AR",
+      "aliases": [],
+      "title": "W6 — Surface Era: Governed Presentation and Review Surfaces (Phase Runway)",
+      "type": "phase-record",
+      "phase": "W6",
+      "deliverable": null,
+      "path": "docs/phases/W6-runway-governed-presentation-review-surfaces.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The W6 phase runway and gate document two of the standing three-document entry gate, derived from closed records only after the read-only W0-W5 independent assurance pass found zero blocking discrepancies. North star: governed truth must survive display without becoming authority — visual language is language, and everything the language law forbids a sentence to claim it equally forbids a pixel to imply. Proposes six deliverables with stable identifiers: W6-D1 surface-era doctrine (display-vocabulary law, stored-versus-derived rule, prohibited-label law, the fourteen per-state rendering questions, the label-authority firewall including visual semantics, catalogue identity and the catalogue-ID namespace, and the read-only review-surface boundary contract); W6-D2 the governed string catalogue over the thirty-three review-of-record strings with the dormant catalogue-ID validator class woken under same-commit proofs; W6-D3 language-law grading per W1-D5 D5-T24 including the carried historical register observations as review items never silent edits; W6-D4 review surfaces only as D1 contracts authorise, writing nothing and minting nothing; W6-D5 presentation assurance auditing every rendered state against its governed source including implied-claim audit of design semantics; W6-D6 the closure record. Binds ten named risks including labels minting authority, visual overclaim through colour, icon, layout or checkmarks, unknowns being visually resolved or hidden, stub conversion by convenience, generative-era drift, catalogue scope creep, surface write-back, historical register mismatch, dependency temptation, and phase-boundary board staleness. Carries the closure inventory forward unresolved: nine pending stubs visible with the six behavioural stubs generative-era work behind ADR-0034's first-contact gate, the twenty-six unknown-not-absent records displayed only and never resolved, Tier 3 external, applicability unresolved, E10, Z4, E12/Z5 and the hosted class dormant, and the carried open questions named. Authorises W6 briefs only: W6-D1 is not opened by this runway alone, no catalogue, label, surface, runtime, fixture, evaluation, ledger, Lane C or applicability change is authorised, and no display claim of safety, health, certification or production readiness of any kind exists or may be made.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D5",
+        "ADR-0003",
+        "ADR-0034",
+        "W4-CR",
+        "W4-D6-PHDAR",
+        "W5-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:1052627369b1376b90cb6038dfa2b5cb33665cdcecb4aa03c9c5891444408dc3",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
