@@ -125,3 +125,4 @@ docs/decisions/0034-behavioural-evaluation-architecture.md | compliance-claim | 
 docs/decisions/0034-behavioural-evaluation-architecture.md | companion-framing | companion behaviour | ADR 0034 non-goals public-safety prohibition statement
 docs/decisions/0034-behavioural-evaluation-architecture.md | companion-framing | Companion framing appears only where a sentence names the prohibition itself | ADR 0034 public-safety note prohibition-statement class
 docs/decisions/0035-plaintext-residue-applicability-w5-runtime-boundary.md | companion-framing | companion behaviour | ADR 0035 non-goals public-safety prohibition statement
+docs/decisions/0036-revocation-cascade-derived-artefacts.md | companion-framing | companion behaviour | ADR 0036 non-goals public-safety prohibition statement

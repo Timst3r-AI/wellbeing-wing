@@ -105,6 +105,7 @@ Every governance-bearing document within that scope gets an entry, whatever its 
 | ADR-0033 | adr | accepted | 2026-08-16 | `docs/decisions/0033-model-access.md` |
 | ADR-0034 | adr | accepted | 2026-08-16 | `docs/decisions/0034-behavioural-evaluation-architecture.md` |
 | ADR-0035 | adr | accepted | 2026-08-17 | `docs/decisions/0035-plaintext-residue-applicability-w5-runtime-boundary.md` |
+| ADR-0036 | adr | accepted | 2026-08-17 | `docs/decisions/0036-revocation-cascade-derived-artefacts.md` |
 
 Full field detail (aliases, roles, dependencies, namespaces, hashes, errata) lives in the canonical manifest. Type enum: `constitution` / `adr` / `architecture` / `phase-record` / `phase-brief` / `template` / `room-contract`. Implementation-permission enum: `none` / `verification-only` / `future-governed`.
 

@@ -2163,6 +2163,43 @@
       "content_hash": "sha256:a1cc084953f8dd804b5003e13d303d8ae7f5a0b564f97999df17308d77f4e75c",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0036",
+      "aliases": [],
+      "title": "0036 — Revocation Cascade for Derived Artefacts",
+      "type": "adr",
+      "phase": "W5",
+      "deliverable": null,
+      "path": "docs/decisions/0036-revocation-cascade-derived-artefacts.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "Resolves W0 Open Question 2, the consent revocation cascade — the required-with-trigger record W5-AR section 4 names and the accepted W5-D2 milestone brief's explicit gate before W5-D2-M05: what happens to derived artefacts, downstream references, cached views, boundary-held material, payload candidates, context products and later runtime artefacts when the grant that authorised them is revoked or expires. The invalidation events are exactly revocation and expiry; ordinary completion is not invalidation, a declined grant produced nothing, and lawful succession is continued permission that invalidates nothing. Revocation and expiry carry identical forward consequences — no new use, no new derivation, no new disclosure — and distinct marks, derived under revoked consent and derived under expired grant, neither punitive, neither deleting anything by itself. Every affected thing is exactly one of five kinds: source records, never cascade targets; user-owned material — the user's own records, exports, copies, and any artefact whose chain includes the user's explicit adoption act — rights territory the cascade never reaches, because revocation is forward-looking and does not reach backwards through a completed user act; Wing-controlled derived artefacts without a user act, the cascade's targets; boundary-held material, which is residue governed by the residue doctrine, never artefact; and content-free governance records, permanent. Five dispositions, defined and exhaustive: purge for boundary-held material, immediate, on every termination path including abort, crash and kill under the registered residue operations; invalidate — permanently barred from every future use as input, context payload, derivation basis or disclosure candidate, with the mark load-bearing and travelling with every reference; quarantine — held visibly and unusably, surfaced as an internal flag at next relevant use, batched, never pushed, for the user's own decision to keep by explicit adoption or delete by the erasure right, because the Wing never cascade-deletes on its own initiative; retention-by-reference for content-free lineage; and audit-only for the permanent append-only trail. Silent re-use is the named failure: an invalidated artefact entering any context, payload, derivation or crossing is refused structurally, re-derivation from an invalidated artefact is a new use and refused, and the lawful path to equivalent content is a new grant over the source. Interrupted marking completes at next relevant use, never in the background. Vendor-side material is beyond the cascade and the record says so plainly: revocation halts future disclosures, past crossings remain honestly recorded, and no vendor-side deletion claim is ever made. W5-D2-M05 and later milestones inherit deterministic proof obligations: payload assembly refuses invalidated inputs, derived-artefact production records grant lineage at creation, marks are content-free C0 metadata, no code path deletes user-owned material or re-uses an invalidated artefact, and boundary purge holds on every termination path. W1-D2 section 5's five immediate effects stand unamended with its interim no-new-uses rule promoted to standing; erasure remains the user's right on ADR-0015's terms; quarantine wording and surfaces are W6's; mark representation and the refusal implementation are W5-D2-M05's. Authorises no implementation, no assembler, no marker store, no deletion tooling, no surface, no model contact, no fixture execution, no pending-ledger change, and amends no record; W5-D2-M05 is unblocked at this record's publication and remote verification and still requires its own authorisation.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D2",
+        "W1-D5",
+        "ADR-0003",
+        "ADR-0004",
+        "ADR-0015",
+        "ADR-0024",
+        "ADR-0030",
+        "ADR-0031",
+        "ADR-0032",
+        "ADR-0033",
+        "ADR-0035",
+        "W5-AR"
+      ],
+      "resolves": [
+        "W0-OQ-2"
+      ],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:e96ddfd78bde5cb8bd9e0ef8c177489da8d3b2e75050db55f4123a65d6861697",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
