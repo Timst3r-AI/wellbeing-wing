@@ -20,6 +20,7 @@ from pathlib import Path
 REGISTERED_BOUNDARY_OPERATIONS = (
     ("processing-context-lifecycle", "W5-D2-M04"),
     ("payload-assembly", "W5-D2-M05"),
+    ("transmission-crossing", "W5-D2-M06"),
 )
 
 

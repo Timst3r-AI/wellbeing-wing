@@ -21,9 +21,13 @@ RUNTIME = ROOT / "runtime"
 # combined-pipeline authorisation and its landing scope).
 # W5-D2-M05: payload.py (payload assembly and equality, under the
 # accepted combined-pipeline authorisation and its landing scope).
-# Any further file is a new milestone's to authorise here, by record.
+# W5-D2-M06: transmission.py (transmission and disclosure mechanics,
+# under the accepted combined-pipeline authorisation and its landing
+# scope). Any further file is a new milestone's to authorise here, by
+# record.
 AUTHORISED_RUNTIME_FILES = ["__init__.py", "grants.py",
-                            "freshness.py", "context.py", "payload.py"]
+                            "freshness.py", "context.py", "payload.py",
+                            "transmission.py"]
 NETWORK_FACILITY_PREFIXES = (
     "socket", "ssl", "http", "urllib", "ftplib", "smtplib", "poplib",
     "imaplib", "xmlrpc", "requests", "aiohttp", "websockets", "grpc",
@@ -72,6 +76,7 @@ class RuntimeSkeleton(unittest.TestCase):
     AUTHORISED_BOUNDARY_OPERATIONS = (
         ("processing-context-lifecycle", "W5-D2-M04"),
         ("payload-assembly", "W5-D2-M05"),
+        ("transmission-crossing", "W5-D2-M06"),
     )
 
     def test_residue_scaffolding_registers_exactly_the_authorised(self):
