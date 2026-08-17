@@ -2505,6 +2505,38 @@
       "content_hash": "sha256:be927c0e951d51c82573f6200d047da14388a1a901bbd37581ecb3aaae5b14d7",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0043",
+      "aliases": [],
+      "title": "0043 — Review-Surface Boundary Contract",
+      "type": "adr",
+      "phase": "W6",
+      "deliverable": "W6-D1",
+      "path": "docs/decisions/0043-review-surface-boundary-contract.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The sixth and final W6-D1 doctrine record (DR-W6-06), carrying the accepted brief's law fifteen and completing the W6-D1 doctrine set at its publication — doctrine complete is not capability begun, and W6-D2 becomes eligible for its own future accepted brief without being opened. A review surface is a bounded reader over governed sources and governed catalogue entries presented to a human — a presentation boundary, never an authority boundary: nothing becomes true by being shown. Sixteen non-identities held structurally: not a source of truth or authority, not a runtime, model, memory, cache, annotation store, decision store, workflow engine, approval, conversion or retirement system, human-review record, hidden ledger, fifth channel, or substitute for records or human acts. Read law: declared governed sources only, through what the boundary exposes; no discovery by path walk, search, heuristic, model inference or metadata sweep; no merging into unstated sources; no model output unless a future W7-era record creates such a source, and no W6 record does. Write law: a surface writes nothing and persists nothing — no derived labels, filters, selections, comments, annotations, decisions or display state — unless a future governed record creates a lawful store, and in W6-D1 none exists. State law: transient render-time state only if later authorised and proven non-persisting, with the four named drifts barred — no cache becoming a shadow source, no convenience state becoming evidence, no hidden queue becoming a workflow, no annotation field becoming a human decision. Channel law: there are no hidden channels and no fifth channel; a needed channel is new architecture and must stop for its own governed crossing record. Declarability law: fifteen declarations as data — sources, derivations, catalogue IDs, classes, accompaniments, visual semantics, glyphs, colours, coverage, filters, ordering, affordances, and write, persistence and external paths which are none unless later governed — under one admission rule: no declaration, no pass. The no-bulk-approve obligation is a contract term barring every batch and ceremony-collapsing affordance. The human-review boundary carries four aphorisms as contract terms: viewing is not reviewing, clicking is not deciding, selecting is not approving, closing a panel is not retiring — a surface may never create or record a human act. Twenty proof obligations are specified for future W6-D4 surfaces in the W5 same-commit style, as specifications only. Consumes ADR-0038 V4/V5, declarations, classes and vocabulary, ADR-0039 whole, ADR-0040 decisions three to twelve, ADR-0041 decisions three to fifteen, ADR-0042's identity and gate law, the ledger's no-bulk-approve, and ADR-0024's observation-never-a-second-channel as precedent, weakening nothing. Creates no surface, cache, store, workflow or path; renders nothing; changes no governed state; W6-D2 through W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0038",
+        "ADR-0039",
+        "ADR-0040",
+        "ADR-0041",
+        "ADR-0042",
+        "W6-D1-SDB",
+        "W6-AR",
+        "ADR-0003",
+        "ADR-0024",
+        "W5-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:ce2441f9c7e346df443451f12331029520cea358156e11d484f2e8eaccaa5c2e",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
