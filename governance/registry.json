@@ -2690,6 +2690,34 @@
       "content_hash": "sha256:7fbcf0ceec2b740265de49c07ccc49cb9221fdf844ef6e471f8935f3e5c05621",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-D2-CR",
+      "aliases": [],
+      "title": "W6-D2-E — Governed String Catalogue Completion Record",
+      "type": "phase-record",
+      "phase": "W6",
+      "deliverable": "W6-D2",
+      "path": "docs/phases/W6-D2-E-catalogue-completion-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The fifth and final landing of the W6-D2 five-landing plan: the completion record that closes the governed string catalogue deliverable at its acceptance, publication and remote verification — closing because every acceptance condition of the opening brief is satisfied on the published branch, assessed one by one, and not because five landings carry dates. Verifies the authority chain whole: the opening brief, ADR-0044's home and format, ADR-0045's schema, and the merged C+D landing published and independently reviewable before this record was authorised. Records the artefact as it stands: governance/string-catalogue.json registered as W6-CAT with its hash moving only with its bytes, four canonical top-level keys, thirty-three entries CAT-0001 through CAT-0033 contiguous and meaning-free, eleven fields per entry with two lawful nulls and the fixed ceiling sentence byte-identical throughout. Records the admission pass: thirty-three processed, thirty-three admitted, zero rejected, zero deferred — eleven Wellness, eleven Kitchen, eleven Gym, zero Meditation with the zero a source-derived finding — every disposition individual and on the record, rejection lawful and simply unneeded. Records the validator awake at twenty-two deterministic proofs green over the populated register, with its ceiling stated: green means schema-and-law conformance only, never grading, approval or renderability. Restates non-authority at closure: catalogue membership is necessary where later law requires it, never sufficient for display, and entry presence, id presence, registry hash and validator green do not authorise display. Closure changes nothing — no entry, wording, identifier, schema byte or validator line — and opens nothing: string grading and D5-T24 remain W6-D3's behind its own brief, no label renders, no surface exists, the nine pending stubs stay visible and unconverted, and W6-D3 through W6-D6 and W7 remain unopened. Next lawful step: the W6-D3 opening brief, only on authorisation.",
+      "governs": [],
+      "depends_on": [
+        "W6-D2-GSC",
+        "ADR-0044",
+        "ADR-0045",
+        "W6-D2-CD",
+        "W6-CAT",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:3ac8d10544de9602528d18aba11dc8480b02d6bfbb5c600ba47f1c0b58e16ac1",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
