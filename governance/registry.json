@@ -2596,6 +2596,37 @@
       "content_hash": "sha256:3a1a2325c7bdb7091c5199137aa1e1c57bfbee6947f93bc5ac07b3c1cf2929f6",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0045",
+      "aliases": [],
+      "title": "0045 — Catalogue Schema and Metadata Shape",
+      "type": "adr",
+      "phase": "W6",
+      "deliverable": "W6-D2",
+      "path": "docs/decisions/0045-catalogue-schema-and-metadata-shape.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The second landing of the W6-D2 five-landing plan (W6-D2-B): the schema-shape decision record, defining the future catalogue's JSON shape in doctrine inside ADR-0044's fixed and unreopened inputs, creating no file, no standalone schema artefact, no entry, and no identifier final or illustrative — the record itself is the schema's single authoritative statement, with a second schema artefact rejected as a second source of truth. Top level: a single JSON object with four keys in canonical order — catalogue_version, status with birth value governed_register_active, a byte-stable governance_note worded at first population, and entries born empty and populated only by W6-D2-D's per-string decisions — the registry's own version-note-entries pattern followed. Entry shape: a flat array, each entry all eleven fields always with no omitted keys and no hidden defaults, sorted by id in allocation order which encodes nothing; grouping by class rejected as semantic hierarchy, grouping by room rejected as surface information architecture smuggled into storage which would render the Meditation zero as a permanent empty section, and normalisation rejected as hidden joins. Canonical key order: id, string, vocabulary_class, source_authority, derivation_reference, accompaniment_linkage, prohibition_register, source_citation_requirement, supersession_retirement_posture, proof_obligations, display_authorisation_statement — identity first, the governed wording second, its law after, the ceiling last. Field law: id a lawfully allocated CAT value encoding nothing; string the exact governed wording never a paraphrase; vocabulary_class one of a closed seven-value machine set tied one-to-one to ADR-0038; source_authority a non-empty citation array with no-source-no-entry and source never display authority; derivation_reference null-or-citation to a registered authority-non-increasing rule with unregistered derivation inexpressible; accompaniment_linkage citation-based before allocation with emptiness lawful only where no law applies and validator-cross-checked; prohibition_register the single gate under which barred words and the certif- and complian- stems may lawfully appear in a string; source_citation_requirement a two-value checked legal fact never optional where law requires; supersession_retirement_posture a structured object with active birth value, visible supersession and retirement by record only, no silent edit, no deletion-as-cleanup, no id reuse; proof_obligations a non-empty array from a closed seven-token set where obligations are debts not receipts; and display_authorisation_statement one fixed verbatim ceiling sentence byte-identical in every entry so no record can be read or excerpted without its boundary. Exactly two fields nullable with defined meanings; absence always an error. Complete validation specification handed to W6-D2-C and the admission schema handed to W6-D2-D with nothing admitted, nothing rejected, rejection lawful. The catalogue remains uncreated; W6-D3 through W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "W6-D2-GSC",
+        "ADR-0044",
+        "ADR-0042",
+        "ADR-0038",
+        "ADR-0039",
+        "ADR-0040",
+        "ADR-0041",
+        "ADR-0043",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:e7a06c2bbbd18b3ff81e6f0a540e682915342e8a2c5c27bc9759582d580c0e1d",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
