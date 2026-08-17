@@ -2627,6 +2627,69 @@
       "content_hash": "sha256:e7a06c2bbbd18b3ff81e6f0a540e682915342e8a2c5c27bc9759582d580c0e1d",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-D2-CD",
+      "aliases": [],
+      "title": "W6-D2-C+D — Catalogue Validator Wake and Seed Corpus Admission Record",
+      "type": "phase-record",
+      "phase": "W6",
+      "deliverable": "W6-D2",
+      "path": "docs/phases/W6-D2-CD-catalogue-admission-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The merged W6-D2-C+D landing record, carrying the architect's merge ruling in place: the validator wake is same-commit-coupled to the artefact it validates, so a split landing would prove an empty register and re-prove the populated one, while the merged landing leaves no intermediate published half-state — file born, seed decisions recorded, entries populated, validator woken and green over the real register in one commit. Records all thirty-three seed dispositions one by one: thirty-three admitted, zero rejected, zero deferred — eleven Wellness, eleven Kitchen, eleven Gym, with the Meditation zero remaining a source-derived finding. Every admitted entry is a room-register string carried verbatim from its sealed contract into the catalogue under the uniform recorded analysis: class derived_presentation_label (deterministic state-to-string selection with slot filling, per each contract's section five coverage ledger, reviewed authority-non-increasing — the wordings surface uncertainty, never reduce it); source authority the contract's registered identity and section; unknown-family strings linked to the ADR-0040 unknown accompaniment and the contradicted strings to the review-routing accompaniment, pure freshness-ladder strings carrying none because no accompaniment family applies; prohibition register null throughout; source citation required throughout — the wordings carry label and age inline; lifecycle active; proof obligations per the closed token set. One named mechanical exception in the ADR-0037 pattern: the barred word passed appears only inside two source collocations quoted verbatim from the W1-D3 freshness ladder — review interval has passed and renewal grace period has passed — temporal statements about intervals, never claims that anything passed a test, with the validator proving every occurrence sits inside a named collocation so the exception cannot widen silently. Allocates CAT-0001 through CAT-0033 in flat allocation order encoding nothing. The dormant catalogue-ID validator wakes as tests/test_w6_catalogue_validator.py implementing the thirteen ADR-0042 Part F obligations and the ADR-0045 specification, green over the populated catalogue in the same commit, with the W4 dormancy check's docstring amended by record while the sealed contracts' acceptance-time deferral declarations stay byte-untouched. No string is graded — grading is W6-D3's D5-T24 work behind its own brief; no label renders; no surface exists; catalogue membership remains necessary and never sufficient for display; W6-D2 remains open pending its own completion record and W6-D2-E is not declared; W6-D3 through W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "W6-D2-GSC",
+        "ADR-0044",
+        "ADR-0045",
+        "ADR-0042",
+        "ADR-0043",
+        "ADR-0038",
+        "ADR-0039",
+        "ADR-0040",
+        "ADR-0041",
+        "W4-D2",
+        "W4-D3",
+        "W4-D4",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "w6-d2-cd-catalogue-materialisation",
+      "open_decisions": [],
+      "content_hash": "sha256:c814a466b67801dc589f7a66d7f4240697eff433f812a0c98c2d508f0524032e",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W6-CAT",
+      "aliases": [
+        "string-catalogue"
+      ],
+      "title": "Governed String Catalogue",
+      "type": "governed-register",
+      "phase": "W6",
+      "deliverable": "W6-D2",
+      "path": "governance/string-catalogue.json",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The governed string catalogue artefact: the register of approved display strings and their required metadata defined by ADR-0042, sited and shaped by ADR-0044 and ADR-0045, first populated by the W6-D2-C+D admission pass with thirty-three entries carrying the thirty-three room-register strings from the three sealed room contracts, validated whole by the woken catalogue-ID validator. Registration provides integrity tracking only: this entry's hash proves the file's bytes and nothing about the world — the catalogue is never a source of authority, registration lends a string nothing, membership is necessary where later law requires it and never sufficient for display, and no string in it is graded, approved, renderable, or a claim of any kind. Every entry carries the fixed ceiling sentence byte-identically, and every change to this file is a governed act moving this hash in the same commit.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0042",
+        "ADR-0044",
+        "ADR-0045",
+        "W6-D2-CD"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:7fbcf0ceec2b740265de49c07ccc49cb9221fdf844ef6e471f8935f3e5c05621",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

@@ -84,6 +84,12 @@ class RegistryConsistency(unittest.TestCase):
         for e in self.entries:
             if e["id"] in REGISTRY_ARTIFACT_IDS or e["status"] == "template":
                 continue
+            # Amended by record at the W6-D2-C+D landing: governed-register
+            # entries are JSON data artefacts that cannot carry a prose
+            # header; their acceptance is recorded in their governing
+            # phase-record (for W6-CAT, the W6-D2-CD admission record).
+            if e["type"] == "governed-register":
+                continue
             head = "\n".join(
                 (ROOT / e["path"]).read_text(encoding="utf-8").splitlines()[:8])
             if e["status"] == "accepted":

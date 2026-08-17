@@ -396,7 +396,16 @@ def check_m12b_meditation_edge_set(exp, c, text):
 
 
 def check_m13_catalogue_dormancy(exp, texts=None):
-    """Dormancy assertion only. No catalogue-ID validation exists.
+    """Acceptance-time deferral declarations, asserted as recorded.
+
+    Amended by record at the W6-D2-C+D landing: the catalogue-ID
+    validator class WOKE there and lives in
+    tests/test_w6_catalogue_validator.py, validating the populated
+    governed string catalogue. This check continues to assert that each
+    sealed contract's section 9 carries its acceptance-time catalogue
+    deferral declaration — historical statements that are never edited
+    (the contracts' acceptance-time sentences are never edited to track
+    later state; the map/catalogue is the live record).
 
     `texts` maps room -> contract text, so the check can be exercised against
     in-memory material. No test ever writes to a governed repository file.
