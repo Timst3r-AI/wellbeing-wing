@@ -2259,6 +2259,42 @@
       "content_hash": "sha256:b8281bd181656105afd7462b0f54092a339d53a4ab82741762eefd16fb0673b0",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W5-CR",
+      "aliases": [],
+      "title": "W5 Closure Record",
+      "type": "phase-record",
+      "phase": "W5",
+      "deliverable": "W5-D6",
+      "path": "docs/phases/W5-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "Seals W5, Runtime Enforcement and Behavioural Evaluation, satisfying W5-D6: the deliverable chain cited by commit from the runway through the seven doctrine records, ADR-0035/0036/0037, the seven runtime milestones, the instrument, the one governed execution event and the Lane C maintenance act; every runway obligation assessed as satisfied, intentionally deferred under named doctrine, or an external dependency honestly recorded; verification at closure (446 passed, 9 skipped, 439 subtests; scan 195 files, zero findings, 123 suppressions; registry 70 advanced to 71 by this record; zero dependencies for the whole phase; twenty-three fixtures behaviourally_executed and twenty-four evaluation records byte-untouched); the pending ledger reviewed with nine stubs visible and none converted — the six behavioural stubs passed forward as generative-era work behind ADR-0034's first-contact gate with the T12 amendment assignment undischarged and visible; five incidents closed with dispositions; honest findings carried in ink — structure proven and behaviour not, executed never passed, observations never proof, the generative era deliberately unopened, Lane C complete and honest rather than universally green, applicability unresolved where governed and Tier 3 external always; the W6 gate named as three documents and three acceptances without opening W6 or creating any W6 artefact, with the generative evaluation era named as separately gated and assigned to no phase; and the deferred inventory naming every dormant door — E10, Z4, E12/Z5, hosted, deployment authentication, data in motion, outward transfer — unchanged. Closure asserts no safety, health, clinical, legal or certification status of any kind and authorises nothing new; W6 must open through its own runway and gate.",
+      "governs": [],
+      "depends_on": [
+        "W5-AR",
+        "ADR-0024",
+        "ADR-0029",
+        "ADR-0030",
+        "ADR-0031",
+        "ADR-0032",
+        "ADR-0033",
+        "ADR-0034",
+        "ADR-0035",
+        "ADR-0036",
+        "ADR-0037",
+        "W5-D5-LCM",
+        "W4-D6-BEF",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:ec3f4e1d13bab876db31ada3482712cbc7f4b076cb0a20219168aaf8b570b2e5",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
