@@ -2324,6 +2324,34 @@
       "content_hash": "sha256:1052627369b1376b90cb6038dfa2b5cb33665cdcecb4aa03c9c5891444408dc3",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-D1-SDB",
+      "aliases": [],
+      "title": "W6-D1 — Surface-Era Doctrine Brief and Opening Record",
+      "type": "phase-brief",
+      "phase": "W6",
+      "deliverable": "W6-D1",
+      "path": "docs/phases/W6-D1-surface-era-doctrine-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The first W6 deliverable brief and gate document three of the standing three-document entry gate, completing the gate at its acceptance and publication and opening W6-D1 only — W6-D2 through W6-D6 remain unopened behind their own briefs. Defines the surface-era doctrine set as six decision records covering the fifteen required laws: DR-W6-01 display-vocabulary and label law (closed display vocabulary; stored-versus-derived; prohibited labels and prohibited visuals); DR-W6-02 honest-state rendering law (unknown as standing truth never absence; review-required as human invitation never machine judgement; deferred never failure or completion; behaviourally_executed never passed; evidenced and not_evidenced with the standing non-claim and without shame or false alarm; applicability-unresolved never not-applicable); DR-W6-03 human-routing presentation law (review-routed deltas without verdicts, pending stubs surfaced without conversion, carried open questions surfaced without retirement); DR-W6-04 the label-authority firewall, the keystone answering how label language including visual language remains structurally unable to mint authority; DR-W6-05 catalogue identity and catalogue-ID namespace law with no catalogue artefact and no final identifier allocated; DR-W6-06 the read-only review-surface boundary contract with structural proof obligations and no write-back, cache, or second data channel. Binds visual semantics as doctrine — a rendered word is a claim, colour is a sentence, a checkmark is a verdict, grouping, sort order, position, icon and affordance are possible claims, and omission of an honest state is the quietest overclaim. Maps all fourteen runway doctrine questions into exactly one record each, discharges all ten runway risk bindings, states the deterministic proof obligations later records must carry under the DR-W4-06 decidability discipline, and preserves the north star: governed truth must survive display without becoming authority. Authorises no implementation: no catalogue, no grading, no rendering, no surface, no runtime, fixture, evaluation, ledger, Lane C, Tier 3 or applicability change, no model contact, no dependency, and no claim of safety, conformance, certification or production readiness in words or pixels.",
+      "governs": [],
+      "depends_on": [
+        "W6-AR",
+        "ADR-0003",
+        "ADR-0034",
+        "W4-D6-PHDAR",
+        "W5-CR",
+        "W1-D5"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:b77b96c772886c56395574997fcb5f06c4d0e04b64d0f8e361463313fa0978b6",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
