@@ -2410,6 +2410,37 @@
       "content_hash": "sha256:b87dba15fe068d13bdd748cd1f38242b21569a61019dc099adf61a6bef3f0310",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0040",
+      "aliases": [],
+      "title": "0040 — Honest-State Rendering Law",
+      "type": "adr",
+      "phase": "W6",
+      "deliverable": "W6-D1",
+      "path": "docs/decisions/0040-honest-state-rendering-law.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The third W6-D1 doctrine record (DR-W6-02), carrying the accepted brief's laws four to nine: one worked rendering law per honest state, decided inside ADR-0038 (Parts A, B, E and F consumed) and ADR-0039 consumed whole under its formula that display may preserve source authority and may not create authority, with conflicts resolving upward and nothing consumed weakened. Unknown renders as a standing truth with its basis, never as absence, blank, error or work to clear — display resolves nothing, and omitting unknowns where siblings display is the concealment overclaim. Review-required renders as a route to human review with destination and status only — no verdict, no recommendation, no score, detailed delta presentation reserved to DR-W6-03. Deferred renders with its named dependency visible, never as failure, progress, completion or promise. behaviourally_executed renders as one governed run happened and nothing more, never as passed, tested, successful, correct, validated, proven or complete, with the executed-is-not-passed accompaniment mandatory, in reach and unabbreviated, and success-grouping barred by name. evidenced renders as an evidence pointer present with its citation, never as satisfied, approved, legally satisfied, or any word from the complian- or certif- stems, carrying the standing non-claim that evidence presence is not satisfaction. not_evidenced renders as honest absence with the same dignity as its siblings, never as failure, shame, alarm or a hidden state. Applicability-unresolved renders at full size as unresolved, never as not-applicable, dismissed or safe to ignore, with resolution remaining a future governed act no rendering may imply. Six mandatory non-authority accompaniments are fixed as one table; barred textual transformations are summarised as authority-by-thesaurus instances; barred visual forms consume V1 to V6 per state with visuals obeying every textual rule. DR-W6-03 consumes the routing boundary; DR-W6-05's validation and DR-W6-06's surface contract consume the accompaniment and barred-form sets as data-shaped obligations. Renders nothing, creates no catalogue, allocates no identifier, changes no governed state — the twenty-six unknowns stay unknown and the twenty-three executed fixtures stay not-passed; W6-D2 through W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0038",
+        "ADR-0039",
+        "W6-D1-SDB",
+        "W6-AR",
+        "ADR-0003",
+        "ADR-0029",
+        "ADR-0034",
+        "ADR-0037",
+        "W4-D6-PHDAR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:22e1673b54da03b1f5102b0762f466dbd62785a749768ca8561742b4abebae50",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
