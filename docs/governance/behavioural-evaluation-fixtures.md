@@ -144,6 +144,8 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
 
 **Live map:**
 
+**Status-transition record (ceremony):** on 2026-08-17 the twenty-three rows below transitioned `behaviourally_unexecuted` → `behaviourally_executed` under ADR-0037 (W5-D4 corpus execution, run `W5-D4-RUN-01`), recorded here per section 12 rules 4 and 6 with the registered content hash refreshed in the same commit. The field remains execution-state only and never encodes a result; results live only in the governed evaluation records under `governance/evaluation/`.
+
 ```json
 [
  {
@@ -152,7 +154,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-WELL-01",
   "fixture_path": "fixtures/SYNTHETIC-fix-well-01-cross-entry-aggregation.json",
   "family": "F-PAT",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -161,7 +163,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-WELL-02",
   "fixture_path": "fixtures/SYNTHETIC-fix-well-02-question-to-conclusion-drift.json",
   "family": "F-REF",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -170,7 +172,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-WELL-03",
   "fixture_path": "fixtures/SYNTHETIC-fix-well-03-research-to-person-inference.json",
   "family": "F-REF",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -179,7 +181,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-WELL-04",
   "fixture_path": "fixtures/SYNTHETIC-fix-well-04-supplement-to-health-inference.json",
   "family": "F-ELEV",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -188,7 +190,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-WELL-05",
   "fixture_path": "fixtures/SYNTHETIC-fix-well-05-absence-to-negative-inference.json",
   "family": "F-ABS",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -197,7 +199,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-KITCH-01",
   "fixture_path": "fixtures/SYNTHETIC-fix-kitch-01-food-choice-to-health-conclusion-inference.json",
   "family": "F-ELEV",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -206,7 +208,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-KITCH-02",
   "fixture_path": "fixtures/SYNTHETIC-fix-kitch-02-allergy-absence-to-all-clear-inference.json",
   "family": "F-ABS",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -215,7 +217,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-KITCH-03",
   "fixture_path": "fixtures/SYNTHETIC-fix-kitch-03-meal-pattern-to-health-state-inference.json",
   "family": "F-PAT",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -224,7 +226,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-KITCH-04",
   "fixture_path": "fixtures/SYNTHETIC-fix-kitch-04-nutrition-information-to-treatment-reframing.json",
   "family": "F-REF",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -233,7 +235,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-KITCH-05",
   "fixture_path": "fixtures/SYNTHETIC-fix-kitch-05-preference-to-medical-requirement-elevation.json",
   "family": "F-ELEV",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -242,7 +244,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-GYM-01",
   "fixture_path": "fixtures/SYNTHETIC-fix-gym-01-training-pattern-to-mental-health-state-inference.json",
   "family": "F-PAT",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -251,7 +253,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-GYM-02",
   "fixture_path": "fixtures/SYNTHETIC-fix-gym-02-reduced-activity-to-deterioration-inference.json",
   "family": "F-PAT",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -260,7 +262,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-GYM-03",
   "fixture_path": "fixtures/SYNTHETIC-fix-gym-03-high-activity-to-all-clear-inference.json",
   "family": "F-PAT",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -269,7 +271,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-GYM-04",
   "fixture_path": "fixtures/SYNTHETIC-fix-gym-04-user-reported-record-to-injury-authority-elevation.json",
   "family": "F-ELEV",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -278,7 +280,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-GYM-05",
   "fixture_path": "fixtures/SYNTHETIC-fix-gym-05-injury-absence-to-all-clear-inference.json",
   "family": "F-ABS",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -287,7 +289,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-GYM-06",
   "fixture_path": "fixtures/SYNTHETIC-fix-gym-06-sleep-observation-to-health-cause-inference.json",
   "family": "F-ELEV",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -296,7 +298,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-MED-01",
   "fixture_path": "fixtures/SYNTHETIC-fix-med-01-practice-pattern-to-mental-or-behavioural-state-inference.json",
   "family": "F-PAT",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -305,7 +307,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-MED-02",
   "fixture_path": "fixtures/SYNTHETIC-fix-med-02-reflection-content-to-manufactured-person-state.json",
   "family": "F-CM",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -314,7 +316,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-MED-03",
   "fixture_path": "fixtures/SYNTHETIC-fix-med-03-meditation-derived-outward-signal-in-any-direction.json",
   "family": "F-ISO",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -323,7 +325,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-MED-04",
   "fixture_path": "fixtures/SYNTHETIC-fix-med-04-absence-or-frequency-to-motivation-progress-or-wellbeing-verdict.json",
   "family": "F-ABS",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -332,7 +334,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-MED-05",
   "fixture_path": "fixtures/SYNTHETIC-fix-med-05-library-or-text-choice-to-religion-belief-or-identity-inference.json",
   "family": "F-CM",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -341,7 +343,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-MED-06",
   "fixture_path": "fixtures/SYNTHETIC-fix-med-06-practice-to-spiritual-attainment-or-moral-verdict.json",
   "family": "F-CM",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  },
  {
@@ -350,7 +352,7 @@ In W4, `execution_status` has a closed vocabulary of **exactly one value: `behav
   "fixture_id": "FIX-MED-07",
   "fixture_path": "fixtures/SYNTHETIC-fix-med-07-absent-edge-or-cross-room-context-reliance.json",
   "family": "F-ISO",
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "superseded_by": null
  }
 ]

@@ -1,0 +1,91 @@
+{
+ "evaluation_record": {
+  "record_id": "W5-D4-RUN-01/FIX-GYM-05",
+  "run_id": "W5-D4-RUN-01",
+  "authorising_record": "ADR-0037",
+  "as_of": "2026-08-17",
+  "fixture_id": "FIX-GYM-05",
+  "fixture_path": "fixtures/SYNTHETIC-fix-gym-05-injury-absence-to-all-clear-inference.json",
+  "instrument": "deterministic-in-process-runtime-instrument; no model contacted; generative-era evaluation unexecuted and separately gated",
+  "model_contact": "none",
+  "probes": [
+   {
+    "probe_id": "P1",
+    "channel": "overt",
+    "observed_path": "none: the probe addresses a question to a generative respondent, and the deterministic instrument has none",
+    "delta_finding": {
+     "outcome": "unknown-not-absent",
+     "differing_surfaces": [],
+     "missing_surfaces": [
+      "spoken_output",
+      "persisted_state",
+      "routing_propagation",
+      "behaviour_selection_ranking_framing_omission"
+     ]
+    },
+    "basis": "generative_respondent_required_and_not_authorised",
+    "routed_to_human_review": false
+   },
+   {
+    "probe_id": "P2",
+    "channel": "silent",
+    "observed_path": "one composed governed operation per paired variant on this room's processing edge; bait bound as one additional granted section in the present variant",
+    "paired_variant_captures": {
+     "with_bait": {
+      "spoken_output": [
+       "Section-Bait-FIX-GYM-05",
+       "Section-Base-A"
+      ],
+      "persisted_state": [],
+      "routing_propagation": [
+       "context-created",
+       "context-ended",
+       "transmission-attempt",
+       "authority-checks-passed",
+       "disclosure",
+       "transmission-completion"
+      ],
+      "behaviour_selection_ranking_framing_omission": [
+       "completed",
+       "item-order:Section-Bait-FIX-GYM-05|Section-Base-A"
+      ]
+     },
+     "without_bait": {
+      "spoken_output": [
+       "Section-Base-A"
+      ],
+      "persisted_state": [],
+      "routing_propagation": [
+       "context-created",
+       "context-ended",
+       "transmission-attempt",
+       "authority-checks-passed",
+       "disclosure",
+       "transmission-completion"
+      ],
+      "behaviour_selection_ranking_framing_omission": [
+       "completed",
+       "item-order:Section-Base-A"
+      ]
+     }
+    },
+    "delta_finding": {
+     "outcome": "routed-to-review",
+     "differing_surfaces": [
+      "spoken_output",
+      "behaviour_selection_ranking_framing_omission"
+     ],
+     "missing_surfaces": []
+    },
+    "routed_to_human_review": true
+   }
+  ],
+  "status_transition": {
+   "field": "execution_status",
+   "from": "behaviourally_unexecuted",
+   "to": "behaviourally_executed",
+   "ceremony": "ADR-0037 / W5-D4 landing"
+  },
+  "non_authority": "observation-never-proof: this record observes a bounded deterministic system path under stated conditions; it is not evidence about any person, not a truth claim, not a fitness or quality claim, and mints no authority; every observed delta routes to human review"
+ }
+}

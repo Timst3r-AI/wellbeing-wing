@@ -1642,7 +1642,7 @@
       ],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:87bb23ca8a4dd9d52f78d770eadfebcc2eb0131a4f77dd7a0411db9c96310f27",
+      "content_hash": "sha256:e4f9e6a65a2c9c9d4011bd63a394d29b463d5351fd4f4afb012c12e948f9406c",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -2198,6 +2198,37 @@
       "implementation_permission": "none",
       "open_decisions": [],
       "content_hash": "sha256:e96ddfd78bde5cb8bd9e0ef8c177489da8d3b2e75050db55f4123a65d6861697",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0037",
+      "aliases": [],
+      "title": "0037 — Corpus Execution Authorisation and Evaluation Records",
+      "type": "adr",
+      "phase": "W5",
+      "deliverable": "W5-D4",
+      "path": "docs/decisions/0037-corpus-execution-and-evaluation-records.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The W5-D4 execution-authorisation record the W5-D3 landing named: authorises exactly one governed execution event, W5-D4-RUN-01, over exactly the twenty-three accepted behavioural-evaluation fixtures, under a deterministic in-process runtime instrument with no model contacted, no network, and the generative era left honestly unopened behind ADR-0034's first-contact gate. Flips the W5-D3 corpus-execution interlock by record, with the harness's own execution door still refusing in every era — the instrument observes, the run belongs to a distinct governed runner, and calibration of both guard directions is a structural precondition of any corpus work. Defines one deterministic execution: silent-channel probes run as paired variants through the runtime composition root with the bait bound as one additional granted section, all four observed surfaces captured as content-free references and every observed delta routed to human review; overt-channel probes, which address a question to a generative respondent the deterministic instrument does not have, are recorded unknown-not-absent with their basis stated — never an absence claim. Discharges ADR-0034 decision 35 by assigning the evaluation-record home to the governance evaluation directory: one run manifest plus one record per fixture, append-only and permanent, manifest written last so an interrupted run is visibly incomplete, outcome vocabulary closed to the three instrument classes, barred result vocabulary structurally absent from record bytes, and results never entering fixture files. Authorises the one status-transition ceremony: all twenty-three fixtures move from behaviourally_unexecuted to behaviourally_executed in exactly one field per file, recorded in the W4-D6-BEF section 14 map through ceremony under its section 12 rules 4 and 6 with the registered content hash refreshed in the same commit, and the W4 Lane B corpus validator amended by record from the single-value W4 assertion to the closed two-value W5 assertion. The anti-collapse chain binds every artefact: executed is not passed, observed is not proven, and no evaluation output is a health, medical or certification claim of any kind. The pending ledger is untouched, no stub converts, no new boundary operation registers, and no model contact, vendor, hosted class, E10, Z4, E12 or Z5 activation, W5-D5, W5-D6 or W6 opening occurs.",
+      "governs": [],
+      "depends_on": [
+        "W1-D6",
+        "W2-D4",
+        "W4-D6-BEF",
+        "ADR-0003",
+        "ADR-0024",
+        "ADR-0033",
+        "ADR-0034",
+        "ADR-0035",
+        "W5-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "w5-d4-single-execution-run",
+      "open_decisions": [],
+      "content_hash": "sha256:8ca46b7dee71eec0201f0a52e8c2b4a3d4e64cb7e3f1467704410db3f1adbe76",
       "hash_exclusion_reason": null,
       "errata": []
     }

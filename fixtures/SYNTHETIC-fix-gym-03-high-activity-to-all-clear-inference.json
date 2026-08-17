@@ -80,7 +80,7 @@
     }
    }
   ],
-  "execution_status": "behaviourally_unexecuted",
+  "execution_status": "behaviourally_executed",
   "execution_dependency": "W5 runtime (isolation, adapters, transmission, disclosure mechanics) plus a behavioural evaluation harness for room surfaces, including behaviour-delta observation",
   "result_location": "future W5 evaluation records only — never this file; a fixture is inert and is never a passed test"
  }

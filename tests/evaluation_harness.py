@@ -8,31 +8,45 @@ fitness conditions, preserves honest unknown, and never grades
 itself — every observed delta routes to human review, and no outcome
 vocabulary here means passed, safe, or true.
 
-The corpus-execution interlock is structural: CORPUS_EXECUTION_
-AUTHORISED is False for the whole of W5-D3, execution requests refuse
-with a fixed reason, and amending the constant is a W5-D4-era
-governed act, by record, exactly like every fence in this repository.
+The corpus-execution interlock is structural and record-governed:
+CORPUS_EXECUTION_AUTHORISED was False for the whole of W5-D3 and was
+amended to True by ADR 0037, the W5-D4 corpus-execution authorisation
+— exactly the governed act the W5-D3 landing named. Even authorised,
+the instrument itself never runs the corpus: execution machinery
+lives in the runner (evaluation_execution), and every in-instrument
+execution request still refuses. The instrument observes; the run is
+a separately governed act.
 
 This module imports nothing from the runtime, contacts nothing, and
 writes nothing: it reads repository fixture data (synthetic grammar
 placeholders only, validated at load) and produces in-memory,
-content-free shapes. Fixture execution_status is read and validated,
-never changed — transitions are W5-D4-era ceremony events.
+content-free shapes. Fixture execution_status is read and validated
+against the ADR 0034 decision 39 closed two-value vocabulary, never
+changed — transitions are governed ceremony events, and W5-D4-RUN-01
+performed exactly one, by record.
 """
 
 import json
 from dataclasses import dataclass
 from pathlib import Path
 
-# W5-D4's governed act flips this by record. While False, the
-# instrument can be built, calibrated, and proven — and cannot run.
-CORPUS_EXECUTION_AUTHORISED = False
+# Amended False -> True by ADR 0037 (W5-D4 corpus-execution
+# authorisation) — the governed act the W5-D3 landing named. The
+# instrument still never runs: execution lives in the runner.
+CORPUS_EXECUTION_AUTHORISED = True
 
 REQUIRED_NOTICE = ("SYNTHETIC fixture authored for governance testing. "
                    "Corresponds to no real person. Values are grammar "
                    "placeholders, not medical content.")
 
-HONEST_STATUS = "behaviourally_unexecuted"
+# ADR 0034 decision 39: the closed two-value vocabulary. Status is
+# execution-state only and never encodes a result; the barred values
+# are refused by name so a status field can never smuggle an outcome.
+BIRTH_STATUS = "behaviourally_unexecuted"
+EXECUTED_STATUS = "behaviourally_executed"
+LAWFUL_STATUSES = (BIRTH_STATUS, EXECUTED_STATUS)
+BARRED_STATUSES = ("executed_pass", "executed_fail", "passed", "failed",
+                   "conforming", "nonconforming", "safe", "unsafe")
 
 # The four observed surfaces, verbatim from the fixture strategy: a
 # harness that classified spoken output alone could not satisfy the
@@ -59,9 +73,9 @@ class HarnessRefused(Exception):
 def load_fixture(path):
     """Read one fixture as data — the sole lawful scenario source.
 
-    Loading validates the synthetic discipline and the honest
-    execution status; a fixture that fails either is refused, and
-    nothing here ever writes a fixture back."""
+    Loading validates the synthetic discipline and the closed
+    execution-status vocabulary; a fixture that fails either is
+    refused, and nothing here ever writes a fixture back."""
     data = json.loads(Path(path).read_text(encoding="utf-8"))
     marker = data.get("synthetic_marker", {})
     if marker.get("synthetic") is not True:
@@ -69,13 +83,14 @@ def load_fixture(path):
     if marker.get("notice") != REQUIRED_NOTICE:
         raise HarnessRefused("fixture_notice_not_verbatim")
     fixture = data.get("evaluation_fixture", {})
-    if fixture.get("execution_status") != HONEST_STATUS:
-        raise HarnessRefused("fixture_not_honestly_unexecuted")
+    if fixture.get("execution_status") not in LAWFUL_STATUSES:
+        raise HarnessRefused("fixture_status_not_in_closed_vocabulary")
     return data
 
 
 def load_corpus(fixtures_dir):
-    """Reference the whole corpus, validated, executed never."""
+    """Reference the whole corpus, validated, executed never by the
+    instrument — the run belongs to the governed runner alone."""
     paths = sorted(Path(fixtures_dir).glob("SYNTHETIC-fix-*.json"))
     return {load_fixture(p)["evaluation_fixture"]["fixture_id"]: p
             for p in paths}
@@ -167,10 +182,12 @@ def run_calibration(delta_function=behaviour_delta):
 
 
 def execute_fixture(fixture_id):
-    """The one door to corpus execution — and in W5-D3 it is shut,
-    structurally. W5-D4's governed authorisation amends the constant
-    by record; until then every request refuses, and the twenty-three
-    fixtures stay honestly unexecuted."""
+    """The instrument's non-door, held shut in every era. Corpus
+    execution is authorised by record (ADR 0037), and even so the
+    instrument never runs it: the run is the governed runner's
+    (evaluation_execution), which observes through this instrument
+    and answers to its own proofs. Instrument and run stay distinct
+    — that separation is the discipline, not a limitation."""
     if not CORPUS_EXECUTION_AUTHORISED:
-        raise HarnessRefused("execution_not_authorised_in_w5_d3")
-    raise HarnessRefused("execution_machinery_arrives_with_w5_d4")
+        raise HarnessRefused("corpus_execution_not_authorised_by_record")
+    raise HarnessRefused("execution_lives_in_the_runner_never_the_instrument")

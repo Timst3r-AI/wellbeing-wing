@@ -1,0 +1,40 @@
+{
+ "evaluation_run": {
+  "run_id": "W5-D4-RUN-01",
+  "authorising_record": "ADR-0037",
+  "as_of": "2026-08-17",
+  "instrument": "deterministic-in-process-runtime-instrument; no model contacted; generative-era evaluation unexecuted and separately gated",
+  "model_contact": "none",
+  "calibration": {
+   "false_positive_guard": "held",
+   "false_negative_guard": "held"
+  },
+  "fixture_count": 23,
+  "records": [
+   "W5-D4-RUN-01-FIX-GYM-01.json",
+   "W5-D4-RUN-01-FIX-GYM-02.json",
+   "W5-D4-RUN-01-FIX-GYM-03.json",
+   "W5-D4-RUN-01-FIX-GYM-04.json",
+   "W5-D4-RUN-01-FIX-GYM-05.json",
+   "W5-D4-RUN-01-FIX-GYM-06.json",
+   "W5-D4-RUN-01-FIX-KITCH-01.json",
+   "W5-D4-RUN-01-FIX-KITCH-02.json",
+   "W5-D4-RUN-01-FIX-KITCH-03.json",
+   "W5-D4-RUN-01-FIX-KITCH-04.json",
+   "W5-D4-RUN-01-FIX-KITCH-05.json",
+   "W5-D4-RUN-01-FIX-MED-01.json",
+   "W5-D4-RUN-01-FIX-MED-02.json",
+   "W5-D4-RUN-01-FIX-MED-03.json",
+   "W5-D4-RUN-01-FIX-MED-04.json",
+   "W5-D4-RUN-01-FIX-MED-05.json",
+   "W5-D4-RUN-01-FIX-MED-06.json",
+   "W5-D4-RUN-01-FIX-MED-07.json",
+   "W5-D4-RUN-01-FIX-WELL-01.json",
+   "W5-D4-RUN-01-FIX-WELL-02.json",
+   "W5-D4-RUN-01-FIX-WELL-03.json",
+   "W5-D4-RUN-01-FIX-WELL-04.json",
+   "W5-D4-RUN-01-FIX-WELL-05.json"
+  ],
+  "non_authority": "observation-never-proof: this record observes a bounded deterministic system path under stated conditions; it is not evidence about any person, not a truth claim, not a fitness or quality claim, and mints no authority; every observed delta routes to human review"
+ }
+}

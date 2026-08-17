@@ -10,8 +10,14 @@ Boundary (B-R60, B-R42, B-R46, B-R54, B-R55): this module executes no
 behavioural test, interprets no runtime delta, claims no behavioural success,
 creates no placeholder rule, infers no placeholder authority from family, and
 contains no W5 runtime logic. A green run means the traps are well-formed and
-referenced — nothing more. Every fixture is, and remains, behaviourally
-unexecuted in W4. Validator output does not mint doctrine.
+referenced — nothing more. Validator output does not mint doctrine.
+
+Amended by record at the W5-D4 landing (ADR-0037 decision 13): the W4-era
+single-value execution-status assertion — true throughout W4 and true as
+history — became the closed two-value W5 assertion of ADR-0034 decision 39.
+The corpus-wide value is behaviourally_executed per the recorded W5-D4-RUN-01
+ceremony; the status remains execution-state only and never a result, and
+the barred outcome-bearing values are refused by name.
 """
 
 import hashlib
@@ -30,7 +36,12 @@ FIXTURE_DIR = ROOT / "fixtures"
 FIX_RE = re.compile(r"^FIX-(WELL|KITCH|GYM|MED)-\d\d$")
 CONTRACT_FOR_ROOM = {"WELL": "W4-D2", "KITCH": "W4-D3", "GYM": "W4-D4", "MED": "W4-D5"}
 ROOM_NAME = {"WELL": "Wellness", "KITCH": "Kitchen", "GYM": "Gym", "MED": "Meditation"}
-STATUS = "behaviourally_unexecuted"
+# ADR-0034 decision 39 closed vocabulary; corpus-wide value set by the
+# ADR-0037 W5-D4-RUN-01 status-transition ceremony (never an edit).
+STATUS = "behaviourally_executed"
+LAWFUL_STATUSES = ("behaviourally_unexecuted", "behaviourally_executed")
+BARRED_STATUSES = ("executed_pass", "executed_fail", "passed", "failed",
+                   "conforming", "nonconforming", "safe", "unsafe")
 SURFACES = ["spoken_output", "persisted_state", "routing_propagation",
             "behaviour_selection_ranking_framing_omission"]
 # accepted probe floors: two per bait unless a ruling derived more
@@ -111,6 +122,8 @@ class MapIntegrity(unittest.TestCase):
                 self.assertEqual(row["contract_registry_id"], CONTRACT_FOR_ROOM[room])
                 self.assertTrue(row["fixture_id"].startswith("FIX-%s-" % room))
                 self.assertEqual(row["execution_status"], STATUS)
+                self.assertIn(row["execution_status"], LAWFUL_STATUSES)
+                self.assertNotIn(row["execution_status"], BARRED_STATUSES)
                 self.assertIsNone(row["superseded_by"])
                 self.assertIn(row["fixture_id"], by_id, "orphan map row")
                 path, data = by_id[row["fixture_id"]]
@@ -258,6 +271,8 @@ class DisciplineAndDeferral(unittest.TestCase):
             ev = d["evaluation_fixture"]
             with self.subTest(file=p.name):
                 self.assertEqual(ev["execution_status"], STATUS)
+                self.assertIn(ev["execution_status"], LAWFUL_STATUSES)
+                self.assertNotIn(ev["execution_status"], BARRED_STATUSES)
                 self.assertEqual(ev["execution_dependency"], dep)
                 self.assertEqual(ev["result_location"], loc,
                                  "result_location is mandatory lawful metadata")
