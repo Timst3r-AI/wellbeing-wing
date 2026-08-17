@@ -19,6 +19,7 @@ from pathlib import Path
 # tax (create / run / terminate normally and by kill / sweep).
 REGISTERED_BOUNDARY_OPERATIONS = (
     ("processing-context-lifecycle", "W5-D2-M04"),
+    ("payload-assembly", "W5-D2-M05"),
 )
 
 

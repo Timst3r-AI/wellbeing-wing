@@ -18,10 +18,12 @@ RUNTIME = ROOT / "runtime"
 # brief and landing scope). W5-D2-M03: freshness.py (freshness runtime
 # wiring, under its accepted opening brief and landing scope).
 # W5-D2-M04: context.py (processing context, under the accepted
-# combined-pipeline authorisation and its landing scope). Any
-# further file is a new milestone's to authorise here, by record.
+# combined-pipeline authorisation and its landing scope).
+# W5-D2-M05: payload.py (payload assembly and equality, under the
+# accepted combined-pipeline authorisation and its landing scope).
+# Any further file is a new milestone's to authorise here, by record.
 AUTHORISED_RUNTIME_FILES = ["__init__.py", "grants.py",
-                            "freshness.py", "context.py"]
+                            "freshness.py", "context.py", "payload.py"]
 NETWORK_FACILITY_PREFIXES = (
     "socket", "ssl", "http", "urllib", "ftplib", "smtplib", "poplib",
     "imaplib", "xmlrpc", "requests", "aiohttp", "websockets", "grpc",
@@ -69,6 +71,7 @@ class RuntimeSkeleton(unittest.TestCase):
     # registration is a new milestone's to authorise here, by record.
     AUTHORISED_BOUNDARY_OPERATIONS = (
         ("processing-context-lifecycle", "W5-D2-M04"),
+        ("payload-assembly", "W5-D2-M05"),
     )
 
     def test_residue_scaffolding_registers_exactly_the_authorised(self):
