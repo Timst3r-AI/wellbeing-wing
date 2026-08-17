@@ -25,11 +25,13 @@ EXCLUSION_REASON = "registry artifact — self-reference exclusion"
 # Amended under the W3-D2 milestone-1 Tier F authorisation: admits
 # exactly the engine directory and the single pinned manifest, nothing
 # else. Amended again under the licence-selection record's Tier F
-# authorisation: admits exactly LICENSE and NOTICE. Any further root
+# authorisation: admits exactly LICENSE and NOTICE. Amended again under
+# the W5-D2-M01 Tier F authorisation (accepted opening brief,
+# 2026-08-17): admits exactly the runtime directory. Any further root
 # entry is a new named fence-crossing requiring its own record-backed
 # amendment here.
 ALLOWED_TOP_LEVEL = {"docs", "governance", "tests", "fixtures", "scripts",
-                     "engine",
+                     "engine", "runtime",
                      "README.md", ".gitignore", ".git",
                      "requirements.txt", "LICENSE", "NOTICE",
                      ".public-safety.local.txt"}
