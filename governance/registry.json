@@ -2472,6 +2472,39 @@
       "content_hash": "sha256:1bdda11e7142b6f7bd3d41e488e0f97127fbdfe3d2043460354f9415328f2752",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0042",
+      "aliases": [],
+      "title": "0042 — Catalogue Identity and Catalogue-ID Namespace Law",
+      "type": "adr",
+      "phase": "W6",
+      "deliverable": "W6-D1",
+      "path": "docs/decisions/0042-catalogue-identity-and-namespace-law.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The fifth W6-D1 doctrine record (DR-W6-05), carrying the accepted brief's law fourteen and gating W6-D2 without opening it. The governed string catalogue is defined as a governed register of approved display strings and their required metadata — each entry carrying string, vocabulary class, source authority, derivation reference, accompaniment linkage, prohibition register and proof obligations as data — and defined equally by what it is not: not a surface, UI, renderer, copy deck, glossary, design system, or softening translation layer, and never a source of authority, because registration lends a string nothing. Membership is governed strings only in the seven ADR-0038 classes including the ADR-0040 and ADR-0041 accompaniment tables as first-class members; exclusions bar source records, evidence, fixtures, evaluation results, human decisions except as later-law source-cited strings, layout, glyphs, colours, affordances, screenshots, runtime behaviour, model output, and anything that would create a surface by being registered. Catalogue-ID law: an ID identifies one governed string record and that is the whole of its meaning — stable, immutable except through visible supersession or retirement with identifiers never reused, encoding no ranking, quality, priority, risk, confidence, approval or order, implying no acceptance, safety, correctness, satisfaction, certif- or complian- form, diagnosis, therapy, production readiness or proof, never a verdict, never a substitute for source citation, and never authorising display by itself — necessary, never sufficient. The namespace is closed and mechanically checkable: a single flat CAT- prefixed allocation sequence under the register precedent, identity structurally separated from meaning with every meaning in fields, no sub-namespaces, and the single illustrative identifier marked non-final with nothing allocated. The thirty-three review-of-record strings are seed corpus only — not graded, not admitted, not renderable — with per-string admission or rejection through W6-D2's own brief and ceremony, rejection a lawful outcome. Thirteen deterministic obligations are specified for the dormant catalogue-ID validator class, which W6-D2 wakes by record and which today stays exactly a dormancy assertion, untouched. W6-D2 may open only after this record's publication, still requires its own accepted brief, and must prove declarability, per-entry validation, per-seed admission decisions and no authority-by-registration before any catalogue artefact exists. Creates no catalogue, file, schema, entry or ID; wakes nothing; grades nothing; renders nothing; W6-D2 through W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0038",
+        "ADR-0039",
+        "ADR-0040",
+        "ADR-0041",
+        "W6-D1-SDB",
+        "W6-AR",
+        "ADR-0003",
+        "W4-D6-EASR",
+        "W5-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [
+        "CAT-#### (governed string catalogue records; grammar defined only — no identifier allocated)"
+      ],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:be927c0e951d51c82573f6200d047da14388a1a901bbd37581ecb3aaae5b14d7",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
