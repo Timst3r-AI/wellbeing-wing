@@ -12,6 +12,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tests"))  # scaffolding import under any runner
 RUNTIME = ROOT / "runtime"
+# The authorised runtime tree — amended by record per milestone, on the
+# top-level fence pattern. W5-D2-M01: the capability-empty skeleton.
+# W5-D2-M02: grants.py (grant machinery, under its accepted opening
+# brief and landing scope). Any further file is a new milestone's to
+# authorise here, by record.
+AUTHORISED_RUNTIME_FILES = ["__init__.py", "grants.py"]
 NETWORK_FACILITY_PREFIXES = (
     "socket", "ssl", "http", "urllib", "ftplib", "smtplib", "poplib",
     "imaplib", "xmlrpc", "requests", "aiohttp", "websockets", "grpc",
@@ -23,20 +29,21 @@ def runtime_modules():
 
 
 class RuntimeSkeleton(unittest.TestCase):
-    def test_runtime_package_contains_exactly_the_skeleton(self):
+    def test_runtime_package_contains_exactly_the_authorised_files(self):
         files = sorted(p.relative_to(RUNTIME).as_posix()
-                       for p in RUNTIME.rglob("*") if p.is_file())
-        self.assertEqual(files, ["__init__.py"],
-                         "W5-D2-M01 authorises the skeleton only")
+                       for p in RUNTIME.rglob("*")
+                       if p.is_file() and "__pycache__" not in p.parts)
+        self.assertEqual(files, sorted(AUTHORISED_RUNTIME_FILES),
+                         "runtime tree must match the record-authorised set")
 
-    def test_skeleton_owns_no_capability(self):
-        for mod in runtime_modules():
-            tree = ast.parse(mod.read_text(encoding="utf-8"))
-            for node in ast.walk(tree):
-                self.assertNotIsInstance(
-                    node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef,
-                           ast.Import, ast.ImportFrom),
-                    f"capability or import in skeleton: {mod.name}")
+    def test_skeleton_init_owns_no_capability(self):
+        tree = ast.parse((RUNTIME / "__init__.py").read_text(encoding="utf-8"))
+        for node in ast.walk(tree):
+            self.assertNotIsInstance(
+                node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef,
+                       ast.Import, ast.ImportFrom),
+                "the skeleton stays capability-free; capability modules "
+                "carry their own structural proofs")
 
     def test_runtime_tree_reaches_no_network_facility(self):
         for mod in runtime_modules():
