@@ -2352,6 +2352,35 @@
       "content_hash": "sha256:b77b96c772886c56395574997fcb5f06c4d0e04b64d0f8e361463313fa0978b6",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0038",
+      "aliases": [],
+      "title": "0038 — Display-Vocabulary and Label Law",
+      "type": "adr",
+      "phase": "W6",
+      "deliverable": "W6-D1",
+      "path": "docs/decisions/0038-display-vocabulary-and-label-law.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The first W6-D1 doctrine record (DR-W6-01), carrying the accepted brief's laws one to three. The display vocabulary is closed at seven exhaustive classes — source-state labels shown verbatim or through registered derived labels and never through invented synonyms; derived presentation labels computed at presentation by recorded deterministic rules and never stored, generalising the Lane C derived-never-stored precedent Wing-wide; routing labels that name destinations never judgements; non-authority labels as first-class load-bearing content including the mandatory executed-is-not-passed accompaniment; review labels always attributed to human review; prohibition labels permitted only in negation form; and future-owned labels that say dormant when a thing is dormant. Renaming a stored state into a safer-looking display alias is minting authority by thesaurus and is barred; explanatory prose is bounded by its sources. The prohibited-label law closes a barred display list — including passed, safe, clinically safe, medically safe, legally satisfied, production-ready, approved by the system, validated as correct, behaviourally proven, proof of safety, diagnosis, therapy, treatment advice, readiness, all-green status, success verdict, and every word formed from the certif- and complian- stems — growable by record and never shrinkable, consumable as data with the deterministic validation obligation landing when the first string-bearing artefact exists. The prohibited-visual law binds the visual axioms — a rendered word is a claim, colour is a sentence, a checkmark is a verdict, omission of an honest state is an overclaim — and bars six checkable visual classes: verdict glyphs on execution, evidence or applicability states; grading colour semantics; aggregate verdicts and readiness meters; concealment groupings that hide deferred, unknown, not-evidenced or unresolved states; ceremony-bypassing affordances including any bulk-approve control; and confidence by prominence — with future rendering artefacts obliged to declare glyph, colour, coverage and affordance inventories as data so the bans check deterministically. Every known honest state family is assigned its vocabulary class and none may be omitted from a surface that shows its siblings. Creates no catalogue, allocates no identifier, renders nothing, grades nothing, changes no governed state anywhere, and leaves detailed per-state rendering to DR-W6-02, delta presentation to DR-W6-03, the firewall to DR-W6-04 which consumes this record whole, catalogue identity to DR-W6-05, and the surface contract to DR-W6-06. W6-D2 through W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "W6-D1-SDB",
+        "W6-AR",
+        "ADR-0003",
+        "ADR-0029",
+        "ADR-0034",
+        "ADR-0037",
+        "W4-D6-PHDAR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:30fae597448abaf1e34c6fa1976ca75f21c783134e30cc256fb513422af79924",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
