@@ -2381,6 +2381,35 @@
       "content_hash": "sha256:30fae597448abaf1e34c6fa1976ca75f21c783134e30cc256fb513422af79924",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0039",
+      "aliases": [],
+      "title": "0039 — The Label-Authority Firewall",
+      "type": "adr",
+      "phase": "W6",
+      "deliverable": "W6-D1",
+      "path": "docs/decisions/0039-label-authority-firewall.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The second W6-D1 doctrine record (DR-W6-04) and the keystone of the surface era: the label-authority firewall, translating passing-tests-must-not-mint-authority to presentation under one normative formula — display may preserve source authority; display may not create authority. Consumes ADR-0038 whole and unweakened as its input layer, with any conflict resolved in ADR-0038's favour. Binds the firewall as a mechanism of eleven checkable binds: the closed display vocabulary, class-as-data, the authority-non-increasing derivation rule (verbatim or registered deterministic derivation whose output never carries more certainty, approval or finality than its input — the Lane C overlay derivation the founding member), prohibited wording and stem checks, prohibited visual declaration checks over declared glyph, colour, coverage and affordance inventories, mandatory unweakened non-authority accompaniments, honest-state coverage with concealment failing as overclaim, no write-back of derived presentation states to any governed source, no ranking or prominence without a declared non-quality rule, no ceremony-bypassing affordance including any bulk-approve control, and no machine verdict structurally — a verdict may display only where a governed source holds a recorded human-authorised act, and no current W6 source holds one. Enforces the register distinctions: absence is not unknown, pending is not converted, evidenced asserts no requirement satisfied, executed is not passed. Twelve normative firewall rules bind every future display artefact, ending with the admission condition that an artefact unable to declare its labels, classes, derivations, visual semantics, coverage and affordances as data cannot pass. Deterministic conformance proofs land with the artefacts that first bear strings and surfaces, under DR-W6-05's catalogue validation and DR-W6-06's surface contract; until then nothing is checked and no conformance is claimed. The firewall promotes nothing: executed stays not passed, unknowns stay unknown, deferred stays deferred, unresolved stays unresolved, pending stays pending. Creates no catalogue, allocates no identifier, renders nothing, grades nothing, changes no governed state; W6-D2 through W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0038",
+        "W6-D1-SDB",
+        "W6-AR",
+        "ADR-0003",
+        "ADR-0034",
+        "ADR-0037",
+        "W4-D6-PHDAR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:b87dba15fe068d13bdd748cd1f38242b21569a61019dc099adf61a6bef3f0310",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
