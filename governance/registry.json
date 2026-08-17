@@ -2441,6 +2441,37 @@
       "content_hash": "sha256:22e1673b54da03b1f5102b0762f466dbd62785a749768ca8561742b4abebae50",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0041",
+      "aliases": [],
+      "title": "0041 — Human-Routing Presentation Law",
+      "type": "adr",
+      "phase": "W6",
+      "deliverable": "W6-D1",
+      "path": "docs/decisions/0041-human-routing-presentation-law.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The fourth W6-D1 doctrine record (DR-W6-03), carrying the accepted brief's laws ten to twelve: presentation law for human-routed material beyond the routing boundary ADR-0040 decision four fixed, consuming ADR-0038's routing and future-owned classes and V5, ADR-0039 whole with its no-machine-verdict and no-ceremony-bypassing binds, the pending ledger's no-bulk-approve obligation, the W5 evaluation posture and the closure carry-forward inventories, with conflicts resolving upward and nothing weakened. Review-routed deltas display whole — both variant captures exactly as the source records hold them with the fact and recorded reason of routing — and display never does the review: no recommendation, score, verdict, winner, better or safer option, no collapse of two variants into a machine-selected conclusion, and no hidden variant because there is no selected variant unless a human record later creates one; absent a human decision the state remains routed to human review, and time never escalates it. Pending stubs display with identity, owner, dependency and unblocking condition, as pending not converted, with no convert, approve, approve-all, resolve, retire or mark-done affordance of any kind, no bulk path by words, visuals, grouping or affordance, never grouped as defects or backlog shame and never hidden for being uncomfortable — display performs neither eligibility nor conversion. Carried open questions display as carried, still alive: never resolved, retired, irrelevant, ignored, not applicable, deferred forever or a roadmap promise, with the three waits — carried question, pending stub, deferred dependency — kept distinct and never merged into one open-items pile. The human-attribution chain is law: a human decision displays only where a governed source records a human act, attributed as human with its source cited; no current W6 record creates such an act; human-review-needed is not human-reviewed, routed-to-review is not reviewed, and reviewed is not approved unless the recorded act says approval and a future record authorises its display. Visual law bars verdict glyphs, urgency theatre, red-as-failure, green-as-cleared, progress bars over waits, concealment defaults and every ceremony-implying affordance. Five accompaniments complete the ADR-0040 table across all governed display states. Renders nothing, performs no review, invents no human act, converts nothing, retires nothing; W6-D2 through W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0038",
+        "ADR-0039",
+        "ADR-0040",
+        "W6-D1-SDB",
+        "W6-AR",
+        "ADR-0003",
+        "ADR-0034",
+        "ADR-0037",
+        "W5-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:1bdda11e7142b6f7bd3d41e488e0f97127fbdfe3d2043460354f9415328f2752",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
