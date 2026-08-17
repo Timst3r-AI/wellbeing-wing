@@ -15,9 +15,10 @@ RUNTIME = ROOT / "runtime"
 # The authorised runtime tree — amended by record per milestone, on the
 # top-level fence pattern. W5-D2-M01: the capability-empty skeleton.
 # W5-D2-M02: grants.py (grant machinery, under its accepted opening
-# brief and landing scope). Any further file is a new milestone's to
-# authorise here, by record.
-AUTHORISED_RUNTIME_FILES = ["__init__.py", "grants.py"]
+# brief and landing scope). W5-D2-M03: freshness.py (freshness runtime
+# wiring, under its accepted opening brief and landing scope). Any
+# further file is a new milestone's to authorise here, by record.
+AUTHORISED_RUNTIME_FILES = ["__init__.py", "grants.py", "freshness.py"]
 NETWORK_FACILITY_PREFIXES = (
     "socket", "ssl", "http", "urllib", "ftplib", "smtplib", "poplib",
     "imaplib", "xmlrpc", "requests", "aiohttp", "websockets", "grpc",
