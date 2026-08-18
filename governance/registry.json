@@ -2852,7 +2852,7 @@
       "path": "docs/phases/W6-D4-DEF-surface-materialisation-record.md",
       "status": "accepted",
       "accepted_date": "2026-08-17",
-      "role": "The materialisation landing of the W6-D4 programme, merging D, E and F because a surface and its proofs are same-commit-coupled. The static review surface exists: a dependency-free deterministic generator reading exactly the six declared inputs of the exposure contract with undeclared access refusing structurally, emitting one HTML artefact with no JavaScript, no forms, no controls, no links, no external references, no verdict glyphs and a provably neutral grey palette encoding nothing, plus the ADR-0043 fifteen declarations as data with empty glyph, affordance, write, persistence and external inventories, plus the mandatory per-item trace of one hundred and eighty-eight rows — thirty-three register entries, sixty-five evidence rows, twenty-three executed fixtures, twenty-six honest unknowns, twenty-five routed deltas with both variant captures whole, nine pending stubs and seven carried questions — each row carrying source, catalogue id where applicable, governed state, accompaniment, rendered wording, proof result and non-authority confirmation, under Tara's directive that family reasoning is explanatory and the per-item trace is the accountability. Twenty-two structural proofs land in the same commit: bounded clockless imports, no discovery, write paths exactly two, byte-identical regeneration as the integrity mechanism, trace bijection both ways, accompaniments and aphorisms and ceilings rendered inline, uncomfortable states at full size, no barred affirmative anywhere, no display-authorisation claim, and artefacts living only under docs/surface. Viewing the surface reviews nothing, decides nothing, approves nothing and retires nothing — structurally, because nothing on it can be pressed. A green suite means contract conformance only. W6-D4-G remains separate; W6-D5, W6-D6 and W7 remain unopened.",
+      "role": "The materialisation landing of the W6-D4 programme, merging D, E and F because a surface and its proofs are same-commit-coupled. The static review surface exists: a dependency-free deterministic generator reading exactly the six declared inputs of the exposure contract with undeclared access refusing structurally, emitting one HTML artefact with no JavaScript, no forms, no controls, no links, no external references, no verdict glyphs and a provably neutral grey palette encoding nothing, plus the ADR-0043 fifteen declarations as data with empty glyph, affordance, write, persistence and external inventories, plus the mandatory per-item trace of one hundred and eighty-eight rows — thirty-three register entries, sixty-five evidence rows, twenty-three executed fixtures, twenty-six honest unknowns, twenty-five routed deltas with both variant captures whole, nine pending stubs and seven carried questions — each row carrying source, catalogue id where applicable, governed state, accompaniment, rendered wording, proof result and non-authority confirmation, under Tara's directive that family reasoning is explanatory and the per-item trace is the accountability. Twenty-six structural proofs land in the same commit: bounded clockless imports, no discovery, write paths exactly two, byte-identical regeneration as the integrity mechanism, trace bijection both ways, accompaniments and aphorisms and ceilings rendered inline, uncomfortable states at full size, no barred affirmative anywhere, no display-authorisation claim, and artefacts living only under docs/surface. Viewing the surface reviews nothing, decides nothing, approves nothing and retires nothing — structurally, because nothing on it can be pressed. A green suite means contract conformance only. W6-D4-G remains separate; W6-D5, W6-D6 and W7 remain unopened.",
       "governs": [],
       "depends_on": [
         "W6-D4-SOB",
@@ -2871,9 +2871,14 @@
       "id_namespaces": [],
       "implementation_permission": "w6-d4-static-surface-materialisation",
       "open_decisions": [],
-      "content_hash": "sha256:3d511b371482569f5594479893481e1c83b58bf8e479f637b201e5a68b83642e",
+      "content_hash": "sha256:86362be9b7441abf5da05d3783ca21be17219d6c3c591d7b108d9dd80565c309",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-08-17",
+          "note": "Proof-count wording corrected from twenty-two to twenty-six, authorised by human reviewer ruling (2026-08-17): the record's drafting-time tally was not reconciled to the live proof module before landing. The module contained twenty-six tests, the suite collected and executed twenty-six, the programme packet and the W6-D4-G closure record used the live count, and the proof enumeration in the same sentence was and is accurate \u2014 only the tally word here and the matching wording in this role were wrong. One word changed in the record and one in this role; hash recomputed in the same commit. No proof, artefact, or surface byte changed."
+        }
+      ]
     },
     {
       "id": "W6-D4-CR",
