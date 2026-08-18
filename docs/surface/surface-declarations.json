@@ -1,0 +1,67 @@
+{
+ "declaration_note": "The ADR-0043 declarability law satisfied as data for the W6-D4 static review surface. Authored at the W6-D4-D/E/F landing, reviewed as content, cross-checked by proof against the governed records it cites. This file is a declared input to the generator and never a source of authority.",
+ "source_inputs": [
+  "governance/string-catalogue.json",
+  "docs/governance/privacy-health-data-assurance-record.md",
+  "governance/evaluation/",
+  "tests/test_pending_ledger.py",
+  "governance/registry.json",
+  "docs/surface/surface-declarations.json"
+ ],
+ "source_to_display_derivations": [
+  "Lane C derived presentation states per W4-D6-PHDAR section 5 derivation rule (overlay plus unresolved applicability presents as applicability unresolved, never a pass)",
+  "catalogue entries rendered verbatim from governance/string-catalogue.json fields under ADR-0038 Part B (no alias, no synonym)",
+  "evaluation states rendered verbatim from the W5-D4-RUN-01 records under ADR-0040 decisions 6 and 3",
+  "pending stubs rendered from the ledger's own stub identities and conditions under ADR-0041 decision 7"
+ ],
+ "catalogue_entries_used": "all thirty-three, CAT-0001 through CAT-0033, by id, with metadata and ceiling",
+ "label_classes_used": [
+  "source_state_label",
+  "derived_presentation_label",
+  "routing_label",
+  "non_authority_label",
+  "future_owned_label"
+ ],
+ "mandatory_accompaniments": [
+  {"state": "behaviourally_executed", "text": "executed is not passed — one governed run happened, and nothing more", "citation": "ADR-0040 decisions 6 and 10"},
+  {"state": "evidenced/not_evidenced", "text": "evidence presence is not satisfaction — an evidence pointer locates evidence and never asserts a requirement satisfied", "citation": "ADR-0040 decisions 7, 8 and 10"},
+  {"state": "applicability_unresolved", "text": "unresolved is not \"not applicable\" — no pass is implied", "citation": "ADR-0040 decisions 9 and 10"},
+  {"state": "review_routed", "text": "routed to human review; no machine judgement exists or is implied", "citation": "ADR-0041 decision 15"},
+  {"state": "unknown", "text": "a standing truth, not an absence", "citation": "ADR-0040 decisions 3 and 10"},
+  {"state": "pending_stub", "text": "pending stub; conversion requires separate governed ceremony", "citation": "ADR-0041 decision 15"},
+  {"state": "carried_question", "text": "carried open question; still alive, not retired", "citation": "ADR-0041 decision 15"}
+ ],
+ "visual_semantics": "one neutral typographic register; colour encodes nothing; emphasis encodes nothing beyond document structure; no state is graded, ranked, or grouped by appearance",
+ "glyph_inventory": [],
+ "colour_semantic_mapping": "none — colour does not encode state, grade, priority, or any property; the palette is neutral greys only",
+ "declared_palette": ["#111111", "#444444", "#777777", "#f5f5f5", "#dddddd", "#ffffff"],
+ "default_coverage": "total — every state family the declared sources hold renders, with no filter, no collapse, no default view narrower than everything",
+ "filters_and_collapse_rules": "none exist",
+ "ordering_and_grouping_rules": "identifier order and source order only (CAT id ascending; Lane C row order as held in source; fixture id ascending; ledger order; declaration order) — deterministic, non-quality-named, encoding nothing",
+ "affordance_inventory": [],
+ "write_paths": "none",
+ "persistence_paths": "none",
+ "external_paths": "none",
+ "d3_grading_summary": {
+  "citation": "W6-D3-GR section 4 and W6-D3-CR section 2",
+  "dispositions": "lawful-as-worded 33 · unlawful-as-worded 0 · routed-to-review 0 · deferred 0",
+  "ceiling": "a grade is not approval, not display permission, not renderability, not safety, not correctness, and not a claim of any kind"
+ },
+ "carried_open_questions": [
+  {"item": "retention defaults", "citation": "W0 section 12; W5-CR section 9"},
+  {"item": "hard-block versus warn (W1-D3 section 10.6 remainder)", "citation": "W1-D3 section 10.6; W5-CR section 9"},
+  {"item": "clinician-question-list export format", "citation": "W1-D1 OQ 5; W5-CR section 9"},
+  {"item": "the Gym device-intake question", "citation": "W4-D4; W5-CR section 9"},
+  {"item": "the Meditation content-supply surface and its content-rights determination", "citation": "W4-D5; W5-CR section 9"},
+  {"item": "per-room context-cost evidence (ADR-0017 carried question)", "citation": "ADR-0017; W5-CR section 9"},
+  {"item": "the repository's carried line-ending and index-omission reviews", "citation": "W5-CR section 9"}
+ ],
+ "surface_identity": "a bounded reader over governed sources and governed catalogue entries, presented to a human for inspection or review — a presentation boundary, never an authority boundary: nothing becomes true by being shown",
+ "aphorisms": [
+  "viewing is not reviewing",
+  "clicking is not deciding",
+  "selecting is not approving",
+  "closing a panel is not retiring"
+ ],
+ "ceiling": "catalogue membership is necessary where later law requires it, never sufficient for display; entry presence, id presence, registry hash, and validator results do not authorise display"
+}
