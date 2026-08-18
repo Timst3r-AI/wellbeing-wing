@@ -2874,6 +2874,32 @@
       "content_hash": "sha256:3d511b371482569f5594479893481e1c83b58bf8e479f637b201e5a68b83642e",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-D4-CR",
+      "aliases": [],
+      "title": "W6-D4-G — Review Surfaces Closure Record",
+      "type": "phase-record",
+      "phase": "W6",
+      "deliverable": "W6-D4",
+      "path": "docs/phases/W6-D4-G-review-surfaces-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The final landing of the W6-D4 programme: the closure record, landing separately after the materialisation was published and independently reviewable. W6-D4 — Review Surfaces — is complete and closed: three landings with every merge justification stated in its record, and closure changes nothing. Exactly one surface exists and it is exactly one kind — a static generated review surface with its declarations and its mandatory per-item trace, produced deterministically by a standard-library-only generator reading exactly the six declared inputs with undeclared access refusing structurally. What it cannot do is everything else: no scripts, forms, controls, links or affordances; no write, cache, persistence, channel, workflow, approval, conversion, retirement or bulk path; no verdict, glyph, colour-as-state or claim — viewing it reviews nothing, decides nothing, approves nothing and retires nothing, structurally, because nothing on it can be pressed. Results final: one hundred and eighty-eight trace rows rendered and individually proven across register, evidence, evaluation, unknowns, routed deltas, stubs and carried questions; twenty-six structural proofs green in the materialisation commit including byte-identical regeneration and the two-way trace bijection; family reasoning used exactly as directed and replacing nothing; two named mechanical exceptions carried faithfully and proven bounded. Unresolved, deferred and correction-needed items: none. No presentation assurance was performed — auditing this surface is W6-D5's whole purpose and none of it has begun. W6-D5 is next and remains unopened; W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "W6-D4-SOB",
+        "W6-D4-SMR",
+        "ADR-0043",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:be09a642c22bc3962a4e05610f54af3028f7b5940237e21d344159378798ba53",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
