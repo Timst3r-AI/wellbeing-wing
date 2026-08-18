@@ -3083,6 +3083,38 @@
       "content_hash": "sha256:01afb1dd9e3adff9c8e9f5e0e7101aad77d8d47a1bacb356a2dc12685679ddef",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-CR",
+      "aliases": [],
+      "title": "W6 Closure Record",
+      "type": "phase-record",
+      "phase": "W6",
+      "deliverable": "W6-D6",
+      "path": "docs/phases/W6-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "Seals W6, Surface Era: Governed Presentation and Review Surfaces, satisfying W6-D6: the phase closes because every obligation its runway addresses to the phase is satisfied, satisfied with a named carried item, intentionally deferred under named doctrine, or honestly recorded as external, and it closes complete rather than perfect, with two correction-needed findings open, three W6-owned stubs waiting on unauthorised ceremonies, seven questions carried since W1 still carried, eleven Lane C rows still external and four applicability records still unresolved, and the generative evaluation era assigned to no phase including the next, every one of them named in the closure assessment, classified there, and represented as resolved nowhere. Records what the phase achieved: the doctrine of showing in six records including the label-authority firewall under its formula that display may preserve source authority and may not create authority; the governed register of thirty-three entries admitted one at a time with a validator woken in the same commit; thirty-three of thirty-three strings graded lawful-as-worded under an eight-criterion rubric whose disposition vocabulary deliberately contains no pass, fail or conformance form, with not one word rewritten; a static review surface with no scripts, forms, controls, links, glyphs or colour-as-state, reading six declared inputs, carrying one hundred and eighty-eight mandatory per-item trace rows and twenty-six structural proofs; and an audit of five hundred and thirty-one read-only checks that found the showing faithful and wrote nothing. Assesses all twelve runway obligations as ten satisfied and two satisfied-with-carried-item with none unresolved, treats satisfied-with-carried-item as honest closure language and never a pass, and records the non-goals honoured and mechanically verified across the whole phase range with the runtime, fixtures, evaluation records, engine and dependency manifest byte-untouched, no stub converted, no Tier 3 or applicability or Lane C movement, no dormant door touched, no dependency added, no W7 artefact in existence, and no model contacted at any point in the phase in any form. Verification at closure: four hundred and ninety-four passed with nine skipped and zero failures, grown by forty-eight proofs; scan two hundred and twenty-eight files with zero findings and not one new suppression added by the phase; registry ninety-five before this deliverable and ninety-eight at this record; thirty-four files changed with seven thousand four hundred and eighty-one insertions across twenty-four W6 commits plus three closure landings. Reviews the ledger byte-untouched with nine stubs and the T12 obligation still assigned and undischarged; logs seven closed incidents, two open findings and five learnings, including the one wording error caught after publication by the architect and corrected by Tier M erratum with its history preserved; carries the honest findings in ink, that the words are lawful but that is not permission to say them, that the window is honest with two panes held by hand, and that the audit is trustworthy and partly packet-reported; states what closure does not mean, naming safety, clinical validity, legal conformance, certification, correctness, approval and production readiness among the things it is not; names the W7 gate as three documents and three acceptances with its full inheritance stated and W7 unopened and no W7 artefact created; keeps the generative era and the correction and conversion ceremonies separately gated and belonging to no phase boundary; and publishes the deferred inventory in four honest states with nothing softened. Authorises nothing new.",
+      "governs": [],
+      "depends_on": [
+        "W6-AR",
+        "W6-D6-CAB",
+        "W6-D6-CAR",
+        "W6-D5-CR",
+        "W6-D4-CR",
+        "W6-D3-CR",
+        "W6-D2-CR",
+        "W6-D1-SDB",
+        "ADR-0043",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:a720fb1970235965c3a978410c9adc0176ab2d2f5152c056d2197ff6b11eb80e",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
