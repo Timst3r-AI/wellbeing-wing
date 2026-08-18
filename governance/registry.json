@@ -2973,6 +2973,35 @@
       "content_hash": "sha256:f38d8e74f857ab8972324f5346395d503875d94d38f19183bce0bb308b234f8d",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-D5-AFR",
+      "aliases": [],
+      "title": "W6-D5-F — Assurance Findings and Correction Paths",
+      "type": "phase-record",
+      "phase": "W6",
+      "deliverable": "W6-D5",
+      "path": "docs/phases/W6-D5-F-assurance-findings-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The findings landing of the W6-D5 programme, consolidating the published audit evidence into classified findings with the smallest governed correction path named for each and every correction stopped unexecuted, landing separately from closure so anything correction-needed is visible before completeness is declared over it. Answers the programme question: the showing stayed honest on the checks performed, on the day performed — no rendered state drifted, no honest state was omitted, softened, aggregated away or hidden, nothing in words, colours, ordering, prominence or silence implied approval, completion, safety, correctness, conformance or readiness, and state-family reasoning excused no item from answering for itself — with that finding bounded exactly: it is not certification, safety, clinical validity, legal conformance, correctness, production readiness or approval. Two findings classified correction-needed, neither a misstatement and both accountability rather than defect repairs: the per-entry grading disposition rendering from a generator literal whose content is accurate and citation-supported but would not follow a future grading change, and the four applicability records rendering as an accurate family statement without the individual rows every other governed state carries. Two observations classified satisfied. Three correction paths named and not taken: a pinning proof as the smallest repair for the first with the declared per-entry mapping as the fuller alternative, rendering the four applicability records as their own items taking the trace from one hundred and eighty-eight to one hundred and ninety-two for the second, and an optional separate landing to make the audit a standing proof module. Reassesses the three W6-owned stubs as eligible for future conversion consideration only, converting none and proposing no ledger edit, with eligibility distinguished from conversion and no stub convertible merely because a later deliverable exists. Distinguishes independently verifiable claims from packet-reported ones precisely. Corrected, regenerated, converted and touched nothing; declared no completeness; W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "W6-D5-PAB",
+        "W6-D5-AER",
+        "ADR-0043",
+        "ADR-0040",
+        "ADR-0041",
+        "W6-D3-GR",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:0d81388d493261cab34c5f3275a6a628f07cbf582c23825c548550de80809df3",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
