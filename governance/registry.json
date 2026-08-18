@@ -3053,6 +3053,36 @@
       "content_hash": "sha256:2e4098691c6fe45772855e49d74464ac8e45dab6fedb4779319178d2a30da57f",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-D6-CAR",
+      "aliases": [],
+      "title": "W6-D6-B/C/D/E/F — W6 Closure Assessment",
+      "type": "phase-record",
+      "phase": "W6",
+      "deliverable": "W6-D6",
+      "path": "docs/phases/W6-D6-BCDEF-closure-assessment-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The assessment landing of the W6-D6 programme, merging the whole-phase deliverable inventory, runway obligation assessment, pending-ledger review, incident log with honest findings, and deferred inventory with next gates as one evidence-gathering act over one already-published corpus, containing no declaration of closure. Inventories the W6 chain: twenty-four commits from the runway through the D5 closure, twenty-four registry entries across six deliverables, the D4 Tier M erratum in the chain, and phase totals of thirty-four files changed with seven thousand four hundred and eighty-one insertions and three deletions. Assesses all twelve runway obligations one by one: ten satisfied and two satisfied-with-carried-item, a classification this record treats as honest closure language and never as a pass, with no obligation unresolved and none satisfied by weakening a record; the non-goals are honoured and mechanically verified, with the runtime, fixtures, evaluation records, engine and dependency manifest byte-untouched across the whole phase, no stub converted, no Tier 3 conversion, no applicability resolution, no Lane C change, no dormant door moved, no model contacted at any point, no safety or conformance claim in words or pixels, and no W7 artefact in existence. Reviews the pending ledger as byte-untouched across the entire phase with nine stubs still skipped, records the three W6-owned stubs as eligible for future conversion consideration with none converted, states that eligibility is not conversion and that the remaining blocker is the unauthorised ceremony itself, and confirms the T12 amendment obligation still assigned and undischarged. Logs nine entries distinguishing incidents from findings from learnings, including the proof-count wording mismatch caught after publication by the architect and corrected by the Tier M erratum, and five learnings carried forward ending with the standing one that an independent reviewer catches what the implementer's own tally cannot. Carries the deferred inventory forward with smallest future paths named and untaken for both correction-needed findings, the optional proof-module path, the three ceremony-bound stubs, the generative-era work assigned to no phase including W7, the T12 obligation, the seven carried open questions, the external Tier 3 rows and unresolved applicability records, and the dormant doors, and names the next gates, W7 and the separately gated generative era and the correction and conversion ceremonies, opening none of them. Declares no closure, executes no correction, converts no stub, and mutates no artefact, source, ledger or governed state.",
+      "governs": [],
+      "depends_on": [
+        "W6-D6-CAB",
+        "W6-AR",
+        "W6-D5-CR",
+        "W6-D4-CR",
+        "W6-D3-CR",
+        "W6-D2-CR",
+        "W6-D1-SDB",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:01afb1dd9e3adff9c8e9f5e0e7101aad77d8d47a1bacb356a2dc12685679ddef",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
