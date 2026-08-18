@@ -2808,6 +2808,39 @@
       "content_hash": "sha256:827ad8a36ca8e35db1c17e36fd26d5759a25230dd57fec53b3add9383cebf5b8",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-D4-SOB",
+      "aliases": [],
+      "title": "W6-D4-A/B/C — Review Surfaces: Opening Brief, Medium Decision, and Exposure Contract",
+      "type": "phase-brief",
+      "phase": "W6",
+      "deliverable": "W6-D4",
+      "path": "docs/phases/W6-D4-ABC-surface-opening-medium-contract.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The opening landing of the W6-D4 programme, merging A, B and C with the justification in place: the reviewable unit is the complete surface framework before anything renders, with the build kept separate. Opens W6-D4 for brief-governed work only, asking exactly whether the words can be shown without minting authority, consuming ADR-0043 whole and binding seven named risks at opening — viewing becoming review, clicking becoming decision, selecting becoming approval, closing becoming retirement, ordering becoming priority, filtering becoming concealment, and prominence becoming authority — each made structural by the chosen medium. Carries the state-family rendering directive whole: rendering law reasoned once per genuinely shared family, tied to ADR-0040 and ADR-0041, with a mandatory per-item trace row for every rendered item carrying source, catalogue entry, governed state, accompaniment linkage, rendered wording, proof result and non-authority confirmation — a family proof is explanatory, the per-item trace is mandatory. Decides the medium: a static generated review surface at docs/surface/review-surface.html, produced deterministically by a Python-stdlib-only generator with no JavaScript, no forms, no interactive controls and no external references, accompanied by a declarations artefact carrying the ADR-0043 fifteen declarations as data and a complete per-item trace artefact — documentation-only rejected as answering the question only in theory, a preview server rejected as a runtime surface, CLI preview rejected as unreviewable, richer media premature behind their own future briefs. Implementation is permitted inside the merged D+E+F landing under this medium. Scope: the full governed string register with D3 dispositions and their ceilings, all sixty-five Lane C rows, the whole evaluation posture with both variant captures whole, all nine pending stubs with no affordance, and the carried open questions — total coverage, with omission the V4 overclaim. Registry posture explicit: the three generated artefacts deliberately excluded for the evaluation-records reason, integrity proven by deterministic byte-identical regeneration. The exposure contract closes the read set at six declared inputs with undeclared input failing structurally — no path walk, search, metadata sweep, source merge, hidden source, cache, store, environment, network or clock — and binds the source-trace requirement to every rendered row with a two-way rendered-traced bijection. Nothing renders at this landing; W6-D5, W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0043",
+        "ADR-0038",
+        "ADR-0039",
+        "ADR-0040",
+        "ADR-0041",
+        "ADR-0042",
+        "ADR-0045",
+        "W6-D3-CR",
+        "W6-CAT",
+        "W6-AR",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:0c6f13468b01d9048ec318b4d6f7edd206b1642a5a9d7fdbef0708cc01432369",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
