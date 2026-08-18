@@ -3028,6 +3028,31 @@
       "content_hash": "sha256:c603527edba84eba3d469620f4e56facec8aea763aa3c2d2093f15f80d7a5142",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-D6-CAB",
+      "aliases": [],
+      "title": "W6-D6-A — W6 Closure-Authorisation Brief",
+      "type": "phase-brief",
+      "phase": "W6",
+      "deliverable": "W6-D6",
+      "path": "docs/phases/W6-D6-A-closure-authorisation-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The opening landing of the W6-D6 programme, opening the deliverable for brief-governed phase-closure work only and authorising the preparation of a closure record and nothing else: no closure declared, no correction executed, no stub converted, W7 not opened. Confirms closure preparation lawful — W6-D1 through W6-D5 each published and independently verifiable on the default branch, with every W6 registry entry hash-current against live bytes at derivation, and no condition preventing preparation. States the standing closure standard restated from W2 through W5: a phase may close complete with open carried items if and only if each is named, classified and never represented as resolved, because a phase closes when its own obligations are discharged, deferred under named doctrine or honestly recorded as external, never because everything it touched is finished — and two correction-needed findings, one optional path, three ceremony-bound stubs and the carried question inventory travel through this closure unresolved and visible. Defines the sequence as three landings: this opening; the closure assessment merging the deliverable inventory, runway obligation assessment, pending-ledger review, incident log and deferred inventory as one evidence-gathering act over one already-published corpus with no declaration of closure among them; and the final closure record separately, after the assessment is published and independently reviewable, honouring the standing rule that closure happens after publication and never before. Carries the standing closure directive: phase-family reasoning only where a closure rule genuinely applies across a family of records and tied to its source, with every deliverable, finding, pending stub, erratum and carried item traced individually and published in an inspectable table — phase reasoning explains, the closure inventory answers, and no phase-level conclusion may hide an unresolved item, correction-needed item, open question, ceremony-bound stub, packet-reported boundary or future gate. States that closure is not certification, safety, clinical validity, legal conformance, correctness, approval or production readiness, and that W7 remains unopened and may be named only as next-gated work, never opened by implication, inventory or naming. Inventories, assesses, reviews, logs, defers and closes nothing; executes no correction path; converts and edits no stub; mutates no artefact, source or ledger.",
+      "governs": [],
+      "depends_on": [
+        "W6-D5-CR",
+        "W6-AR",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:2e4098691c6fe45772855e49d74464ac8e45dab6fedb4779319178d2a30da57f",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
