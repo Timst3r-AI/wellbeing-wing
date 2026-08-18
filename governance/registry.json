@@ -2782,6 +2782,32 @@
       "content_hash": "sha256:d40826fc955c2a14e7b9eba24a74c68560a00a107e3c774d162302d4a0446598",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-D3-CR",
+      "aliases": [],
+      "title": "W6-D3-F — Grading Results Record and D3 Closure Posture",
+      "type": "phase-record",
+      "phase": "W6",
+      "deliverable": "W6-D3",
+      "path": "docs/phases/W6-D3-F-grading-results-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The final landing of the W6-D3 programme: the results record and closure posture, landing separately after the grading landing was published and independently reviewable. W6-D3 — Language-Law Grading — is complete and closed: the programme ran as three landings with every merge justification stated in its record, the grading population was thirty-three of thirty-three admitted entries with none excluded, and the final dispositions are lawful-as-worded thirty-three, unlawful-as-worded zero, routed-to-review zero, deferred zero, with the historical register review disposing all three sealed-record items as recorded notes requiring no correction. Unresolved, deferred and correction-needed items: none. Closure changes nothing — the catalogue and validator are byte-identical to their W6-D2 state under exact hashes — and promotes nothing: a grade is not approval, not display permission, not renderability, not safety, not correctness, and not a claim of any kind; whether the words can be shown is W6-D4's question behind its own opening brief, the showing's honesty is W6-D5's, and phase closure is W6-D6's. No W6-D4 work has begun, no label has ever been rendered, the pending ledger is untouched with the language-law stub converting only through its own separate ceremony, and W6-D4 through W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "W6-D3-LLG",
+        "W6-D3-GR",
+        "W6-CAT",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:827ad8a36ca8e35db1c17e36fd26d5759a25230dd57fec53b3add9383cebf5b8",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
