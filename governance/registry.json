@@ -3002,6 +3002,32 @@
       "content_hash": "sha256:0d81388d493261cab34c5f3275a6a628f07cbf582c23825c548550de80809df3",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-D5-CR",
+      "aliases": [],
+      "title": "W6-D5-G — Presentation Assurance Closure Record",
+      "type": "phase-record",
+      "phase": "W6",
+      "deliverable": "W6-D5",
+      "path": "docs/phases/W6-D5-G-presentation-assurance-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The final landing of the W6-D5 programme: the closure record, landing after the framework, the evidence and the findings were each published and independently reviewable. W6-D5 — Presentation Assurance — is complete and closed because the deliverable's own obligations are discharged, not because everything the audit found is resolved: two correction-needed findings remain open by design, visible, sized, unexecuted and awaiting their own authorisation, because an assurance deliverable that quietly repaired what it found would destroy the independent account it exists to produce. The programme ran as four landings with F and G deliberately kept apart so the findings were reviewable before completeness was declared over them. Carries the audit's answer to closure: the showing stayed honest on the checks performed — one hundred and eighty-eight of one hundred and eighty-eight rendered states matching their sources, fourteen implied-claim checks satisfied with no defects, three hundred and twenty-one of three hundred and twenty-four trace and mapping checks matching with the trace bijective both ways and every row carrying all seven mandatory fields, and state-family reasoning proven not to have replaced individual accountability — bounded in the same breath as not certification, safety, clinical validity, legal conformance, correctness, production readiness or approval. Lists outstanding items at closure: both correction-needed findings open with their smallest paths named and untaken, the optional audit-as-proof-module path open by choice, the three W6-owned stubs eligible for future consideration with none converted and the ledger byte-identical, and two observations closed. Confirms every audited artefact, source and ledger byte-identical to its pre-D5 state — the deliverable read them and wrote nothing. W6-D6 is next and remains unopened, inheriting the open findings as named, unresolved, honestly-carried work; W7 remains unopened.",
+      "governs": [],
+      "depends_on": [
+        "W6-D5-PAB",
+        "W6-D5-AER",
+        "W6-D5-AFR",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:c603527edba84eba3d469620f4e56facec8aea763aa3c2d2093f15f80d7a5142",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
