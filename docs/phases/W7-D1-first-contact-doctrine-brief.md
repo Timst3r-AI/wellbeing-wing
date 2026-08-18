@@ -76,7 +76,7 @@ W7-D1 delivers the first-contact doctrine set as **two decision records (DR-W7-0
 
 **Sentence-position grammar is permitted** — leading capital at sentence start, lowercase mid-sentence, and relative-clause linkage where grammar requires it. **Nothing else is:** no synonym, no paraphrase, no expansion, and no location, date, participant, practice, project name, plan name, or implementation detail. **No Tier M erratum is required for `W7-AR` §14 on this point** — that wording is a grammatical variant, not a doctrinal inconsistency, because it preserves the invariant clause unchanged. DR-W7-01 states this rule, records this basis, and makes it mechanically checkable, with the check written so that it fails if the permitted variation widens.
 
-**Declarability as the admission condition**, carried from ADR-0043 rule 12 into the new class: **a W7 artefact that cannot declare its inputs' synthetic provenance as data cannot land.** What cannot declare itself cannot be audited, and what cannot be audited does not land — the firewall's admission condition, applied to provenance rather than to labels.
+**Declarability as the admission condition**, carried from ADR-0039 rule 12 — completed for surfaces by ADR-0043 decision 13 — into the new class: **a W7 artefact that cannot declare its inputs' synthetic provenance as data cannot land.** What cannot declare itself cannot be audited, and what cannot be audited does not land — the firewall's admission condition, applied to provenance rather than to labels.
 
 **The non-authority ceiling**, to be carried inside every W7 record that holds generated or specimen text:
 
