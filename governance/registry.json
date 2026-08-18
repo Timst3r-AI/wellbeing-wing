@@ -3183,6 +3183,43 @@
           "note": "Declarability attribution corrected from ADR-0043 rule 12 to ADR-0039 rule 12, completed for surfaces by ADR-0043 decision 13, authorised by human reviewer ruling (2026-08-18). Rule 12 - declarability as the admission condition - belongs to ADR-0039, the label-authority firewall; ADR-0043 consumes and completes it for surfaces at its own decision 13 under the rule no declaration, no pass, while ADR-0043's own item 12 is the no-fifth-channel rule. The substance was correct and is unchanged: a W7 artefact that cannot declare its inputs' synthetic provenance as data cannot land. The same sentence's closing clause already named the firewall's admission condition, so the correction makes the citation agree with the doctrine the sentence was describing. One phrase changed in the record and one in this role; hash recomputed in the same commit. No decision, gate posture, acceptance status, non-goal, proof obligation, deliverable sequence, or other record changed; the entry's depends_on already declared both ADR-0039 and ADR-0043 and is unchanged; the brief's line 6 reference to ADR-0043's own declarability admission condition is accurate and was deliberately left untouched."
         }
       ]
+    },
+    {
+      "id": "ADR-0046",
+      "aliases": [
+        "DR-W7-01"
+      ],
+      "title": "0046 - Synthetic-Only Public Law and the External Adoption Boundary",
+      "type": "adr",
+      "phase": "W7",
+      "deliverable": "W7-D1",
+      "path": "docs/decisions/0046-synthetic-only-public-law-and-adoption-boundary.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-18",
+      "role": "The first of the two W7-D1 decision records and the outer fence of the model era, landing before DR-W7-02 because boundary-before-contact binds. Decides what public W7 may be made of, what it may never contain, in exactly what words the external adoption authority is referred to, what every artefact of the coming generated-output class must be able to declare about itself, and what ceiling binds text no human in this repository authored - and creates no artefact of that class, defines no record shape, authors no text, and contacts nothing. Synthetic-only by construction and never by scrubbing, carrying W2-D4 rule 1 and ADR-0007 decision 1 into the new class unweakened, with no de-identification pathway because there is no identification to remove and scrubbing rejected as a pathway for the third time in this corpus; the test is constructional rather than custodial, so an artefact that could carry real-person content is unlawful whether or not it currently does and emptiness is not conformance. Capture is publication: ADR-0007 decision 2 binds every act that moves text into a W7 record, the capture is checked at capture time by the act that captures it, upstream cleanliness never transfers, and a capture that cannot be checked at capture time may not be made; ADR-0007 decision 6 keeps generated, specimen and capture text out of commit messages, board rows, registry roles and packets. Three lawful input origins, closed at authored synthetic material, existing repository fixtures, and governed public repository records, with a fourth origin unlawful rather than dispositionable, the set growable only by governed record, and no-recirculation binding so that capture is terminal and captured text may never become an input to a prompt, fixture, catalogue string, doctrine record, summary or another capture. The closed exclusion list is growable only and never narrowable, carrying ADR-0007 decision 4's machine-identifying detail with repository-relative paths expressly unaffected, and no exemption for machine production applies: under ADR-0034 decision 34 artefacts of the class are scanned exactly as documents are, and because generated prose cannot be enumerated in advance a scan finding inside it is a governed event with a disposition path, never a silent allowlisting, with the mechanism assigned to W7-D2. The external boundary invariant is fixed at the clause a separate governed authority outside this repository, with sentence-position grammar permitted and nothing else, under a non-naming law barring any name, description, location, date, participant, practice, project name, plan name, implementation detail or explanatory footnote; stating the clause creates nothing, opens nothing, schedules nothing and establishes no dependency, and no erratum is required for the runway's grammatical variant because it preserves the invariant clause unchanged. Provenance declarability is the admission condition, completing ADR-0039 rule 12 for provenance as ADR-0043 decision 13 completed it for surfaces: an artefact that cannot declare its inputs' origin as data cannot land, with five minimum declarable facts named as a required capability, the W2-D4 marker block as the shape precedent, and the field shape assigned wholly to W7-D2. The non-authority ceiling is carried byte-identically inside every record holding generated or specimen text rather than beside it, under specimen parity so an authored specimen cannot buy a weaker ceiling than the generated text it stands in for, with ADR-0033 decisions 22 to 25 and ADR-0034 decision 37 carried unchanged. Six proof obligations: P1, the boundary-invariant exact form, is mechanical, bounded to the clause and only the clause, and is implemented and green in this same commit at tests/test_w7_boundary_invariant.py with a closed permitted-variation set guarded by an assertion that fails if the set widens; P2, non-naming, is review-only in full and permanently so, for two independent structural reasons recorded as doctrine - a mechanical check for a name that must never be written cannot exist because writing the search term would breach the law the check enforces, and rule-explaining prose cannot be distinguished from authority-elaborating prose without semantic judgement, so closing the gap would require exactly the allowlisting this record forbids elsewhere; P3 through P6 are specified debts implemented only by the landing that first creates an artefact of the class. P1's green result proves the clause is intact and proves nothing whatever about whether the authority was named, and no packet, closure record or summary may imply otherwise. Binds DR-W7-02 and every later W7 deliverable; opens no deliverable, narrows none of the four model-boundary options reserved to W7-D3, and opens neither ADR-0033's dormant hosted class nor its constructable-only local class by implication.",
+      "governs": [],
+      "depends_on": [
+        "W7-D1-FCB",
+        "W7-AR",
+        "W6-CR",
+        "ADR-0003",
+        "ADR-0007",
+        "W2-D4",
+        "ADR-0033",
+        "ADR-0034",
+        "ADR-0038",
+        "ADR-0039",
+        "ADR-0043",
+        "ADR-0044",
+        "ADR-0045"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:8886f71a7b3b38778e49536c9c75cfdb544405ba039b709b21b0edf24e079193",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
