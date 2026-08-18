@@ -2752,6 +2752,36 @@
       "content_hash": "sha256:e57e352b8fa6d105bc926e10528ee28bf9f3f53c8f57c5cbc36ba8a45a277e39",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W6-D3-GR",
+      "aliases": [],
+      "title": "W6-D3-D/E — Per-String Grading Execution and Historical Register Review",
+      "type": "phase-record",
+      "phase": "W6",
+      "deliverable": "W6-D3",
+      "path": "docs/phases/W6-D3-DE-grading-execution-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The judgement landing of the W6-D3 programme, merging D and E with the justification in place: one rubric session, with the three-item historical review too small for its own landing and closure kept separate. Grades all thirty-three admitted catalogue entries one by one under the accepted rubric: the four mechanical criteria executed as a deterministic reproducible script over the live catalogue with the W6-CAT hash proven unchanged, the four review criteria applied per string with reasoning recorded per state family and every room variant individually read. Totals: lawful-as-worded thirty-three, unlawful-as-worded zero, routed-to-review zero, deferred zero — with the named passed exception re-proven exactly bounded at twelve occurrences inside the two W1-D3 collocations. Two rubric-application notes recorded as checker precision, never string defects: the Contradicted strings' compound generic slots admitted, and the Kitchen and Gym safety variants' concrete item naming — an allergy record, an injury note — recognised as stronger, source-faithful carriage. No string was rewritten, improved, or touched; no result was forced. The ceiling restated over every row: a grade is not approval, not display permission, not renderability, not safety, not correctness, and not a claim of any kind. The historical register review disposes all three sealed-record observations as recorded register notes with no correction required, none deferred, none rejected — sealed records never edited, and any future display of such phrasing already guarded by the admission-plus-rubric path where the barred-wording law refuses it. W6-D3-F remains separate; W6-D4 through W6-D6 and W7 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "W6-D3-LLG",
+        "W6-CAT",
+        "ADR-0038",
+        "ADR-0039",
+        "ADR-0040",
+        "ADR-0041",
+        "W1-D5",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:d40826fc955c2a14e7b9eba24a74c68560a00a107e3c774d162302d4a0446598",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
