@@ -3115,6 +3115,38 @@
       "content_hash": "sha256:a720fb1970235965c3a978410c9adc0176ab2d2f5152c056d2197ff6b11eb80e",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W7-AR",
+      "aliases": [],
+      "title": "W7 — First-Contact Governance and Synthetic Model Evaluation (Phase Runway)",
+      "type": "phase-record",
+      "phase": "W7",
+      "deliverable": null,
+      "path": "docs/phases/W7-runway-first-contact-governance-synthetic-evaluation.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-17",
+      "role": "The W7 phase runway and gate document two of the standing three-document entry gate, authorising W7 briefs only and never capability, contact or execution. North star: generated text may enter the public Wing only as synthetic, governed evaluation evidence, observed, preserved, compared, routed and reviewed, and never authority, advice, truth, safety evidence, approval or a decision about any person — with the phase's honest boundary stated once, that W7 does not prove the Wing is safe with a model but asks only whether a model can enter a governed room, be observed honestly, fail without being laundered, and leave reviewable evidence. Fixes the public/private boundary: the public repository proves the pattern with synthetic material only, and any real-person adoption is a separate governed authority outside this repository, named in public records that one way and never otherwise, with a closed exclusion list covering real-person data, identified rooms and health material, wearable and device data, private relationship and lived-interaction material, private model transcripts, credentials, tokens, keys, secrets, private configuration and machine paths — grounded in ADR-0034's existing requirement that every evaluation artefact be synthetic-only by construction and that real-person content would need its own separate governed authority. Establishes synthetic-only law by construction and never by scrubbing, and defines generated model prose as a new governed artefact class with nine binding properties, the non-authority ceiling to be carried inside every generated-output record, and two consequences decided in advance rather than discovered: that the scan-exception mechanism must invert for generated prose because it cannot be enumerated ahead of time, so a finding inside generated output becomes a governed event with a disposition path and is never silently allowlisted; and that the W6 review surface already governs the display of textual deltas, so W7 inherits its display layer. Holds the model boundary and dependency crossing open as a decision space rather than a decision, naming as inherited constraints that ADR-0033 keeps the hosted class unopened and the local class doctrinally constructable only, that ADR-0034 requires runtime authority, Tier F crossings, a named first-contact gate and synthetic-only artefacts together for any model-contacting proof, that no dependency has been added since W3, and that no credential, secret, private configuration or model binary may enter the repository — then sets out four options for W7-D3 to assess, a repository-managed local dependency, an adapter to an external local model, manual model-output import under governed record shape, and no public model contact using synthetic generated-text specimens, with the observation offered that the first three each need generated text from a source that is either a Tier F crossing or a dormant door while the fourth reaches the phase purpose touching neither, and with the decision expressly reserved to W7-D3 from source-grounded authority. Proposes seven deliverables with stable identifiers and a non-negotiable gate discipline: the record shape lands before any harness produces records, the model boundary lands before any model contact, the harness binding lands before execution, the human-review law lands before any disposition, and closure lands only after the evidence is published and reviewable. Carries the master non-goals, seventeen stop-and-report tripwires including that any result tempting to summarise as the model having passed is a stop, the sixteen standard quality gates plus six W7-specific ones, and the whole W6 carried inventory named and unsolved. Opens no deliverable, contacts no model, produces no generated output, executes no harness, adds no dependency, and opens neither W8 nor any real-person adoption.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D5",
+        "W1-D6",
+        "ADR-0003",
+        "ADR-0033",
+        "ADR-0034",
+        "ADR-0038",
+        "ADR-0041",
+        "ADR-0043",
+        "W6-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:3448a1a19e867a17e7d538755b9dd6c7c1d747a3b8fc52425cbaf5502112343e",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
