@@ -3283,6 +3283,42 @@
       "content_hash": "sha256:2daba7bd6095f9358499fcc3c76f3c14f26125b21fcdfef667d5b71f005505a1",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0048",
+      "aliases": [
+        "W7-D2-B"
+      ],
+      "title": "0048 - Record-Shape Doctrine for Generated-Output / Authored-Specimen Evaluation Records",
+      "type": "adr",
+      "phase": "W7",
+      "deliverable": "W7-D2",
+      "path": "docs/decisions/0048-generated-evaluation-record-shape-doctrine.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-19",
+      "role": "The second of W7-D2's five landings: the record-shape doctrine deciding where a future generated-output or authored-specimen evaluation record will live, what it is made of, how coarse it is, how its integrity is proven, and that it may never be rewritten - and creating none of it. No directory, no schema, no field, no manifest, no record, no proof module, no run, no probe. Decides that the W7 record is an EXTENSION of the existing evaluation-record class rather than a parallel invention: it inherits the W5 spine whole, where the delta has never carried a winner field and routing has always been declared rather than assumed, and exactly one thing changes, that these records may carry text - which is why the home, integrity posture and immutability rule below exist at all. ADR-0034 B6 decision 33's never-become rules bind the extended class unchanged. HOME: governance/generated-evaluation/, a sibling of governance/evaluation/, never shared with it, reserved and not created, because the W5 records are content-free by construction while these may contain text a model produced, and a reader, a scan rule and a future contributor should be able to tell which tree may hold such text from the path alone; chosen inside governance/ rather than as a new top-level entry because governance/ is already authorised and the fence checks top-level entries only, so the home crosses no fence and moves nothing. FORMAT: JSON as material and format class only, under W2-D4 section 3 conventions, with the ADR-0044 formula reused - this record fixes the material and not the blueprint. It fixes no future W7 generated-evaluation key name, key order, nesting, nullability, closed value set or field, all of which are W7-D2-C's wholly; it may cite existing W5 evaluation-record keys only as live precedent for the inherited spine; and nothing in it may be read as fixing a generated-evaluation field. GRANULARITY: one record per evaluation unit, one probe across a paired-variant pair with both captures whole in the same record, so that an omitted variant is a broken record rather than a missing file, since a missing file is the kind of absence that looks like tidiness; W7-D2-C must make omission expressible as a schema violation. INTEGRITY: a registered manifest per run carrying a content hash for every record it lists, one registry entry per run and never one per record, because the registry is an index of authority rather than a file inventory and an index that grows without bound stops being readable. The load-bearing finding: ADR-0034 B6's deliberate-exclusion precedent does not transfer, because the W5 records are unregistered only on the strength of deterministic reproduction, and generated text is not reproducible while an authored specimen is written rather than derived - when reproduction proves nothing the hash is the only thing left that proves anything, so the class that most needs integrity tracking is precisely the one that cannot inherit the exclusion; unregistered-with-reproduction was never a posture for the class name, only for reproducible members of it. The manifest is an integrity index and run inventory and never a summary, conclusion or scoreboard. IMMUTABILITY: captured text, once landed, is never edited - not for a typo, whitespace, length or tidiness - so capture is terminal in time as well as in flow; correction happens by erratum or supersession with the original bytes preserved, because a record whose captured text could be edited would drift from the act it records, and an untrustworthy capture is worse than none since it looks like evidence. Human-review fields may be written after landing as subsequent governed acts, which weakens nothing: the captured text is frozen and the human's response to it is a later event, with its expression W7-D2-C's and its mutability W7-D6's. GATE POSTURE: the shape is not permission - a named home, a format decision, a schema, a validator, a manifest and an empty directory authorise no model contact, no specimen, no generated-output import and no harness; a container is not an invitation. The six standing statements bind in full, this record discharges no precondition, preconditions 2, 3 and 7 stand outstanding with no first-contact gate named anywhere, no model may be contacted after this record lands, and W7-D3's four options are untouched because the home, format, granularity, integrity and immutability decisions are identical under all four - the test this record applied to itself before proposing any of them. Four proof obligations are specified and NONE is implemented here: S1 reserved-home vacancy, mechanical and demonstrated against current repository bytes; S2 manifest completeness, a debt; S3 capture immutability, candidate-mechanical with feasibility not yet demonstrated and returnable as review-only; S4 whether the home still signals its risk class and the manifest has stayed an index, review-only in full alongside P2, Q3 and R7. All W7-D2 proofs land in W7-D2-E after their subjects. B does not discharge W7-D2 by itself; W7-D2-C, W7-D2-D and W7-D2-E remain unlanded; W7-D3 remains unbegun and the model boundary unchosen.",
+      "governs": [],
+      "depends_on": [
+        "W7-D2-RSB",
+        "ADR-0046",
+        "ADR-0047",
+        "W7-AR",
+        "W7-D1-FCB",
+        "ADR-0003",
+        "ADR-0007",
+        "ADR-0033",
+        "ADR-0034",
+        "ADR-0044",
+        "W2-D4",
+        "W6-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:6f9b4a18eb9aabb6bfebbe95f852a43c72e3b56ff0f12446b3cb94914974d593",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
