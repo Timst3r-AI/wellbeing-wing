@@ -3319,6 +3319,45 @@
       "content_hash": "sha256:6f9b4a18eb9aabb6bfebbe95f852a43c72e3b56ff0f12446b3cb94914974d593",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0049",
+      "aliases": [
+        "W7-D2-C"
+      ],
+      "title": "0049 - Field Law for Generated-Output / Authored-Specimen Evaluation Records",
+      "type": "adr",
+      "phase": "W7",
+      "deliverable": "W7-D2",
+      "path": "docs/decisions/0049-generated-evaluation-field-law.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-19",
+      "role": "The third of W7-D2's five landings: the field law, drawing the complete blueprint ADR-0048 chose the ground and material for, and pouring no concrete - no directory, no schema file, no manifest, no record, no proof module, and no generated-output, authored-specimen, capture-payload or example-payload text. Fixes one wrapper key generated_evaluation_record; fifteen top-level record fields always present in canonical order (record_id, run_id, authorising_record, as_of, synthetic_marker, model_contact, inputs, pairing, captures, delta, findings, exclusion_check, no_recirculation, human_review, non_authority); twenty nested record-object and item positions; five capture-object fields (text_class, authoring_record, text, text_digest, scan_status); five finding-event fields (finding_id, capture_ref, category, locus, disposition); forty-six schema-property positions in total under a stated counting convention where repeated instances count once per distinct shape; and exactly four nullable positions, each with a named lifecycle reason - model_contact.authorising_record, human_review.disposition, human_review.disposition_record, and the capture-level authoring_record. Order is governed and reasoned: identity, then material, then contact posture, then inputs, then the pair's declaration, then the captures, then difference, findings and the standing checks, then what a human owes, then the ceiling last, with pairing preceding captures so a reader learns the pair's shape before meeting either half, and non_authority last because a reader finishes the complete governed record on the ceiling and no field may follow it. Provenance is by text_class and never by appearance, with two structural constraints making a laundered claim invalid rather than merely untrue: a capture may declare generated_output only if model_contact.occurred is true, and a capture declaring authored_synthetic_specimen must carry a non-null authoring_record naming the act that authorised the authoring. Pair completeness is structural rather than asserted: captures is an object whose key set is identical to pairing.variant_labels, with no paired boolean and no expected-count field, because a boolean creates a branch in which one capture is lawful. Model contact declares occurrence separately from authorisation - occurred false requires contact_class none and a null authorising_record, occurred true requires a W7-D3-authorised contact_class member and a non-null authorising_record - and contact is not authorised by the declaration, since a citation is a claim and not a clearance, with the stop-and-report obligation for an ungated contact remaining ADR-0047's and a generated-evaluation record being no incident report. Four structural absences are fields that do not exist at any level: no winner under any name, no capture-level recirculation authority, no machine-valid human-review path, and no matched-text field on a finding, so a finding event has nowhere to put what it found. Input-source non-recirculation closes the other side of the reuse path: no GER identifier, no path under governance/generated-evaluation/, and no capture or finding address may resolve as scenario material through an input citation or reference, while a later governance record citing a GER as evidence that an evaluation occurred remains a different and lawful act - and semantic re-authoring of captured prose stays a review duty no field law can reach. Two coherence laws bind: an outcome of routed-to-review requires human_review.routed true, one-way only and implying nothing about disposition; and a capture's scan_status matches, in both directions, whether any finding references it. The synthetic marker's notice is byte-fixed here, authored on the ADR-0045 precedent because the live W2-D4 marker is fixture-specific and false of this class in two places. The ADR-0046 decision 23 non-authority ceiling is carried byte-identically as the final field, with specimen parity, and every complete governed record carries it while a partial excerpt that omits it may never be represented as the complete record. text_digest is SHA-256 over the UTF-8 bytes of the decoded text string after JSON unescaping, with JSON escaping excluded and no newline or Unicode normalisation, recorded as lowercase hex with a sha256 prefix; it proves internal consistency and not immutability, is not the record hash, and does not discharge ADR-0048's S3. The record never contains its own content hash, which lives only in the manifest, and no record indexes its siblings or summarises its run. This record mints the meaning-free identifier namespace GER-####, allocating no identifier: numeric order carries identity only, and a higher number is not more authoritative, important, severe, complete, correct, reviewed or successful than a lower one. Closed C-owned vocabularies carry every value: text_class, inputs origin, delta outcome, the four observed surfaces, scan_status, and exclusion_check result. Four vocabularies are deliberately left to their owners - contact_class beyond none to W7-D3, findings disposition to W7-D2-D, variant labels to W7-D4, and human-review disposition to W7-D6 - each stopping at a different owner's door rather than one shared deadline, so a W7-D5 record is valid with the two human-review fields still null because the reviewer's law cannot be a precondition of the records it reviews. Nine proof obligations are specified and NONE is implemented here: T1 schema-statement integrity, T2 canonical field-set integrity over all twelve C-owned object shapes with locus's inner shape excluded as W7-D2-D's, and T3 acyclic integrity graph, all mechanical and demonstrated against the record's own tables; T4 pair bijection, T5 ceiling verbatim-and-last, T7 delta-routing coherence, T8 capture scan-status coherence and T9 input-source non-recirculation, all mechanical debts against a class that does not exist; and T6 semantic-absence and laundering review, review-only in full, because a machine cannot infer semantic function from a name. All W7-D2 proofs land in W7-D2-E. C does not discharge W7-D2 by itself; W7-D2-D and W7-D2-E remain unlanded; W7-D3 remains unbegun and the model boundary unchosen; and no model may be contacted after this record lands.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0048",
+        "W7-D2-RSB",
+        "ADR-0046",
+        "ADR-0047",
+        "W7-AR",
+        "W7-D1-FCB",
+        "ADR-0003",
+        "ADR-0007",
+        "ADR-0033",
+        "ADR-0034",
+        "ADR-0045",
+        "W2-D4",
+        "W6-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [
+        "GER-#### (generated-evaluation records; grammar defined only — no identifier allocated)"
+      ],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:bca3d94732bc95737ef77a5a0ae74561b91ddf3d62b0862d76cdfef9618af1d9",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
