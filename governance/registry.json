@@ -3396,6 +3396,37 @@
       "content_hash": "sha256:8244509cb6578b92ff0dfc024d51cdeaf7bb11fca983df71424ad348e29276f0",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W7-D2-E",
+      "aliases": [],
+      "title": "W7-D2-E - Proof Completion Record",
+      "type": "phase-record",
+      "phase": "W7",
+      "deliverable": "W7-D2",
+      "path": "docs/phases/W7-D2-E-proof-completion-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-20",
+      "role": "The fifth and final of W7-D2's five landings: the proof completion record for the generated-evaluation record-shape law, proving what ADR-0048, ADR-0049 and ADR-0050 already landed and creating no artefact of the class. No generated-evaluation home, schema file, manifest, record, GER identifier, specimen, model contact, generated import, harness or dependency exists, and ADR-0051 is neither allocated nor reserved. Nineteen inherited proof obligations are classified and accounted for as 5 LIVE, 10 READY-DEBT and 4 REVIEW-ONLY, 5 + 10 + 4 = 19 with no twentieth obligation invented: LIVE are S1, T1, T2, T3 and U1, whose subjects - the landed declaration itself, the reserved home and the scan allowlist - exist today; READY-DEBT are S2, T4, T5, T7, T8, T9, U2, U3, U4 and U5, whose predicates run and whose negative controls bite but whose subject does not exist; REVIEW-ONLY are S3, S4, T6 and U6. One source-derived proof module of exactly eighteen test functions across five test classes parses its expectations from the landed records rather than re-expressing them: the twelve object shapes come from ADR-0049's own field tables and Holds cells; the counting, vocabulary, canonical-order and nullability statements are reconciled against one another through a single integrity checker that also judges every mutant, so that compensating errors which preserve a total are still caught at the level and per-shape statements; the integrity graph is parsed from decision 41's literal dependency chain rather than constructed; and every governed constant - the reserved home, the non-authority ceiling, the disposition set and the locus field - is derived from landed source and cross-reconciled wherever two records state the same fact. S3 is resolved REVIEW-ONLY on demonstrated insufficiency rather than preference: a disposable throwaway repository created outside this one showed a path-scoped history check passing while the law was broken, once a record is renamed and its capture then edited, and an id-scoped check cannot separate an unlawful edit from deletion followed by reappearance of the same identifier, so a complete mechanical proof would require identity or lifecycle semantics that ADR-0049 did not state - and this record invents none, resolving the question in neither direction and recording that absence of a no-reuse rule is not affirmative permission to reuse. S2 implements only the ADR-0048 set-and-hash relation over neutral identity tokens and encodes no manifest schema, no manifest key, no manifest-entry object and no parser, because no governed manifest shape exists to bind to. The ten debts remain debts despite runnable predicates: the predicates test rule machinery rather than an absent subject, the debt class and its methods are named so that no green result reads as a discharged obligation, two anti-vacuity tests keep the distinction from being deleted while the suite stays green, and no pending-ledger row is added, converted, removed or touched. The four review-only duties remain human and are neither tests, skipped tests, TODOs nor ledger rows. ADR-0050's Part Q publication seam remains unresolved, since a capture producing a scan finding still could not be published as a generated-evaluation record under the resulting law, and the local-wordlist coordinate seam remains unresolved exactly where ADR-0050 left it. On publication and remote verification W7-D2 satisfies its opening brief's completion condition and ADR-0047 precondition 6, that the generated-output record shape exists and is accepted, is thereby discharged; preconditions 2, 3 and 7 remain outstanding, since the applicable Tier F crossing is W7-D3's, the named first-contact gate belongs to the brief of whichever deliverable would perform contact and no such gate is named anywhere, and the harness binding is W7-D4's. Completion is shape completion, not class activation. W7-D3 remains unopened, the model boundary remains unchosen, and no model may be contacted.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0050",
+        "ADR-0049",
+        "ADR-0048",
+        "W7-D2-RSB",
+        "ADR-0046",
+        "ADR-0047",
+        "W7-AR",
+        "W7-D1-FCB",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:a75cdb36e61edaf33452f349e10163d691551c47314787fbf6e82063dea791b8",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
