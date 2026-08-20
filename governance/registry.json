@@ -3358,6 +3358,44 @@
       "content_hash": "sha256:bca3d94732bc95737ef77a5a0ae74561b91ddf3d62b0862d76cdfef9618af1d9",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0050",
+      "aliases": [
+        "W7-D2-D"
+      ],
+      "title": "0050 - Finding-Is-An-Event and the Finding-Disposition Mechanism",
+      "type": "adr",
+      "phase": "W7",
+      "deliverable": "W7-D2",
+      "path": "docs/decisions/0050-finding-is-an-event-and-finding-disposition-mechanism.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-20",
+      "role": "The fourth of W7-D2's five landings: the finding-is-an-event mechanism, completing the three things ADR-0049 deliberately left open inside its five-field finding event - what a locus is, what a finding_id means, and what a disposition may say - and building none of it. No directory, schema file, manifest, proof module, record, identifier, run, probe, fixture, harness or payload text. Fixes the order of operations: a finding comes into existence at capture-time scan, before assembly and long before landing, because capture is publication and no upstream cleanliness transfers to a capture; a finding is created by machinery and dispositioned by a person, and no act removes one while retaining the capture that produced it. FINDING IDENTITY is record-local and meaning-free, the pair (record_id, finding_id), and this record deliberately mints NO repository-wide namespace, because a citable, countable, rankable, trackable finding identifier would be four kinds of authority a finding must never acquire; allocation order carries nothing. LOCUS is exactly one integer field, character_start, 1-based and counted in Unicode code points of the decoded capture text, match-start only, with no end coordinate, no length and no string member at any depth, so it cannot become a text-bearing channel; a line-and-ordinal design was drafted and rejected on live behaviour, since str.splitlines() splits on far more than U+000A and a category-relative ordinal would have been hostage to future regex behaviour. It is reconciled with ADR-0049's digest rule explicitly: text_digest hashes the UTF-8 bytes of the decoded string while locus identifies a code-point position within that same value, and is deliberately not a byte offset. DISPOSITION is a closed three-value vocabulary - open, routed_for_public_safety_review, withheld_from_publication - of which none is landable and none means the finding stopped mattering; there is no value for accepted, allowlisted, suppressed, waived, ignored, false-positive, safe, approved or harmless, and no landable finding disposition exists under this record's law. The packet's four proposed tokens were re-derived against landed ADR-0049 and three were removed: capture_excluded as unlawful under pair completeness, record_not_landed because a state existing only in artefacts that do not exist is not a disposition, and capture_bounded_by_named_exception because an exception has nowhere to be named inside five fields and an unnamed exception is an allowlist with better manners. PART I prohibits any scan-allowlist entry whose path lies under governance/generated-evaluation/ - no path, wildcard, glob, category workaround or fingerprint exception - grounded in the live mechanism's granularity, since the allowlist is line-scoped rather than match-scoped and that coarseness is acceptable only for specifically reviewed human-authored enumerable prose. The suppression mechanics are category-sensitive and stated as such: for a committed-pattern finding the machinery offers an allowlist route and this record refuses it, while the local-wordlist branch consults no allowlist at all, so there is nothing there to refuse; in both cases an unsuppressed finding makes the scanner return 1 while the deterministic suite requires 0, and therefore EVERY FINDING-BEARING GER IS NON-LANDABLE under the resulting law - two machinery facts and one governed refusal, with the record naming which part was found and which part was decided. A LOCAL-WORDLIST SEAM is preserved rather than solved: the current semantics do not guarantee a uniquely lawful original-text character_start for every finding they can emit, because the branch emits one finding on a containment test without selecting or retaining an occurrence, and Unicode lowercasing can expand characters; a later governed act must define and prove how the coordinate is produced, which could lawfully be owned by a scanner change, a capture-time resolver or a mechanism not yet designed, and this record authorises and chooses among none of them. A scan finding is kept distinct from an exclusion-list breach, which is absolute and non-dispositionable, and the no-quotation law holds with locus checked as a channel and not merely as a field. A nineteen-condition landing predicate is re-derived from landed law, and stop-and-report is the honest outcome where a capture cannot be made publicly lawful: no editing, removing, paraphrasing, summarising or truncating, and above all no calling altered text the original capture, with the report's form named as W7-D5's and its content-free minimum fixed here. FINDING DISPOSITION IS NOT W7-D6's HUMAN-REVIEW DISPOSITION - neither may stand in for, be read from, or be written by the other - and nothing here defines, constrains or pre-decides W7-D6's vocabulary or moves it earlier in the phase. Six proof obligations U1 to U6 are handed to W7-D2-E and NONE is implemented here: U1 allowlist purity demonstrated against live bytes, U2 exclusion-list non-overridability, U3 locus structural integrity and U4 disposition closure and non-landability demonstrated as rule logic, U5 finding-reference integrity a debt, and U6 disposition soundness REVIEW-ONLY IN FULL because no machine can decide whether a human public-safety judgement was substantively right. PART Q REMAINS EXPLICITLY UNRESOLVED: if this record lands, ADR-0046 decision 13's second branch has no implementation under the resulting law, so a capture producing a scan finding cannot be published as a GER - a real narrowing of what public W7 can demonstrate, left visible for the human authority and the architect to resolve through their own ceremony, and deliberately not solved by manufacturing a fourth disposition. D does not discharge W7-D2 by itself; W7-D2-E remains unlanded; W7-D3 remains unbegun and the model boundary unchosen; and this record authorises no implementation, model contact, specimen, generated-output import or harness.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0049",
+        "ADR-0048",
+        "W7-D2-RSB",
+        "ADR-0046",
+        "ADR-0047",
+        "W7-AR",
+        "W7-D1-FCB",
+        "ADR-0003",
+        "ADR-0007",
+        "ADR-0033",
+        "ADR-0034",
+        "ADR-0038",
+        "W2-D4",
+        "W6-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:8244509cb6578b92ff0dfc024d51cdeaf7bb11fca983df71424ad348e29276f0",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
