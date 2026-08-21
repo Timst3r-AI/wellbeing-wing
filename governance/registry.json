@@ -3427,6 +3427,39 @@
       "content_hash": "sha256:a75cdb36e61edaf33452f349e10163d691551c47314787fbf6e82063dea791b8",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W7-D3-MBB",
+      "aliases": [],
+      "title": "W7-D3 - Model Boundary, Adapter and Dependency Crossing: Opening / Design Brief",
+      "type": "phase-brief",
+      "phase": "W7",
+      "deliverable": "W7-D3",
+      "path": "docs/phases/W7-D3-model-boundary-opening-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-21",
+      "role": "The W7-D3 opening brief, opening W7-D3 for brief-governed model-boundary DECISION work only and nothing else, effective on publication and remote verification. It selects none of the four options - A repository-managed local dependency, B adapter to a local model already running outside the repository, C manual governed model-output import, D no public model contact using authored synthetic generated-text specimens - and it frames the eventual Tier F decision without taking it. Opening the decision work is not taking the decision. Carries a neutral four-option assessment across contact and reversibility, surface and fence, evidence and reproducibility, and seam interaction, and states explicitly that the frame supplies dimensions but no weights, produces no ordering, and leaves weighting to the decision itself. Every material claim is classified as governing law, live mechanism, precedent, or planning inference, so that no inference in the brief can later be cited as something the corpus decided. Carries the six-seam pre-execution routing register as a first-class section, splitting it by kind rather than by one blanket rule: FOUR HARD PREREQUISITES, each tied to the moment before which the work is not possible - the manifest artefact shape before any run manifest or GER landing, the scan-environment representation before any governed run is represented, the W7-D2-E proof succession before the first GER, and GER lifecycle and identity law including reuse semantics before the first GER identifier allocation - and TWO LAWFULLY CARRYABLE LIMITATIONS, Part Q only if its current narrowing is explicitly accepted and execution proved lawful under it, and the local-wordlist coordinate seam only under the complete per-run posture. Neither carried limitation becomes a resolution by repetition or elapsed time. Requires scan-environment reproducibility as exactly one governed bit, the EFFECTIVE local-wordlist branch state active or inactive determined from the filtered list the scanner actually used, classified as public run provenance rather than private machine configuration, with term counts, terms, fingerprints, hashes, excerpts, file presence and machine identity all barred; a run whose branch was inactive proves dormancy for that run only, dormant is never resolved, and inactivity may never be manufactured by disabling, emptying, renaming, bypassing or ignoring an active wordlist. Carries the working-state-outside-repository invariant: unlanded and undispositioned capture working state must remain outside the repository, the repository is never scratch storage for raw captures, assembling records, finding-bearing payloads, withheld capture text or transient model output, and the protection presently enforced by S1's filesystem assertion must be carried forward deliberately through the proof transition rather than silently dropped. Records that S1 does not fail when the creation interval ends - ADR-0048 defines it temporally and it reaches its lawful endpoint - so W7-D2-E is not thereby erroneous and requires no erratum, since state evolution is not error; what becomes obsolete is E's present-state rendering, and W7-D4 designs the proof succession while W7-D5 performs it before the first GER. Preserves Part Q's current law under a no-reliance rule: the W7-D3 decision must be taken against the Part Q law as it stands at the moment of decision, today that no finding-bearing record is landable, and may not rely on, assume, price in, discount for, or pre-authorise any future relaxation, so that future doctrine cannot retroactively subsidise an option chosen today. Retains the Tier F crossing record as the instrument under every option: where a crossing is required it is recorded, and where none is required the decision record states and proves that the applicable set is empty. This opening brief discharges NONE of the outstanding preconditions. Precondition 2 remains outstanding until the later W7-D3 Tier F decision record lands; precondition 3 remains outstanding with no first-contact gate named anywhere, and the brief records that a no-contact outcome is a lawful resting state under the fifteenth anti-collapse link, no contact does not equal nothing proven, while W7-D7 must still report precondition 3 honestly as outstanding; precondition 7 remains outstanding with W7-D4 unopened. Opens no W7-D4 through W7-D7 deliverable, allocates no ADR number, and authorises no model contact, dependency, credential, configuration, binary, specimen, generated-output import, harness, manifest, generated-evaluation home, GER or GER identifier. It amends no record and contains no real health data and no clinical examples.",
+      "governs": [],
+      "depends_on": [
+        "W7-D2-E",
+        "ADR-0050",
+        "ADR-0049",
+        "ADR-0048",
+        "ADR-0047",
+        "ADR-0046",
+        "W7-D1-FCB",
+        "W7-AR",
+        "ADR-0033",
+        "ADR-0034",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:593a4b49605672301c1f15bfe5affe8f60cbc0ab737a3e2c6ac4192616487e30",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
