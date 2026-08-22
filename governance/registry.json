@@ -3565,6 +3565,43 @@
       "content_hash": "sha256:46299e137b86a91bf76e964017a103e03da5b3d71830b86390d369e7b1327050",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W7-D4-SHR",
+      "aliases": [],
+      "title": "W7-D4 - Synthetic Harness Binding, Exam Paper and Traps: Development and Completion Record",
+      "type": "phase-record",
+      "phase": "W7",
+      "deliverable": "W7-D4",
+      "path": "docs/phases/W7-D4-synthetic-harness-binding-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-23",
+      "role": "The single completion record of W7-D4, produced under the brief's full-development operating mode - one accepted architecture, one independent development cycle, one final review - and landing in the same commit as the instrument it reports, on the baseline published by ADR-0052. Three artefacts and nothing else: the synthetic exam paper fixtures/SYNTHETIC-w7-d4-exam.json, the deterministic standard-library harness tests/w7_synthetic_evaluation_harness.py, and the fourteen-family proof module tests/test_w7_synthetic_harness.py. The twenty-six recorded generative-era unknowns are re-derived from the live W5-D4 evaluation records under one predicate - overt channel, unknown-not-absent outcome, generative_respondent_required_and_not_authorised basis - never transcribed, with no twenty-seventh invented and no pair collapsed; all twenty-three live trap fixtures are accounted for and left byte-unchanged, three of them carrying two unknowns each, which is why twenty-three traps yield twenty-six probes and fifty-two captures under a capture count derived as twice the probes. Fifty-two distinct authored specimens, one per capture, after an earlier six-template draft was caught and regenerated as the compression it was. No trap is classified non-executable, and executing a trap as a handling probe is never a behavioural pass. Option D is bound mechanically rather than asserted: model contact occurred false, contact_class none, authorising record null, every capture an authored_synthetic_specimen with a non-null authoring record and an explicitly declared text class that is never defaulted, provenance carried rather than re-declared so admission returns the origin it admitted and the record declares that origin, and no generated_output branch present in the source to flip. Exclusion-list conformance follows ADR-0052 rather than the withdrawn partition: P4a, the mechanical surface guards, runs over the class artefact and the harness from a governed guard inventory of eleven rows, eight carrying detectors with governed positive and clean controls and three declared unguarded, with the live decision 11 family inventory source-read and reconciled to the governed inventory by coverage rather than by order so no guard is matched positionally, all five accepted failure conditions implemented and individually controlled, and the ordinary public-safety scan demonstrated insufficient for three guarded families by passing planted violations through the live scanner and showing it reports no category at all; P4b, complete exclusion-list conformance, is recorded as a named human review act across all eleven families, and P4a green supplies no evidence for it. The truthful arithmetic is carried unchanged: eleven families wholly prohibited, eight currently guarded, three currently unguarded, all eleven inside P4b. Part Q's current narrowing is ACCEPTED for W7 execution and is not amended or relaxed: the scan gateway passes an empty allowlist so a capture has no suppression route to reach, any suppression raises, any finding returns stop_and_report before a candidate record exists, no allowlist entry was added, no trap was narrowed or softened, and the cost of an unpublishable interesting failure is accepted as the price of current law. The local-wordlist seam is bounded and not solved: one public provenance bit, active or inactive, derived from the scanner actually used, validated as the only key in scan_environment, sampled at run start and re-confirmed before every capture with a mid-run change stopping the run, inactivity never manufactured, contents never printed, hashed, counted or persisted, and a finding without a lawful locus answered by stop-and-report rather than a fabricated character_start; the branch measured inactive in the development environment, recorded as a fact about one machine and not as a resolution. The run-manifest shape is fixed as a closed-shape integrity index: four exact key sets covering the manifest, the exam block, the scan environment and each record entry, so an arbitrary extra field fails on membership rather than on a name blacklist, with the retained blacklist proved to bite only where a shape cannot, on a forbidden name used as a value. The validator detects out-of-set scan environments, exam-hash disagreement, duplicate or self-listing records, missing hashes, listed-absent, present-unlisted, hash mismatch, listed paths escaping the reserved home by wrong prefix, traversal, root-absolute, drive-rooted or backslash form, and a record whose own bytes place it in another run - membership being read from each record's declared run identity and never inferred from its identifier, path or hash. No manifest exists. The W7-D2-E proof succession is designed and negatively controlled: S1 stays green with the reserved home absent on disk and untracked, the successor predicate bites on disposable homes outside the repository, S1 reaching its lawful endpoint in W7-D5 is recorded as state evolution and not a failed proof and not an erratum to W7-D2-E, and S2 stays honestly READY-DEBT until a real manifest exists. Working state is fenced outside the repository by a rule rewritten during the ceremony because mutation proved the original containment check unreachable dead code; the harness has exactly one file write, into a validated external workspace, removed in a finally block. Inherited obligations reach their implementation point here because this is the first landing to create artefacts of the specimen class: P3 live over all fifty-two shipped specimens and every assembled input; P5 live with the ADR-0046 decision 23 sentence read from its record at run time and matched byte-identically at fifty-three carriage points inside the artefact under decision 25 specimen parity; Q4 live from published history, reading each gate's introducing commit, proving ancestry against HEAD, registry acceptance, record-shape before model-boundary, and a directional predicate whose reverse is false; P6 live over the artefact with the ADR-0049 T6 re-authoring residue left human; and P4 discharged as P4a plus P4b under ADR-0052. ADR-0046 is no longer byte-unchanged through this deliverable: its Part H gained a one-line pointer at the ADR-0052 landing, and every source and hash assertion in this record is stated against that amended record. Obligations owned by this deliverable are classified twelve LIVE, two READY-DEBT and nine REVIEW-ONLY, with R5 - specimen evidence must never be generalised into model evidence - standing permanently. Completion is instrument completion: no model was contacted by script or by hand, no generated output exists or is admissible, no GER or GER identifier is allocated, no generated-evaluation home, manifest or record exists, no dependency, scanner change, allowlist entry or suppression was added, requirements.txt and the twenty-three trap fixtures and the W7-D2 law records and ADR-0051 are byte-unchanged, and W7-D5 is not opened. On publication and remote verification this landing discharges ADR-0047 precondition 7 and leaves precondition 3 alone outstanding, neither waived nor inapplicable nor failed because no contact act occurs to exercise it. It amends no record and contains no real health data and no clinical examples.",
+      "governs": [],
+      "depends_on": [
+        "W7-D4-SHB",
+        "ADR-0052",
+        "ADR-0051",
+        "W7-D3-MBB",
+        "W7-D2-E",
+        "ADR-0050",
+        "ADR-0049",
+        "ADR-0048",
+        "ADR-0047",
+        "ADR-0046",
+        "W7-AR",
+        "ADR-0037",
+        "ADR-0034",
+        "W4-D6-BEF",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:4ef8481b87ec41014a745d3ec06931bec746b6b0bdbe149091674d4bd45d6264",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
