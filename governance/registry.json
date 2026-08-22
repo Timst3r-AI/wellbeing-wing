@@ -3217,9 +3217,14 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:8886f71a7b3b38778e49536c9c75cfdb544405ba039b709b21b0edf24e079193",
+      "content_hash": "sha256:b2bac9e3bbf3fd3cd3991c174671f2dbbbde3832363ef3df93cb67cde3de5270",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-08-22",
+          "note": "Part H gained a one-line pointer to ADR 0052 (Exclusion-List Conformance (P4) Decomposition and Decidability Correction), which corrects the P4 row of decision 27 and that decision's lead sentence by decomposing P4 into P4a, mechanical exclusion surface guards, and P4b, complete exclusion-list conformance, review-only across all eleven decision 11 families. Non-semantic: no corrected rule is restated in this document, decision 11's exclusion list is untouched, and no prohibition is weakened. Amendment made via decision record per checklist rule 2; hash recomputed in the same commit."
+        }
+      ]
     },
     {
       "id": "ADR-0047",
@@ -3525,6 +3530,39 @@
       "implementation_permission": "w7-d4-synthetic-harness-binding",
       "open_decisions": [],
       "content_hash": "sha256:f5d4a0dbe4f6739b87e503f44ff23c5f30ee01c6d07d215ea1ee2be7430f2c84",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0052",
+      "aliases": [],
+      "title": "0052 - Exclusion-List Conformance (P4) Decomposition and Decidability Correction",
+      "type": "adr",
+      "phase": "W7",
+      "deliverable": "W7-D4",
+      "path": "docs/decisions/0052-exclusion-list-conformance-p4-decomposition.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-22",
+      "role": "The P4 decidability correction: an implementation-derived, then review-corrected, amendment to ADR-0046 that decomposes exclusion-list conformance into two named clauses and corrects a decidability claim the corpus could not support. W7-D4 is the landing that first creates artefacts of the specimen class, which brought ADR-0046 P4 to the implementation point decision 28 assigns it; implementation then found that decision 11 is a prohibition over kinds and that no kind in it is decidable as a kind from repository bytes, because family membership turns on provenance, character, context and effect. P4 is decomposed as ADR-0021 decision 3 and section 57 require, a compound term being decomposed rather than described as partly automated. P4a, mechanical exclusion surface guards, detects the bounded, writable and enumerable surface forms named by a governed guard inventory, with barred forms carried as stems and the instrument excluding precisely itself: the live family inventory is source-read from decision 11 while the guard inventory and its family mapping are governed declarations that are mechanically reconciled to it and never inferred from semantic prose, and each guard carries governed positive controls that must trigger and governed clean controls that must not. P4a fails on any of five decidable conditions - a guarded surface form detected, a required guard or control absent or disabled, a governed positive control failing to trigger, a governed clean control beginning to trigger, or the live family inventory failing reconciliation against the governed guard inventory. P4a carries four explicit non-claims: no claim that a guarded family is clear, none that an unguarded family is clear of anything, none that the guard inventory is complete, and none to detect every possible semantic narrowing of a guard beyond its governed controls, guard adequacy being P4b's question. P4b, complete exclusion-list conformance, is review-only in full across all eleven families and fails when an artefact's provenance, character, context or effect places it inside a prohibited family whether or not any enumerable surface form is present, including material whose bytes are indistinguishable from lawful material. P4 conforms only when P4a is green and P4b has received human review at that landing, and a green P4a is no evidence for P4b in any degree. The withdrawn eight-plus-three partition is replaced by the truthful arithmetic: eleven families remain wholly prohibited, eight currently have one or more surface guards, three currently have none, and all eleven remain inside P4b human review; the guard count is an inventory of instruments and never a measure of how much of decision 11 has been decided. The ordinary public-safety scan is measured rather than assumed and shown insufficient: five of the eight guarded families receive no category at all from the live scanner in either path scope, one only under fixtures, and the two that report do so incidentally without deciding their family. Decision 27's lead sentence is corrected so that four obligations are mechanical in full, P2 remains review-only in full and the only obligation for which no mechanical clause exists, and P4 is compound. Reporting discipline extends ADR-0046 decision 30: P4a and P4b are always reported separately, the phrase P4 green is non-conforming, and P4a green may never be shortened into it. The discovery history is preserved rather than tidied, including the rejected eight-plus-three partition, and the other five W7-D1 obligations were audited and need no decomposition. Decision 11's exclusion list, decision 12's growable-only rule and every prohibition in the corpus are untouched; the correction changes the instrument and the honesty of the claim, never the prohibition, and it makes nothing easier to land. It authorises no implementation, allocates no identifier beyond its own, creates no exception, allowlist or suppression, contacts no model, produces no generated output, and opens no deliverable. Doctrine lands first: the six W7-D4 candidate artefacts are preserved byte-unchanged by this commit and are reconciled to this record in their own later governed act.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0046",
+        "ADR-0021",
+        "ADR-0022",
+        "ADR-0049",
+        "ADR-0047",
+        "ADR-0018",
+        "ADR-0003",
+        "W7-D4-SHB",
+        "W7-AR",
+        "W2-D3",
+        "W0"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:46299e137b86a91bf76e964017a103e03da5b3d71830b86390d369e7b1327050",
       "hash_exclusion_reason": null,
       "errata": []
     }
