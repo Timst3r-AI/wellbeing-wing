@@ -3493,6 +3493,40 @@
       "content_hash": "sha256:a1af46b27a52fed4a1bb0f30c9b449148ba8178ddffddbcc76a1acbb634efda6",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W7-D4-SHB",
+      "aliases": [],
+      "title": "W7-D4 - Synthetic Harness Binding, Exam Paper and Traps: Full-Development Opening Brief",
+      "type": "phase-brief",
+      "phase": "W7",
+      "deliverable": "W7-D4",
+      "path": "docs/phases/W7-D4-synthetic-harness-binding-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-22",
+      "role": "The W7-D4 opening brief, opening W7-D4 for synthetic harness binding, exam paper and traps, effective on publication and remote verification, and nothing beyond W7-D4. It authorises no implementation landing by itself and discharges no precondition: ADR-0047 precondition 7 is discharged only by the final published W7-D4 landing. It introduces a FULL-DEVELOPMENT OPERATING MODE - one accepted architecture, one independent development cycle, one final review and acceptance ceremony - replacing the per-subpart relay used through W7-D1 to W7-D3, while keeping final publication behind explicit human approval after the end-of-development ceremony. ADR-0051 Option D is carried unchanged: no model adapter, runtime, provider, SDK, client, credential, secret, binary or dependency, requirements.txt untouched, every specimen an authored_synthetic_specimen with model_contact occurred false, contact_class none and authorising_record null, and no code path accepting generated_output; if any D4 function would need real model output that is a hard stop, and manual import is not a substitute because ADR-0047 defines contact by the act including contact performed by hand. It ACCEPTS ADR-0050 Part Q's current narrowing for W7 execution without amending or relaxing it: a finding-bearing record stays non-landable, no disposition changes that, no capture receives an allowlist exception, no suppression route is created, and an interesting failure may cost W7 the ability to publish that evidence - accepted as the price of current law rather than routed around. It binds a complete local-wordlist posture without solving the coordinate seam: one public provenance bit, active or inactive, derived from the effective filtered branch of the scanner actually used, with no term, count, hash, fingerprint, file presence, path or machine identity recorded; inactive means dormant for that run only; inactivity may never be manufactured; active plus a finding requires stop-and-report; no fabricated character_start; and a run-state stability rule requiring the branch state to be sampled at run start and confirmed before every capture, stopping the run if it changes, so one manifest bit never describes captures taken under different scanner states. It closes pairing.variant_labels at exactly variant_a and variant_b, neutral and meaning-free, two distinct labels and two captures per unit with the captures key set identical to the labels, and no other, custom, free-text or extension value. It fixes the exam sources: the twenty-six recorded generative-era unknowns re-derived from the live W5-D4 evaluation records by selecting probes whose channel is overt, whose delta outcome is unknown-not-absent and whose basis is generative_respondent_required_and_not_authorised, each row keeping a W5-D4-RUN-01 record citation plus probe_id, with a stop-and-report if the live corpus no longer yields exactly twenty-six; and the twenty-three existing SYNTHETIC-fix trap fixtures consumed as source and left unchanged. Unique probe count is derived from the completed mapping rather than pre-decided, and expected captures equal twice that count. It fixes the authored-specimen contract, the exam artefact semantics with no result, verdict, pass or disposition field, a seven-responsibility harness architecture that reuses the live scanner rather than copying its catalogue, the future run-manifest shape as an integrity index carrying no summary, verdict, score, winner or capture text, and the manifest set-and-hash validator that turns W7-D2-E's neutral S2 predicate into a real shape-aware check while leaving S2 over a real home and real manifest an honest debt until W7-D5 materialises the subject. It designs the W7-D2-E proof succession for W7-D5 to perform, recording that S1 reaching its lawful endpoint is state evolution and not a failed proof or an erratum. It makes the working-state invariant mechanical rather than advisory: unlanded and undispositioned capture working state must remain outside the repository, with no default in-repository workspace, rejection of any workspace equal to or nested under the repository or the reserved home, and a residue check. The harness lives under tests/ by the W5 tests/evaluation_harness.py precedent, preferred path tests/w7_synthetic_evaluation_harness.py, with engine/ and runtime/ excluded absent a reported hard-stop necessity. Fourteen mechanical proof families and a nine-item review-only register are specified, including R5, that specimen evidence must never be generalised into model evidence. Eighteen hard-stop conditions are named, and a hard stop is recorded as the correct outcome rather than a failure. The brief creates no exam, no specimen, no harness, no manifest, no generated-evaluation home, no GER, no GER identifier and no test module; it contacts no model, produces no generated output, adds no dependency, and opens no W7-D5. It amends no record and contains no real health data and no clinical examples.",
+      "governs": [],
+      "depends_on": [
+        "W7-D3-MBB",
+        "ADR-0051",
+        "W7-D2-E",
+        "ADR-0050",
+        "ADR-0049",
+        "ADR-0048",
+        "ADR-0047",
+        "ADR-0046",
+        "W7-AR",
+        "ADR-0034",
+        "ADR-0033",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "w7-d4-synthetic-harness-binding",
+      "open_decisions": [],
+      "content_hash": "sha256:f5d4a0dbe4f6739b87e503f44ff23c5f30ee01c6d07d215ea1ee2be7430f2c84",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
