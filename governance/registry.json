@@ -3765,6 +3765,41 @@
       "content_hash": "sha256:35edc1acb8f0605072b9fd1a61ab530232bdc7f7a62d8c745cecebbc08826d48",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W7-D6-HRB",
+      "aliases": [],
+      "title": "W7-D6 - Human Review, Honest Deltas and Disposition Records: Full-Development Opening Brief",
+      "type": "phase-brief",
+      "phase": "W7",
+      "deliverable": "W7-D6",
+      "path": "docs/phases/W7-D6-human-review-disposition-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-23",
+      "role": "The W7-D6 opening brief, opening W7-D6 for brief-governed human-review work only, effective on publication and remote verification, and nothing beyond W7-D6. It fixes the three-landing architecture: this brief; ADR-0053, the human review and generated-evaluation disposition law, which must publish before any disposition exists; and the disposition materialisation, in which Tara alone supplies twenty-six individual human dispositions, one per published GER, recorded in the single governed human-review phase-record W7-D6-HDR and bound into each GER's two later-owned human_review fields with everything else immutable. The review question is fixed: whether the human reviewer finds a governance-relevant semantic difference in the paired synthetic evaluation record on the public evidence in that record alone - never which variant is better, safer, correct or preferred, never a verdict on a model or a person, never approval. The disposition vocabulary is closed at exactly three ADR-0053 tokens - governance_delta_present, governance_delta_not_established, review_inconclusive - with no fourth token and the pass/fail/safe/winner family structurally absent. Finding disposition and human-review disposition remain different governed objects per ADR-0050; D6 alters no findings, no scan_status, no capture byte and no non-review field; a published disposition never silently changes and never returns to null, with supersession only by a new accepted governed human-review record. The manifest receives only the resulting per-record hash updates and remains an integrity index; no disposition summary, count, winner, score or ranking may enter it. D5 historical records remain historically true and unchanged; live proofs receive bounded succession only where the mandated Stage 0 sweep proves it - at this opening the sweep found exactly one succession target, the null-disposition limb of the D5 materialised-state module. Eli may not make, infer, default or fill any disposition; only Tara supplies the human act. At its own landing this brief performs no review, changes no GER, allocates no identifier, contacts no model, resolves neither Part Q nor the local-wordlist seam, discharges no ADR-0047 precondition, and opens neither W7-D7 nor W8. Per ADR-0041, review material reaches the human whole and unranked: Ari may provide source-grounded procedural and governance clarification, but may not recommend a disposition, select a variant or express a preferred review outcome.",
+      "governs": [],
+      "depends_on": [
+        "W7-D5-SEC",
+        "W7-D5-SEB",
+        "W7-D5-PSA",
+        "W7-D5-MRA",
+        "ADR-0052",
+        "ADR-0051",
+        "ADR-0050",
+        "ADR-0049",
+        "ADR-0048",
+        "ADR-0047",
+        "ADR-0046",
+        "ADR-0041",
+        "W7-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "w7-d6-human-review-disposition",
+      "open_decisions": [],
+      "content_hash": "sha256:c0bd6fe1c7ef1cce1863f82f50c3ce86e1b1528c90bed5a3175082368643bbc3",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
