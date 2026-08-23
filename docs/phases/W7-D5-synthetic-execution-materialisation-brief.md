@@ -3,7 +3,7 @@
 **Status:** Accepted by human reviewer, 2026-08-23. **Effective on publication and remote verification**, at which point it opens W7-D5 and governs the bounded D5 implementation cycle under the full-development mode in section 4, and nothing beyond W7-D5. It is not itself an implementation: it begins no run, allocates no `GER-####` identifier, and creates no generated-evaluation home, manifest or stop report. `W7-D5-RUN-01` begins only after Tara and Ari receive and accept the remotely verified Landing A publication state.
 
 **Date prepared:** 2026-08-23  
-**Revision:** v1.1 - the accepted architecture revision, incorporating the read-only eight-item / four-drift-check review  
+**Revision:** v1.2 - v1.1 reconciled by the accepted proof-succession scope amendment `W7-D5-PSA`; the accepted architecture revision, incorporating the read-only eight-item / four-drift-check review  
 **Phase:** W7 - First-Contact Governance and Synthetic Model Evaluation  
 **Deliverable:** W7-D5 - Synthetic execution records and first generated-evaluation materialisation  
 **Identity:** `W7-D5-SEB`, type `phase-brief`  
@@ -263,7 +263,7 @@ The D4 exam must still resolve to:
 - 52 distinct authored synthetic specimen texts;
 - no result, verdict, winner, ranking or disposition field.
 
-Any byte drift in these three D4 artefacts is a hard stop. D5 does not repair D4.
+The exam and the harness are permanently byte-frozen at these hashes. The D4 proof-module hash is the D5 pre-succession baseline pin fixed by `W7-D5-PSA`: only H12 may receive the bounded successful-materialisation succession edit, and only in the successful Landing B candidate. Any other byte drift in these three D4 artefacts is a hard stop. D5 does not repair D4.
 
 ---
 
@@ -936,6 +936,15 @@ D5 fixes the current-state invariant as:
 
 This is the successor to vacancy. It is not a reinterpretation of S1.
 
+### 24.4 Adjacent present-state successions (W7-D5-PSA)
+
+The accepted `W7-D5-PSA` amendment brings two further present-state vacancy assertions, outside the D2-E module, inside the succession design:
+
+- **H12 in `tests/test_w7_synthetic_harness.py`**, pre-succession pin `6da85d5b2b745e6156d7317f8859fde393489fee8b6df963310a9ebac747d860`: the vacancy limb becomes a from-published-history proof - the reserved home had no tracked artefact at any commit up to and including the parent of the first authorised materialisation commit - and H12 retains its disposable-home successor checks unchanged. Current real-home conformance is owned by D5's materialised-state proof module, never by H12.
+- **M6 in `tests/test_w7_model_boundary_decision.py`**, pre-succession pin `3748a16b219404fcd8d3686431adecc3713850aa3d2983f52d38a2970a45e722`: the home limbs become a from-published-history proof of the ADR-0051 landing-era condition - no home and no GER allocation existed at the ADR-0051 landing or at any commit up to and including the parent of the first authorised materialisation commit - rather than an assertion of current vacancy. M6's registry limb, that no registry entry id begins `GER-`, remains a current-state assertion and remains true after D5.
+
+Neither succession edit occurs on a stopped `W7-D5-RUN-01`; both may enter only the successful Landing B candidate, each bounded to its named test with every other byte of its module identical to the pre-succession pin. No other D3 or D4 proof, decision, exam, harness, engineering or doctrine byte changes.
+
 ---
 
 ## 25. S2 becomes real
@@ -1243,7 +1252,7 @@ Eli stops and reports without improvising if any of the following occurs:
 5. Exam no longer derives 26 probes, 23 traps or 52 captures.
 6. Pair vocabulary differs from `variant_a`/`variant_b`.
 7. A model contact path, generated-output branch, provider, SDK, credential or binary appears.
-8. A D4 harness/proof/exam edit appears in the D5 implementation diff.
+8. A D4 harness or exam edit appears in the D5 implementation diff, or any D4 proof-module edit beyond the bounded H12 succession authorised by `W7-D5-PSA`.
 9. The GER namespace is not empty when RUN-01 expects the first block.
 10. Any GER ID exists in authoritative history unexpectedly.
 11. Any capture scan finds anything.
@@ -1274,7 +1283,7 @@ A hard stop does not authorise a repair outside this brief's scope.
 
 ## 35. Successful final landing scope
 
-Assuming the live source inspection reveals no new hard dependency, the successful D5 implementation landing is exactly **33 paths**:
+Assuming the live source inspection reveals no new hard dependency, the successful D5 implementation landing is exactly **35 paths**:
 
 ### 35.1 Generated-evaluation home: 27 new files
 
@@ -1306,17 +1315,19 @@ Assuming the live source inspection reveals no new hard dependency, the successf
 26. `governance/generated-evaluation/GER-0026.json`
 27. `governance/generated-evaluation/W7-D5-RUN-01-manifest.json`
 
-### 35.2 D5 implementation/proof: 3 paths
+### 35.2 D5 implementation/proof: 5 paths
 
 28. new `tests/w7_generated_evaluation_binding.py`
 29. modify `tests/test_w7_generated_evaluation_shape.py` for explicit proof succession
 30. new `tests/test_w7_generated_evaluation_materialised.py`
+31. modify `tests/test_w7_synthetic_harness.py` - the bounded H12 succession edit only (`W7-D5-PSA`)
+32. modify `tests/test_w7_model_boundary_decision.py` - the bounded M6 succession edit only (`W7-D5-PSA`)
 
 ### 35.3 Governance/reporting: 3 paths
 
-31. new `docs/phases/W7-D5-synthetic-execution-materialisation-record.md`
-32. modify `governance/registry.json`
-33. modify `docs/phases/README.md`
+33. new `docs/phases/W7-D5-synthetic-execution-materialisation-record.md`
+34. modify `governance/registry.json`
+35. modify `docs/phases/README.md`
 
 No other path is part of the successful landing.
 
@@ -1324,7 +1335,7 @@ Specifically excluded unless a new governed act says otherwise:
 
 - D4 exam;
 - D4 harness;
-- D4 proof module;
+- D4 proof module, beyond the bounded H12 succession edit;
 - ADR-0046 through ADR-0052;
 - `scripts/public-safety-scan.py`;
 - `scripts/scan-allowlist.txt`;
@@ -1430,17 +1441,17 @@ Specifically excluded unless a new governed act says otherwise:
 Eli's final packet must include measured results for all of the following against the exact proposed tracked state in the disposable clone:
 
 1. frozen D4 hash check;
-2. D4 focused proof module;
+2. D4 focused proof module, complete and green after its authorised H12 succession edit;
 3. D2-E shape proof after succession edit;
 4. D5 materialised-state proof module;
-5. D3 model-boundary proof;
+5. D3 model-boundary proof, complete and green after its authorised M6 succession edit;
 6. first-contact doctrine proof;
 7. boundary invariant proof;
 8. repo-state proof;
 9. pending-ledger proof, with no row touched;
 10. P4a guard application;
 11. mutation/negative-control ceremony;
-12. landing-mode scan over **all 33 proposed paths**;
+12. landing-mode scan over **all 35 proposed paths**;
 13. normal scan across the complete proposed tracked state;
 14. suppression count comparison;
 15. full deterministic suite;
@@ -1460,7 +1471,7 @@ Two distinct human acts must not be collapsed.
 
 ### 38.1 P4b publication review
 
-Tara reviews all eleven ADR-0046 exclusion families against the exact 33-path final candidate and records CLEAR or concern family by family.
+Tara reviews all eleven ADR-0046 exclusion families against the exact 35-path final candidate and records CLEAR or concern family by family.
 
 This is the publication-conformance act.
 
@@ -1481,15 +1492,15 @@ Only after section 38 is complete:
 1. verify authoritative checkout still clean at the D5 brief baseline;
 2. verify remote main has not moved unexpectedly;
 3. re-run GER namespace/history lock;
-4. transfer the exact 33 accepted candidate files/edits into the authoritative checkout;
+4. transfer the exact 35 accepted candidate files/edits into the authoritative checkout;
 5. compare every resulting path hash to the accepted packet;
 6. prove no extra untracked or modified path exists;
 7. run focused D5 proofs;
-8. run landing-mode scan over exactly the 33 paths;
+8. run landing-mode scan over exactly the 35 paths;
 9. run normal scan and suppression comparison;
 10. run repo-state and pending-ledger checks;
 11. run full deterministic suite;
-12. stage exactly the 33 paths;
+12. stage exactly the 35 paths;
 13. show staged path list and nothing unstaged/untracked;
 14. commit once;
 15. push by plain fast-forward only;
@@ -1635,7 +1646,7 @@ If any of those remains materially open, the brief is not ready to land.
 
 After Tara accepts this brief and its Landing A is remotely verified, the implementation instruction is:
 
-> Implement W7-D5 exactly under `W7-D5-SEB` in full-development mode. Re-ground on the published brief baseline and freeze the accepted D4 exam, harness and proof bytes. Work payload-bearing candidate state only in a disposable external clone/workspace. Execute only `W7-D5-RUN-01`, once, over the 26-probe D4 exam, with no model contact and no generated output. Any capture finding, branch-state change, provenance mismatch, cardinality mismatch or other hard stop ends the successful-run path and must be reported without retry.
+> Implement W7-D5 exactly under `W7-D5-SEB` in full-development mode. Re-ground on the published brief baseline; freeze the accepted D4 exam and harness bytes permanently, hold the D4 proof and D3 model-boundary proof modules at their `W7-D5-PSA` pre-succession pins, and apply only the bounded H12 and M6 succession edits, in the successful Landing B candidate alone. Work payload-bearing candidate state only in a disposable external clone/workspace. Execute only `W7-D5-RUN-01`, once, over the 26-probe D4 exam, with no model contact and no generated output. Any capture finding, branch-state change, provenance mismatch, cardinality mismatch or other hard stop ends the successful-run path and must be reported without retry.
 >
 > Keep the D4 harness byte-identical. Invoke it with `authorising_record = W7-D4-SHB`, then add only the pure D5 authority/identity binding layer required to replace the top-level run authority with `W7-D5-SEB` while preserving `W7-D4-SHB` on every capture. On a wholly clean run, construct exactly 26 candidate GERs, the one D4-shaped run manifest, the D2-E proof succession, the materialised-state proof module, the completion record, registry delta and phase-board delta in the disposable candidate clone.
 >

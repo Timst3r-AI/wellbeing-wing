@@ -3632,7 +3632,40 @@
       "id_namespaces": [],
       "implementation_permission": "w7-d5-synthetic-execution-materialisation",
       "open_decisions": [],
-      "content_hash": "sha256:56ed36c6335599ff5fa100f2021984b9b62079ba7ab82d418d9c2a67084fff92",
+      "content_hash": "sha256:eec4aa2f414302db2bc1b3fd0474a70831ceb7c04c00e2c7daa65a488d455770",
+      "hash_exclusion_reason": null,
+      "errata": [
+        {
+          "date": "2026-08-23",
+          "note": "Reconciled to revision v1.2 by the accepted proof-succession scope amendment W7-D5-PSA (docs/phases/W7-D5-proof-succession-amendment.md): v1.1's section 24 succession design covered only the three D2-E present-state assertions, while the frozen D4 proof module's H12 vacancy limb and the D3 model-boundary module's M6 home limbs also assert present vacancy that a successful materialisation necessarily breaks, leaving section 37 unsatisfiable inside the 33-path scope. v1.2 pins both modules pre-succession, authorises the two bounded succession edits in the successful Landing B candidate only, moves the successful landing scope from exactly 33 to exactly 35 paths, and reconciles sections 6, 24, 34, 35, 37, 38, 39 and 45 plus the header revision line. Discovered by pre-run sweep with W7-D5-RUN-01 unconsumed; content hash recomputed in the same commit."
+        }
+      ]
+    },
+    {
+      "id": "W7-D5-PSA",
+      "aliases": [],
+      "title": "W7-D5 - Proof Succession Scope Amendment",
+      "type": "phase-record",
+      "phase": "W7",
+      "deliverable": "W7-D5",
+      "path": "docs/phases/W7-D5-proof-succession-amendment.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-23",
+      "role": "The governed proof-succession scope amendment to the accepted W7-D5-SEB brief, prepared after implementation stopped pre-run with W7-D5-RUN-01 unconsumed - no clone, no preflight, no capture. A corpus-wide sweep found two present-state vacancy assertions outside the brief's succession design that a successful materialisation necessarily breaks: the H12 vacancy limb of the frozen D4 proof module and the M6 home limbs of the D3 model-boundary proof module, while the brief's section 37 requires both modules green. The correction is architectural, not doctrinal: no ADR-0046 through ADR-0052 decision changes, ADR-0051 Option D stands, and W7-D4-SHR and every historical completion record are unchanged, each having been true when it landed. It settles ten points: the D4 exam and harness remain permanently byte-frozen at their published hashes; tests/test_w7_synthetic_harness.py hash 6da85d5b2b745e6156d7317f8859fde393489fee8b6df963310a9ebac747d860 becomes the D5 pre-succession baseline pin with only H12 authorised a bounded successful-materialisation succession edit; tests/test_w7_model_boundary_decision.py is pinned pre-succession at 3748a16b219404fcd8d3686431adecc3713850aa3d2983f52d38a2970a45e722 with only M6 authorised its bounded edit; H12 proves D4-era vacancy from published history and retains its disposable successor checks, with current real-home conformance owned by D5's materialised-state proof module; M6 proves the ADR-0051 landing-era no-home/no-allocation condition from published history rather than asserting current vacancy after D5, its no-GER-registry-id limb remaining current-state and true; neither succession edit occurs on a stopped RUN-01; successful Landing B moves from exactly 33 to exactly 35 paths by adding the two proof modules; section 37 still requires both complete modules green against the exact successful proposed tracked state after their authorised edits; no other D3 or D4 proof, decision, exam, harness, engineering or doctrine byte is authorised to change; and the inherited-present-state-assertion sweep joins the standing architecture review discipline. At its own landing this amendment creates no generated-evaluation home, allocates no GER identifier, leaves the registry namespace declaration untouched and true, begins no run, edits neither proof module, contacts no model, produces no generated output, adds no dependency, and leaves Part Q, the local-wordlist seam and ADR-0047 precondition 3 exactly as they stand. W7-D6, W7-D7 and W8 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "W7-D5-SEB",
+        "W7-D4-SHR",
+        "W7-D4-SHB",
+        "ADR-0052",
+        "ADR-0051",
+        "W7-D2-E"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:601e1b5bff167c45ac300685511f19d5043a407ca0e77fe3a6d14714e405239d",
       "hash_exclusion_reason": null,
       "errata": []
     }
