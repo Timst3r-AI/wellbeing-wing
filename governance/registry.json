@@ -3800,6 +3800,40 @@
       "content_hash": "sha256:c0bd6fe1c7ef1cce1863f82f50c3ce86e1b1528c90bed5a3175082368643bbc3",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0053",
+      "aliases": [],
+      "title": "0053 - W7 Human Review and Generated-Evaluation Disposition Law",
+      "type": "adr",
+      "phase": "W7",
+      "deliverable": "W7-D6",
+      "path": "docs/decisions/0053-human-review-generated-evaluation-disposition-law.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-23",
+      "role": "The W7-D6 human review and generated-evaluation disposition law, landed before any disposition exists per the runway's review-law-before-dispositions discipline, and effective only on publication and remote verification. Fixes the review question exactly: does the human reviewer find a governance-relevant semantic difference in the paired synthetic evaluation record, on the public evidence contained in that record alone - never a verdict on a model or a person, never a finding disposition, never approval, selection, ranking or preference, with specimen evidence never becoming model evidence. Closes human_review.disposition at exactly three byte-fixed lower_snake_case members - governance_delta_present, governance_delta_not_established, review_inconclusive, the third a valid completed review and not a pending state - with no fourth token, and the barred family structurally absent: no member may carry the meaning of the result-, verdict-, preference- or conformance-style vocabulary, and no amendment may introduce one into this vocabulary. Consumes ADR-0050's inequality unchanged and adds the mirror bars: no scan finding state enters a human-review disposition, no member of this vocabulary enters a finding event, review alters no findings array or scan status, and this vocabulary provides no route around Part Q. Fixes the only lawful GER mutation as the atomic two-field pair human_review.disposition and human_review.disposition_record, routed remaining true and every other position immutable including every capture byte; one governed human act in one governing phase-record, W7-D6-HDR, one row per GER in exact order carrying record_id, probe_id and exactly one member, with no capture text, no excerpt, no paraphrase and no per-GER rationale prose; disposition_record names the accepted governing record and an unaccepted source is void. Bounds the manifest cascade to the per-record content hashes and the register's own hash, the manifest remaining an integrity index with no disposition summary, count, winner, score or ranking. Fixes the lifecycle: a published disposition never silently changes and never returns to null; supersession only by a new accepted governed human-review record moving both fields atomically, the earlier act preserved and never described as corrected unless the superseding record expressly says so. Only the human authority supplies a disposition; the implementer may not select, default, infer, fill or convert silence into a decision; per ADR-0041 the architect may clarify governing law, provenance and mechanical facts but may not recommend a disposition, select or rank a variant, or express a preferred review outcome; presentation is whole, symmetric, unranked, with no preselection, default or bulk path and an explicit individual human decision per record. Proofs land with their subjects in the disposition landing, parsing this vocabulary from these landed bytes; the one known succession is the null-disposition limb of the W7-D5 materialised-state module, reaching its lawful endpoint. A disposition establishes only that the named human reviewer answered the fixed question for that record under this law; it establishes no model behaviour, safety, correctness, clinical validity, approval, winner, real-person fact, Part Q resolution, seam resolution or precondition discharge. At its own landing this record performs no review, writes no disposition, changes no GER, manifest or proof, allocates no identifier, contacts no model, and opens neither W7-D7 nor W8.",
+      "governs": [],
+      "depends_on": [
+        "W7-D6-HRB",
+        "W7-D5-SEC",
+        "W7-D5-SEB",
+        "ADR-0052",
+        "ADR-0051",
+        "ADR-0050",
+        "ADR-0049",
+        "ADR-0048",
+        "ADR-0047",
+        "ADR-0046",
+        "ADR-0041",
+        "W7-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:d03333fa6e1b1b3363ccd4aa5bffcd16bba794e997705460776ac004900f3ff2",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
