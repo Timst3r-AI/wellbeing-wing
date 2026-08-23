@@ -5,11 +5,21 @@ ABSENCE MAY PROVE DORMANCY; ABSENCE MAY NOT DISCHARGE A DEBT WHOSE SUBJECT DOES 
 Nineteen obligations are inherited. This module implements what a machine can
 honestly decide today and refuses to imply the rest:
 
-  LIVE (5)          S1 T1 T2 T3 U1 — the subject exists; the proof establishes the obligation.
-  READY / DEBT (10) S2 T4 T5 T7 T8 T9 U2 U3 U4 U5 — the predicate runs and its
-                    negative controls bite, but no generated-evaluation record
-                    exists, so the obligation is OUTSTANDING, not satisfied.
-  REVIEW-ONLY (4)   S3 S4 T6 U6 — human duties. They are not tests here, not
+  ENDPOINT / HISTORICAL (1)  S1 — vacancy held until the authorised W7-D5
+                    materialisation landing, and the protected interval ended
+                    lawfully (W7-D5-PSA; brief v1.2 section 24). The original
+                    proof was not failed and not erroneous; it reached its
+                    endpoint by state evolution.
+  LIVE (11)         S2 S3 T1 T2 T3 T4 T5 T7 T8 T9 U1 — real subjects now exist.
+                    This module keeps the predicate-level proofs; the bindings of
+                    the record-level obligations to real repository bytes live in
+                    tests/test_w7_generated_evaluation_materialised.py.
+  READY / DEBT (4)  U2 U3 U4 U5 — current Part Q law prevents a finding-bearing
+                    record from becoming a landed subject; the rule machinery
+                    stays proven here, and the absence of a finding event is
+                    never used to claim their subject has existed, so those
+                    obligations remain OUTSTANDING, not satisfied.
+  REVIEW-ONLY (3)   S4 T6 U6 — human duties. They are not tests here, not
                     skips, not TODOs, and not pending-ledger rows.
 
 WHAT GREEN DOES NOT MEAN. A green run of this module NEVER establishes:
@@ -389,6 +399,20 @@ def tracked_records():
     return [p for p in out.stdout.split() if p]
 
 
+def introducing_commit(rel):
+    """The oldest commit that added a file under `rel`, or None. The W7-D5-PSA
+    succession reads vacancy from history through this point."""
+    out = subprocess.run(["git", "log", "--diff-filter=A", "--format=%H", "--", rel],
+                         cwd=ROOT, capture_output=True, text=True, check=True).stdout.split()
+    return out[-1] if out else None
+
+
+def tree_names(ref, rel):
+    return subprocess.run(["git", "ls-tree", "-r", "--name-only", ref, "--", rel],
+                          cwd=ROOT, capture_output=True, text=True,
+                          check=True).stdout.split()
+
+
 def allowlist_paths():
     rows = []
     for line in _src(ALLOWLIST).splitlines():
@@ -737,12 +761,32 @@ class LiveShapeLaw(unittest.TestCase):
 class LiveHomeAndAllowlist(unittest.TestCase):
     """S1, U1 — LIVE. The home and the allowlist both exist as subjects today."""
 
-    def test_s1_reserved_home_is_vacant(self):
+    def test_s1_vacancy_reached_its_lawful_endpoint(self):
+        # W7-D5-PSA / brief v1.2 section 24: S1's protected interval ends at the
+        # authorised materialisation landing. This is proof succession, not an
+        # erratum: the original vacancy proof was true for every commit it ran on.
         with self.subTest(anchor="ADR-0048 decision 7 states the home"):
             self.assertEqual(RESERVED_HOME, "governance/generated-evaluation/")
-        self.assertEqual(tracked_records(), [])
-        on_disk = ROOT / RESERVED_HOME
-        self.assertFalse(on_disk.exists(), "the reserved home must not have been created")
+        first = introducing_commit(RESERVED_HOME)
+        if first is None:
+            # The authorised landing has not occurred: vacancy is still the law.
+            self.assertEqual(tracked_records(), [])
+            self.assertFalse((ROOT / RESERVED_HOME).exists(),
+                             "the reserved home must not exist before its landing")
+        else:
+            with self.subTest(fact="vacancy held through the parent of the first "
+                                   "authorised materialisation commit"):
+                self.assertEqual(tree_names(first + "^", RESERVED_HOME), [])
+            with self.subTest(fact="the materialising commit carries the accepted "
+                                   "D5 brief that authorises the creation"):
+                tree = subprocess.run(
+                    ["git", "ls-tree", "-r", "--name-only", first], cwd=ROOT,
+                    capture_output=True, text=True, check=True).stdout.split()
+                self.assertIn(
+                    "docs/phases/W7-D5-synthetic-execution-materialisation-brief.md",
+                    tree)
+            with self.subTest(state="S1 is ENDPOINT / HISTORICAL, not failed"):
+                self.assertIn("ENDPOINT / HISTORICAL", __doc__)
         planted = RESERVED_HOME + "GER-0001.json"
         self.assertTrue(planted.startswith(RESERVED_HOME),
                         "control: a planted path under the home must be detectable")
@@ -949,17 +993,26 @@ class ReadyPredicatesForAbsentSubjects(unittest.TestCase):
 class DebtsRemainOutstanding(unittest.TestCase):
     """Anti-vacuity. The distinction between LIVE and READY/DEBT is asserted."""
 
-    def test_no_generated_evaluation_record_exists(self):
-        self.assertEqual(tracked_records(), [],
-                         "a record would change every record-level obligation's status")
-        self.assertFalse((ROOT / RESERVED_HOME).exists())
+    def test_record_subjects_exist_only_by_authorised_materialisation(self):
+        first = introducing_commit(RESERVED_HOME)
+        if first is None:
+            self.assertEqual(tracked_records(), [],
+                             "before the authorised landing, absence is the law")
+        else:
+            self.assertTrue((ROOT / RESERVED_HOME).exists(),
+                            "after the authorised landing, the subjects are real")
+            self.assertTrue(
+                (ROOT / "tests/test_w7_generated_evaluation_materialised.py").exists(),
+                "the real-subject bindings live in the materialised-state module")
 
-    def test_absence_does_not_discharge_record_dependent_debts(self):
+    def test_remaining_debts_are_not_discharged_by_materialisation(self):
         self.assertIn("ABSENCE MAY PROVE DORMANCY", __doc__)
         self.assertIn("MAY NOT DISCHARGE A DEBT WHOSE SUBJECT DOES NOT EXIST", __doc__)
         self.assertIn("OUTSTANDING, not satisfied", __doc__)
-        self.assertEqual(tracked_records(), [],
-                         "the ten record-level obligations remain outstanding debts")
+        for debt in ("U2", "U3", "U4", "U5"):
+            with self.subTest(debt=debt):
+                self.assertIn(debt, __doc__)
+        self.assertIn("never used to claim their subject has existed", __doc__)
 
 
 # ==========================================================================

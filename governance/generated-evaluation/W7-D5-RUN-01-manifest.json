@@ -1,0 +1,146 @@
+{
+ "generated_evaluation_run_manifest": {
+  "run_id": "W7-D5-RUN-01",
+  "authorising_record": "W7-D5-SEB",
+  "as_of": "2026-08-23",
+  "exam": {
+   "reference": "SYNTHETIC-w7-d4-exam.json",
+   "content_hash": "sha256:9755cca1e8f9e41d7c89d532abb2f674a0189ec58935e3a5763fd641c90406a7"
+  },
+  "scan_environment": {
+   "local_wordlist": "inactive"
+  },
+  "records": [
+   {
+    "record_id": "GER-0001",
+    "path": "governance/generated-evaluation/GER-0001.json",
+    "content_hash": "sha256:73e4d760d0d9b031e2705686c051de51ba3ec6c60044c78733b95afc28bc99ce"
+   },
+   {
+    "record_id": "GER-0002",
+    "path": "governance/generated-evaluation/GER-0002.json",
+    "content_hash": "sha256:10d4d9036a538bcad8ca73e242313689456d21fa9d3079f4d33a51c48888787b"
+   },
+   {
+    "record_id": "GER-0003",
+    "path": "governance/generated-evaluation/GER-0003.json",
+    "content_hash": "sha256:289156b50be3673e4dd7845fba31d4df8c9795e17388f76233ff3a73601df020"
+   },
+   {
+    "record_id": "GER-0004",
+    "path": "governance/generated-evaluation/GER-0004.json",
+    "content_hash": "sha256:b489e7a8699046a37f3d63c1f9f3c5b4c0009d706458785bf0543db21df6581f"
+   },
+   {
+    "record_id": "GER-0005",
+    "path": "governance/generated-evaluation/GER-0005.json",
+    "content_hash": "sha256:6a5aa42c89b5eaf35fd13ba55d4fa9aaf365969864c5eeb8d44e72d31b87da35"
+   },
+   {
+    "record_id": "GER-0006",
+    "path": "governance/generated-evaluation/GER-0006.json",
+    "content_hash": "sha256:2c2072e04bdefb4b9b89c9279fb76f593ff509cf8c8913517ce35a167649430f"
+   },
+   {
+    "record_id": "GER-0007",
+    "path": "governance/generated-evaluation/GER-0007.json",
+    "content_hash": "sha256:dcb44481e23d8b4a978216f70754ab4a7462a36e1bdc08e36819ae21a1f324ac"
+   },
+   {
+    "record_id": "GER-0008",
+    "path": "governance/generated-evaluation/GER-0008.json",
+    "content_hash": "sha256:e73896bd06a2c5b1c17e5e5195ec4906b7b5abc6e3c94c2c85265a99fb5e437f"
+   },
+   {
+    "record_id": "GER-0009",
+    "path": "governance/generated-evaluation/GER-0009.json",
+    "content_hash": "sha256:9df9ce2c465df97f1ea641d8aadda897cdacc2353cc347f4efc522c7e6a0ebc9"
+   },
+   {
+    "record_id": "GER-0010",
+    "path": "governance/generated-evaluation/GER-0010.json",
+    "content_hash": "sha256:f451845238aa6c2acf3389e92e3a87607c93feb8b6b920e86371c88f7327e2e5"
+   },
+   {
+    "record_id": "GER-0011",
+    "path": "governance/generated-evaluation/GER-0011.json",
+    "content_hash": "sha256:969b4060b59a43f74418cef184a4d7959d0b4a850d343b65e3d5e85d3576ef8b"
+   },
+   {
+    "record_id": "GER-0012",
+    "path": "governance/generated-evaluation/GER-0012.json",
+    "content_hash": "sha256:b8a5048e82d3de13035290d0fc886d4ed5468d290f3d2af607def2d64cc12580"
+   },
+   {
+    "record_id": "GER-0013",
+    "path": "governance/generated-evaluation/GER-0013.json",
+    "content_hash": "sha256:100842be5754f2dc6046fd3f17b3e690aa2701e622271e54a8ffa4c80f548c52"
+   },
+   {
+    "record_id": "GER-0014",
+    "path": "governance/generated-evaluation/GER-0014.json",
+    "content_hash": "sha256:342dbeeac725394c22b45255b97548cccb96d7a7f472927bbf58ce4caa6f49de"
+   },
+   {
+    "record_id": "GER-0015",
+    "path": "governance/generated-evaluation/GER-0015.json",
+    "content_hash": "sha256:8583da908858e61033190c4e60e0f938b9fac80731ae60c9a09a47b968755230"
+   },
+   {
+    "record_id": "GER-0016",
+    "path": "governance/generated-evaluation/GER-0016.json",
+    "content_hash": "sha256:73ec7ead0d55e27398a7b7e6ab1ca1c13a935755e1d79bd4a810e3bacdc4ea38"
+   },
+   {
+    "record_id": "GER-0017",
+    "path": "governance/generated-evaluation/GER-0017.json",
+    "content_hash": "sha256:e2756017f6bfd9421b7a5e9f4c4b92cf31d4fda95a19bd2a85f5b4443e506171"
+   },
+   {
+    "record_id": "GER-0018",
+    "path": "governance/generated-evaluation/GER-0018.json",
+    "content_hash": "sha256:8a1fa20398ac4d90b6f4aeaf5d74e8794b14b18b4a97beb6dbf47a132af2eb58"
+   },
+   {
+    "record_id": "GER-0019",
+    "path": "governance/generated-evaluation/GER-0019.json",
+    "content_hash": "sha256:fff038226355350f87d55cb54ca59d0db2e738534610f4ae0f3a5a3f3a8ff106"
+   },
+   {
+    "record_id": "GER-0020",
+    "path": "governance/generated-evaluation/GER-0020.json",
+    "content_hash": "sha256:2017e1cb5190fe0ab079e671cc4cbe279a0293808314829823625872db9ff80c"
+   },
+   {
+    "record_id": "GER-0021",
+    "path": "governance/generated-evaluation/GER-0021.json",
+    "content_hash": "sha256:45b0c8c164fe1151a0b2da2c1ae927fe434e1e9c750cef3b4e600d297d85d2f8"
+   },
+   {
+    "record_id": "GER-0022",
+    "path": "governance/generated-evaluation/GER-0022.json",
+    "content_hash": "sha256:c85afa1d33f1bd581285ab5d49a6ae039023fc5dd048c47cfb6662acd63bdddf"
+   },
+   {
+    "record_id": "GER-0023",
+    "path": "governance/generated-evaluation/GER-0023.json",
+    "content_hash": "sha256:03b6d51cccfbfff019a1505cb8cd060272a7bc285ceb7d24b6641c95365aeed5"
+   },
+   {
+    "record_id": "GER-0024",
+    "path": "governance/generated-evaluation/GER-0024.json",
+    "content_hash": "sha256:ca2118745c9c7685b3274c38adfc0ddfb6e37e9153fc6739ad37cc922bab5bb3"
+   },
+   {
+    "record_id": "GER-0025",
+    "path": "governance/generated-evaluation/GER-0025.json",
+    "content_hash": "sha256:0b1594ee9cac7d0699f95a7c14c58e801ec0d599523c2be506fbbe4d5adcb563"
+   },
+   {
+    "record_id": "GER-0026",
+    "path": "governance/generated-evaluation/GER-0026.json",
+    "content_hash": "sha256:8e3a733c68c6655154ce686a27e7ddbfd74445ae419187fe767df6039fcba66b"
+   }
+  ]
+ }
+}

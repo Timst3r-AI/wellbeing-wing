@@ -205,14 +205,40 @@ class DecisionRecordShape(unittest.TestCase):
 class RepositoryStateAtThisLanding(unittest.TestCase):
     """M6 — facts about the repository, not about the record."""
 
-    def test_m6_home_absent_and_no_ger_identifier_allocated(self):
-        out = subprocess.run(["git", "ls-files", "--", RESERVED_HOME],
-                             cwd=ROOT, capture_output=True, text=True, check=True)
-        tracked = [p for p in out.stdout.split() if p]
-        with self.subTest(limb="no tracked file under the reserved home"):
-            self.assertEqual(tracked, [])
-        with self.subTest(limb="the reserved home does not exist on disk"):
-            self.assertFalse((ROOT / RESERVED_HOME).exists())
+    def test_m6_no_home_or_allocation_through_the_landing_era_history(self):
+        # W7-D5-PSA succession: the ADR-0051 landing-era no-home/no-allocation
+        # condition is proven from published history rather than asserted of the
+        # present, because the W7-D5 materialisation lawfully ends present
+        # vacancy. The registry limb below stays current-state: GERs receive no
+        # registry rows under ADR-0048, so it remains true after D5.
+        def oldest_adding(rel):
+            out = subprocess.run(["git", "log", "--diff-filter=A", "--format=%H",
+                                  "--", rel], cwd=ROOT, capture_output=True,
+                                 text=True, check=True).stdout.split()
+            return out[-1] if out else None
+
+        def tree_names(ref, rel):
+            return subprocess.run(["git", "ls-tree", "-r", "--name-only", ref,
+                                   "--", rel], cwd=ROOT, capture_output=True,
+                                  text=True, check=True).stdout.split()
+
+        adr = oldest_adding("docs/decisions/0051-model-boundary-no-public-contact.md")
+        with self.subTest(limb="ADR-0051 landed with no home and no allocation"):
+            self.assertIsNotNone(adr, "ADR-0051 must exist in published history")
+            self.assertEqual(tree_names(adr, RESERVED_HOME), [])
+            import json as _json
+            reg_then = _json.loads(subprocess.run(
+                ["git", "show", adr + ":governance/registry.json"], cwd=ROOT,
+                capture_output=True, check=True).stdout.decode("utf-8"))
+            self.assertEqual([e["id"] for e in reg_then["entries"]
+                              if e["id"].startswith("GER-")], [])
+        with self.subTest(limb="the home stayed absent through the parent of the "
+                               "first authorised materialisation commit"):
+            first = oldest_adding(RESERVED_HOME)
+            if first is None:
+                self.assertFalse((ROOT / RESERVED_HOME).exists())
+            else:
+                self.assertEqual(tree_names(first + "^", RESERVED_HOME), [])
         entries = registry_entries()
         with self.subTest(limb="no GER identifier is allocated in the registry"):
             self.assertEqual([e["id"] for e in entries if e["id"].startswith("GER-")], [])

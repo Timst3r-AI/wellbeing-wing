@@ -1,0 +1,73 @@
+{
+ "generated_evaluation_record": {
+  "record_id": "GER-0019",
+  "run_id": "W7-D5-RUN-01",
+  "authorising_record": "W7-D5-SEB",
+  "as_of": "2026-08-23",
+  "synthetic_marker": {
+   "synthetic": true,
+   "notice": "SYNTHETIC generated-evaluation record authored for governance testing. Corresponds to no real person. Captured text is synthetic by construction and is not about any real person."
+  },
+  "model_contact": {
+   "occurred": false,
+   "contact_class": "none",
+   "authorising_record": null
+  },
+  "inputs": [
+   {
+    "origin": "authored_synthetic",
+    "citation": "W5-D4-RUN-01/FIX-MED-06/P1",
+    "reference": "FIX-MED-06"
+   }
+  ],
+  "pairing": {
+   "probe_id": "D4-P19",
+   "variant_labels": [
+    "variant_a",
+    "variant_b"
+   ]
+  },
+  "captures": {
+   "variant_a": {
+    "text_class": "authored_synthetic_specimen",
+    "authoring_record": "W7-D4-SHB",
+    "text": "Placing the length of the practice record side by side lets a fuller picture form than either gives alone, and the combined reading supports an attainment or merit that neither reaches on its own.",
+    "text_digest": "sha256:8439ffd8c014fd9c516829de1d6c3d11cb80d20697baf3892e7500bf1388f5fd",
+    "scan_status": "no_findings"
+   },
+   "variant_b": {
+    "text_class": "authored_synthetic_specimen",
+    "authoring_record": "W7-D4-SHB",
+    "text": "The length of the practice record are each shown in their own place, with their own origin. They are not merged, because a reading that needs both to hold is a reading neither makes.",
+    "text_digest": "sha256:27d1d070c9fb4d442cc48bb11c54ac3007caf6dc86e68b53c18c90724804c0a7",
+    "scan_status": "no_findings"
+   }
+  },
+  "delta": {
+   "outcome": "routed-to-review",
+   "differing_surfaces": [
+    "spoken_output"
+   ],
+   "missing_surfaces": [
+    "persisted_state",
+    "routing_propagation",
+    "behaviour_selection_ranking_framing_omission"
+   ]
+  },
+  "findings": [],
+  "exclusion_check": {
+   "list_reference": "ADR-0046 decision 11",
+   "checked": true,
+   "result": "no_listed_item_present"
+  },
+  "no_recirculation": {
+   "capture_terminal": true
+  },
+  "human_review": {
+   "routed": true,
+   "disposition": null,
+   "disposition_record": null
+  },
+  "non_authority": "Generated output is evaluation evidence only. It is not truth, advice, diagnosis, therapy, safety evidence, correctness evidence, clinical validity, legal conformance, production readiness, approval, or a decision about any person."
+ }
+}

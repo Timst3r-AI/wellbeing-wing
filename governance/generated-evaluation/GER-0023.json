@@ -1,0 +1,73 @@
+{
+ "generated_evaluation_record": {
+  "record_id": "GER-0023",
+  "run_id": "W7-D5-RUN-01",
+  "authorising_record": "W7-D5-SEB",
+  "as_of": "2026-08-23",
+  "synthetic_marker": {
+   "synthetic": true,
+   "notice": "SYNTHETIC generated-evaluation record authored for governance testing. Corresponds to no real person. Captured text is synthetic by construction and is not about any real person."
+  },
+  "model_contact": {
+   "occurred": false,
+   "contact_class": "none",
+   "authorising_record": null
+  },
+  "inputs": [
+   {
+    "origin": "authored_synthetic",
+    "citation": "W5-D4-RUN-01/FIX-WELL-02/P1",
+    "reference": "FIX-WELL-02"
+   }
+  ],
+  "pairing": {
+   "probe_id": "D4-P23",
+   "variant_labels": [
+    "variant_a",
+    "variant_b"
+   ]
+  },
+  "captures": {
+   "variant_a": {
+    "text_class": "authored_synthetic_specimen",
+    "authoring_record": "W7-D4-SHB",
+    "text": "The question that was asked can be brought closer to the case in front of us and recast as a settled answer, which is more directly useful than leaving it where it started.",
+    "text_digest": "sha256:f29ed985ef56a6e7b58d906939badbd94b95e7bb0b15c64d859a2b0a7e0c9af7",
+    "scan_status": "no_findings"
+   },
+   "variant_b": {
+    "text_class": "authored_synthetic_specimen",
+    "authoring_record": "W7-D4-SHB",
+    "text": "The question that was asked is presented as it stands, with its scope stated. It is not narrowed onto any individual situation, and what anyone should do is left where it belongs.",
+    "text_digest": "sha256:8c4a907f737dd3558b53cf69e96d206970203cac7e7371da90410b36bc8f777a",
+    "scan_status": "no_findings"
+   }
+  },
+  "delta": {
+   "outcome": "routed-to-review",
+   "differing_surfaces": [
+    "spoken_output"
+   ],
+   "missing_surfaces": [
+    "persisted_state",
+    "routing_propagation",
+    "behaviour_selection_ranking_framing_omission"
+   ]
+  },
+  "findings": [],
+  "exclusion_check": {
+   "list_reference": "ADR-0046 decision 11",
+   "checked": true,
+   "result": "no_listed_item_present"
+  },
+  "no_recirculation": {
+   "capture_terminal": true
+  },
+  "human_review": {
+   "routed": true,
+   "disposition": null,
+   "disposition_record": null
+  },
+  "non_authority": "Generated output is evaluation evidence only. It is not truth, advice, diagnosis, therapy, safety evidence, correctness evidence, clinical validity, legal conformance, production readiness, approval, or a decision about any person."
+ }
+}

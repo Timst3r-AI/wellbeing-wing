@@ -1064,12 +1064,28 @@ class H12_ProofSuccession(unittest.TestCase):
     def _record_bytes(run_id, marker):
         return json.dumps({H.WRAPPER_KEY: {"run_id": run_id, "x": marker}}).encode("utf-8")
 
-    def test_h12_vacancy_holds_now_and_the_successor_bites_on_fakes(self):
-        with self.subTest(limb="the reserved home is still absent in the live repository"):
-            self.assertFalse(H.RESERVED_HOME.exists())
-            out = subprocess.run(["git", "ls-files", "--", "governance/generated-evaluation/"],
-                                 cwd=ROOT, capture_output=True, text=True, check=True)
-            self.assertEqual(out.stdout.split(), [])
+    def test_h12_vacancy_held_and_the_successor_bites_on_fakes(self):
+        # W7-D5-PSA succession: the D4-era vacancy claim is proven from published
+        # history, not asserted of the present. Current real-home conformance is
+        # owned by the D5 materialised-state proof module, never by H12.
+        with self.subTest(limb="vacancy held through the parent of the first "
+                               "authorised materialisation commit"):
+            first = introducing_commit("governance/generated-evaluation/")
+            if first is None:
+                # No materialisation landing exists: the D4-era state still holds.
+                self.assertFalse(H.RESERVED_HOME.exists())
+                out = subprocess.run(["git", "ls-files", "--",
+                                      "governance/generated-evaluation/"],
+                                     cwd=ROOT, capture_output=True, text=True, check=True)
+                self.assertEqual(out.stdout.split(), [])
+            else:
+                held = subprocess.run(["git", "ls-tree", "-r", "--name-only",
+                                       first + "^", "--",
+                                       "governance/generated-evaluation/"],
+                                      cwd=ROOT, capture_output=True, text=True, check=True)
+                self.assertEqual(held.stdout.split(), [],
+                                 "the home must have stayed vacant until its "
+                                 "authorised landing")
         with workspace() as ws:
             home = Path(ws) / "generated-evaluation"
             home.mkdir()
