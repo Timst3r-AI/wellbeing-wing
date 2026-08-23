@@ -3602,6 +3602,39 @@
       "content_hash": "sha256:4ef8481b87ec41014a745d3ec06931bec746b6b0bdbe149091674d4bd45d6264",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W7-D5-SEB",
+      "aliases": [],
+      "title": "W7-D5 - Synthetic Execution Records and First Materialisation: Full Architecture Brief",
+      "type": "phase-brief",
+      "phase": "W7",
+      "deliverable": "W7-D5",
+      "path": "docs/phases/W7-D5-synthetic-execution-materialisation-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-23",
+      "role": "The W7-D5 opening brief, opening W7-D5 for brief-governed implementation only, effective on publication and remote verification, and nothing beyond W7-D5. It is the accepted architecture (revision v1.1) and the pre-materialisation authority the W7-D4 handoff requires before any first GER-#### allocation. It fixes: GER lifecycle and identifier persistence with a permanent no-reuse law read from authoritative history, canonical identity paths, and retention with no automatic expiry and no D5 deletion, archival or withdrawal-from-view mechanism; run identity W7-D5-RUN-01, consumed at first capture, with no silent retry and a UTC as_of carrying no location fact; the authority split under which the frozen D4 harness is invoked with W7-D4-SHB as specimen-authoring authority and a pure, write-free binding layer rebinds only the top-level run authority to W7-D5-SEB; the first-materialisation authority for governance/generated-evaluation/ as exactly twenty-six GER records plus one registered run manifest, landed run-atomically or not at all; the exact record and manifest materialisation order and hash direction; the D2-E proof succession design performed only in Landing B - S1 to its lawful endpoint, S2 bound to real repository bytes, S3 candidate-mechanical under the new lifecycle law and reclassified only after its required negative controls are demonstrated; the stop-and-report artefact form with the three-path W7-D5-RUN-01-STOP alternate landing for any capture finding, scan-environment branch change or locus-less local-wordlist finding, the report itself subject to public law and possibly non-landable; the advance of the ADR-0049 GER-#### namespace declaration only at first allocation in Landing B; and the boundary that D5 acceptance is publication conformance and never a W7-D6 human-review disposition. Landing B requires the P4a guard application over the class artefacts and the human authority's landing-specific P4b review across all eleven families, and P4a green is no evidence for P4b. Under ADR-0051 Option D no model is contacted and no generated output exists; ADR-0047 precondition 3 remains outstanding; Part Q and the local-wordlist coordinate seam remain unresolved; specimen evidence is never model evidence. This landing itself allocates no identifier, creates no home, manifest, GER, run or stop report, changes no D4 byte, adds no dependency, touches no scanner or allowlist line, and leaves the existing empty-namespace declaration true and untouched. W7-D5-SEB mints no identifier namespace. W7-D6, W7-D7 and W8 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "W7-D4-SHR",
+        "W7-D4-SHB",
+        "ADR-0052",
+        "ADR-0051",
+        "W7-D2-E",
+        "ADR-0050",
+        "ADR-0049",
+        "ADR-0048",
+        "ADR-0047",
+        "ADR-0046",
+        "W7-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "w7-d5-synthetic-execution-materialisation",
+      "open_decisions": [],
+      "content_hash": "sha256:56ed36c6335599ff5fa100f2021984b9b62079ba7ab82d418d9c2a67084fff92",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
