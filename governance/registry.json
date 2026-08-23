@@ -3632,12 +3632,16 @@
       "id_namespaces": [],
       "implementation_permission": "w7-d5-synthetic-execution-materialisation",
       "open_decisions": [],
-      "content_hash": "sha256:eec4aa2f414302db2bc1b3fd0474a70831ceb7c04c00e2c7daa65a488d455770",
+      "content_hash": "sha256:804fcf07ed0137251c71ed37dd04192f177b09f5e4dc244404e2f6cc914233f1",
       "hash_exclusion_reason": null,
       "errata": [
         {
           "date": "2026-08-23",
           "note": "Reconciled to revision v1.2 by the accepted proof-succession scope amendment W7-D5-PSA (docs/phases/W7-D5-proof-succession-amendment.md): v1.1's section 24 succession design covered only the three D2-E present-state assertions, while the frozen D4 proof module's H12 vacancy limb and the D3 model-boundary module's M6 home limbs also assert present vacancy that a successful materialisation necessarily breaks, leaving section 37 unsatisfiable inside the 33-path scope. v1.2 pins both modules pre-succession, authorises the two bounded succession edits in the successful Landing B candidate only, moves the successful landing scope from exactly 33 to exactly 35 paths, and reconciles sections 6, 24, 34, 35, 37, 38, 39 and 45 plus the header revision line. Discovered by pre-run sweep with W7-D5-RUN-01 unconsumed; content hash recomputed in the same commit."
+        },
+        {
+          "date": "2026-08-23",
+          "note": "Reconciled to revision v1.3 by the accepted manifest registry classification amendment W7-D5-MRA (docs/phases/W7-D5-manifest-registry-classification-amendment.md): section 17.1 typed the run-manifest registry entry phase-record, but the live registry law (test_repo_state statuses-match-source-headers) requires a prose acceptance header no conformant JSON manifest can carry, and the live governed-register type exists for exactly this artefact class on the W6-CAT precedent. v1.3 retypes the W7-D5-RUN-01 entry governed-register with acceptance recorded in W7-D5-SEC, fixes the acyclic dependency direction (RUN-01 depends on SEC, never the reverse), and adds the matching M12 mechanical acceptance criterion. Discovered during Landing B candidate assembly with W7-D5-RUN-01 already complete and wholly clean; the run is not rerun. Landing B remains exactly 35 paths. Content hash recomputed in the same commit."
         }
       ]
     },
@@ -3666,6 +3670,33 @@
       "implementation_permission": "none",
       "open_decisions": [],
       "content_hash": "sha256:601e1b5bff167c45ac300685511f19d5043a407ca0e77fe3a6d14714e405239d",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W7-D5-MRA",
+      "aliases": [],
+      "title": "W7-D5 - Manifest Registry Classification Amendment",
+      "type": "phase-record",
+      "phase": "W7",
+      "deliverable": "W7-D5",
+      "path": "docs/phases/W7-D5-manifest-registry-classification-amendment.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-23",
+      "role": "The governed manifest registry classification amendment to the accepted W7-D5-SEB brief, reconciling it to revision v1.3. Landing B candidate assembly, with W7-D5-RUN-01 already executed once and wholly clean, found an accepted-brief defect: section 17.1 typed the run-manifest registry entry phase-record, but the live registry law requires every accepted entry's file to open with a prose acceptance header that no conformant JSON manifest can carry, and the governed-register type - governed at the W6-D2-C+D landing, precedent W6-CAT - exists for exactly this artefact class, with human acceptance recorded in the governing phase-record. Implementation stopped rather than choosing by discretion, and the architect ruled the live repository law controlling. Settles: the W7-D5-RUN-01 entry is type governed-register; its human acceptance is recorded in W7-D5-SEC, which remains phase-record; W7-D5-RUN-01 depends on W7-D5-SEC as its governing record and W7-D5-SEC does not depend on W7-D5-RUN-01, so no circular authority dependency exists while the completion record still cites and verifies the manifest as evidence; M12 of the materialised-state proof module mechanically asserts the exact type, the governing-record dependency, the canonical path, the matching content hash, implementation_permission none, and the absence of per-GER rows; successful Landing B remains exactly 35 paths, every consequential change being metadata within already-counted paths; and the completed run is not rerun. At its own landing this amendment edits no implementation or test artefact, creates no home artefact, GER or manifest, allocates no identifier, leaves the namespace declaration to advance only in successful Landing B, contacts no model, and leaves Part Q, the local-wordlist seam and ADR-0047 precondition 3 exactly as they stand. W7-D6, W7-D7 and W8 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "W7-D5-PSA",
+        "W7-D5-SEB",
+        "W6-CAT",
+        "ADR-0048",
+        "ADR-0050"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:1894d846c1f1319c4eaa9bd7da240e0b7da8a86805f4421dcd189af51416a1a7",
       "hash_exclusion_reason": null,
       "errata": []
     }

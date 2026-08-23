@@ -3,7 +3,7 @@
 **Status:** Accepted by human reviewer, 2026-08-23. **Effective on publication and remote verification**, at which point it opens W7-D5 and governs the bounded D5 implementation cycle under the full-development mode in section 4, and nothing beyond W7-D5. It is not itself an implementation: it begins no run, allocates no `GER-####` identifier, and creates no generated-evaluation home, manifest or stop report. `W7-D5-RUN-01` begins only after Tara and Ari receive and accept the remotely verified Landing A publication state.
 
 **Date prepared:** 2026-08-23  
-**Revision:** v1.2 - v1.1 reconciled by the accepted proof-succession scope amendment `W7-D5-PSA`; the accepted architecture revision, incorporating the read-only eight-item / four-drift-check review  
+**Revision:** v1.3 - v1.2 reconciled by the accepted manifest registry classification amendment `W7-D5-MRA`; v1.1 reconciled by the accepted proof-succession scope amendment `W7-D5-PSA`; the accepted architecture revision, incorporating the read-only eight-item / four-drift-check review  
 **Phase:** W7 - First-Contact Governance and Synthetic Model Evaluation  
 **Deliverable:** W7-D5 - Synthetic execution records and first generated-evaluation materialisation  
 **Identity:** `W7-D5-SEB`, type `phase-brief`  
@@ -608,9 +608,11 @@ A successful D5 final landing therefore adds exactly two registry entries:
 
 ### 17.1 `W7-D5-RUN-01`
 
-A `phase-record` entry pointing to:
+A `governed-register` entry pointing to:
 
 `governance/generated-evaluation/W7-D5-RUN-01-manifest.json`
+
+The manifest is a JSON data artefact and cannot carry a prose acceptance header, so it is registered under the live `governed-register` type on the `W6-CAT` precedent (`W7-D5-MRA`): its human acceptance is recorded in its governing phase-record `W7-D5-SEC`, and `W7-D5-RUN-01.depends_on` names `W7-D5-SEC` as that governing record. `W7-D5-SEC.depends_on` does not name `W7-D5-RUN-01`, so the registry carries no circular authority dependency; the completion record still cites and verifies the manifest as evidence, because citation is not authority dependency.
 
 It carries:
 
@@ -1181,7 +1183,7 @@ Recommended proof families:
     Reuse governed D4 inventory; no duplicated guard law.
 
 12. **M12 - Registry/run integrity**  
-    Exactly one manifest registry entry, no per-GER registry rows, registry hash matches manifest, completion record separately registered.
+    Exactly one manifest registry entry of exact type `governed-register` with `implementation_permission: "none"`, its governing-record dependency on `W7-D5-SEC`, its canonical manifest path and a content hash matching the exact manifest bytes; no per-GER registry rows; completion record separately registered as `phase-record` (`W7-D5-SEC`).
 
 13. **M13 - Boundary contract**  
     Green proves materialisation integrity only, not model contact, model behaviour, trap success, safety, correctness, D6 disposition, Part Q resolution, local-wordlist resolution, p3 discharge, D6 opening or W8 opening.
