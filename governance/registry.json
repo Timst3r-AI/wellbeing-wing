@@ -3713,6 +3713,7 @@
       "role": "The registered run manifest of W7-D5-RUN-01, the first governed synthetic specimen run under W7-D5-SEB revision v1.3: an integrity index and run inventory only, listing the twenty-six GER records of the run by identifier, canonical path and content hash over the exact final bytes, and carrying the executed exam reference with its frozen published hash and the one-bit scan-environment state sampled for the run (inactive, not manufactured). Registered under the governed-register type per W7-D5-MRA on the W6-CAT precedent, because a conformant JSON manifest cannot carry a prose acceptance header: its human acceptance is recorded in its governing phase-record W7-D5-SEC, named in depends_on, and the governing record does not depend on this register, so no circular authority dependency exists. It contains no result, summary, conclusion, count, winner, score, ranking, disposition, selected variant, capture text or model, provider or runtime metadata; it records no model run, no safety result and no W7-D6 disposition; and every record it lists is authored synthetic specimen evidence under ADR-0051 Option D, never model evidence. GER hashes flow into this manifest and this manifest's hash flows into this registry entry; no record contains its own hash and no manifest self-hash exists. The twenty-six records receive no registry rows of their own under ADR-0048.",
       "governs": [],
       "depends_on": [
+        "W7-D6-HDR",
         "W7-D5-SEC",
         "W7-D5-MRA",
         "W7-D5-PSA",
@@ -3727,7 +3728,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:ad48aa68c62ebfc887033427307c2bb23bcd829c809a244a89425deb4ca72e16",
+      "content_hash": "sha256:ed8ea66b8de389bf5c7afeffb852b7c116e56da4031d97e8af713763c449afa7",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -3832,6 +3833,40 @@
       "implementation_permission": "none",
       "open_decisions": [],
       "content_hash": "sha256:d03333fa6e1b1b3363ccd4aa5bffcd16bba794e997705460776ac004900f3ff2",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W7-D6-HDR",
+      "aliases": [],
+      "title": "W7-D6 - Human Review and Disposition Record",
+      "type": "phase-record",
+      "phase": "W7",
+      "deliverable": "W7-D6",
+      "path": "docs/phases/W7-D6-human-review-disposition-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-08-24",
+      "role": "The single governed W7-D6 human act: Tara's twenty-six individual human-review dispositions of 2026-08-24, one per published W7-D5 generated-evaluation record, each an explicit decision under the published ADR-0053 law and none inferred, defaulted or machine-selected - all twenty-six governance_delta_present, meaning only that the reviewer finds each pair to contain a governance-relevant semantic difference of the kind it was routed to examine, never that a variant passed, failed, is safer or correct, and never a fact about any model or person. The durable disposition source for the twenty-six records - each GER's disposition_record names this record and its row here agrees exactly - and the W7-D6 development and completion record. Carries one verbatim human-authored reviewer observation, marked non-disposition and non-evidentiary: an instrument-design observation that the present set does not strongly discriminate reviewer judgement and that future evaluation design should include wording-or-tone-only negative controls and genuinely underspecified pairs; the observation reproduces no specimen text, alters no token, and resolves no historical unknown; a second reviewer observation concerning one record's review was held too close to ADR-0053 decision 20's anti-laundering boundary on architect review and is preserved verbatim in review transport for a later governed evaluation-design handoff. Records the bounded landing: exactly two later-owned fields changed per GER with every capture byte proven identical to first publication, the manifest cascaded in its per-record hashes only and remaining an integrity index, this record added as the register's later governing authority with no dependency cycle, the D5 materialised-state module's null-disposition limb succeeded to the atomic-pair law at its lawful endpoint, and the H1-H16 disposition proof module landed with its subjects. A published disposition never silently changes and never returns to null; supersession requires a new accepted governed human-review record. Establishes exactly that every published W7-D5 record received an explicit human disposition under a law that preceded it, durably attributed, with all captured evidence preserved unchanged - and no model behaviour, safety, correctness, approval, winner, real-person fact, Part Q resolution, local-wordlist resolution or ADR-0047 precondition 3 discharge. W7-D7 and W8 remain unopened.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0053",
+        "W7-D6-HRB",
+        "W7-D5-SEC",
+        "W7-D5-SEB",
+        "ADR-0052",
+        "ADR-0051",
+        "ADR-0050",
+        "ADR-0049",
+        "ADR-0048",
+        "ADR-0047",
+        "ADR-0046",
+        "ADR-0041"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:954738f5941f6a18e86dd2d6d09b17ccefe336b4fcb7dba87836aa64dcc96ead",
       "hash_exclusion_reason": null,
       "errata": []
     }

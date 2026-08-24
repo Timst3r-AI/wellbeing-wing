@@ -65,8 +65,8 @@
   },
   "human_review": {
    "routed": true,
-   "disposition": null,
-   "disposition_record": null
+   "disposition": "governance_delta_present",
+   "disposition_record": "W7-D6-HDR"
   },
   "non_authority": "Generated output is evaluation evidence only. It is not truth, advice, diagnosis, therapy, safety evidence, correctness evidence, clinical validity, legal conformance, production readiness, approval, or a decision about any person."
  }

@@ -185,8 +185,11 @@ def shape_violations(rec):
     hr = rec.get("human_review") or {}
     if mc.get("authorising_record") is not None:
         out.append("model_contact.authorising_record must be null under Option D")
-    if hr.get("disposition") is not None or hr.get("disposition_record") is not None:
-        out.append("a W7-D6 disposition field is non-null")
+    # W7-D6 succession: universal nullness reached its lawful endpoint when the
+    # ADR-0053 review landed. The shape law here is the atomic pair; vocabulary
+    # and source conformance are owned by tests/test_w7_human_review_dispositions.py.
+    if (hr.get("disposition") is None) != (hr.get("disposition_record") is None):
+        out.append("half-filled W7-D6 review pair")
     if list(rec)[-1] != "non_authority":
         out.append("the ceiling is not the final field")
     if rec.get("non_authority") != H._law_text("ceiling"):
@@ -508,9 +511,10 @@ class M4_CanonicalShape(unittest.TestCase):
             with self.subTest(record=rid):
                 self.assertEqual(shape_violations(rec), [])
         rec = json.loads(json.dumps(load_records()["GER-0001"][0]))
-        with self.subTest(control="a non-null disposition is detected"):
+        with self.subTest(control="a half-filled review pair is detected"):
             mutant = json.loads(json.dumps(rec))
-            mutant["human_review"]["disposition"] = "noted"
+            mutant["human_review"]["disposition"] = None
+            mutant["human_review"]["disposition_record"] = "W7-D6-HDR"
             self.assertTrue(shape_violations(mutant))
         with self.subTest(control="a field after the ceiling is detected"):
             mutant = json.loads(json.dumps(rec))
