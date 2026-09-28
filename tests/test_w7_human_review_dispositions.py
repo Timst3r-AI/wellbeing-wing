@@ -452,10 +452,17 @@ class H13toH15_Boundaries(unittest.TestCase):
             m = re.search(r"\| \*\*3\*\* \|[^|]+\| \*?\*?([A-Z]+)\*?\*? \|", src)
             self.assertIsNotNone(m)
             self.assertEqual(m.group(1), "OUTSTANDING")
-        with self.subTest(fact="no W7-D7 or W8 artefact exists"):
+        with self.subTest(fact="no W7-D7 or W8 artefact existed at the pre-D7 "
+                               "baseline, from published history"):
+            baseline = "3b807a0c031f11f99dcc7c17aff1de952fc21920"
+            tracked_then = _git("ls-tree", "-r", "--name-only",
+                                baseline).split()
+            self.assertEqual([p for p in tracked_then
+                              if "W7-D7" in p or p.startswith("docs/phases/W8")], [])
+        with self.subTest(fact="no W8 artefact exists"):
             tracked = _git("ls-files").split()
             self.assertEqual([p for p in tracked
-                              if "W7-D7" in p or p.startswith("docs/phases/W8")], [])
+                              if p.startswith("docs/phases/W8")], [])
         with self.subTest(fact="every record still declares no model contact"):
             for rid, (rec, _) in sorted(load_records().items()):
                 self.assertIs(rec["model_contact"]["occurred"], False)

@@ -3869,6 +3869,31 @@
       "content_hash": "sha256:954738f5941f6a18e86dd2d6d09b17ccefe336b4fcb7dba87836aa64dcc96ead",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W7-D7-CAB",
+      "aliases": [],
+      "title": "W7-D7-A - W7 Closure-Authorisation Brief",
+      "type": "phase-brief",
+      "phase": "W7",
+      "deliverable": "W7-D7",
+      "path": "docs/phases/W7-D7-A-closure-authorisation-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-09-28",
+      "role": "The opening landing of the W7-D7 closure programme, opening the deliverable for brief-governed closure assessment and closure drafting only, effective on publication and remote verification, and nothing beyond W7-D7. It fixes the three-landing closure architecture - this brief; the whole-phase closure assessment, in which no declaration of closure may appear and which must publish and remote-verify before any closure record is accepted; and the final W7 closure record, which alone may declare closure, effective only on its own publication and remote verification - under the standing W2-through-W6 closure standard restated as closure without false resolution. ADR-0047 precondition 3 remains outstanding in its lawful resting state, Part Q and the local-wordlist seam remain unresolved, the two CARRYABLE seams remain carried on their source-defined terms, the four HARD seams must be re-derived by Landing B as discharged timing gates with named published evidence, and the twenty-six historical generative-era unknowns remain unanswered. The accepted Landing A scope is exactly four paths, the fourth confined to the bounded H15 vacancy succession: the pre-D7 no-W7-D7/W8 vacancy becomes a published-history proof at the pre-D7 baseline, the current-state no-W8 assertion is preserved, and no new current-state W7-D7 cardinality assertion is introduced. No model contact, no new evaluation run, no exam redesign, no W8 artefact, no carried-item repair, no pending-ledger conversion. W7 is not closed by this brief.",
+      "governs": [],
+      "depends_on": [
+        "W7-D6-HDR",
+        "W7-AR",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:2255feda0943ff88e1963c549a1982d1e4064fb39e417ccd02a3a436e69b014f",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
