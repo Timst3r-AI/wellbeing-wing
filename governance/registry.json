@@ -3894,6 +3894,32 @@
       "content_hash": "sha256:2255feda0943ff88e1963c549a1982d1e4064fb39e417ccd02a3a436e69b014f",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W7-D7-CAR",
+      "aliases": [],
+      "title": "W7-D7-B - W7 Whole-Phase Closure Assessment",
+      "type": "phase-record",
+      "phase": "W7",
+      "deliverable": "W7-D7",
+      "path": "docs/phases/W7-D7-B-closure-assessment-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-09-29",
+      "role": "The W7-D7 Landing B whole-phase closure assessment: the evidence record on which any closure decision must rest, containing no declaration of closure. Inventories derived from live public repository sources at the Landing A baseline: the deliverable inventory across runway and D1-D6 with every amendment, erratum and correction; the runway obligation and non-goal assessment in the six accepted closure postures; the seven ADR-0047 first-contact preconditions with precondition 3 reported outstanding in its lawful resting state; the P and Q obligation and proof-succession audit including the D2-E nineteen-obligation matrix trajectory and every authorised bounded succession; the six-seam register with the four HARD timing gates accounted as discharged by named published evidence and Part Q and the local-wordlist seam carried unresolved and bounded on their source-defined terms; the public/private boundary audit with the human semantic review recorded as a human act; the generated-evaluation home integrity audit proving the D6-sealed state byte-unchanged with all twenty-six dispositions remaining individual human acts and no aggregate verdict anywhere; the honest incident, correction and learning log; and the deferred and next-gate inventory carrying the inherited W6 items exactly as W6-CR enumerates them. docs/governance/registry.md is named as a stale subordinate derivative and not repaired. Per the accepted brief, the D6 P4b act is cited as historical only and the fresh D7 closure-time P4b act remains owed at Landing C. W7 is not closed by this record; the final closure record alone may declare closure, on its own publication and remote verification. W8 remains unopened.",
+      "governs": [],
+      "depends_on": [
+        "W7-D7-CAB",
+        "W7-D6-HDR",
+        "W7-AR",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:8c2a5412b44b594bd2133321f47fcc0a2c209082e5877091a486dd5cdb21860c",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
