@@ -3920,6 +3920,33 @@
       "content_hash": "sha256:8c2a5412b44b594bd2133321f47fcc0a2c209082e5877091a486dd5cdb21860c",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W7-CR",
+      "aliases": [],
+      "title": "W7 Closure Record",
+      "type": "phase-record",
+      "phase": "W7",
+      "deliverable": "W7-D7",
+      "path": "docs/phases/W7-closure-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-01",
+      "role": "The W7 closure record and audit seal, satisfying W7-D7 and closing W7 - effective on acceptance, publication and independent remote verification, and not before. Drafted from the published Landing B closure assessment W7-D7-CAR, which is the evidence base for every claim it makes, under the standing W2-through-W6 closure standard restated as closure without false resolution. It declares W7 complete and closed with every unfinished matter named at its true standing: ADR-0047 precondition 3 outstanding in its lawful resting state; Part Q and the local-wordlist seam unresolved and bounded under named doctrine on their source-defined terms; the four HARD seams historically discharged timing gates with named published evidence; the twenty-six historical generative-era unknowns unanswered; the pending ledger untouched; and the inherited W6 inventory carried item-for-item at the standing the assessment records. No model was contacted anywhere in W7 and no claim about model behaviour is established. Closure authorises nothing new: no W8 artefact or authority, no model-contact authority, no exam redesign, no pending conversion, no seam resolution, no private-adoption authority. W8 remains unopened behind its own three-document gate.",
+      "governs": [],
+      "depends_on": [
+        "W7-D7-CAR",
+        "W7-D7-CAB",
+        "W7-D6-HDR",
+        "W7-AR",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:8086966f2355c59d2c8ea34593d177446cac0ec9707977b27d186b7e0d96200a",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
