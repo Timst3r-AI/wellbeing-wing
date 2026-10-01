@@ -3977,6 +3977,31 @@
       "content_hash": "sha256:fda68f9d1e69c166587cfb746d7d1830b39ea99d9c4c6a9129a0b75d34eba24e",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-D1-EDB",
+      "aliases": [],
+      "title": "W8-D1 - Evaluation Doctrine: Opening Brief",
+      "type": "phase-brief",
+      "phase": "W8",
+      "deliverable": "W8-D1",
+      "path": "docs/phases/W8-D1-evaluation-doctrine-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-01",
+      "role": "Gate document three of the W8 entry gate and the W8-D1 opening brief, opening W8-D1 for doctrine work only, effective on publication and remote verification behind the published runway, and nothing beyond W8-D1. It assigns the doctrine record - proposed identity ADR-0054, which does not yet exist - its required settlements: the positive governance-delta law over a growable-never-casually-extensible governed-property law with prior-authority sequencing, under which a case, calibration or finding may reveal a needed property but never extend the law; the affirmative non-delta law under which surface features are not governed properties in themselves, surface difference is never governance difference, and surface classification is never immunity from governance consequence; the mandatory review_inconclusive law on positive conditions including unresolved conflict within admissible source evidence; the closed three-token case-level vocabulary with no aggregate able to override, replace or pressure a case disposition; the evidence-admissibility specification under which reviewer disposition is grounded only in admissible source evidence; the blinding law excluding authoring class and intent before disposition, revealed only afterwards for calibration; the nine anti-collapse distinctions, none weakened or omitted; the human-review law under which mechanical evidence is never human authority; case independence under which case ordering is never hidden evidence; and the prospective, non-retroactive relation to W7, whose records, dispositions and history remain untouched and historically true. The four bound corrections from the consolidated design review are carried as visible requirements. It authorises no doctrine record, no case, no corpus, no calibration, no contact surface and no later deliverable.",
+      "governs": [],
+      "depends_on": [
+        "W8-AR",
+        "W7-CR",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:b0b6ff972f6ef9350f02783e20d825b4769ed801bdb36d2597d60bb02ec56f6e",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
