@@ -459,9 +459,12 @@ class H13toH15_Boundaries(unittest.TestCase):
                                 baseline).split()
             self.assertEqual([p for p in tracked_then
                               if "W7-D7" in p or p.startswith("docs/phases/W8")], [])
-        with self.subTest(fact="no W8 artefact exists"):
-            tracked = _git("ls-files").split()
-            self.assertEqual([p for p in tracked
+        with self.subTest(fact="no W8 artefact existed at the pre-W8 "
+                               "baseline, from published history"):
+            w8_baseline = "7d4ff5792b20a037fdb73ec6a2c5813d744d5bf3"
+            tracked_w8 = _git("ls-tree", "-r", "--name-only",
+                              w8_baseline).split()
+            self.assertEqual([p for p in tracked_w8
                               if p.startswith("docs/phases/W8")], [])
         with self.subTest(fact="every record still declares no model contact"):
             for rid, (rec, _) in sorted(load_records().items()):

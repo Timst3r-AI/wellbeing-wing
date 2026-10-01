@@ -3947,6 +3947,36 @@
       "content_hash": "sha256:8086966f2355c59d2c8ea34593d177446cac0ec9707977b27d186b7e0d96200a",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-AR",
+      "aliases": [],
+      "title": "W8 - Generative Evaluation Maturity (Phase Runway)",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": null,
+      "path": "docs/phases/W8-runway-generative-evaluation-maturity.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-01",
+      "role": "The W8 phase runway and gate document two of the standing three-document entry gate, authorising W8 briefs only and never capability, contact or execution, effective on publication and remote verification. W8 is the evaluation-maturity phase: the instrument must distinguish true governance deltas, negative controls and genuinely inconclusive cases before any assumption that model contact is useful, necessary or authorised. Seven deliverables behind their own briefs - doctrine, discriminating instrument, synthetic calibration, instrument validation, evidence adequacy review, a separately governed contact decision with no outcome preselected, and closure. The W7 public/private boundary and synthetic-first law are inherited whole; ADR-0047 precondition 3 remains outstanding in its lawful resting state; the carried W7 inventory is named and not solved by this runway; and no model is contacted by anything this runway authorises.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "ADR-0003",
+        "ADR-0033",
+        "ADR-0034",
+        "ADR-0046",
+        "ADR-0047",
+        "ADR-0053",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:fda68f9d1e69c166587cfb746d7d1830b39ea99d9c4c6a9129a0b75d34eba24e",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
