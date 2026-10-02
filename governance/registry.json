@@ -4002,6 +4002,40 @@
       "content_hash": "sha256:b0b6ff972f6ef9350f02783e20d825b4769ed801bdb36d2597d60bb02ec56f6e",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0054",
+      "aliases": [],
+      "title": "0054 - W8 Generative Evaluation Maturity Doctrine",
+      "type": "adr",
+      "phase": "W8",
+      "deliverable": "W8-D1",
+      "path": "docs/decisions/0054-generative-evaluation-maturity-doctrine.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-02",
+      "role": "The W8 evaluation doctrine as law, landed before any case exists, satisfying the effective W8-D1 opening brief and visibly incorporating its four bound corrections. Fixes the nine recognised governed properties with growth only by prior authority - a case, calibration or finding may reveal a needed property, never extend the law; the property-based downstream-obligation delta test under which textual difference by itself is never sufficient; the affirmative non-delta law under which surface features are not governed properties in themselves, surface difference is never governance difference, and surface classification is never immunity from governance consequence; the mandatory review_inconclusive law under which failure to prove a delta never defaults to no_governance_delta and neither substantive disposition may be reached by elimination; the closed three-token case-level vocabulary with no aggregate able to override, replace, pressure or rewrite a case disposition; the four-category evidence architecture under which reviewer disposition is grounded only in admissible source evidence; the blinding law under which authoring class and intent are excluded before disposition, nothing reviewer-visible may disclose the authored class, the reveal is post-disposition only, and the authoring label is never evidence for the answer it was designed to test; the nine evaluation anti-collapse rules extending the fifteen-link chain and weakening nothing; the exact human review question with all three dispositions always available and mechanical evidence never human authority; case independence with case ordering never hidden evidence and aggregation only after the session's individual dispositions exist; and the prospective, non-retroactive relation to ADR-0053 under which the twenty-six published W7 dispositions stand exactly as recorded and W7 remains historically true. Proof obligations V1-V12 are classified honestly: the mechanical rows prove carriage and byte-stability only; V8, whether any difference is governance-relevant, is review-only in full. No case, fixture, corpus, calibration, execution record, contact surface or W8-D2 brief exists or is authorised by this record. W8-D2 remains closed behind its own brief.",
+      "governs": [],
+      "depends_on": [
+        "W8-D1-EDB",
+        "W8-AR",
+        "ADR-0053",
+        "ADR-0052",
+        "ADR-0051",
+        "ADR-0050",
+        "ADR-0049",
+        "ADR-0048",
+        "ADR-0047",
+        "ADR-0046",
+        "ADR-0041",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:4cd552df3be6ad7e0e06b4c54ea2beb11ee85dc1e5e6fe61a2e33be3d1b4ecbd",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
