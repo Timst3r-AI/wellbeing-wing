@@ -4036,6 +4036,33 @@
       "content_hash": "sha256:4cd552df3be6ad7e0e06b4c54ea2beb11ee85dc1e5e6fe61a2e33be3d1b4ecbd",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-D2-DIB",
+      "aliases": [],
+      "title": "W8-D2 - Discriminating Instrument: Opening Brief",
+      "type": "phase-brief",
+      "phase": "W8",
+      "deliverable": "W8-D2",
+      "path": "docs/phases/W8-D2-discriminating-instrument-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-02",
+      "role": "The W8-D2 opening brief, opening W8-D2 for discriminating-instrument work only, effective on publication and remote verification, and nothing beyond W8-D2. It fixes a two-landing programme, each behind its own acceptance: D2-B, the proposed case-shape, evidence-separation and blinding law, landing before the first case and defining a new W8 case class that never reuses the W7 GER class, the exact reviewer-visible shape, deterministic class-independent identity and ordering rules, the withheld-authoring-record shape, and the commitment and reveal mechanism; and D2-C, the corpus materialisation and completion, landing the fixed class-opaque reviewer-visible synthetic instrument with one published SHA-256 commitment per withheld authoring record bound one-to-one to the neutral case identity. The corpus is fresh authored synthetic material from the public governance law - the W7 GERs, exam prose and twenty-six historical unknowns remain historically true and are not W8 case material. Before disposition nothing reviewer-visible may disclose or encode authored class; authoring records, including the intended disposition as a construction hypothesis and a non-enumerability nonce carrying no capability, remain byte-fixed in governed external review transport until the D3 review session is complete; class counts and composition stay withheld until post-disposition reveal, which must reproduce every commitment byte-exactly before any calibration comparison. ADR-0054 carries whole: evidence architecture without category conversion, the byte-identical review question, all three tokens on every case, the nine anti-collapse rules, and case independence. No disposition, no calibration, no class disclosure, no model contact, no provider, credential, transport or binary; ADR-0047 precondition 3 remains outstanding in its lawful resting state; P2, Q3, P4a and a fresh P4b bind at every landing. W8-D3 through W8-D7 remain closed behind their own briefs.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0054",
+        "W8-D1-EDB",
+        "W8-AR",
+        "W7-CR",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:1b5be8d2207b06c44a40191e0ebcc785a8daad811103d120eca4029a2da19a83",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
