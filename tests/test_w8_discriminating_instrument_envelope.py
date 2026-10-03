@@ -763,8 +763,27 @@ class V12_DoctrineCarriageAndAbsence(unittest.TestCase):
         tracked = subprocess.run(
             ["git", "ls-files"], cwd=ROOT, capture_output=True, text=True,
             check=True).stdout.split()
-        with self.subTest(fact="no tracked W8 case file exists"):
-            self.assertEqual([p for p in tracked if "W8-C-" in p], [])
+        with self.subTest(fact="the W8 case namespace stayed vacant "
+                               "through the parent of the first "
+                               "authorised corpus materialisation "
+                               "commit, and every tracked case file "
+                               "lives in the governed home"):
+            first = subprocess.run(
+                ["git", "log", "--diff-filter=A", "--format=%H",
+                 "--reverse", "--",
+                 "governance/discriminating-instrument/"],
+                cwd=ROOT, capture_output=True, text=True,
+                check=True).stdout.split()
+            held_at = (first[0] + "^") if first else "HEAD"
+            held = subprocess.run(
+                ["git", "ls-tree", "-r", "--name-only", held_at],
+                cwd=ROOT, capture_output=True, text=True,
+                check=True).stdout.split()
+            self.assertEqual([p for p in held if "W8-C-" in p], [])
+            self.assertEqual(
+                [p for p in tracked
+                 if "W8-C-" in p and not p.startswith(
+                     "governance/discriminating-instrument/")], [])
         with self.subTest(fact="no tracked file carries the authoring "
                                "schema except this module and the law"):
             offenders = []

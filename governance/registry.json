@@ -4126,6 +4126,59 @@
       "content_hash": "sha256:2a7ea0f53bc75b9ee45afd148732f7b5a2f05ccbe3b13518d99e9084c2ccf388",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-D2-DIC",
+      "aliases": [],
+      "title": "W8-D2 - Discriminating Instrument Completion Record",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": "W8-D2",
+      "path": "docs/phases/W8-D2-discriminating-instrument-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-03",
+      "role": "The completion record of W8-D2's D2-C landing: exactly twelve reviewer-visible cases and exactly one commitment manifest materialised under effective ADR-0055 as reconciled by W8-D2-MSA - fresh authored synthetic material under ADR-0054 Parts B-D, all three authoring classes materially exercised with composition withheld until the post-disposition D3 reveal, Part C canonical bytes, evidence-derived identities, mechanical filenames, ascending lexical order, hash grinding prohibited and no collision. Carries the ceremony attestation that every published commitment was reproduced by hashing the exact retained bytes of the withheld records in the governed outside-repository transport, read back read-only at authoring and again at candidate freeze, twelve of twelve PASS both times, and carries the human acceptance of the governed register W8-D2-CM-01 on the W6-CAT and W7-D5-RUN-01 precedent. The corpus proofs prove mechanics only - closure, shape, container, binding, blinding-channel absence, registry binding, count consistency, textual non-reuse - and no proof decides, predicts or hints at any case's authored class or human disposition. No human disposition, calibration, reveal, class-count disclosure, aggregate vocabulary or contact surface anywhere in D2; ADR-0047 precondition 3 remains outstanding in its lawful resting state; W8-D3 through W8-D7 remain closed behind their own briefs.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0055",
+        "W8-D2-MSA",
+        "W8-D2-DIB",
+        "ADR-0054",
+        "W8-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:62df368528b973a590e300267bab89a634894d8e3fe4604815082d99137af93c",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W8-D2-CM-01",
+      "aliases": [],
+      "title": "W8-D2 - Discriminating Instrument: Commitment Manifest",
+      "type": "governed-register",
+      "phase": "W8",
+      "deliverable": "W8-D2",
+      "path": "governance/discriminating-instrument/W8-D2-commitment-manifest.json",
+      "status": "accepted",
+      "accepted_date": "2026-10-03",
+      "role": "The class-opaque commitment manifest of the W8-D2 discriminating instrument: an integrity register only, exactly one closed two-field instance under the W8-D2-MSA container law - schema byte-fixed w8-commitment-manifest-v1, one row per case sorted solely by case_id, each row exactly the case identity, the digest of that case's exact published reviewer-visible bytes, and the commitment over the exact retained withheld-record bytes. Registered under the governed-register type per the W6-CAT and W7-D5-RUN-01 precedent because a conformant JSON register cannot carry a prose acceptance header: its human acceptance is carried by its governing phase-record W8-D2-DIC, named in depends_on, and the governing record does not depend on this register, so no circular authority dependency exists. It contains no authored class, intended answer, construction map, rationale, expected distribution, class count or authoring sequence; the total number of cases is lawfully visible and the composition is not; the commitment preimages remain withheld in the governed outside-repository transport until the post-disposition D3 reveal, which must reproduce every commitment byte-exactly before any calibration comparison.",
+      "governs": [],
+      "depends_on": [
+        "W8-D2-DIC",
+        "ADR-0055",
+        "W8-D2-MSA",
+        "ADR-0054"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:3eb1178037827996c136075f1ffa2ee617134423890d030adc80094cd8a4f459",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
