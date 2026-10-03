@@ -4092,7 +4092,38 @@
       ],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:7ba3ffbeaecca53eed8c9a4dbb9c6ebd38f2b6098ba799ba9c3ff09c7182a33a",
+      "content_hash": "sha256:e23ddd60e197b8eadda50f1400cf0064a4665dd235edb96a05079ef606171d2b",
+      "hash_exclusion_reason": null,
+      "errata": [
+        {
+          "date": "2026-10-03",
+          "note": "Part J decision 28 reconciled by the accepted manifest shape amendment W8-D2-MSA (docs/phases/W8-D2-manifest-shape-amendment.md): the record's decision question claims the manifest shape is fixed completely before any case is authored, but decision 28 fixed rows, ordering, opacity and binding without fixing the outer file container. The reconciliation fixes the manifest instance as one closed two-field object - schema byte-fixed w8-commitment-manifest-v1 and rows exactly the decision's rows - under Part C canonical bytes at the fixed home path, with exactly one instance per corpus. Structural and bounded: no other decision changed, no decision renumbered, the published envelope proof module byte-untouched, and no case, nonce, hidden authoring record, commitment or manifest instance existed when the defect was found. Hash recomputed in the same commit."
+        }
+      ]
+    },
+    {
+      "id": "W8-D2-MSA",
+      "aliases": [],
+      "title": "W8-D2 - Manifest Shape Amendment",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": "W8-D2",
+      "path": "docs/phases/W8-D2-manifest-shape-amendment.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-03",
+      "role": "A bounded structural reconciliation of ADR-0055 Part J, landed before any case exists: the envelope law's decision question claims the manifest shape is fixed completely before any case is authored, but decision 28 omitted the outer file container. Implementation stopped at the gap with the W8-C namespace empty - no case, nonce, hidden authoring record, commitment or manifest instance existed - and this record expands decision 28 in place so the manifest instance is one closed two-field JSON object, schema byte-fixed w8-commitment-manifest-v1 and rows exactly the decision's governed rows, under Part C canonical bytes, exactly one instance at the fixed home path. Structural, not doctrinal: no class-opacity, commitment, custody, reveal, identity or ordering law moves; the published envelope proof module remains historically valid and byte-untouched; the D2-C corpus proof C4 will additionally enforce the fixed outer shape. Also records, at the architectural level, that the outside-repository review transport passed its sentinel durability exercise - outside the repository, outside transient storage, raw-byte reopen equality, standard library only, no provider, credential, secret store or dependency, written once at freeze and never reopened for write. First-case authoring remains prohibited until this amendment is accepted, published and remotely verified.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0055",
+        "W8-D2-DIB",
+        "ADR-0054",
+        "W8-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:2a7ea0f53bc75b9ee45afd148732f7b5a2f05ccbe3b13518d99e9084c2ccf388",
       "hash_exclusion_reason": null,
       "errata": []
     }
