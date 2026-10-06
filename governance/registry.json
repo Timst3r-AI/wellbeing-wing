@@ -4179,6 +4179,35 @@
       "content_hash": "sha256:3eb1178037827996c136075f1ffa2ee617134423890d030adc80094cd8a4f459",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0056",
+      "aliases": [],
+      "title": "0056 - Public Repository Identity and Attribution Boundary",
+      "type": "adr",
+      "phase": "W8",
+      "deliverable": null,
+      "path": "docs/decisions/0056-public-repository-identity-attribution-boundary.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-05",
+      "role": "Cross-cutting public repository identity law: current tracked content uses functional governance roles rather than private identities, with role-faithful substitution (human reviewer, human authority, architect, implementer/builder/executor) and meaning preservation - no decision, disposition, chronology, count, permission, authority relationship or governed outcome moves; lexical collisions (URLs, standards identifiers, acronyms) are preserved byte-untouched, including the EUR-Lex European Legislation Identifier path segment the external assurance source register already explains; generated artefacts are regenerated from remediated sources, never hand-edited; source-document changes and registry hash/role updates move atomically; future Git publication uses Timst3r-AI as author and committer with the account's verified privacy-safe noreply identity, beginning with this record's own publication commit; legitimate public AI collaboration attribution (Claude/Anthropic, and OpenAI/Codex only on genuine contribution with an independently verified identity mapping) remains lawful and non-authoritative; pre-ADR-0056 Git objects - 157 commits with the legacy personal author and committer identity, 12 messages carrying private-project terms, 33 AI attribution trailers - are preserved as named historical residue rather than rewritten, with truthful-claims law barring any whole-history no-private-identity claim while they remain reachable; the accepted A/B/C remediation remains separately gated landing by landing; no W8 deliverable is opened and W8-D3 through W8-D7 remain closed.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W2-D3",
+        "ADR-0003",
+        "W7-CR",
+        "W8-AR",
+        "ADR-0054",
+        "ADR-0055"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:ed0f3ab7e5828c2c7be408b2712a491f68d635bb80efc42e2328d83792a3084d",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
