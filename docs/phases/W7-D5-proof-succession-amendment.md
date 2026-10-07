@@ -7,9 +7,9 @@
 **Deliverable:** W7-D5 - Synthetic execution records and first generated-evaluation materialisation  
 **Identity:** `W7-D5-PSA`, type `phase-record`  
 **Amends:** `W7-D5-SEB` (`docs/phases/W7-D5-synthetic-execution-materialisation-brief.md`), revision v1.1 to v1.2  
-**Architect:** Ari  
-**Builder/executor after acceptance:** Eli  
-**Human authority:** Tara  
+**Architect:** the architect  
+**Builder/executor after acceptance:** the implementer  
+**Human authority:** the human authority  
 **Baseline for this candidate:** `77e388dd3af57ec0dbc445ecf02fa7ca4e434dbc` - `W7-D5: Govern first synthetic execution materialisation`  
 **Baseline registry state:** 113 entries, last `W7-D5-SEB`
 
@@ -24,7 +24,7 @@ The stop was triggered by a pre-implementation sweep of the whole proof corpus f
 1. **`tests/test_w7_synthetic_harness.py`** - the frozen D4 proof module, hash-pinned by brief section 6, any edit a section 34 hard stop. Its `H12_ProofSuccession.test_h12_vacancy_holds_now_and_the_successor_bites_on_fakes` carries an unconditional limb asserting that `governance/generated-evaluation/` does not exist on disk and has no tracked file.
 2. **`tests/test_w7_model_boundary_decision.py`** - the D3 model-boundary proof module, absent from the brief's 33-path successful landing scope. Its `RepositoryStateAtThisLanding.test_m6_home_absent_and_no_ger_identifier_allocated` carries unconditional limbs asserting the same absence, alongside a registry limb (no `GER-####` registry identifier) that remains true after D5.
 
-A successful Landing B necessarily makes both vacancy assertions false, while brief section 37 items 2 and 5 require both modules green over the exact proposed tracked state. The successful candidate was therefore impossible without either exceeding the brief's scope or landing red proofs. Implementation stopped and reported rather than improvising, and Ari independently confirmed both contradictions against the published `77e388dd` state.
+A successful Landing B necessarily makes both vacancy assertions false, while brief section 37 items 2 and 5 require both modules green over the exact proposed tracked state. The successful candidate was therefore impossible without either exceeding the brief's scope or landing red proofs. Implementation stopped and reported rather than improvising, and the architect independently confirmed both contradictions against the published `77e388dd` state.
 
 ## 2. Character of the correction
 
@@ -89,7 +89,7 @@ Exactly four paths:
 
 ## 7. Acceptance criteria
 
-Tara and Ari should be satisfied, before this amendment lands, that:
+The human authority and the architect should be satisfied, before this amendment lands, that:
 
 - both pre-succession pins equal the published blobs at `77e388dd`;
 - the v1.2 diff touches exactly the section 4 sites;

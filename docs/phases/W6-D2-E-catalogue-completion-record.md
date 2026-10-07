@@ -63,7 +63,7 @@ No string grading and no D5-T24 execution (W6-D3's, behind its own brief) · no 
 
 ## 9. Next lawful step
 
-**The W6-D3 opening brief — language-law grading of the admitted strings per D5-T24 — only if Tara authorises.** Until then the catalogue stands as it is: thirty-three governed words, validated, ungraded, unrendered, and honest about all three.
+**The W6-D3 opening brief — language-law grading of the admitted strings per D5-T24 — only if the human authority authorises.** Until then the catalogue stands as it is: thirty-three governed words, validated, ungraded, unrendered, and honest about all three.
 
 ---
 

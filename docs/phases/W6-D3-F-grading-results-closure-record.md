@@ -28,7 +28,7 @@ No W6-D4 work has begun: no surface, UI, CLI, rendering, or presentation artefac
 
 ## 5. Next lawful step
 
-**W6-D4 is next and remains unopened** — review surfaces, behind its own opening brief (W6-D4-A), under the ADR-0043 boundary contract and its twenty proof obligations, only if Tara authorises. **W6-D5, W6-D6, and W7 remain unopened.**
+**W6-D4 is next and remains unopened** — review surfaces, behind its own opening brief (W6-D4-A), under the ADR-0043 boundary contract and its twenty proof obligations, only if the human authority authorises. **W6-D5, W6-D6, and W7 remain unopened.**
 
 ---
 

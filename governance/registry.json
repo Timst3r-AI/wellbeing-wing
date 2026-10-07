@@ -2086,7 +2086,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:0ba35712ba85b2df48e9b837e6406c8c0a9347ad008148edac2db22f604c7538",
+      "content_hash": "sha256:1ce7c980b3e45342e5fe485d053d9f4ef3ab887015914158a5146345a076ceba",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -2321,7 +2321,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:1052627369b1376b90cb6038dfa2b5cb33665cdcecb4aa03c9c5891444408dc3",
+      "content_hash": "sha256:b122550d449a508695e225e46bbdd602cece9cb20bf92e57719a4a8d2a75247b",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -2565,7 +2565,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:2043cbc8d09ff352deebc7cce4af7f5710295bdce1a62a4063da16f85850b683",
+      "content_hash": "sha256:895b3bd2832f3ca6d65c585d94a4af11712008a035003e08cd7504687c692c62",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -2715,7 +2715,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:3ac8d10544de9602528d18aba11dc8480b02d6bfbb5c600ba47f1c0b58e16ac1",
+      "content_hash": "sha256:a0a83636343aa719fda1c0803af515cc264b8cdf89dd4521f4455feea8693197",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -2729,7 +2729,7 @@
       "path": "docs/phases/W6-D3-ABC-grading-opening-scope-rubric.md",
       "status": "accepted",
       "accepted_date": "2026-08-17",
-      "role": "The opening landing of the W6-D3 programme, merging the A, B and C sub-phases with the justification stated in place: three docs-only decisions with no artefact mutation, whose reviewable unit is the complete grading framework before any grading executes, with the judgement-heavy grading landing kept separate. Opens W6-D3 for brief-governed work only, answering exactly one question — are the words lawful — with showing, assurance and closure left to their own deliverables. Locks the grading population at exactly the thirty-three admitted catalogue entries CAT-0001 through CAT-0033 under the W6-CAT registered hash, with no hidden strings, no exclusions, and the three historical wording-register items expressly outside the graded population as sealed-record register questions. Fixes the language-law rubric on the D5-T24 spine — governance information must be legible, not merely present — read at string level as information living in the wording itself, load-bearing and unremovable, with surface-layer legibility left to W6-D4 and W6-D5 at the layer where type sizes exist. Eight criteria under the DR-W4-06 decidability discipline: four mechanical (barred wording under word-boundary matching with the two named W1-D3 collocations for passed as the only exception; placeholder discipline; governance-information carriage inline as slots; state-name fidelity in source terms) and four review-only (authority-non-increase; uncertainty carriage with most-protective posture; non-authority framing; accompaniment compatibility). The disposition vocabulary is closed at four values deliberately containing no pass, no fail and no conform- form: lawful-as-worded, unlawful-as-worded which stops for Tara and Ari before any correction path is designed, routed-to-review, and deferred. Grading never touches the words — the catalogue stays byte-clean, proven against its registered hash at every landing — and the ceiling binds every grade ever issued: a grade is not approval, not display permission, not renderability, not safety, not correctness, and not a claim of any kind. States proof obligations for the grading landing. No string is graded by this record; W6-D4 through W6-D6 and W7 remain unopened.",
+      "role": "The opening landing of the W6-D3 programme, merging the A, B and C sub-phases with the justification stated in place: three docs-only decisions with no artefact mutation, whose reviewable unit is the complete grading framework before any grading executes, with the judgement-heavy grading landing kept separate. Opens W6-D3 for brief-governed work only, answering exactly one question — are the words lawful — with showing, assurance and closure left to their own deliverables. Locks the grading population at exactly the thirty-three admitted catalogue entries CAT-0001 through CAT-0033 under the W6-CAT registered hash, with no hidden strings, no exclusions, and the three historical wording-register items expressly outside the graded population as sealed-record register questions. Fixes the language-law rubric on the D5-T24 spine — governance information must be legible, not merely present — read at string level as information living in the wording itself, load-bearing and unremovable, with surface-layer legibility left to W6-D4 and W6-D5 at the layer where type sizes exist. Eight criteria under the DR-W4-06 decidability discipline: four mechanical (barred wording under word-boundary matching with the two named W1-D3 collocations for passed as the only exception; placeholder discipline; governance-information carriage inline as slots; state-name fidelity in source terms) and four review-only (authority-non-increase; uncertainty carriage with most-protective posture; non-authority framing; accompaniment compatibility). The disposition vocabulary is closed at four values deliberately containing no pass, no fail and no conform- form: lawful-as-worded, unlawful-as-worded which stops for the human authority and the architect before any correction path is designed, routed-to-review, and deferred. Grading never touches the words — the catalogue stays byte-clean, proven against its registered hash at every landing — and the ceiling binds every grade ever issued: a grade is not approval, not display permission, not renderability, not safety, not correctness, and not a claim of any kind. States proof obligations for the grading landing. No string is graded by this record; W6-D4 through W6-D6 and W7 remain unopened.",
       "governs": [],
       "depends_on": [
         "W6-AR",
@@ -2749,7 +2749,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:e57e352b8fa6d105bc926e10528ee28bf9f3f53c8f57c5cbc36ba8a45a277e39",
+      "content_hash": "sha256:984c7bd27fe075abc2506c87bd5fb3631cd03ca4d0025c162c1494489ca67c9c",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -2805,7 +2805,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:827ad8a36ca8e35db1c17e36fd26d5759a25230dd57fec53b3add9383cebf5b8",
+      "content_hash": "sha256:c6c48ac64907101c13b1b57beb9135f786affe6b2c8defa208524caa8e5c9a69",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -2852,7 +2852,7 @@
       "path": "docs/phases/W6-D4-DEF-surface-materialisation-record.md",
       "status": "accepted",
       "accepted_date": "2026-08-17",
-      "role": "The materialisation landing of the W6-D4 programme, merging D, E and F because a surface and its proofs are same-commit-coupled. The static review surface exists: a dependency-free deterministic generator reading exactly the six declared inputs of the exposure contract with undeclared access refusing structurally, emitting one HTML artefact with no JavaScript, no forms, no controls, no links, no external references, no verdict glyphs and a provably neutral grey palette encoding nothing, plus the ADR-0043 fifteen declarations as data with empty glyph, affordance, write, persistence and external inventories, plus the mandatory per-item trace of one hundred and eighty-eight rows — thirty-three register entries, sixty-five evidence rows, twenty-three executed fixtures, twenty-six honest unknowns, twenty-five routed deltas with both variant captures whole, nine pending stubs and seven carried questions — each row carrying source, catalogue id where applicable, governed state, accompaniment, rendered wording, proof result and non-authority confirmation, under Tara's directive that family reasoning is explanatory and the per-item trace is the accountability. Twenty-six structural proofs land in the same commit: bounded clockless imports, no discovery, write paths exactly two, byte-identical regeneration as the integrity mechanism, trace bijection both ways, accompaniments and aphorisms and ceilings rendered inline, uncomfortable states at full size, no barred affirmative anywhere, no display-authorisation claim, and artefacts living only under docs/surface. Viewing the surface reviews nothing, decides nothing, approves nothing and retires nothing — structurally, because nothing on it can be pressed. A green suite means contract conformance only. W6-D4-G remains separate; W6-D5, W6-D6 and W7 remain unopened.",
+      "role": "The materialisation landing of the W6-D4 programme, merging D, E and F because a surface and its proofs are same-commit-coupled. The static review surface exists: a dependency-free deterministic generator reading exactly the six declared inputs of the exposure contract with undeclared access refusing structurally, emitting one HTML artefact with no JavaScript, no forms, no controls, no links, no external references, no verdict glyphs and a provably neutral grey palette encoding nothing, plus the ADR-0043 fifteen declarations as data with empty glyph, affordance, write, persistence and external inventories, plus the mandatory per-item trace of one hundred and eighty-eight rows — thirty-three register entries, sixty-five evidence rows, twenty-three executed fixtures, twenty-six honest unknowns, twenty-five routed deltas with both variant captures whole, nine pending stubs and seven carried questions — each row carrying source, catalogue id where applicable, governed state, accompaniment, rendered wording, proof result and non-authority confirmation, under the human authority's directive that family reasoning is explanatory and the per-item trace is the accountability. Twenty-six structural proofs land in the same commit: bounded clockless imports, no discovery, write paths exactly two, byte-identical regeneration as the integrity mechanism, trace bijection both ways, accompaniments and aphorisms and ceilings rendered inline, uncomfortable states at full size, no barred affirmative anywhere, no display-authorisation claim, and artefacts living only under docs/surface. Viewing the surface reviews nothing, decides nothing, approves nothing and retires nothing — structurally, because nothing on it can be pressed. A green suite means contract conformance only. W6-D4-G remains separate; W6-D5, W6-D6 and W7 remain unopened.",
       "governs": [],
       "depends_on": [
         "W6-D4-SOB",
@@ -2871,7 +2871,7 @@
       "id_namespaces": [],
       "implementation_permission": "w6-d4-static-surface-materialisation",
       "open_decisions": [],
-      "content_hash": "sha256:86362be9b7441abf5da05d3783ca21be17219d6c3c591d7b108d9dd80565c309",
+      "content_hash": "sha256:c92f4112e4a1a90c2ecafbc31a4e7d36d5fdf193075b46c8973baaad88d14f3f",
       "hash_exclusion_reason": null,
       "errata": [
         {
@@ -2938,7 +2938,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:985e44ced27a15ab5658995f6f41819a75a0d29d1eb1ef9a9681196c0718c5a5",
+      "content_hash": "sha256:4a7ce45b7934c43ab2a03c9075e6ae00071f81305370ddd95d6c34fb583879db",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -2999,7 +2999,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:0d81388d493261cab34c5f3275a6a628f07cbf582c23825c548550de80809df3",
+      "content_hash": "sha256:906b57aeabdf8eb9203e3ad02c629be0d027e8020b43ad04554ae52aabc95389",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -3529,7 +3529,7 @@
       "id_namespaces": [],
       "implementation_permission": "w7-d4-synthetic-harness-binding",
       "open_decisions": [],
-      "content_hash": "sha256:f5d4a0dbe4f6739b87e503f44ff23c5f30ee01c6d07d215ea1ee2be7430f2c84",
+      "content_hash": "sha256:656ecde1cd7fb1aca67b5a11c5342a0983ba5fa259dc3fb2365435c3c89bac75",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -3599,7 +3599,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:4ef8481b87ec41014a745d3ec06931bec746b6b0bdbe149091674d4bd45d6264",
+      "content_hash": "sha256:0ed7151f4f845f463a52f423809694b96d47d0e78cf5e9843a32a3688a136bf1",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -3632,7 +3632,7 @@
       "id_namespaces": [],
       "implementation_permission": "w7-d5-synthetic-execution-materialisation",
       "open_decisions": [],
-      "content_hash": "sha256:804fcf07ed0137251c71ed37dd04192f177b09f5e4dc244404e2f6cc914233f1",
+      "content_hash": "sha256:c293c23723377dbe4193bad240b7c07a6ee786b3ebbfe4c1574a64f234c7e816",
       "hash_exclusion_reason": null,
       "errata": [
         {
@@ -3669,7 +3669,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:601e1b5bff167c45ac300685511f19d5043a407ca0e77fe3a6d14714e405239d",
+      "content_hash": "sha256:d706a56434b29a40633e02f050a5353d1485709f070f126486edae3fb3c53754",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -3696,7 +3696,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:1894d846c1f1319c4eaa9bd7da240e0b7da8a86805f4421dcd189af51416a1a7",
+      "content_hash": "sha256:e577c56fa880e18a25efeb75d27e2bb7fb83fcab3316de95ed9660ff07a2cd67",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -3763,7 +3763,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:35edc1acb8f0605072b9fd1a61ab530232bdc7f7a62d8c745cecebbc08826d48",
+      "content_hash": "sha256:1e8ac6895e216ac1ad54c034a8303dcdcd3ec40d5a1c8ee8c043b3478ae70f65",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -3777,7 +3777,7 @@
       "path": "docs/phases/W7-D6-human-review-disposition-brief.md",
       "status": "accepted",
       "accepted_date": "2026-08-23",
-      "role": "The W7-D6 opening brief, opening W7-D6 for brief-governed human-review work only, effective on publication and remote verification, and nothing beyond W7-D6. It fixes the three-landing architecture: this brief; ADR-0053, the human review and generated-evaluation disposition law, which must publish before any disposition exists; and the disposition materialisation, in which Tara alone supplies twenty-six individual human dispositions, one per published GER, recorded in the single governed human-review phase-record W7-D6-HDR and bound into each GER's two later-owned human_review fields with everything else immutable. The review question is fixed: whether the human reviewer finds a governance-relevant semantic difference in the paired synthetic evaluation record on the public evidence in that record alone - never which variant is better, safer, correct or preferred, never a verdict on a model or a person, never approval. The disposition vocabulary is closed at exactly three ADR-0053 tokens - governance_delta_present, governance_delta_not_established, review_inconclusive - with no fourth token and the pass/fail/safe/winner family structurally absent. Finding disposition and human-review disposition remain different governed objects per ADR-0050; D6 alters no findings, no scan_status, no capture byte and no non-review field; a published disposition never silently changes and never returns to null, with supersession only by a new accepted governed human-review record. The manifest receives only the resulting per-record hash updates and remains an integrity index; no disposition summary, count, winner, score or ranking may enter it. D5 historical records remain historically true and unchanged; live proofs receive bounded succession only where the mandated Stage 0 sweep proves it - at this opening the sweep found exactly one succession target, the null-disposition limb of the D5 materialised-state module. Eli may not make, infer, default or fill any disposition; only Tara supplies the human act. At its own landing this brief performs no review, changes no GER, allocates no identifier, contacts no model, resolves neither Part Q nor the local-wordlist seam, discharges no ADR-0047 precondition, and opens neither W7-D7 nor W8. Per ADR-0041, review material reaches the human whole and unranked: Ari may provide source-grounded procedural and governance clarification, but may not recommend a disposition, select a variant or express a preferred review outcome.",
+      "role": "The W7-D6 opening brief, opening W7-D6 for brief-governed human-review work only, effective on publication and remote verification, and nothing beyond W7-D6. It fixes the three-landing architecture: this brief; ADR-0053, the human review and generated-evaluation disposition law, which must publish before any disposition exists; and the disposition materialisation, in which the human reviewer alone supplies twenty-six individual human dispositions, one per published GER, recorded in the single governed human-review phase-record W7-D6-HDR and bound into each GER's two later-owned human_review fields with everything else immutable. The review question is fixed: whether the human reviewer finds a governance-relevant semantic difference in the paired synthetic evaluation record on the public evidence in that record alone - never which variant is better, safer, correct or preferred, never a verdict on a model or a person, never approval. The disposition vocabulary is closed at exactly three ADR-0053 tokens - governance_delta_present, governance_delta_not_established, review_inconclusive - with no fourth token and the pass/fail/safe/winner family structurally absent. Finding disposition and human-review disposition remain different governed objects per ADR-0050; D6 alters no findings, no scan_status, no capture byte and no non-review field; a published disposition never silently changes and never returns to null, with supersession only by a new accepted governed human-review record. The manifest receives only the resulting per-record hash updates and remains an integrity index; no disposition summary, count, winner, score or ranking may enter it. D5 historical records remain historically true and unchanged; live proofs receive bounded succession only where the mandated Stage 0 sweep proves it - at this opening the sweep found exactly one succession target, the null-disposition limb of the D5 materialised-state module. The implementer may not make, infer, default or fill any disposition; only the human reviewer supplies the human act. At its own landing this brief performs no review, changes no GER, allocates no identifier, contacts no model, resolves neither Part Q nor the local-wordlist seam, discharges no ADR-0047 precondition, and opens neither W7-D7 nor W8. Per ADR-0041, review material reaches the human whole and unranked: the architect may provide source-grounded procedural and governance clarification, but may not recommend a disposition, select a variant or express a preferred review outcome.",
       "governs": [],
       "depends_on": [
         "W7-D5-SEC",
@@ -3798,7 +3798,7 @@
       "id_namespaces": [],
       "implementation_permission": "w7-d6-human-review-disposition",
       "open_decisions": [],
-      "content_hash": "sha256:c0bd6fe1c7ef1cce1863f82f50c3ce86e1b1528c90bed5a3175082368643bbc3",
+      "content_hash": "sha256:8b040b3094d4fecf19b19948db8aa97a522d720c518f5119ad8fca3c3cbe470a",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -3846,7 +3846,7 @@
       "path": "docs/phases/W7-D6-human-review-disposition-record.md",
       "status": "accepted",
       "accepted_date": "2026-08-24",
-      "role": "The single governed W7-D6 human act: Tara's twenty-six individual human-review dispositions of 2026-08-24, one per published W7-D5 generated-evaluation record, each an explicit decision under the published ADR-0053 law and none inferred, defaulted or machine-selected - all twenty-six governance_delta_present, meaning only that the reviewer finds each pair to contain a governance-relevant semantic difference of the kind it was routed to examine, never that a variant passed, failed, is safer or correct, and never a fact about any model or person. The durable disposition source for the twenty-six records - each GER's disposition_record names this record and its row here agrees exactly - and the W7-D6 development and completion record. Carries one verbatim human-authored reviewer observation, marked non-disposition and non-evidentiary: an instrument-design observation that the present set does not strongly discriminate reviewer judgement and that future evaluation design should include wording-or-tone-only negative controls and genuinely underspecified pairs; the observation reproduces no specimen text, alters no token, and resolves no historical unknown; a second reviewer observation concerning one record's review was held too close to ADR-0053 decision 20's anti-laundering boundary on architect review and is preserved verbatim in review transport for a later governed evaluation-design handoff. Records the bounded landing: exactly two later-owned fields changed per GER with every capture byte proven identical to first publication, the manifest cascaded in its per-record hashes only and remaining an integrity index, this record added as the register's later governing authority with no dependency cycle, the D5 materialised-state module's null-disposition limb succeeded to the atomic-pair law at its lawful endpoint, and the H1-H16 disposition proof module landed with its subjects. A published disposition never silently changes and never returns to null; supersession requires a new accepted governed human-review record. Establishes exactly that every published W7-D5 record received an explicit human disposition under a law that preceded it, durably attributed, with all captured evidence preserved unchanged - and no model behaviour, safety, correctness, approval, winner, real-person fact, Part Q resolution, local-wordlist resolution or ADR-0047 precondition 3 discharge. W7-D7 and W8 remain unopened.",
+      "role": "The single governed W7-D6 human act: the human reviewer's twenty-six individual human-review dispositions of 2026-08-24, one per published W7-D5 generated-evaluation record, each an explicit decision under the published ADR-0053 law and none inferred, defaulted or machine-selected - all twenty-six governance_delta_present, meaning only that the reviewer finds each pair to contain a governance-relevant semantic difference of the kind it was routed to examine, never that a variant passed, failed, is safer or correct, and never a fact about any model or person. The durable disposition source for the twenty-six records - each GER's disposition_record names this record and its row here agrees exactly - and the W7-D6 development and completion record. Carries one verbatim human-authored reviewer observation, marked non-disposition and non-evidentiary: an instrument-design observation that the present set does not strongly discriminate reviewer judgement and that future evaluation design should include wording-or-tone-only negative controls and genuinely underspecified pairs; the observation reproduces no specimen text, alters no token, and resolves no historical unknown; a second reviewer observation concerning one record's review was held too close to ADR-0053 decision 20's anti-laundering boundary on architect review and is preserved verbatim in review transport for a later governed evaluation-design handoff. Records the bounded landing: exactly two later-owned fields changed per GER with every capture byte proven identical to first publication, the manifest cascaded in its per-record hashes only and remaining an integrity index, this record added as the register's later governing authority with no dependency cycle, the D5 materialised-state module's null-disposition limb succeeded to the atomic-pair law at its lawful endpoint, and the H1-H16 disposition proof module landed with its subjects. A published disposition never silently changes and never returns to null; supersession requires a new accepted governed human-review record. Establishes exactly that every published W7-D5 record received an explicit human disposition under a law that preceded it, durably attributed, with all captured evidence preserved unchanged - and no model behaviour, safety, correctness, approval, winner, real-person fact, Part Q resolution, local-wordlist resolution or ADR-0047 precondition 3 discharge. W7-D7 and W8 remain unopened.",
       "governs": [],
       "depends_on": [
         "ADR-0053",
@@ -3866,7 +3866,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:954738f5941f6a18e86dd2d6d09b17ccefe336b4fcb7dba87836aa64dcc96ead",
+      "content_hash": "sha256:8bd96c1f22c9664e4c891ad3827a6c818fd1ac82f2e62df1990a977e5216fea8",
       "hash_exclusion_reason": null,
       "errata": []
     },
@@ -3891,7 +3891,7 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:2255feda0943ff88e1963c549a1982d1e4064fb39e417ccd02a3a436e69b014f",
+      "content_hash": "sha256:76b6e0c45d3e6384736d4aabbd7db3ff0923d36d33d188b37da2a9ab8fb1f080",
       "hash_exclusion_reason": null,
       "errata": []
     },

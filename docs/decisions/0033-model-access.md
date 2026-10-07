@@ -249,7 +249,7 @@ Generic and structural wording throughout — user, Wing, room, grant, edge, rec
 ## Open boundaries and later ownership
 
 1. **OR-2** — carried, not closed; unclosable by design while any boundary is not the Wing's. **Owner: none.**
-2. **The vendor-hosted model class** — unopened; its conditions are stated in A4. **Owner: a future governed record, if ever, with Tara's explicit ruling.**
+2. **The vendor-hosted model class** — unopened; its conditions are stated in A4. **Owner: a future governed record, if ever, with the human authority's explicit ruling.**
 3. **The ADR-0004 residue applicability check** — mandatory before any W5-D2 implementation; not resolved here. **Owner: its own pre-W5-D2 gate or separate governed record.**
 4. **Determinism and paired-variant semantics** — the jointly held question. **Owner: DR-W5-07**, with this record's half held open by constraint-free carriage (C5).
 5. **Harness method, observation records, `execution_status`, the T12 seam** — **DR-W5-07.**

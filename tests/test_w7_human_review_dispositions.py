@@ -430,9 +430,13 @@ class H13toH15_Boundaries(unittest.TestCase):
             self.assertTrue(winner_absence_violations(m))
 
     def test_h15_boundary_preservation(self):
-        # The boundaries are proven against the candidate's actual bytes, not
-        # merely asserted in prose: every seam-owning artefact is byte-identical
-        # to the pre-D6 published reference, and no out-of-phase artefact exists.
+        # The boundaries are proven against actual bytes, not merely asserted
+        # in prose: eight seam-owning artefacts are live-byte identical to the
+        # pre-D6 published reference; the W7-D5 execution record is proven
+        # unmoved from that reference through the ADR-0056 Landing A baseline,
+        # after which ADR-0056 governs its public-identity remediation and its
+        # registry hash binds its current bytes; and no out-of-phase artefact
+        # exists.
         ref = pre_d6_ref()
         for rel in ("scripts/public-safety-scan.py",
                     "scripts/scan-allowlist.txt",
@@ -440,12 +444,18 @@ class H13toH15_Boundaries(unittest.TestCase):
                     "docs/decisions/0050-finding-is-an-event-and-finding-disposition-mechanism.md",
                     "docs/decisions/0047-first-contact-doctrine-and-named-not-performed-gate.md",
                     "docs/decisions/0051-model-boundary-no-public-contact.md",
-                    "docs/phases/W7-D5-synthetic-execution-materialisation-record.md",
                     "fixtures/SYNTHETIC-w7-d4-exam.json",
                     "tests/w7_synthetic_evaluation_harness.py"):
             with self.subTest(byte_identical_to_pre_d6=rel):
                 self.assertEqual(_lf(_blob(ref, rel)),
                                  _lf((ROOT / rel).read_bytes()))
+        with self.subTest(fact="the W7-D5 execution record stayed byte-identical "
+                               "to the pre-D6 reference through the ADR-0056 "
+                               "Landing A baseline"):
+            rel = "docs/phases/W7-D5-synthetic-execution-materialisation-record.md"
+            adr0056_baseline = "797e839ac9484a04ac84e1f7bb5f84851f539579"
+            self.assertEqual(_lf(_blob(ref, rel)),
+                             _lf(_blob(adr0056_baseline, rel)))
         with self.subTest(fact="ADR-0047 precondition 3 remains OUTSTANDING in the "
                                "published precondition table"):
             src = _text(ROOT / "docs/decisions/0051-model-boundary-no-public-contact.md")

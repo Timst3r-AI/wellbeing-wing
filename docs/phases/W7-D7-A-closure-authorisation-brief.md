@@ -27,7 +27,7 @@ This brief says that it may, but only through the evidence sequence below.
 
 3. **W7 is not closed by accepting this brief.** Closure exists only after the final W7 closure record has itself been accepted, published and independently remote-verified.
 
-4. **W8 remains unopened.** It may be named only as a future gate. Nothing in D7 may define W8's runway, choose a model-contact path for it, allocate a W8 deliverable, or convert Tara's W7-D6 instrument-design observation into W8 authority.
+4. **W8 remains unopened.** It may be named only as a future gate. Nothing in D7 may define W8's runway, choose a model-contact path for it, allocate a W8 deliverable, or convert the human reviewer's W7-D6 instrument-design observation into W8 authority.
 
 ## 2. The closure claim D7 is allowed to test
 
@@ -177,7 +177,7 @@ ADR-0052 requires P4a and P4b to remain separate and requires closure records an
 D7 adopts the following shape:
 
 - **Landing A and Landing B** must report P4a and P4b separately. They may cite the D6 P4b act only as the historical human act governing the exact D6 class bytes; they may not imply that P4a proves P4b or that the D6 act silently becomes a new D7 act.
-- **Landing C requires a fresh D7 closure-time P4b act by Tara** against the exact final closure candidate, family by family across the complete ADR-0046 decision 11 prohibition set. The generated-evaluation class artefacts must first be mechanically proven byte-identical to the D6-sealed state unless the closure programme has separately stopped for a lawful change.
+- **Landing C requires a fresh D7 closure-time P4b act by the human reviewer** against the exact final closure candidate, family by family across the complete ADR-0046 decision 11 prohibition set. The generated-evaluation class artefacts must first be mechanically proven byte-identical to the D6-sealed state unless the closure programme has separately stopped for a lawful change.
 - The final closure record and its phase-board row must state both the P4a mechanical result and the fresh P4b human act, separately.
 - The fresh D7 P4b act establishes only semantic conformance to the public prohibition set for the exact closure candidate. It establishes nothing about model behaviour, safety, correctness, clinical validity, legal conformance, production readiness, approval or real-person adoption.
 
@@ -269,9 +269,9 @@ For each item, Landing B must state:
 
 **No future phase is assigned an obligation merely because D7 wants somewhere to put it.**
 
-## 13. Tara's W7-D6 instrument-design observation
+## 13. The human reviewer's W7-D6 instrument-design observation
 
-`W7-D6-HDR` §3 contains Tara's human-authored, non-disposition, non-evidentiary instrument-design observation. D7 must **not paraphrase that observation into governed closure prose**. If the observation is carried at all, it must be carried either by bare source citation or by verbatim quotation from the published HDR §3.
+`W7-D6-HDR` §3 contains the human reviewer's human-authored, non-disposition, non-evidentiary instrument-design observation. D7 must **not paraphrase that observation into governed closure prose**. If the observation is carried at all, it must be carried either by bare source citation or by verbatim quotation from the published HDR §3.
 
 D7 must treat that observation exactly as its source does:
 - it may be named as a **future evaluation-design input**;
@@ -381,7 +381,7 @@ In addition:
 - verify no model-contact claim exists;
 - perform the standing **P2 and Q3 human-review duties** for this landing;
 - verify P4a mechanically over the exact final class artefacts;
-- obtain Tara's **fresh D7 closure-time P4b act** under §8.1 against the exact final closure candidate, separate from P4a;
+- obtain the human reviewer's **fresh D7 closure-time P4b act** under §8.1 against the exact final closure candidate, separate from P4a;
 - verify the final closure candidate's public/private boundary by human review;
 - run the full deterministic suite and public-safety scan;
 - verify exact intended path scope;
@@ -425,7 +425,7 @@ This brief is acceptable only if the human reviewer agrees that:
 9. Closure is effective only on final publication and independent remote verification.
 10. Any anomaly escalates to human review rather than being absorbed into closure prose.
 11. P2 and Q3 are performed as standing human-review duties at every D7 landing.
-12. The final closure candidate receives a fresh D7-specific P4b human act by Tara, separate from P4a, with generated-evaluation class bytes proven unchanged from the D6-sealed state unless a separately governed stop has occurred.
+12. The final closure candidate receives a fresh D7-specific P4b human act by the human reviewer, separate from P4a, with generated-evaluation class bytes proven unchanged from the D6-sealed state unless a separately governed stop has occurred.
 13. `docs/governance/registry.md` is named as a stale subordinate derivative and is not repaired by D7.
 
 ## 20. Candidate final closure sentence

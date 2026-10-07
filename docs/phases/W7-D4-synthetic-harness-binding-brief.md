@@ -31,7 +31,7 @@ The W7 north star remains controlling:
 
 ## 2. Controlling authority
 
-Eli must re-read the live published versions of the following before changing any file, and must work from their current bytes rather than from this brief's summaries:
+The implementer must re-read the live published versions of the following before changing any file, and must work from their current bytes rather than from this brief's summaries:
 
 1. `docs/phases/W7-runway-first-contact-governance-synthetic-evaluation.md`
 2. `docs/decisions/0046-synthetic-only-public-law-and-adoption-boundary.md`
@@ -49,27 +49,27 @@ Eli must re-read the live published versions of the following before changing an
 14. `tests/test_w7_model_boundary_decision.py`
 15. the current registry and phase board.
 
-Where this brief and a landed source differ, the landed source wins. Eli must report the discrepancy and stop if the difference changes scope, authority, schema, public/private law, Part Q, model-contact posture, or the D5 handoff.
+Where this brief and a landed source differ, the landed source wins. The implementer must report the discrepancy and stop if the difference changes scope, authority, schema, public/private law, Part Q, model-contact posture, or the D5 handoff.
 
 ---
 
 ## 3. Full-development operating mode
 
-This deliverable deliberately does **not** use the Ari/Eli relay for each internal subpart.
+This deliverable deliberately does **not** use the architect/implementer relay for each internal subpart.
 
-Once this brief is accepted, landed and remotely verified, Eli may complete the whole D4 development cycle independently, including source grounding, design, fixture authoring, implementation, tests, negative controls, mutation work, scans and final packaging.
+Once this brief is accepted, landed and remotely verified, the implementer may complete the whole D4 development cycle independently, including source grounding, design, fixture authoring, implementation, tests, negative controls, mutation work, scans and final packaging.
 
 The operating rule is:
 
 **one accepted architecture -> one independent development cycle -> one final review and acceptance ceremony.**
 
-During development Eli does not need to return to Ari after every internal decision that is already settled by this brief. He may repair implementation defects, strengthen tests, reconcile counts to measured results, and make narrow design choices that stay inside the fixed boundaries below.
+During development the implementer does not need to return to the architect after every internal decision that is already settled by this brief. The implementer may repair implementation defects, strengthen tests, reconcile counts to measured results, and make narrow design choices that stay inside the fixed boundaries below.
 
-Eli may use disposable clones, temporary directories and scratch artefacts outside the repository. He may not publish, push, merge, allocate a GER identifier, create the generated-evaluation home, or open W7-D5 while developing D4.
+The implementer may use disposable clones, temporary directories and scratch artefacts outside the repository. The implementer may not publish, push, merge, allocate a GER identifier, create the generated-evaluation home, or open W7-D5 while developing D4.
 
 The preferred working posture is an unstaged local working tree or disposable clone until the final review. Temporary development commits are permitted only in a disposable local branch or clone and must not be pushed or treated as governed publication.
 
-The final D4 implementation must return to Tara and Ari as one review packet. **No final implementation commit or push is authorised by this brief alone.** Final publication requires explicit human approval after the end-of-development ceremony in section 24.
+The final D4 implementation must return to the human authority and the architect as one review packet. **No final implementation commit or push is authorised by this brief alone.** Final publication requires explicit human approval after the end-of-development ceremony in section 24.
 
 ---
 
@@ -135,7 +135,7 @@ The acceptance is deliberately narrow:
 
 Part Q is therefore **accepted as a carryable limitation for W7**, not architecturally resolved for all future phases.
 
-Tara's acceptance of this brief is acceptance of that D4 posture. If Tara does not accept this section, D4 does not open.
+The human authority's acceptance of this brief is acceptance of that D4 posture. If the human authority does not accept this section, D4 does not open.
 
 ### 6.2 Lawful execution consequence
 
@@ -305,7 +305,7 @@ The fixture may state what governance property a probe is designed to exercise. 
 
 ## 11. Exam fixture shape
 
-Eli may refine field names during implementation, but the D4 exam artefact must encode the following semantics and no more:
+The implementer may refine field names during implementation, but the D4 exam artefact must encode the following semantics and no more:
 
 - exam format version;
 - D4 authoring authority;
@@ -751,7 +751,7 @@ A scanner change is not absolutely forbidden, but is outside the preferred desig
 
 ## 24. End-of-development ceremony
 
-Eli returns **one final packet** only after the complete development is ready.
+The implementer returns **one final packet** only after the complete development is ready.
 
 The packet must contain:
 
@@ -820,7 +820,7 @@ The packet must contain:
 - proposed single final D4 commit subject;
 - statement of what publication would and would not change.
 
-Only after Tara and Ari accept that packet may Eli stage, commit and push the final D4 implementation.
+Only after the human authority and the architect accept that packet may the implementer stage, commit and push the final D4 implementation.
 
 ---
 
@@ -873,7 +873,7 @@ D5 may route a record to human review where the schema requires, but it may not 
 
 ## 27. Hard-stop conditions
 
-Eli must stop development and return to Tara/Ari if any of the following becomes necessary or is discovered:
+The implementer must stop development and return to the human authority and the architect if any of the following becomes necessary or is discovered:
 
 - baseline public head no longer matches the authorised starting authority and the intervening change touches D4 law or scope;
 - the canonical unknown inventory cannot be derived as exactly 26;
@@ -929,7 +929,7 @@ The later website/model-adapter/agent-layer work belongs to separate adoption/de
 
 ## 29. Acceptance criteria for this brief
 
-Tara's acceptance of this full-development brief means she accepts all of the following D4 architecture choices together:
+The human authority's acceptance of this full-development brief means acceptance of all of the following D4 architecture choices together:
 
 1. full-development mode instead of subpart relay;
 2. Option D no-contact carried unchanged;
@@ -947,13 +947,13 @@ Tara's acceptance of this full-development brief means she accepts all of the fo
 14. no final D4 publication occurs until one end-of-development review packet is accepted;
 15. D4 final publication discharges p7 only and opens no D5.
 
-If accepted, this document should be landed as W7-D4's accepted full-development opening brief before Eli starts repository-resident implementation.
+If accepted, this document should be landed as W7-D4's accepted full-development opening brief before the implementer starts repository-resident implementation.
 
 ---
 
-## 30. Instruction to Eli after acceptance
+## 30. Instruction to the implementer after acceptance
 
-**Proceed independently through W7-D4 under this brief. Do not relay subparts back for approval. Re-ground every source from the published baseline, build the complete synthetic harness and exam, keep every transient capture outside the repository, preserve Option D, accept Part Q's current narrowing exactly as written here, add no model path and no dependency, create no GER and no generated-evaluation home, prove every mechanical obligation with negative controls, keep semantic duties review-only, run the complete final ceremony, and return one final development packet for Tara and Ari's review. Do not stage, commit or push the final D4 implementation until that final packet is explicitly accepted.**
+**Proceed independently through W7-D4 under this brief. Do not relay subparts back for approval. Re-ground every source from the published baseline, build the complete synthetic harness and exam, keep every transient capture outside the repository, preserve Option D, accept Part Q's current narrowing exactly as written here, add no model path and no dependency, create no GER and no generated-evaluation home, prove every mechanical obligation with negative controls, keep semantic duties review-only, run the complete final ceremony, and return one final development packet for review by the human authority and the architect. Do not stage, commit or push the final D4 implementation until that final packet is explicitly accepted.**
 
 ---
 

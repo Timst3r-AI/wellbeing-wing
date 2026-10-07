@@ -5,7 +5,7 @@ Proves the static review surface against ADR-0043's obligations and
 the W6-D4-A/B/C contract: reads only declared inputs, writes nothing
 but its two outputs, holds no state, opens no channel, carries no
 affordance, grades nothing, and renders every governed item with its
-own mandatory trace row (Tara's state-family directive: family
+own mandatory trace row (the human authority's state-family directive: family
 reasoning is explanatory; the per-item trace is the accountability).
 A green run means contract conformance only — never that anything
 shown is approved, correct, safe, or authorised for any other display.

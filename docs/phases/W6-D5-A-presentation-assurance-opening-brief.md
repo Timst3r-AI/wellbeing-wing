@@ -18,7 +18,7 @@
 
 ## 2. The D5 sequence
 
-3. **A** — this record. **B+C+D+E** — the audit execution as one landing: rendered-state audit, implied-claim audit, catalogue-to-surface and source-to-surface trace audit, and the W6-owned pending-stub reassessment, merged because they are one read-only session over one artefact set sharing a single evidence base, and splitting them would republish the same evidence four times through three partially-reported intermediate states. **F** — findings consolidation with correction paths named, separate. **G** — closure posture, separate, after the findings are published and independently reviewable. **F and G are kept apart deliberately**: where an audit records anything correction-needed, the findings must be visible to Tara and Ari before completeness is declared over them.
+3. **A** — this record. **B+C+D+E** — the audit execution as one landing: rendered-state audit, implied-claim audit, catalogue-to-surface and source-to-surface trace audit, and the W6-owned pending-stub reassessment, merged because they are one read-only session over one artefact set sharing a single evidence base, and splitting them would republish the same evidence four times through three partially-reported intermediate states. **F** — findings consolidation with correction paths named, separate. **G** — closure posture, separate, after the findings are published and independently reviewable. **F and G are kept apart deliberately**: where an audit records anything correction-needed, the findings must be visible to the human authority and the architect before completeness is declared over them.
 
 ## 3. The standing audit directive, carried
 

@@ -68,7 +68,7 @@ Generic and structural wording — catalogue, register, string, record, class, v
 
 ## 12. Boundary
 
-**This brief opens W6-D2 and nothing else.** The next lawful step is the W6-D2-A landing — the catalogue artefact shape and home decision — through its own authorisation, only if Tara asks.
+**This brief opens W6-D2 and nothing else.** The next lawful step is the W6-D2-A landing — the catalogue artefact shape and home decision — through its own authorisation, only if the human authority asks.
 
 ---
 

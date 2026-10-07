@@ -2,7 +2,7 @@
 
 **Status:** Accepted by human reviewer, 2026-08-17.
 **Date:** 2026-08-17 · **Phase:** W6 — Surface Era · **Deliverable:** **W6-D5** (landing **F**)
-**Position:** the findings landing of the W6-D5 programme: the audit evidence published at `W6-D5-AER` consolidated into classified findings, with the smallest governed correction path named for each — **and every correction stopped here, unexecuted, awaiting its own authorisation.** This record lands separately from closure so that anything correction-needed is visible to Tara and Ari before completeness is declared over it.
+**Position:** the findings landing of the W6-D5 programme: the audit evidence published at `W6-D5-AER` consolidated into classified findings, with the smallest governed correction path named for each — **and every correction stopped here, unexecuted, awaiting its own authorisation.** This record lands separately from closure so that anything correction-needed is visible to the human authority and the architect before completeness is declared over it.
 **Governed by:** `W6-D5-PAB` and `W6-D5-AER`; ADR-0043's declarability and source-trace law; ADR-0040 and ADR-0041's rendering and routing laws.
 **Tier at landing:** J — full ceremony.
 
@@ -44,7 +44,7 @@ Three stubs are W6-owned, each on the ledger's own `w6 surface phase` owner: **l
 
 ## 5. Packet-reported versus independently verifiable
 
-Stated honestly so Ari can label the packet precisely:
+Stated honestly so the architect can label the packet precisely:
 
 - **Independently verifiable from repository records today:** the two findings themselves — the generator literal is readable in `scripts/generate_review_surface.py` and the absence of applicability ids is checkable in the page and trace; and every property covered by the twenty-six standing structural proofs, which anyone can re-run: trace bijection both ways, the seven mandatory fields, ceilings and accompaniments rendered, aphorisms present, uncomfortable states at full size, palette neutrality, absence of glyphs, controls, links and barred affirmatives, byte-identical regeneration, and declared-input conformance.
 - **Packet-reported:** the five hundred and thirty-one checks *as a single executed audit run* — specifically the per-item cell-by-cell comparison of every rendered state against its governed source. The results are reproducible by anyone from the declared sources, and the tables in `W6-D5-AER` record them item by item, but the script that executed them is not a repository artefact. **P-3 exists precisely to close that gap, and closing it is optional and unauthorised here.**

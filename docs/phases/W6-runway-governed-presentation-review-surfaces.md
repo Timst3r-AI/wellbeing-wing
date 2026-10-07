@@ -100,7 +100,7 @@ Generic and structural wording throughout — surface, label, catalogue, string,
 
 ## 10. Boundary
 
-**This runway authorises W6 briefs only.** It opens no deliverable, creates no catalogue, allocates no catalogue ID, grades no string, renders no label, builds no surface, converts no stub, and changes nothing outside its own measured landing set. **W6-D1 opens only on its own accepted brief.** The next lawful step after this runway's publication and verification is the W6-D1 opening brief, only if Tara asks.
+**This runway authorises W6 briefs only.** It opens no deliverable, creates no catalogue, allocates no catalogue ID, grades no string, renders no label, builds no surface, converts no stub, and changes nothing outside its own measured landing set. **W6-D1 opens only on its own accepted brief.** The next lawful step after this runway's publication and verification is the W6-D1 opening brief, only if the human authority asks.
 
 ---
 

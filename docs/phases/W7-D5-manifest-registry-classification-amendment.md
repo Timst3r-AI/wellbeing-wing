@@ -7,9 +7,9 @@
 **Deliverable:** W7-D5 - Synthetic execution records and first generated-evaluation materialisation  
 **Identity:** `W7-D5-MRA`, type `phase-record`  
 **Amends:** `W7-D5-SEB` (`docs/phases/W7-D5-synthetic-execution-materialisation-brief.md`), revision v1.2 to v1.3  
-**Architect:** Ari  
-**Builder/executor after acceptance:** Eli  
-**Human authority:** Tara  
+**Architect:** the architect  
+**Builder/executor after acceptance:** the implementer  
+**Human authority:** the human authority  
 **Baseline for this candidate:** `646a9dd938c6bbab2c6a0fb11b7fe7523f65bcf4` - `W7-D5: Amend proof succession scope`  
 **Baseline registry state:** 114 entries, last `W7-D5-PSA`
 
@@ -21,7 +21,7 @@
 
 During Landing B candidate assembly, the registry work surfaced an accepted-brief defect. Brief section 17.1 classifies the run-manifest registry entry as type `phase-record`, but the live registry law rejects that classification for this artefact: `tests/test_repo_state.py::RegistryConsistency::test_statuses_match_source_headers` requires every `accepted` entry's file to carry the prose header `Accepted by human reviewer` in its first eight lines, and a conformant JSON run manifest cannot carry a prose header - its shape is the closed D4 manifest shape, and section 16.2 forbids exactly the kind of annotation a header would be. The same test carries the lawful answer, governed at the W6-D2-C+D landing: entries of type `governed-register` are JSON data artefacts exempt from the header requirement, **with their human acceptance recorded in their governing phase-record**. The one live precedent is `W6-CAT`, the governed string catalogue at `governance/string-catalogue.json`, whose acceptance is recorded through its admission record and whose `depends_on` names that governing record.
 
-Implementation did not choose by discretion. Assembly stopped, the evidence was reported, and Ari ruled the mismatch a genuine accepted-brief defect with the live repository law controlling. This amendment is the bounded governed correction, landing before candidate assembly resumes - the doctrine-first pattern, a third time.
+Implementation did not choose by discretion. Assembly stopped, the evidence was reported, and the architect ruled the mismatch a genuine accepted-brief defect with the live repository law controlling. This amendment is the bounded governed correction, landing before candidate assembly resumes - the doctrine-first pattern, a third time.
 
 ## 2. Character of the correction
 
@@ -77,7 +77,7 @@ Exactly four paths:
 
 ## 7. Acceptance criteria
 
-Tara and Ari should be satisfied, before this amendment lands, that:
+The human authority and the architect should be satisfied, before this amendment lands, that:
 
 - the cited test law and the `W6-CAT` precedent are exactly as the evidence report stated;
 - the v1.3 diff touches exactly the section 4 sites;

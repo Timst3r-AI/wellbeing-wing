@@ -1,15 +1,15 @@
 # W7-D5 - Synthetic Execution Records and First Materialisation: Full Architecture Brief
 
-**Status:** Accepted by human reviewer, 2026-08-23. **Effective on publication and remote verification**, at which point it opens W7-D5 and governs the bounded D5 implementation cycle under the full-development mode in section 4, and nothing beyond W7-D5. It is not itself an implementation: it begins no run, allocates no `GER-####` identifier, and creates no generated-evaluation home, manifest or stop report. `W7-D5-RUN-01` begins only after Tara and Ari receive and accept the remotely verified Landing A publication state.
+**Status:** Accepted by human reviewer, 2026-08-23. **Effective on publication and remote verification**, at which point it opens W7-D5 and governs the bounded D5 implementation cycle under the full-development mode in section 4, and nothing beyond W7-D5. It is not itself an implementation: it begins no run, allocates no `GER-####` identifier, and creates no generated-evaluation home, manifest or stop report. `W7-D5-RUN-01` begins only after the human authority and the architect receive and accept the remotely verified Landing A publication state.
 
 **Date prepared:** 2026-08-23  
 **Revision:** v1.3 - v1.2 reconciled by the accepted manifest registry classification amendment `W7-D5-MRA`; v1.1 reconciled by the accepted proof-succession scope amendment `W7-D5-PSA`; the accepted architecture revision, incorporating the read-only eight-item / four-drift-check review  
 **Phase:** W7 - First-Contact Governance and Synthetic Model Evaluation  
 **Deliverable:** W7-D5 - Synthetic execution records and first generated-evaluation materialisation  
 **Identity:** `W7-D5-SEB`, type `phase-brief`  
-**Architect:** Ari  
-**Builder/executor after acceptance:** Eli  
-**Human authority:** Tara  
+**Architect:** the architect  
+**Builder/executor after acceptance:** the executor  
+**Human authority:** the human authority  
 **Source baseline for this candidate:** `6cd6235d6d8af3fd9754bc66289564f89cc5dd0f` - `W7-D4: Bind the synthetic harness and exam paper`  
 **Expected baseline registry state:** 112 entries, last `W7-D4-SHR`, to be re-verified before any landing  
 **Proposed implementation permission after publication:** `w7-d5-synthetic-execution-materialisation`
@@ -37,7 +37,7 @@ This brief fixes, before any first `GER-####` allocation:
 11. the final human P4b act required before publication;
 12. the boundary between D5 acceptance and the later D6 human-review disposition.
 
-This brief is intended to be the **separate published pre-materialisation governed act** required by the W7-D4 handoff. Once accepted and published, Eli may perform the bounded D5 implementation cycle described here without further design decisions. Any hard-stop condition still returns control to Tara and Ari.
+This brief is intended to be the **separate published pre-materialisation governed act** required by the W7-D4 handoff. Once accepted and published, the executor may perform the bounded D5 implementation cycle described here without further design decisions. Any hard-stop condition still returns control to the human authority and the architect.
 
 The brief does not itself create the home, a GER, a run manifest, a stop report, a generated output, a model contact, a human-review disposition, or any new dependency.
 
@@ -182,11 +182,11 @@ No home, GER, manifest, execution code, test change, specimen change or run occu
 
 `W7-D5: Govern first synthetic execution materialisation`
 
-Landing A must be accepted by Tara, published by plain fast-forward, and remotely verified before D5 execution begins.
+Landing A must be accepted by the human authority, published by plain fast-forward, and remotely verified before D5 execution begins.
 
 ### Landing B - the D5 implementation and first successful run
 
-Landing B may materialise the first public generated-evaluation run only after the entire external development and review cycle is green and Tara accepts the exact candidate bytes.
+Landing B may materialise the first public generated-evaluation run only after the entire external development and review cycle is green and the human authority accepts the exact candidate bytes.
 
 D5 is complete only after Landing B is published and remotely verified.
 
@@ -198,13 +198,13 @@ D5 adopts D4's full-development model with a stricter payload boundary.
 
 After Landing A is published:
 
-- Ari's architecture is fixed by this brief;
-- Eli may build the bounded D5 implementation end-to-end;
+- the architect's architecture is fixed by this brief;
+- the executor may build the bounded D5 implementation end-to-end;
 - no subpart requires routine relay approval;
 - payload-bearing candidate work occurs in a disposable clone or workspace **outside the authoritative repository working tree**;
-- Eli returns one reconciled final packet;
-- Ari performs architecture and engineering review;
-- Tara performs the required human P4b act over the exact final candidate;
+- the executor returns one reconciled final packet;
+- the architect performs architecture and engineering review;
+- the human reviewer performs the required human P4b act over the exact final candidate;
 - only after acceptance are the exact approved bytes transferred into the authoritative working tree for the landing ceremony.
 
 Hard-stop conditions are exceptions to independent execution and return control immediately.
@@ -244,7 +244,7 @@ The runway's older phrase "synthetic model execution records" must be read throu
 
 ## 6. Frozen D4 input contract
 
-Before any D5 run begins, Eli must re-read the published D4 bytes and prove the following three hashes against the current published baseline:
+Before any D5 run begins, the executor must re-read the published D4 bytes and prove the following three hashes against the current published baseline:
 
 | Artefact | Required SHA-256 |
 |---|---|
@@ -285,7 +285,7 @@ Once the first capture begins, `W7-D5-RUN-01` is consumed as an execution-attemp
 
 ### 7.2 No silent retry
 
-If `W7-D5-RUN-01` stops after run start, Eli must not silently rerun it.
+If `W7-D5-RUN-01` stops after run start, the executor must not silently rerun it.
 
 A later attempt requires a new run identity, beginning with `W7-D5-RUN-02`, and a small separately accepted run-authority amendment stating why the first run stopped and authorising the next attempt. This is not a redesign of D5, but it is a new governed execution act.
 
@@ -725,7 +725,7 @@ This does not resolve the coordinate seam.
 
 ### 20.3 Finding disposition is not D6 disposition
 
-A finding may require Tara's pre-landing public-safety judgement under ADR-0050. That act uses ADR-0050's finding-disposition vocabulary.
+A finding may require the human reviewer's pre-landing public-safety judgement under ADR-0050. That act uses ADR-0050's finding-disposition vocabulary.
 
 It is **not** `human_review.disposition` on a GER. D6 remains the only owner of that later field vocabulary.
 
@@ -741,7 +741,7 @@ The report is outside `governance/generated-evaluation/` because it is not a GER
 
 ### 21.1 Finding-triggered report
 
-After Tara performs the required ADR-0050 public-safety review, the report may contain only:
+After the human reviewer performs the required ADR-0050 public-safety review, the report may contain only:
 
 - `run_id`;
 - proposed/candidate record identifier if one had already been bound, otherwise `not_allocated`;
@@ -771,7 +771,7 @@ No wordlist content appears.
 
 The form does not guarantee that a stop report can be published. The report itself must pass the ordinary public-safety scan and every standing W7 boundary before it may land.
 
-ADR-0050 requires the actual finding category among the content-free minimum facts. D5 must not rename, alias, encode or soften that category merely to make the report scan-clean. If the required category, the required locus fact, or any other mandatory minimum makes the stop report itself non-landable, the report remains outside the repository and D5 hard-stops for Tara/Ari review. No weakened report is substituted and no allowlist route is created.
+ADR-0050 requires the actual finding category among the content-free minimum facts. D5 must not rename, alias, encode or soften that category merely to make the report scan-clean. If the required category, the required locus fact, or any other mandatory minimum makes the stop report itself non-landable, the report remains outside the repository and D5 hard-stops for review by the human authority and the architect. No weakened report is substituted and no allowlist route is created.
 
 This is an honest extension of Part Q's current cost: in the strictest case the evidence cannot land and the content-free report about why it could not land may itself be unable to land. D5 records that limitation rather than routing around it.
 
@@ -806,7 +806,7 @@ Recommended implementation environment:
 5. construct the completion record, registry delta and board delta there;
 6. run the complete proposed tracked-state verification there;
 7. produce hashes of every proposed final path;
-8. perform Ari review and Tara P4b review against those exact candidate bytes;
+8. perform the architect's review and the human reviewer's P4b review against those exact candidate bytes;
 9. only after acceptance, transfer the exact approved bytes into the authoritative checkout;
 10. prove the transferred bytes match the accepted hashes before staging.
 
@@ -872,13 +872,13 @@ Apply the D2-E proof transition and new materialised-state proof module in the d
 
 Run focused tests, negative controls/mutations, full deterministic suite, normal scan, landing scan, P4a mechanical guards and residue checks over the proposed final tracked tree.
 
-### Stage 9 - Ari engineering review
+### Stage 9 - the architect's engineering review
 
-Ari reviews the complete final packet and exact hashes. Engineering acceptance is not P4b.
+The architect reviews the complete final packet and exact hashes. Engineering acceptance is not P4b.
 
-### Stage 10 - Tara P4b
+### Stage 10 - the human reviewer's P4b
 
-Tara reviews the exact final D5 candidate against all eleven exclusion families. P4b is landing-specific and must be an explicit human act.
+The human reviewer reviews the exact final D5 candidate against all eleven exclusion families. P4b is landing-specific and must be an explicit human act.
 
 ### Stage 11 - transfer to authoritative checkout
 
@@ -1109,13 +1109,13 @@ A P4a green result makes no claim about P4b.
 
 P4b remains review-only in full across all eleven ADR-0046 Decision 11 families.
 
-Before final D5 landing, Tara must review the **exact final candidate** against all eleven families and perform a named human act specific to that landing.
+Before final D5 landing, the human reviewer must review the **exact final candidate** against all eleven families and perform a named human act specific to that landing.
 
 The review covers the complete proposed D5 landing, with particular attention to the 26 GERs and manifest.
 
 Mechanical byte identity with the accepted D4 specimens is useful for locating what changed and what did not, but it does not replace human semantic judgement. P4a contributes no evidence of P4b conformance.
 
-The D5 completion record may state P4b clear only after Tara has actually performed that review.
+The D5 completion record may state P4b clear only after the human reviewer has actually performed that review.
 
 No stage, commit or push before that act.
 
@@ -1245,7 +1245,7 @@ Every mutant is isolated and reverted. The unmutated candidate is proven green b
 
 ## 34. Hard-stop conditions
 
-Eli stops and reports without improvising if any of the following occurs:
+The executor stops and reports without improvising if any of the following occurs:
 
 1. D5 brief is not yet published and remotely verified.
 2. Authoritative baseline is not the expected descendant of the D5 brief landing.
@@ -1270,7 +1270,7 @@ Eli stops and reports without improvising if any of the following occurs:
 21. The S3 target proof cannot demonstrate its required negative controls.
 22. Any generated-evaluation allowlist entry is proposed.
 23. P4a is red.
-24. Tara raises any P4b concern.
+24. The human reviewer raises any P4b concern.
 25. Normal scan introduces a new unsuppressed finding.
 26. Suppression count increases without a separately governed reason.
 27. Any payload-bearing working state appears in the authoritative checkout before final acceptance.
@@ -1410,7 +1410,7 @@ Specifically excluded unless a new governed act says otherwise:
 ### 36.8 Human boundaries
 
 - P4a result with all non-claims;
-- Tara's exact P4b act and date;
+- the human reviewer's exact P4b act and date;
 - S4 and T6 review dispositions;
 - `human_review.disposition` remains null in every GER;
 - D5 acceptance is not D6 disposition.
@@ -1438,9 +1438,9 @@ Specifically excluded unless a new governed act says otherwise:
 
 ---
 
-## 37. Verification ceremony before Tara's final acceptance
+## 37. Verification ceremony before the human authority's final acceptance
 
-Eli's final packet must include measured results for all of the following against the exact proposed tracked state in the disposable clone:
+The executor's final packet must include measured results for all of the following against the exact proposed tracked state in the disposable clone:
 
 1. frozen D4 hash check;
 2. D4 focused proof module, complete and green after its authorised H12 succession edit;
@@ -1467,19 +1467,19 @@ Measured numbers are reported from execution. The brief does not pre-invent a pa
 
 ---
 
-## 38. Tara's final D5 human acts
+## 38. The final D5 human acts
 
 Two distinct human acts must not be collapsed.
 
 ### 38.1 P4b publication review
 
-Tara reviews all eleven ADR-0046 exclusion families against the exact 35-path final candidate and records CLEAR or concern family by family.
+The human reviewer reviews all eleven ADR-0046 exclusion families against the exact 35-path final candidate and records CLEAR or concern family by family.
 
 This is the publication-conformance act.
 
 ### 38.2 D5 packet acceptance
 
-After P4b is clear and Ari has accepted the engineering, Tara explicitly accepts the exact D5 final packet and authorises its landing.
+After P4b is clear and the architect has accepted the engineering, the human authority explicitly accepts the exact D5 final packet and authorises its landing.
 
 This is the implementation-landing act.
 
@@ -1612,7 +1612,7 @@ The generated-evaluation home is evidence storage for synthetic governance evalu
 
 ## 44. Architecture acceptance criteria for this brief
 
-Before Landing A, Tara and Ari should be satisfied that this brief answers, without leaving an implementation-time choice:
+Before Landing A, the human authority and the architect should be satisfied that this brief answers, without leaving an implementation-time choice:
 
 - what starts and consumes a run identity;
 - whether a failed run can be silently repeated;
@@ -1644,9 +1644,9 @@ If any of those remains materially open, the brief is not ready to land.
 
 ---
 
-## 45. Instruction to Eli after this brief is accepted and published
+## 45. Instruction to the executor after this brief is accepted and published
 
-After Tara accepts this brief and its Landing A is remotely verified, the implementation instruction is:
+After the human authority accepts this brief and its Landing A is remotely verified, the implementation instruction is:
 
 > Implement W7-D5 exactly under `W7-D5-SEB` in full-development mode. Re-ground on the published brief baseline; freeze the accepted D4 exam and harness bytes permanently, hold the D4 proof and D3 model-boundary proof modules at their `W7-D5-PSA` pre-succession pins, and apply only the bounded H12 and M6 succession edits, in the successful Landing B candidate alone. Work payload-bearing candidate state only in a disposable external clone/workspace. Execute only `W7-D5-RUN-01`, once, over the 26-probe D4 exam, with no model contact and no generated output. Any capture finding, branch-state change, provenance mismatch, cardinality mismatch or other hard stop ends the successful-run path and must be reported without retry.
 >
@@ -1656,7 +1656,7 @@ After Tara accepts this brief and its Landing A is remotely verified, the implem
 >
 > Return one final packet containing exact path scope, bytes, hashes, run accounting, manifest relation, nineteen-obligation matrix, P4a report, mutation results, scans, suite results, registry delta, board delta and all open-boundary statements. Do not stage, commit or push. Do not write any GER `human_review.disposition`. Do not open W7-D6.
 >
-> Ari reviews the engineering. Tara then performs P4b against the exact candidate and separately accepts the final packet. Only after that explicit authority may the exact accepted bytes be transferred to the authoritative checkout, verified, staged, committed and pushed by the bounded ceremony in this brief.
+> The architect reviews the engineering. The human reviewer then performs P4b against the exact candidate, and the human authority separately accepts the final packet. Only after that explicit authority may the exact accepted bytes be transferred to the authoritative checkout, verified, staged, committed and pushed by the bounded ceremony in this brief.
 
 ---
 

@@ -3,7 +3,7 @@
 **Status:** Accepted by human reviewer, 2026-08-17.
 **Date:** 2026-08-17 · **Phase:** W6 — Surface Era · **Deliverable:** **W6-D4** (merged landings **D**, **E**, **F**)
 **Position:** the materialisation landing of the W6-D4 programme: the honest-state rendering surface (D) and the human-routing surface (E) exist as one static generated artefact, and the structural proofs (F) land in the same commit — because **a surface and its proofs are same-commit-coupled**, and a published surface without its proofs, or proofs with nothing real to prove, are both half-states (the merge justification of the accepted opening record, honoured here).
-**Governed by:** the W6-D4-A/B/C record (`W6-D4-SOB`) followed exactly; ADR-0043 whole; ADR-0038 through ADR-0042 and ADR-0045; the W6-D3 grading records; Tara's state-family rendering directive, carried in force.
+**Governed by:** the W6-D4-A/B/C record (`W6-D4-SOB`) followed exactly; ADR-0043 whole; ADR-0038 through ADR-0042 and ADR-0045; the W6-D3 grading records; the human authority's state-family rendering directive, carried in force.
 **Tier at landing:** J — full ceremony.
 
 ---

@@ -528,7 +528,7 @@ Two self-reference cases are handled the way the repository already handles them
 
 ADR-0052 makes P4b review-only in full. It is discharged by a person having read the artefacts against all eleven families and said so, at this landing, or it is not discharged.
 
-**The act was performed by Tara, the human authority, on 2026-08-23**, over the six reconciled artefacts at the hashes recorded in §3. The eleven findings below were drafted by the implementer as a pre-read and were **reviewed and accepted by Tara as her own P4b review act for this landing**. **No mechanical result contributed to any disposition below**, and P4a's green result was not treated as evidence for any of them.
+**The act was performed by the human reviewer on 2026-08-23**, over the six reconciled artefacts at the hashes recorded in §3. The eleven findings below were drafted by the implementer as a pre-read and were **reviewed and accepted by the human reviewer as their own P4b review act for this landing**. **No mechanical result contributed to any disposition below**, and P4a's green result was not treated as evidence for any of them.
 
 | # | decision 11 family | guard | review finding over the D4 artefacts |
 | --- | --- | --- | --- |
@@ -544,7 +544,7 @@ ADR-0052 makes P4b review-only in full. It is discharged by a person having read
 | 10 | private adoption implementation detail | **none** | **No violation.** The external side is named only by its fixed clause, three times in this record and nowhere in the instrument. No adoption mechanism, arrangement, device, room or plan is described, alluded to or implied. |
 | 11 | anything that would turn the public Wing into a live personal instrument | **none** | **No violation.** The deliverable adds an exam of authored synthetic text, a harness that refuses, and a proof module. Nothing it contains can be pointed at a person: there is no runtime path, no intake, no store, no model and no channel, and the harness writes only to a validated external workspace. |
 
-**Disposition, recorded by Tara on 2026-08-23: all eleven families reviewed, no violation found in any of them, at this landing, over these artefact bytes.**
+**Disposition, recorded by the human reviewer on 2026-08-23: all eleven families reviewed, no violation found in any of them, at this landing, over these artefact bytes.**
 
 **What this review act is not.** It is **specific to these six artefacts and this landing, and is not a guarantee beyond them.** It is not permanent — it covers these bytes at this landing and must be performed again at any later landing that touches an artefact of the class. It is not mechanical, and no green suite contributed to it. It is not a guarantee: a reviewer can miss what a reviewer can miss, which is precisely why ADR-0052 records P4b as review-only rather than pretending otherwise. And **P4a's green result was not treated as evidence for any row above** — the guards and the reading are independent, and the reading is the one that discharges P4b.
 

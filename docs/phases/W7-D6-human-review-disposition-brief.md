@@ -39,7 +39,7 @@ The W7 runway requires the review law and vocabulary to land before any disposit
 
 ## 2. Controlling authority
 
-Before changing any repository file, Eli must re-read the current published bytes of:
+Before changing any repository file, the implementer must re-read the current published bytes of:
 
 1. `docs/phases/W7-runway-first-contact-governance-synthetic-evaluation.md`
 2. `docs/decisions/0046-synthetic-only-public-law-and-adoption-boundary.md`
@@ -78,13 +78,13 @@ After this brief is accepted, published and remotely verified, W7-D6 uses the sa
 
 > **one accepted architecture -> one independent development cycle -> one final engineering review -> human review -> one final acceptance ceremony.**
 
-Eli may independently perform source grounding, read-only investigation, implementation, tests, mutation work, disposable-history proofs, scan verification, registry reconciliation and candidate assembly where this brief already fixes the architecture.
+The implementer may independently perform source grounding, read-only investigation, implementation, tests, mutation work, disposable-history proofs, scan verification, registry reconciliation and candidate assembly where this brief already fixes the architecture.
 
-Eli may repair implementation defects and strengthen tests without returning after each internal step.
+The implementer may repair implementation defects and strengthen tests without returning after each internal step.
 
-Eli may not:
+The implementer may not:
 
-* make any human disposition on Tara's behalf;
+* make any human disposition on the human reviewer's behalf;
 * invent a fourth disposition value;
 * infer a human disposition from specimen wording;
 * bulk-default the 26 dispositions;
@@ -135,7 +135,7 @@ Proposed path:
 
 ADR-0053 decides the human-review vocabulary and lifecycle described in this brief.
 
-Landing B must publish and be independently remote-verified **before Tara performs any D6 disposition act and before any GER receives a non-null human-review field**.
+Landing B must publish and be independently remote-verified **before the human reviewer performs any D6 disposition act and before any GER receives a non-null human-review field**.
 
 Landing B changes no GER, no manifest, no D5 proof, no scanner and no allowlist.
 
@@ -145,7 +145,7 @@ Only after ADR-0053 is effective may Landing C be developed to completion.
 
 Landing C contains:
 
-* Tara's 26 individual human dispositions;
+* the human reviewer's 26 individual human dispositions;
 * the one governed human-review record carrying them;
 * the two authorised `human_review` field updates in each GER;
 * the resulting manifest hash cascade;
@@ -160,7 +160,7 @@ Landing C completes W7-D6 only after final acceptance, publication and remote ve
 
 ## 5. Mandatory Stage 0: proof-succession and registry-mechanics sweep
 
-Before drafting ADR-0053 or changing a GER, Eli must perform a read-only corpus sweep from exact baseline `d47caa3438fd961f087b1fd42cf343bfbec621f8`.
+Before drafting ADR-0053 or changing a GER, the implementer must perform a read-only corpus sweep from exact baseline `d47caa3438fd961f087b1fd42cf343bfbec621f8`.
 
 This is mandatory because D5 demonstrated that present-state assertions can make a later lawful state impossible if they are not identified before scope freezes.
 
@@ -398,11 +398,11 @@ D6 implements only the first review. It establishes the lifecycle law for later 
 
 ## 12. Human review ceremony
 
-After ADR-0053 is published and verified, Eli prepares a **read-only review packet** from the published 26 GERs.
+After ADR-0053 is published and verified, the implementer prepares a **read-only review packet** from the published 26 GERs.
 
 No GER is edited at this stage.
 
-For every record, the review surface must show Tara:
+For every record, the review surface must show the human reviewer:
 
 1. GER identity;
 2. probe/source identity;
@@ -410,39 +410,39 @@ For every record, the review surface must show Tara:
 4. the recorded structural delta;
 5. the three lawful ADR-0053 disposition values;
 6. source-grounded governing-law references and the record's governed reason for routing where present; no machine recommendation, proposed disposition, selected variant or preferred outcome;
-7. a place for Tara's individual decision.
+7. a place for the human reviewer's individual decision.
 
 No variant may be preselected.
 No default disposition exists.
 No "apply to all" path exists.
 No 26-row bulk inference is permitted merely because the authored specimens were deliberately constructed as contrasts.
 
-Tara may review in batches for convenience, but every GER receives an explicit human decision.
+The human reviewer may review in batches for convenience, but every GER receives an explicit human decision.
 
-If Tara says the record cannot responsibly be adjudicated from public synthetic evidence alone, `review_inconclusive` is a lawful completed disposition.
+If the human reviewer says the record cannot responsibly be adjudicated from public synthetic evidence alone, `review_inconclusive` is a lawful completed disposition.
 
 ---
 
 ## 13. Human authority boundary
 
-Eli may:
+The implementer may:
 
 * prepare the review packet;
 * prove its completeness;
 * render source material;
-* record Tara's returned tokens exactly;
+* record the human reviewer's returned tokens exactly;
 * mechanically bind those tokens into the candidate.
 
-Eli may not:
+The implementer may not:
 
 * recommend a value through ordering or defaults;
 * infer a value from specimen text;
 * fill missing human decisions;
-* convert Ari's clarification or analysis into a human disposition;
+* convert the architect's clarification or analysis into a human disposition;
 * interpret silence as a decision;
 * replace a missing decision with `review_inconclusive`.
 
-Ari may provide source-grounded clarification of governing law, provenance and mechanically established facts, but may not recommend a disposition, select or rank a variant, or express a preferred review outcome. Only Tara supplies the actual D6 disposition act.
+The architect may provide source-grounded clarification of governing law, provenance and mechanically established facts, but may not recommend a disposition, select or rank a variant, or express a preferred review outcome. Only the human reviewer supplies the actual D6 disposition act.
 
 ---
 
@@ -719,7 +719,7 @@ P4a is no evidence for P4b.
 
 The prior D5 P4b remains historically valid for the exact D5 candidate but does not automatically become the D6 act because the GER bytes have changed.
 
-The D6 P4b review may be streamlined by mechanical proof that every capture and every non-review field is byte-identical to D5, but the semantic conformance act remains Tara's.
+The D6 P4b review may be streamlined by mechanical proof that every capture and every non-review field is byte-identical to D5, but the semantic conformance act remains the human reviewer's.
 
 Never report "P4 green".
 
@@ -733,7 +733,7 @@ D5 left S4 and T6 as review-only duties.
 
 D6 does not convert them into machine checks.
 
-At final review Ari and Tara must again consider:
+At final review the architect and the human reviewer must again consider:
 
 **S4:** whether the generated-evaluation home and manifest still signal the correct risk class and remain an integrity index rather than a summary or scoreboard.
 
@@ -847,15 +847,15 @@ The published 26 GERs are the complete D6 review subject.
 
 ## 27. Candidate-development sequence
 
-Once Landing A and Landing B are effective, Eli may proceed independently through this sequence:
+Once Landing A and Landing B are effective, the implementer may proceed independently through this sequence:
 
 1. Re-ground exact published baseline and authority.
 2. Repeat the Stage 0 succession and registry sweep against the then-current remote head.
 3. Pin the exact D5 GER and manifest state for historical comparison.
 4. Build the D6 proof machinery with review fields still null.
 5. Build a read-only human-review packet.
-6. Stop for Tara's 26 individual disposition acts.
-7. Bind Tara's exact returned tokens into `W7-D6-HDR`.
+6. Stop for the human reviewer's 26 individual disposition acts.
+7. Bind the human reviewer's exact returned tokens into `W7-D6-HDR`.
 8. Update only the two later-owned GER fields.
 9. Recompute all 26 GER whole-file hashes.
 10. Update only the manifest's corresponding record hashes.
@@ -864,9 +864,9 @@ Once Landing A and Landing B are effective, Eli may proceed independently throug
 13. Complete bounded proof succession.
 14. Run D6 focused proof and negative controls.
 15. Run P4a.
-16. Return exact candidate to Ari for engineering and S4/T6 review.
-17. Tara performs D6 landing-specific P4b.
-18. Tara separately accepts the exact final D6 packet.
+16. Return exact candidate to the architect for engineering and S4/T6 review.
+17. The human reviewer performs D6 landing-specific P4b.
+18. The human authority separately accepts the exact final D6 packet.
 19. Apply only the resulting accepted-status/hash transformations.
 20. Run the final complete verification ceremony.
 21. Transfer exact accepted paths to authoritative checkout.
@@ -877,13 +877,13 @@ Once Landing A and Landing B are effective, Eli may proceed independently throug
 26. Independently remote-verify.
 27. Stop.
 
-Human review and final acceptance are not steps Eli may simulate.
+Human review and final acceptance are not steps the implementer may simulate.
 
 ---
 
 ## 28. Hard-stop conditions
 
-Stop and return to Tara and Ari if any of these occurs:
+Stop and return to the human authority and the architect if any of these occurs:
 
 * baseline or governing-source mismatch affecting D6;
 * Stage 0 reveals an affected proof path outside authorised scope;
@@ -896,7 +896,7 @@ Stop and return to Tara and Ari if any of these occurs:
 * any need for a generated-evaluation allowlist entry;
 * any human disposition is missing;
 * any disposition appears to have been machine-selected;
-* Tara's review requires real-person context, private context or clinical expertise to reach a responsible answer;
+* the human reviewer's review requires real-person context, private context or clinical expertise to reach a responsible answer;
 * any proposed token implies pass, safety, correctness, approval, winner or preferred variant;
 * any manifest field other than the authorised record hashes must change;
 * any GER identifier would need to change or be added;
@@ -995,7 +995,7 @@ The subject is proposed until final candidate scope is fixed.
 W7-D6 is complete only when all of the following are true together:
 
 * ADR-0053 exists, is accepted and was published before any D6 disposition;
-* all 26 published D5 GERs have received one explicit Tara disposition;
+* all 26 published D5 GERs have received one explicit human-reviewer disposition;
 * every disposition is one lawful ADR-0053 value;
 * every GER cites the one governed D6 human-review record;
 * every HDR row and GER agrees exactly;
@@ -1009,7 +1009,7 @@ W7-D6 is complete only when all of the following are true together:
 * S4 and T6 have received human review;
 * scans are green;
 * the full deterministic suite is green;
-* final packet receives Tara's separate acceptance;
+* final packet receives the human authority's separate acceptance;
 * exact accepted paths are published;
 * remote verification succeeds.
 
@@ -1108,9 +1108,9 @@ D7's job will be honest whole-phase closure, not repair of anything D6 leaves de
 
 ---
 
-## 37. Final instruction to Eli
+## 37. Final instruction to the implementer
 
-Do not treat this brief as permission until Tara accepts it and its publication is remotely verified.
+Do not treat this brief as permission until the human authority accepts it and its publication is remotely verified.
 
 Before proposing Landing A, re-ground from `d47caa3438fd961f087b1fd42cf343bfbec621f8`, perform the complete Stage 0 proof-succession and registry-mechanics investigation, and return:
 

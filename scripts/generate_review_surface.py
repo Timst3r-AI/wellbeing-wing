@@ -315,7 +315,7 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 (OUT_DIR / "review-surface.html").write_text(page, encoding="utf-8")
 (OUT_DIR / "surface-trace.json").write_text(
     json.dumps({"trace_note": "Mandatory per-item trace for every "
-                "rendered item (Tara's state-family directive): family "
+                "rendered item (the human authority's state-family directive): family "
                 "reasoning is explanatory, these rows are the "
                 "accountability.", "rows": trace},
                indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
