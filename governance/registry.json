@@ -4208,6 +4208,33 @@
       "content_hash": "sha256:ed0f3ab7e5828c2c7be408b2712a491f68d635bb80efc42e2328d83792a3084d",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-D2-CBC",
+      "aliases": [],
+      "title": "W8-D2 - Committed-Blob Proof Correction",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": "W8-D2",
+      "path": "docs/phases/W8-D2-committed-blob-proof-correction.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-08",
+      "role": "A bounded correction of the W8-D2 corpus proof implementation, landed after D2 was complete as built: on a fresh clone with line-ending conversion enabled, checkout rewrote the final line ending of each published case file and of the commitment manifest, and the byte-exact corpus proofs C2, C4 and C5, which read working-tree bytes, failed 25 times although every committed object was exactly canonical. Under ADR-0055 decision 10 the committed bytes are the artefact and checkout conversion is display, so those three limbs now read the immutable published cases and manifest from committed Git objects, with unchanged assertions and controls, and each also requires the working copy, with checkout line endings undone, to equal the committed bytes, preserving pre-commit detection of any content change. Mutable surfaces - registry, board, completion record - are still read from the working tree. No case byte, manifest byte, commitment, ADR, D2 completion state, attributes file or repository configuration moves; no disposition, custody act, reveal, calibration or model contact occurs; W8-D3 through W8-D7 remain closed.",
+      "governs": [],
+      "depends_on": [
+        "W8-D2-DIC",
+        "ADR-0055",
+        "W8-D2-DIB",
+        "ADR-0054",
+        "W8-AR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:f1d18113a61c9fbf27e9705a613881485fa6fa801f977327bb6db56588a1173c",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

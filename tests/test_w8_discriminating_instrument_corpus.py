@@ -74,6 +74,24 @@ def _text(path):
     return _read(path).replace(b"\r\n", b"\n").decode("utf-8")
 
 
+def _committed(path):
+    """The committed blob bytes of an immutable published D2 artefact.
+
+    Checkout may rewrite line endings in the working copy; under ADR-0055
+    decision 10 that is display, and the committed bytes are the artefact.
+    Mutable surfaces are never read this way."""
+    rel = path.relative_to(ROOT).as_posix()
+    head = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT,
+                          capture_output=True, text=True,
+                          check=True).stdout.strip()
+    return subprocess.run(["git", "cat-file", "-p", "%s:%s" % (head, rel)],
+                          cwd=ROOT, capture_output=True, check=True).stdout
+
+
+def _working_copy_is_committed(path):
+    return _read(path).replace(b"\r\n", b"\n") == _committed(path)
+
+
 def case_paths():
     return sorted(p for p in HOME.iterdir() if p.name != MANIFEST.name)
 
@@ -163,8 +181,11 @@ class C2C3_CaseConformance(unittest.TestCase):
         paths = case_paths()
         self.assertEqual(len(paths), EXPECTED_TOTAL)
         for p in paths:
-            raw = _read(p)
+            raw = _committed(p)
             parsed = json.loads(raw)
+            with self.subTest(case=p.name[:14],
+                              check="working copy is the committed bytes"):
+                self.assertTrue(_working_copy_is_committed(p))
             with self.subTest(case=p.name[:14], check="validator"):
                 self.assertEqual(envelope.review_case_violations(parsed), [])
             with self.subTest(case=p.name[:14], check="exact canonical bytes"):
@@ -175,19 +196,21 @@ class C2C3_CaseConformance(unittest.TestCase):
             with self.subTest(case=p.name[:14], check="C3 mechanical filename"):
                 self.assertEqual(p.name, parsed["case_id"] + ".json")
         with self.subTest(control="a planted leak on a real case is detected"):
-            mutant = dict(json.loads(_read(paths[0])))
+            mutant = dict(json.loads(_committed(paths[0])))
             mutant["title"] = "leak"
             self.assertTrue(envelope.review_case_violations(mutant))
         with self.subTest(control="a byte appended to real bytes is detected"):
-            raw = _read(paths[0])
+            raw = _committed(paths[0])
             self.assertNotEqual(envelope.sha256_bytes(raw),
                                 envelope.sha256_bytes(raw + b"\n"))
 
 
 class C4_ManifestContainer(unittest.TestCase):
     def test_c4_container_schema_rows_and_ordering_are_law(self):
-        raw = _read(MANIFEST)
+        raw = _committed(MANIFEST)
         self.assertEqual(manifest_container_violations(raw), [])
+        with self.subTest(fact="working copy is the committed bytes"):
+            self.assertTrue(_working_copy_is_committed(MANIFEST))
         parsed = json.loads(raw)
         with self.subTest(control="undeclared outer field detected"):
             m = dict(parsed); m["note"] = "x"
@@ -213,8 +236,10 @@ class C4_ManifestContainer(unittest.TestCase):
 class C5C6_PublicBinding(unittest.TestCase):
     def test_c5_rows_bind_one_to_one_to_exact_published_case_bytes(self):
         rows = manifest_rows()
-        visible = {json.loads(_read(p))["case_id"]: _read(p)
-                   for p in case_paths()}
+        visible = {}
+        for p in case_paths():
+            raw = _committed(p)
+            visible[json.loads(raw)["case_id"]] = raw
         with self.subTest(fact="no orphan in either public direction"):
             self.assertEqual({r["case_id"] for r in rows}, set(visible))
         for r in rows:
