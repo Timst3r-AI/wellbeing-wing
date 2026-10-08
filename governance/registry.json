@@ -4268,6 +4268,40 @@
       "content_hash": "sha256:ce93c54735a09acf5a2e966628101538912d2faf4e09ad010a7606e293bc6068",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0057",
+      "aliases": [],
+      "title": "0057 - W8 Disposition, Reveal and Calibration Law",
+      "type": "adr",
+      "phase": "W8",
+      "deliverable": "W8-D3",
+      "path": "docs/decisions/0057-w8-disposition-reveal-calibration-law.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-08",
+      "role": "The W8-D3 disposition, reveal and calibration law, landed before any session as the effective W8-D3-SCB requires, turning that brief's sections 4 to 8 into law without weakening or extending them. Fixes the session packet - rendered only by the published deterministic renderer from committed Git object bytes under W8-D2-CBC, refusing withheld authoring material, both variants whole, verbatim and symmetrically framed, the review question byte-identical, the three tokens in one fixed order with no default, one empty response line per case, structural provenance support and every derived or withheld-derived figure omitted, transient and hash-recorded; the human authority as sole source of dispositions, returned complete or not at all; the closed disposition register and session record, with no withheld metadata; immutability after publication and absolutely after reveal; existence-only custody at the session landing; the deliberate safeguard that nothing in the reveal landing begins until the session record is published and remotely verified; reproduction from exact retained bytes before any parse; exact unparsed copies scanned at untracked repository paths, never at the custody location, a finding a stop for the human ADR-0050 act with no suppression, redaction or byte repair; parse only after a clean scan; the case-level agreement or divergence relation; and exactly two count kinds, each a count of individual human acts and nothing more. Lands with proof obligations K1 to K12 over a labelled mechanics sentinel; renders no published case, touches no custody location and authorises no session, reveal, comparison or count by itself.",
+      "governs": [],
+      "depends_on": [
+        "W8-D3-SCB",
+        "ADR-0054",
+        "ADR-0055",
+        "W8-D2-MSA",
+        "W8-D2-CBC",
+        "W8-D2-DIB",
+        "W8-D2-DIC",
+        "W8-D2-CM-01",
+        "ADR-0050",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:0954293ff1ebb8ba1fb66230f8673a3778c09b9c04762e3bc983cc1cc8c7c585",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
