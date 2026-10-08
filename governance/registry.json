@@ -4235,6 +4235,39 @@
       "content_hash": "sha256:f1d18113a61c9fbf27e9705a613881485fa6fa801f977327bb6db56588a1173c",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-D3-SCB",
+      "aliases": [],
+      "title": "W8-D3 - Synthetic Calibration: Opening Brief",
+      "type": "phase-brief",
+      "phase": "W8",
+      "deliverable": "W8-D3",
+      "path": "docs/phases/W8-D3-synthetic-calibration-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-08",
+      "role": "The W8-D3 opening brief, opening W8-D3 for synthetic-calibration work only, effective on publication and remote verification, and nothing beyond W8-D3. Fixes four landings: D3-A this brief; D3-B the disposition, reveal and calibration law (proposed ADR-0057) with its proofs and a published review-packet renderer reading committed Git object bytes under W8-D2-CBC; D3-C the blind human disposition session, its twelve individual dispositions supplied by the human authority alone and published and remotely verified before any withheld byte is read beyond an existence check - a safeguard this brief establishes in addition to the inherited disposition-before-reveal and reproduction-before-reveal law; and D3-D commitment reproduction from exact retained bytes, an exact byte copy into untracked reveal-candidate paths, a landing scan of those copies only, parse only after a clean scan, byte-exact reveal, the case-level agreement or divergence comparison and D3 completion. Authored intent is a construction hypothesis, never an answer key; divergence is signal, never corrected inside D3; counts only - per-token and per-relation, each a count of individual human acts and nothing more. Authorises no session, disposition, reveal, calibration, count or contact surface by itself; W8-D4 through W8-D7 remain closed.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0055",
+        "W8-D2-MSA",
+        "ADR-0054",
+        "W8-D2-DIB",
+        "W8-D2-DIC",
+        "W8-D2-CM-01",
+        "W8-D2-CBC",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR",
+        "ADR-0003"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:ce93c54735a09acf5a2e966628101538912d2faf4e09ad010a7606e293bc6068",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
