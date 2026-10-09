@@ -4302,6 +4302,41 @@
       "content_hash": "sha256:0954293ff1ebb8ba1fb66230f8673a3778c09b9c04762e3bc983cc1cc8c7c585",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0058",
+      "aliases": [],
+      "title": "0058 - W8-D3 Session Recovery Law",
+      "type": "adr",
+      "phase": "W8",
+      "deliverable": "W8-D3",
+      "path": "docs/decisions/0058-w8-d3-session-recovery-law.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-09",
+      "role": "The W8-D3 session recovery law, a bounded void-session record between landings D3-B and D3-C. Records that an attempted D3-C session, in which case-level disposition material not supplied by the human authority reached the human reviewer before the reviewer's own dispositions were complete and recorded, is void and non-recordable; that no D3-C disposition exists from it; that no case-to-disposition association from the void attempt, and no distribution, position, count or aggregate derived from it, may be copied, cited, bound or treated as a source for governed state, without pre-judging the content of any future lawful human act; that the void attempt did not open, read, hash, write or disclose retained authoring material, that the published cases, manifest and published commitments are byte-untouched by this landing, and that the prior governed custody state is carried forward with no new claim about retained-byte integrity, which remains subject to the ADR-0055 reproduction gate; that the void attempt performs and authorises no custody access, commitment reproduction, reveal, comparison or count; that the exposed human reviewer may not repeat the review on this packet and represent it as a blind ADR-0057 session; that D3-C remains open and blocked at its human-review gate and D3-D unopened; and that progress requires a separately governed authority or doctrine amendment outside the authority W8-D3 presently grants. Creates no substitute reviewer, delegation mechanism, new disposition source or exception to ADR-0054 decision 18 or ADR-0057 decision 6, classifies no exchange under ADR-0047 decision 3 and does not state whether model contact occurred, leaving Q3 a fresh human-review duty, and lands with proof obligations R1 to R10.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0057",
+        "W8-D3-SCB",
+        "ADR-0054",
+        "ADR-0055",
+        "W8-D2-MSA",
+        "W8-D2-CBC",
+        "W8-D2-DIB",
+        "W8-D2-DIC",
+        "W8-D2-CM-01",
+        "ADR-0047",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:6291da0206c576be10c6c5eea8a1e71490f836e20430663a8eb5038f49877cd3",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
