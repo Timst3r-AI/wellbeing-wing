@@ -4047,7 +4047,7 @@
       "path": "docs/phases/W8-D2-discriminating-instrument-brief.md",
       "status": "accepted",
       "accepted_date": "2026-10-02",
-      "role": "The W8-D2 opening brief, opening W8-D2 for discriminating-instrument work only, effective on publication and remote verification, and nothing beyond W8-D2. It fixes a two-landing programme, each behind its own acceptance: D2-B, the proposed case-shape, evidence-separation and blinding law, landing before the first case and defining a new W8 case class that never reuses the W7 GER class, the exact reviewer-visible shape, deterministic class-independent identity and ordering rules, the withheld-authoring-record shape, and the commitment and reveal mechanism; and D2-C, the corpus materialisation and completion, landing the fixed class-opaque reviewer-visible synthetic instrument with one published SHA-256 commitment per withheld authoring record bound one-to-one to the neutral case identity. The corpus is fresh authored synthetic material from the public governance law - the W7 GERs, exam prose and twenty-six historical unknowns remain historically true and are not W8 case material. Before disposition nothing reviewer-visible may disclose or encode authored class; authoring records, including the intended disposition as a construction hypothesis and a non-enumerability nonce carrying no capability, remain byte-fixed in governed external review transport until the D3 review session is complete; class counts and composition stay withheld until post-disposition reveal, which must reproduce every commitment byte-exactly before any calibration comparison. ADR-0054 carries whole: evidence architecture without category conversion, the byte-identical review question, all three tokens on every case, the nine anti-collapse rules, and case independence. No disposition, no calibration, no class disclosure, no model contact, no provider, credential, transport or binary; ADR-0047 precondition 3 remains outstanding in its lawful resting state; P2, Q3, P4a and a fresh P4b bind at every landing. W8-D3 through W8-D7 remain closed behind their own briefs.",
+      "role": "The W8-D2 opening brief, opening W8-D2 for discriminating-instrument work only, effective on publication and remote verification, and nothing beyond W8-D2. It fixes a two-landing programme, each behind its own acceptance: D2-B, the proposed case-shape, evidence-separation and blinding law, landing before the first case and defining a new W8 case class that never reuses the W7 GER class, the exact reviewer-visible shape, deterministic class-independent identity and ordering rules, the withheld-authoring-record shape, and the commitment and reveal mechanism; and D2-C, the corpus materialisation and completion, landing the fixed class-opaque reviewer-visible synthetic instrument with one published SHA-256 commitment per withheld authoring record bound one-to-one to the neutral case identity. The corpus is fresh authored synthetic material from the public governance law - the W7 GERs, exam prose and twenty-six historical unknowns remain historically true and are not W8 case material. Before disposition nothing reviewer-visible may disclose or encode authored class; authoring records, including the intended disposition as a construction hypothesis and a non-enumerability nonce carrying no capability, remain byte-fixed in governed external review transport until the D2-C corpus's own separately governed custody act, which no session, reproduction or reveal of another corpus supplies (reconciled by ADR-0059); class counts and composition stay withheld until post-disposition reveal, which must reproduce every commitment byte-exactly before any calibration comparison. ADR-0054 carries whole: evidence architecture without category conversion, the byte-identical review question, all three tokens on every case, the nine anti-collapse rules, and case independence. No disposition, no calibration, no class disclosure, no model contact, no provider, credential, transport or binary; ADR-0047 precondition 3 remains outstanding in its lawful resting state; P2, Q3, P4a and a fresh P4b bind at every landing. W8-D3 through W8-D7 remain closed behind their own briefs.",
       "governs": [],
       "depends_on": [
         "ADR-0054",
@@ -4060,9 +4060,14 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:1b5be8d2207b06c44a40191e0ebcc785a8daad811103d120eca4029a2da19a83",
+      "content_hash": "sha256:c35dc0fdaeedd7f8a63a840edde34d95e3fa97a4a575e5e2fef70bc4ce3b0f7e",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-10-10",
+          "note": "Sections 12 and 14 reconciled in place by ADR-0059 (docs/decisions/0059-w8-supplementary-corpus-recovery-authority.md): the D2-C corpus's custody now runs until its own separately governed custody act, and its reveal, retirement or other custody end requires that act - no session, reproduction or reveal of the supplementary corpus supplies it. Role updated in the same commit, because it repeated the superseded custody window. The exact transformation of the published pre-image is proven by tests/test_w8_recovery_authority.py against the post-image ADR-0059 pins. Effective only on ADR-0059's acceptance, publication and remote verification; the D2-C completion record stays as built. Hash recomputed in the same commit."
+        }
+      ]
     },
     {
       "id": "ADR-0055",
@@ -4092,12 +4097,16 @@
       ],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:e23ddd60e197b8eadda50f1400cf0064a4665dd235edb96a05079ef606171d2b",
+      "content_hash": "sha256:fc967a9c4c4a799dfcd593e05ae5d2db881d47e0a0bf0de6a6fb74fa11dd284b",
       "hash_exclusion_reason": null,
       "errata": [
         {
           "date": "2026-10-03",
           "note": "Part J decision 28 reconciled by the accepted manifest shape amendment W8-D2-MSA (docs/phases/W8-D2-manifest-shape-amendment.md): the record's decision question claims the manifest shape is fixed completely before any case is authored, but decision 28 fixed rows, ordering, opacity and binding without fixing the outer file container. The reconciliation fixes the manifest instance as one closed two-field object - schema byte-fixed w8-commitment-manifest-v1 and rows exactly the decision's rows - under Part C canonical bytes at the fixed home path, with exactly one instance per corpus. Structural and bounded: no other decision changed, no decision renumbered, the published envelope proof module byte-untouched, and no case, nonce, hidden authoring record, commitment or manifest instance existed when the defect was found. Hash recomputed in the same commit."
+        },
+        {
+          "date": "2026-10-10",
+          "note": "Decisions 26 to 30 reconciled in place by ADR-0059 (docs/decisions/0059-w8-supplementary-corpus-recovery-authority.md), the phase-level supplementary recovery authority: the nonce, commitment, manifest-instance, custody-window, reproduction and transport provisions now bind each corpus separately - the D2-C corpus exactly as before, and the one supplementary corpus W8-S1 - with a reconciliation note added. The exact transformation of the published pre-image is proven by tests/test_w8_recovery_authority.py against the post-image ADR-0059 pins. Effective only on ADR-0059's acceptance, publication and remote verification; case shape, canonical bytes, identity, ordering, withheld-record shape and class opacity unchanged. Hash recomputed in the same commit."
         }
       ]
     },
@@ -4265,9 +4274,14 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:ce93c54735a09acf5a2e966628101538912d2faf4e09ad010a7606e293bc6068",
+      "content_hash": "sha256:11cf050e4c0d820868d9dd1f4e852d23f79c509e833ec565dd98ef354b6521dd",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-10-10",
+          "note": "Header and sections 1, 2, 3, 4, 5, 7, 8, 9, 11, 12 and 15 reconciled in place by ADR-0059 (docs/decisions/0059-w8-supplementary-corpus-recovery-authority.md): D3's session material is exactly the session corpus ADR-0059 binds; the existence check, packet, register, reproduction, reveal and comparison never draw in the published D2-C corpus; blinding runs from the reviewer's first access to session-corpus case material until the session record is published; section 8 joins ADR-0059's staged successions into one closed list; section 12 names the outside amendment and opening authority while W8-D3 still authors no case and amends no law. The exact transformation of the published pre-image is proven by tests/test_w8_recovery_authority.py against the post-image ADR-0059 pins. Effective only on ADR-0059's acceptance, publication and remote verification. Hash recomputed in the same commit."
+        }
+      ]
     },
     {
       "id": "ADR-0057",
@@ -4299,9 +4313,14 @@
       "id_namespaces": [],
       "implementation_permission": "none",
       "open_decisions": [],
-      "content_hash": "sha256:0954293ff1ebb8ba1fb66230f8673a3778c09b9c04762e3bc983cc1cc8c7c585",
+      "content_hash": "sha256:4222454a1c68ea3b6056b9d8f5e6e720cf2f1f36f967dd8d9154259802f8e358",
       "hash_exclusion_reason": null,
-      "errata": []
+      "errata": [
+        {
+          "date": "2026-10-10",
+          "note": "Decisions 1, 5, 8, 9, 11, 13, 15, 16, 18, 20, 22 and 24 and the K12 row of decision 28 reconciled in place by ADR-0059 (docs/decisions/0059-w8-supplementary-corpus-recovery-authority.md): every packet, register, existence check, reproduction, reveal, comparison and count binds exactly the session corpus ADR-0059 fixes and never the published D2-C corpus; decision 8's exclusions carry whole over an interval running from the reviewer's first access to session-corpus case material until the session record is published, with a closed list of permitted assistance; the session record adds the corpus binding and the reviewer's procedural attestation; decision 24 admits ADR-0059's closed, staged successions. Decision 6 unchanged. The exact transformation of the published pre-image is proven by tests/test_w8_recovery_authority.py against the post-image ADR-0059 pins. Effective only on ADR-0059's acceptance, publication and remote verification. Hash recomputed in the same commit."
+        }
+      ]
     },
     {
       "id": "ADR-0058",
@@ -4335,6 +4354,76 @@
       "implementation_permission": "none",
       "open_decisions": [],
       "content_hash": "sha256:6291da0206c576be10c6c5eea8a1e71490f836e20430663a8eb5038f49877cd3",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "ADR-0059",
+      "aliases": [],
+      "title": "0059 - W8 Supplementary Corpus Recovery Authority",
+      "type": "adr",
+      "phase": "W8",
+      "deliverable": null,
+      "path": "docs/decisions/0059-w8-supplementary-corpus-recovery-authority.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-10",
+      "role": "The phase-level W8 supplementary recovery authority that ADR-0058 decision 13 requires, held outside W8-D3. Authorises exactly: bounded in-place reconciliations of ADR-0055 decisions 26 to 30, of ADR-0057 decisions 1, 5, 8, 9, 11, 13, 15, 16, 18, 20, 22 and 24 and its K12 row, of the W8-D3 opening brief and of the W8-D2 opening brief, each proven as an exact transformation of its published pre-image against a pinned post-image; the opening, through W8-S1-SOB, of exactly one supplementary corpus W8-S1 of exactly twelve fresh cases, with no comparability claimed; and a closed, staged list of proof successions, of which only ADR-0058's R5 moves at this landing. Binds every later D3 act to the session corpus by its authoring commit, home tree and manifest, refusing original or mixed membership; keeps the human authority the sole source of dispositions and creates no reviewer route; runs the conduct interval from the reviewer's first access to supplementary case material until the session record is published, preserving ADR-0057 decision 8's exclusions whole and permitting only closed mechanical and law-only assistance, with the reviewer's attestation a human statement no test can prove; cites ADR-0058 decision 5 as operative; reads ADR-0058 decision 8 as landing-scoped, narrowly, only by express acceptance; keeps the original corpus sealed, its custody, retirement or reveal left to its own act; and records that broader influence from prior exposure cannot be mechanically excluded. Lands with proof obligations A1 to A12 and authorises no case, nonce, custody act, session, reproduction, reveal or count by itself.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0058",
+        "ADR-0057",
+        "ADR-0055",
+        "W8-D3-SCB",
+        "W8-D2-DIB",
+        "W8-D2-MSA",
+        "W8-D2-CBC",
+        "W8-D2-DIC",
+        "W8-D2-CM-01",
+        "ADR-0054",
+        "ADR-0047",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:05dc46e0b9b17d96f316aa5dcb545c5ba7e99031cdc169277d6ee12abcf06b59",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W8-S1-SOB",
+      "aliases": [],
+      "title": "W8-S1 - Supplementary Corpus: Opening Brief",
+      "type": "phase-brief",
+      "phase": "W8",
+      "deliverable": null,
+      "path": "docs/phases/W8-S1-supplementary-opening-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-10",
+      "role": "The phase-level opening brief of the one supplementary corpus W8-S1 under ADR-0059, effective with that record on publication and remote verification: opens exactly twelve fresh synthetic cases for authoring work only, through one authoring landing, as the accepted opening authority runway section 6.1 requires, with no exemption inferred from its empty deliverable field. Authoring is grounded in public doctrine and approved construction law only - never the void attempt's associations, derived distributions or purported answers, never an adaptation of or template from the original cases; composition stays withheld until the supplement's own reveal; custody is a sub-location of its own in the existing outside-repository transport, in force before the first case; the reviewer's conduct interval begins at first access to supplementary case material, the authoring candidate included; and the original corpus stays sealed, its custody, retirement or reveal left to its own act. W8-D2 stays complete as built; W8-D3 stays open with D3-C blocked until the authoring landing is effective; W8-D4 through W8-D7 remain closed.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0059",
+        "ADR-0058",
+        "ADR-0055",
+        "ADR-0054",
+        "W8-D2-DIB",
+        "W8-D2-MSA",
+        "W8-D2-DIC",
+        "W8-D2-CM-01",
+        "W8-D2-CBC",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:408f4df23a0452dd42ca9615785858f5a31905ef007dc9a130ba72f5b1b1f97a",
       "hash_exclusion_reason": null,
       "errata": []
     }

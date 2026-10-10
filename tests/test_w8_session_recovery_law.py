@@ -70,6 +70,11 @@ UNTOUCHED = {
         "bc3cba96a1c366879420a3e97724221c348d1885"),
 }
 DECISION_8 = {"ADR-0054", "ADR-0055", "ADR-0057", "W8-D3-SCB", "W8-D2-CBC"}
+# R5 succession under ADR-0059 Part G: every pin above stays proven at this
+# record's own published landing commit, and the present state of exactly
+# three of decision 8's laws is the exact reconciliation ADR-0059 pins.
+LANDING = "897f0b14a66ee956bd9fe36e63975b04d5dc9663"
+RECONCILED_BY_ADR_0059 = {"ADR-0055", "ADR-0057", "W8-D3-SCB"}
 CASE_HOME = "governance/discriminating-instrument"
 CASE_HOME_TREE = "ecf232275c81adffbc7335f0115ef501b2c92449"
 REGISTER_HOME = "governance/discriminating-review"
@@ -406,11 +411,27 @@ class R4_NoCustodyRevealOrCountAuthority(unittest.TestCase):
 
 class R5_PublishedLawUntouched(unittest.TestCase):
     def test_r5_decision_8_law_byte_untouched(self):
+        import test_w8_recovery_authority as authority
         by_id = {e["id"]: e for e in load_registry()["entries"]}
         with self.subTest(fact="the pin set is exactly decision 8's law"):
             self.assertEqual({eid for eid, _, _ in UNTOUCHED.values()},
                              DECISION_8)
+        with self.subTest(fact="ADR-0059 reconciles exactly three of them"):
+            self.assertEqual(set(authority.RECONCILED_LAW),
+                             RECONCILED_BY_ADR_0059)
         for rel, (eid, lf, blob) in UNTOUCHED.items():
+            with self.subTest(landing_object=eid):
+                self.assertEqual(
+                    _git("rev-parse", LANDING + ":" + rel).strip(), blob)
+                self.assertEqual(authority.committed_lf_hash(LANDING, rel), lf)
+            if eid in RECONCILED_BY_ADR_0059:
+                with self.subTest(exact_reconciliation=eid):
+                    self.assertEqual(
+                        authority.reconciliation_violations(rel), [])
+                with self.subTest(registry=eid):
+                    self.assertEqual(by_id[eid]["content_hash"],
+                                     lf_hash(ROOT / rel))
+                continue
             with self.subTest(working_copy=eid):
                 self.assertEqual(lf_hash(ROOT / rel), lf)
             with self.subTest(committed_object=eid):
@@ -422,6 +443,13 @@ class R5_PublishedLawUntouched(unittest.TestCase):
             raw = (ROOT / rel).read_bytes() + b" "
             self.assertNotEqual("sha256:" + hashlib.sha256(
                 raw.replace(b"\r\n", b"\n")).hexdigest(), UNTOUCHED[rel][1])
+        with self.subTest(control="an unauthorised edit to a reconciled law "
+                                  "is detected"):
+            rel = next(r for r, (e, _, _) in UNTOUCHED.items()
+                       if e in RECONCILED_BY_ADR_0059)
+            text = _lf_text(ROOT / rel)
+            self.assertTrue(authority.reconciliation_violations(
+                rel, present=text + " "))
 
 
 class R6_PublishedCaseHomeDidNotMove(unittest.TestCase):
