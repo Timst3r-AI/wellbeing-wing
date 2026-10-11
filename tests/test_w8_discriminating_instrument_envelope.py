@@ -783,7 +783,8 @@ class V12_DoctrineCarriageAndAbsence(unittest.TestCase):
             self.assertEqual(
                 [p for p in tracked
                  if "W8-C-" in p and not p.startswith(
-                     "governance/discriminating-instrument/")], [])
+                     ("governance/discriminating-instrument/",
+                      "governance/discriminating-supplement/"))], [])
         with self.subTest(fact="no tracked file carries the authoring "
                                "schema except this module and the law"):
             offenders = []

@@ -4426,6 +4426,65 @@
       "content_hash": "sha256:408f4df23a0452dd42ca9615785858f5a31905ef007dc9a130ba72f5b1b1f97a",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-S1-SCR",
+      "aliases": [],
+      "title": "W8-S1 - Supplementary Corpus Record",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": null,
+      "path": "docs/phases/W8-S1-supplementary-corpus-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-11",
+      "role": "The record of the one W8-S1 supplementary authoring landing under ADR-0059 and W8-S1-SOB: exactly twelve reviewer-visible supplementary cases in Part C canonical bytes under evidence-derived identities and mechanical filenames in their own home, and one class-opaque commitment manifest whose acceptance this record carries as governed register W8-S1-CM-01. Records the supplement custody sub-location's sentinel durability exercise before any case, nonce or retained record; withheld records frozen once with exclusive create after a once-only nonce; every commitment reproduced from the exact retained bytes at authoring and at freeze; fresh authoring from public doctrine with no void-attempt association and no original case adapted; textual non-reuse in both directions, never semantic independence; the original corpus, its custody and the W8-D2 completion untouched; and the reviewer's access to the visible cases at this landing beginning the conduct interval. Moves exactly the envelope V12 case-home limb and the recovery-authority A9 absence limb by exact transformation, with proof obligations S1 to S13. Composition is withheld until the supplement's own reveal; no packet, session, disposition, reveal, comparison or count.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0059",
+        "W8-S1-SOB",
+        "ADR-0055",
+        "ADR-0054",
+        "W8-D2-DIB",
+        "W8-D2-CBC",
+        "ADR-0058",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:562bd94979a07b213575493e7f8159f6868065bbaa87b06ad0d5a9dd69eadfa6",
+      "hash_exclusion_reason": null,
+      "errata": []
+    },
+    {
+      "id": "W8-S1-CM-01",
+      "aliases": [],
+      "title": "W8-S1 - Supplementary Corpus: Commitment Manifest",
+      "type": "governed-register",
+      "phase": "W8",
+      "deliverable": null,
+      "path": "governance/discriminating-supplement/W8-S1-commitment-manifest.json",
+      "status": "accepted",
+      "accepted_date": "2026-10-11",
+      "role": "The class-opaque commitment manifest of the supplementary corpus W8-S1: one closed two-field object under the ADR-0055 decision 28 container law, one row per supplementary case in lexical case identity order, each binding the case's reviewer-visible digest and its authoring commitment; it binds this corpus only. Its acceptance is carried by the record W8-S1-SCR.",
+      "governs": [],
+      "depends_on": [
+        "W8-S1-SCR",
+        "ADR-0059",
+        "ADR-0055",
+        "W8-S1-SOB",
+        "ADR-0054"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:ff59d15345df7c6eb8602c33f1832cc9512e66e880c218f4b3158dd4ad0a6d28",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

@@ -1897,9 +1897,17 @@ class A8_LandingCensus(unittest.TestCase):
 
 class A9_NothingSupplementaryYet(unittest.TestCase):
     def test_a9_no_supplementary_artefact_before_its_landing(self):
-        tracked = _git("ls-files").split()
-        exists = lambda rel: (ROOT / rel).exists()
-        entries = load_registry()["entries"]
+        # Succeeded at the supplementary authoring landing (ADR-0059
+        # Part G decision 25): the absence stays proven at this
+        # record's own landing commit, and the present closure is
+        # the one that landing proves.
+        commit, problems = l1_snapshot()
+        self.assertEqual(problems, [])
+        tracked = (_git("ls-tree", "-r", "--name-only", commit)
+                   .split() if commit else _git("ls-files").split())
+        exists = ((lambda rel: False) if commit
+                  else (lambda rel: (ROOT / rel).exists()))
+        entries = json.loads(snapshot_text(commit, REGISTRY))["entries"]
         self.assertEqual(absence_violations(tracked, exists, entries), [])
         planted = {
             "a tracked case path": (tracked + [SUPPLEMENT_HOME + "/x.json"],
@@ -1914,6 +1922,10 @@ class A9_NothingSupplementaryYet(unittest.TestCase):
         for name, args in planted.items():
             with self.subTest(control="%s is refused" % name):
                 self.assertTrue(absence_violations(*args))
+        with self.subTest(fact="the present closure is the "
+                               "supplementary landing's own"):
+            import test_w8_supplementary_corpus as supplement
+            self.assertEqual(supplement.closure_violations(), [])
 
 
 class A10_ValidationChain(unittest.TestCase):
