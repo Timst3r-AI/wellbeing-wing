@@ -4485,6 +4485,40 @@
       "content_hash": "sha256:ff59d15345df7c6eb8602c33f1832cc9512e66e880c218f4b3158dd4ad0a6d28",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-HPC",
+      "aliases": [],
+      "title": "W8 - Historical-Pin Proof Correction",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": null,
+      "path": "docs/phases/W8-historical-pin-proof-correction.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-13",
+      "role": "A bounded phase-level proof-implementation correction, outside W8-D3, of ADR-0059's proof A3: the Part F post-image pins A3 permits in ADR-0059 are derived from the validated L1 landing snapshot instead of the present working copy, so that successions ADR-0059 Part G authorises cannot unpin ADR-0059's own historical pins. Expressly settles its authority and scope against ADR-0059 decision 28 and the D3 brief's closed succession list: a separate governing act of the human authority, effective only on its own acceptance, publication and remote verification, authorising exactly this one change at its own landing, adding no succession to any D3 landing and amending no law; A3's obligation is unchanged. A prerequisite of the rebuilt D3-C session landing. No case, register, session record, custody access or later gate.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0059",
+        "W8-S1-SOB",
+        "W8-S1-SCR",
+        "ADR-0058",
+        "W8-D3-SCB",
+        "ADR-0057",
+        "ADR-0054",
+        "W8-D2-CBC",
+        "W7-D5-PSA",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:14746269c7af18556b6ee92d6aeb6c760b4835749beb8f0314afb041e4d650b9",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

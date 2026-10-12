@@ -1713,9 +1713,15 @@ class A3_NoExposureOrReservedLiteral(unittest.TestCase):
                 "board status": " ".join(status)}
 
     def test_a3_no_case_token_schema_or_unpinned_digest(self):
+        # Corrected by W8-HPC: the Part F post-image pins A3 permits are
+        # read from the validated L1 snapshot, never from the working
+        # copy, so an authorised later succession of a Part F source
+        # cannot unpin ADR-0059's history.
+        commit, problems = l1_snapshot()
+        self.assertEqual(problems, [])
         pins = [p.split(":", 1)[1] for _, p, _ in PREIMAGE.values()]
-        pins += [_sha(worktree_text(rel).encode("utf-8")).split(":", 1)[1]
-                 for rel in (A55, A57, SCB, DIB, R58)]
+        pins += [_sha(snapshot_text(commit, rel).encode("utf-8"))
+                 .split(":", 1)[1] for rel in (A55, A57, SCB, DIB, R58)]
         surfaces = {"ADR-0059": (worktree_text(ADR59), pins),
                     "W8-S1-SOB": (worktree_text(SOB), [])}
         surfaces.update({k: (t, []) for k, t in self.added_wording().items()})
