@@ -79,8 +79,15 @@ CASE_HOME = "governance/discriminating-instrument"
 CASE_HOME_TREE = "ecf232275c81adffbc7335f0115ef501b2c92449"
 REGISTER_HOME = "governance/discriminating-review"
 REVEAL_HOME = "governance/discriminating-reveal"
+# R7 as succeeded at the session landing (ADR-0059 Part G decision 26).
+SESSION_REGISTER = REGISTER_HOME + "/W8-D3-disposition-register.json"
+SESSION_RECORD = "docs/phases/W8-D3-human-disposition-record.md"
+SESSION_ENTRIES = {"W8-D3-HDR", "W8-D3-DR-01"}
 D3_ENTRIES = {"W8-D3-SCB", "ADR-0057", "ADR-0058"}
 LATER = ("W8-D4", "W8-D5", "W8-D6", "W8-D7")
+# R9's board sentence as succeeded at the session landing.
+R9_EARLIER = "No session, disposition, reveal or calibration exists yet."
+R9_SENTENCE = "No reveal, comparison, count or calibration exists yet."
 
 REQUIRED = (
     "The attempted D3-C session is void and non-recordable.",
@@ -478,23 +485,49 @@ class R6_PublishedCaseHomeDidNotMove(unittest.TestCase):
 
 
 class R7R8_NoRegisterRecordOrRevealHome(unittest.TestCase):
-    def test_r7_no_register_or_session_record(self):
-        tracked = _git("ls-files").split()
-        with self.subTest(fact="no register home, tracked or on disk"):
-            self.assertEqual([p for p in tracked
-                              if p.startswith(REGISTER_HOME + "/")], [])
-            self.assertFalse((ROOT / REGISTER_HOME).exists())
-        with self.subTest(fact="no session record or register file anywhere"):
-            self.assertEqual([p for p in tracked if re.search(
-                r"disposition-register|human-disposition-record", p)], [])
-        entries = load_registry()["entries"]
-        with self.subTest(fact="no registry entry in either home"):
-            self.assertEqual([e["id"] for e in entries if e["path"].startswith(
-                (REGISTER_HOME, REVEAL_HOME))], [])
-        with self.subTest(fact="W8-D3 entries are the brief, the law and this "
-                               "recovery law only"):
-            self.assertEqual({e["id"] for e in entries
+    def test_r7_exactly_the_register_and_session_record(self):
+        # Succeeded at the session landing: the former absence stays
+        # proven at this record's own landing commit, and the present
+        # admits exactly the register, the session record and the two
+        # W8-D3 registry entries they add.
+        before = _git("ls-tree", "-r", "--name-only", LANDING).split()
+        before_entries = json.loads(packet.committed_object_bytes(
+            ROOT, LANDING, "governance/registry.json"))["entries"]
+        with self.subTest(fact="none of them at this record's landing"):
+            self.assertEqual([p for p in before
+                              if p.startswith(REGISTER_HOME + "/")
+                              or re.search(r"disposition-register|"
+                                           r"human-disposition-record", p)],
+                             [])
+            self.assertEqual([e["id"] for e in before_entries
+                              if e["path"].startswith((REGISTER_HOME,
+                                                       REVEAL_HOME))], [])
+            self.assertEqual({e["id"] for e in before_entries
                               if e["deliverable"] == "W8-D3"}, D3_ENTRIES)
+        tracked = _git("ls-files").split()
+        with self.subTest(fact="the register home holds exactly the "
+                               "register, tracked and on disk"):
+            self.assertEqual([p for p in tracked
+                              if p.startswith(REGISTER_HOME + "/")],
+                             [SESSION_REGISTER])
+            self.assertEqual(sorted(p.name for p in
+                                    (ROOT / REGISTER_HOME).iterdir()),
+                             [SESSION_REGISTER.rsplit("/", 1)[1]])
+        with self.subTest(fact="exactly the register and the session "
+                               "record"):
+            self.assertEqual(sorted(p for p in tracked if re.search(
+                r"disposition-register|human-disposition-record", p)),
+                sorted((SESSION_REGISTER, SESSION_RECORD)))
+        entries = load_registry()["entries"]
+        with self.subTest(fact="one registry entry in the register home "
+                               "and none in the reveal home"):
+            self.assertEqual([e["id"] for e in entries if e["path"].startswith(
+                (REGISTER_HOME, REVEAL_HOME))], ["W8-D3-DR-01"])
+        with self.subTest(fact="W8-D3 entries are the brief, the two laws "
+                               "and the two session entries only"):
+            self.assertEqual({e["id"] for e in entries
+                              if e["deliverable"] == "W8-D3"},
+                             D3_ENTRIES | SESSION_ENTRIES)
 
     def test_r8_no_reveal_home(self):
         tracked = _git("ls-files").split()
@@ -517,9 +550,18 @@ class R9_LaterLandingsBlocked(unittest.TestCase):
         with self.subTest(fact="no registry entry opens a later deliverable"):
             self.assertEqual([e["id"] for e in entries
                               if e["deliverable"] in LATER], [])
-        with self.subTest(fact="the board still states no session exists"):
-            self.assertIn("No session, disposition, reveal or calibration "
-                          "exists yet.", _lf_text(BOARD))
+        # Succeeded at the session landing: the earlier sentence stays
+        # proven at the derived baseline, and the board now carries the
+        # session landing's exact wording.
+        with self.subTest(fact="the board stated no session existed at "
+                               "the derived baseline"):
+            self.assertIn(R9_EARLIER, packet.committed_object_bytes(
+                ROOT, LANDING, "docs/phases/README.md").decode("utf-8"))
+        with self.subTest(fact="the board now states no reveal exists, "
+                               "in the session landing's wording"):
+            board = _lf_text(BOARD)
+            self.assertIn(R9_SENTENCE, board)
+            self.assertNotIn(R9_EARLIER, board)
 
 
 class R10_RegistryBinding(unittest.TestCase):

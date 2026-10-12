@@ -42,6 +42,13 @@ REGISTER_SCHEMA = "w8-disposition-register-v1"
 REGISTER_ROW_FIELDS = frozenset({"case_id", "disposition"})
 RELATIONS = ("agreement", "divergence")
 COUNT_STATEMENT = "a count of individual human acts and nothing more"
+# K12 as succeeded at the session landing (ADR-0059 Part G decision
+# 26): the former absence stays proven at this record's own landing
+# commit.
+K12_LANDING = "372287baa4e71bce4353bbdf9ce5e0f2aec93fe1"
+REGISTER_HOME = "governance/discriminating-review"
+REVEAL_HOME = "governance/discriminating-reveal"
+REGISTER_PATH = REGISTER_HOME + "/W8-D3-disposition-register.json"
 
 # Mechanics fixtures only — NOT cases, NOT authored, NOT governed content.
 SENTINEL_PAIRS = (
@@ -587,21 +594,40 @@ class K11K12_ReachAndAbsence(unittest.TestCase):
                               + [["git", "cat-file", "-p",
                                   object_id + ":" + rel] for rel in raws])
 
-    def test_k12_no_packet_register_or_reveal_artefact_exists(self):
-        tracked = subprocess.run(["git", "ls-files"], cwd=ROOT,
-                                 capture_output=True, text=True,
-                                 check=True).stdout.split()
-        with self.subTest(fact="no register or reveal home is tracked"):
-            self.assertEqual(
-                [p for p in tracked if p.startswith(
-                    ("governance/discriminating-review/",
-                     "governance/discriminating-reveal/"))], [])
+    def test_k12_no_packet_and_only_the_published_register(self):
+        # Succeeded at the session landing: the register home admits
+        # exactly the published register, which alone joins the
+        # register schema's homes; the reveal home stays empty until its
+        # own landing.
+        def listed(*rev):
+            argv = (["ls-tree", "-r", "--name-only"] + list(rev)
+                    if rev else ["ls-files"])
+            return subprocess.run(["git"] + argv, cwd=ROOT,
+                                  capture_output=True, text=True,
+                                  check=True).stdout.split()
+
+        def in_home(paths, home):
+            return [p for p in paths if p.startswith(home + "/")]
+        tracked = listed()
+        with self.subTest(fact="no register or reveal home was tracked "
+                               "at this record's landing"):
+            before = listed(K12_LANDING)
+            self.assertEqual(in_home(before, REGISTER_HOME)
+                             + in_home(before, REVEAL_HOME), [])
+        with self.subTest(fact="the register home holds exactly the "
+                               "published register"):
+            self.assertEqual(in_home(tracked, REGISTER_HOME),
+                             [REGISTER_PATH])
+        with self.subTest(fact="no reveal home is tracked"):
+            self.assertEqual(in_home(tracked, REVEAL_HOME), [])
         homes = {"docs/decisions/0057-w8-disposition-reveal-calibration-law.md",
                  "docs/phases/W8-D3-synthetic-calibration-brief.md",
                  "tests/w8_review_packet.py", "tests/test_w8_calibration_law.py"}
         for marker in (packet.PACKET_SCHEMA, REGISTER_SCHEMA):
-            with self.subTest(fact="%s lives only in the law and its code"
-                                   % marker):
+            allowed = homes | ({REGISTER_PATH} if marker == REGISTER_SCHEMA
+                               else set())
+            with self.subTest(fact="%s lives only in the law, its code "
+                                   "and its admitted instance" % marker):
                 found = []
                 for p in tracked:
                     try:
@@ -610,7 +636,7 @@ class K11K12_ReachAndAbsence(unittest.TestCase):
                         continue
                     if marker.encode("utf-8") in data:
                         found.append(p)
-                self.assertTrue(set(found) <= homes, sorted(found))
+                self.assertTrue(set(found) <= allowed, sorted(found))
         flat = " ".join(__doc__.split())
         for clause in ("any disposition, any authored intent or any relation",
                        "that any custody record exists or is intact",
