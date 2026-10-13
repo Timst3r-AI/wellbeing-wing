@@ -97,6 +97,9 @@ LATER = ("W8-D4", "W8-D5", "W8-D6", "W8-D7")
 R9_EARLIER = "No session, disposition, reveal or calibration exists yet."
 R9_SENTENCE = "No reveal, comparison, count or calibration exists yet."
 R9_REVEAL = "No divergence is diagnosed, explained away or corrected."
+# R9's later-deliverable limb as succeeded at the W8-D4 opening
+# (W8-D4-IVB section 8).
+D3_COMPLETION = "3c34246a5b6989aaa6c5e19621964fa0c7799cdd"
 
 REQUIRED = (
     "The attempted D3-C session is void and non-recordable.",
@@ -583,9 +586,21 @@ class R9_LaterLandingsBlocked(unittest.TestCase):
                           "session record is published and independently "
                           "remote-verified", flat)
         entries = load_registry()["entries"]
-        with self.subTest(fact="no registry entry opens a later deliverable"):
-            self.assertEqual([e["id"] for e in entries
+        # Succeeded at the W8-D4 opening landing: the absence of every
+        # later-deliverable entry stays proven at the W8-D3 completion
+        # commit; W8-D4's entry set moves to that landing's own proof
+        # module, and W8-D5 to W8-D7 stay unopened.
+        with self.subTest(fact="no registry entry opened a later "
+                               "deliverable at the W8-D3 completion"):
+            at_completion = json.loads(packet.committed_object_bytes(
+                ROOT, D3_COMPLETION, "governance/registry.json"))[
+                "entries"]
+            self.assertEqual([e["id"] for e in at_completion
                               if e["deliverable"] in LATER], [])
+        with self.subTest(fact="no registry entry opens W8-D5 to "
+                               "W8-D7"):
+            self.assertEqual([e["id"] for e in entries
+                              if e["deliverable"] in LATER[1:]], [])
         # Succeeded at the session landing: the earlier sentence stays
         # proven at the derived baseline, and the board now carries the
         # session landing's exact wording.

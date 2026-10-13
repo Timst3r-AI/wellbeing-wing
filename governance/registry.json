@@ -4653,6 +4653,45 @@
       "content_hash": "sha256:b6e958ba42c59b5c45774eb5bbc66e5a1f8a8f19100f1b580c218e2509addf82",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-D4-IVB",
+      "aliases": [],
+      "title": "W8-D4 - Instrument Validation: Opening Brief",
+      "type": "phase-brief",
+      "phase": "W8",
+      "deliverable": "W8-D4",
+      "path": "docs/phases/W8-D4-instrument-validation-brief.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-14",
+      "role": "The opening brief of W8-D4, instrument validation, under the W8 runway: opens W8-D4 for instrument-validation work only through a six-landing programme - this brief, the validation law, a fresh validation corpus, blind validation sessions, reveal and the case-level comparison, and, if the human authority so decides, divergence diagnosis and completion. Defines six validation methods as construction disciplines for fresh synthetic cases, with method and family withheld until reveal; fixes the evidence limits, closed outcome set and human decision points of divergence diagnosis, which never attributes error to the reviewer and corrects nothing; carries ADR-0058's R9 later-deliverable succession at its own landing, with proof obligations VB1 to VB8. Authors no case, performs no validation and diagnoses nothing; the published W8-D3 record stays fixed, the original corpus stays sealed, W8-D5 to W8-D7 stay closed, and no model is contacted.",
+      "governs": [],
+      "depends_on": [
+        "W8-AR",
+        "ADR-0054",
+        "ADR-0055",
+        "ADR-0057",
+        "ADR-0058",
+        "ADR-0059",
+        "W8-D3-SCB",
+        "W8-D3-HDR",
+        "W8-D3-DR-01",
+        "W8-D3-CCR",
+        "W8-S1-SCR",
+        "W8-S1-CM-01",
+        "W8-HPC",
+        "W8-HAC",
+        "W8-D2-CBC",
+        "ADR-0056",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:30a956dc21d98d20a6e9daf6c18d1e92dc76342b5522d8f3e0aafc0008c574eb",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
