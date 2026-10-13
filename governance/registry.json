@@ -4614,6 +4614,45 @@
       "content_hash": "sha256:a061bab8660d1c3c01e7003b05f89fe92d931b04d76c8d8f9b7aa0d33dab6cd9",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-D3-CCR",
+      "aliases": [],
+      "title": "W8-D3 - Calibration Completion Record",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": "W8-D3",
+      "path": "docs/phases/W8-D3-calibration-completion-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-13",
+      "role": "The W8-D3 completion record of landing D3-D on the session corpus that ADR-0059 binds: every published authoring commitment reproduced by hashing the exact retained bytes, read-only, before any parse; the exact bytes copied to the reveal home and their landing scan clean, the custody location never scanned or named; only then parsed and bound to identity, filename, manifest row and visible digest; the twelve revealed records published as exact retained bytes, bound by W8-S1-CM-01 and not individually registered. Records the case-level comparison of each fixed human disposition with its authored intended token as agreement or divergence, and the two permitted count kinds, each a count of individual human acts and nothing more. Authored intent is a construction hypothesis, never an answer key; divergence is recorded, never diagnosed or corrected here. Moves exactly the reveal-landing successions of ADR-0059 Part G decision 27, with proof obligations RC1 to RC12, prepared over the effective proof correction W8-HAC. No disposition amended; no rate, score or readiness interpretation; W8-D4 to W8-D7 closed.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0057",
+        "ADR-0059",
+        "W8-D3-SCB",
+        "W8-D3-HDR",
+        "W8-D3-DR-01",
+        "W8-S1-SOB",
+        "W8-S1-SCR",
+        "W8-S1-CM-01",
+        "W8-HPC",
+        "W8-HAC",
+        "ADR-0058",
+        "ADR-0054",
+        "ADR-0055",
+        "W8-D2-CBC",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:b6e958ba42c59b5c45774eb5bbc66e5a1f8a8f19100f1b580c218e2509addf82",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

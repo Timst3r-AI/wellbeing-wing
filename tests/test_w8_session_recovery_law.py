@@ -83,11 +83,20 @@ REVEAL_HOME = "governance/discriminating-reveal"
 SESSION_REGISTER = REGISTER_HOME + "/W8-D3-disposition-register.json"
 SESSION_RECORD = "docs/phases/W8-D3-human-disposition-record.md"
 SESSION_ENTRIES = {"W8-D3-HDR", "W8-D3-DR-01"}
+# R7, R8 and R9 as succeeded at the reveal landing (ADR-0059 Part G
+# decision 27).
+SESSION_LANDING = "66b6e6ca7e33e5e0fd326d61653a0c13d1679878"
+REVEAL_BASELINE = "317c0ba9de76853d454774085cdf18f3a638c02f"
+REVEAL_ENTRIES = {"W8-D3-CCR"}
+SESSION_CORPUS = "83253039ec274a2496b37b618949fd00d3cd7c8e"
+SESSION_MANIFEST = ("governance/discriminating-supplement/"
+                    "W8-S1-commitment-manifest.json")
 D3_ENTRIES = {"W8-D3-SCB", "ADR-0057", "ADR-0058"}
 LATER = ("W8-D4", "W8-D5", "W8-D6", "W8-D7")
 # R9's board sentence as succeeded at the session landing.
 R9_EARLIER = "No session, disposition, reveal or calibration exists yet."
 R9_SENTENCE = "No reveal, comparison, count or calibration exists yet."
+R9_REVEAL = "No divergence is diagnosed, explained away or corrected."
 
 REQUIRED = (
     "The attempted D3-C session is void and non-recordable.",
@@ -523,17 +532,44 @@ class R7R8_NoRegisterRecordOrRevealHome(unittest.TestCase):
                                "and none in the reveal home"):
             self.assertEqual([e["id"] for e in entries if e["path"].startswith(
                 (REGISTER_HOME, REVEAL_HOME))], ["W8-D3-DR-01"])
-        with self.subTest(fact="W8-D3 entries are the brief, the two laws "
-                               "and the two session entries only"):
-            self.assertEqual({e["id"] for e in entries
+        with self.subTest(fact="W8-D3 entries were the brief, the two "
+                               "laws and the two session entries at "
+                               "the session landing"):
+            at_session = json.loads(packet.committed_object_bytes(
+                ROOT, SESSION_LANDING, "governance/registry.json"))[
+                "entries"]
+            self.assertEqual({e["id"] for e in at_session
                               if e["deliverable"] == "W8-D3"},
                              D3_ENTRIES | SESSION_ENTRIES)
+        with self.subTest(fact="W8-D3 entries are those and the "
+                               "completion record only"):
+            self.assertEqual({e["id"] for e in entries
+                              if e["deliverable"] == "W8-D3"},
+                             D3_ENTRIES | SESSION_ENTRIES
+                             | REVEAL_ENTRIES)
 
-    def test_r8_no_reveal_home(self):
-        tracked = _git("ls-files").split()
-        self.assertEqual([p for p in tracked
-                          if p.startswith(REVEAL_HOME + "/")], [])
-        self.assertFalse((ROOT / REVEAL_HOME).exists())
+    def test_r8_reveal_home_holds_exactly_the_session_corpus(self):
+        # Succeeded at the reveal landing: the former absence stays
+        # proven at this record's own landing commit and at the reveal
+        # landing's baseline; the present admits exactly the session
+        # corpus's identities, tracked and on disk.
+        for at in (LANDING, REVEAL_BASELINE):
+            with self.subTest(fact="no reveal home at %s" % at[:12]):
+                self.assertEqual([p for p in _git(
+                    "ls-tree", "-r", "--name-only", at).split()
+                    if p.startswith(REVEAL_HOME + "/")], [])
+        rows = json.loads(packet.committed_object_bytes(
+            ROOT, SESSION_CORPUS, SESSION_MANIFEST))["rows"]
+        expected = sorted("%s/%s.json" % (REVEAL_HOME, r["case_id"])
+                          for r in rows)
+        with self.subTest(fact="tracked: exactly the session corpus"):
+            self.assertEqual(sorted(p for p in _git("ls-files").split()
+                                    if p.startswith(REVEAL_HOME + "/")),
+                             expected)
+        with self.subTest(fact="on disk: exactly the same files"):
+            self.assertEqual(sorted(REVEAL_HOME + "/" + p.name for p in
+                                    (ROOT / REVEAL_HOME).iterdir()),
+                             expected)
 
 
 class R9_LaterLandingsBlocked(unittest.TestCase):
@@ -557,10 +593,18 @@ class R9_LaterLandingsBlocked(unittest.TestCase):
                                "the derived baseline"):
             self.assertIn(R9_EARLIER, packet.committed_object_bytes(
                 ROOT, LANDING, "docs/phases/README.md").decode("utf-8"))
-        with self.subTest(fact="the board now states no reveal exists, "
-                               "in the session landing's wording"):
+        # Succeeded again at the reveal landing: the session landing's
+        # wording stays proven at the reveal landing's baseline.
+        with self.subTest(fact="the board stated no reveal existed at "
+                               "the reveal landing's baseline"):
+            self.assertIn(R9_SENTENCE, packet.committed_object_bytes(
+                ROOT, REVEAL_BASELINE, "docs/phases/README.md")
+                .decode("utf-8"))
+        with self.subTest(fact="the board now carries the reveal "
+                               "landing's wording"):
             board = _lf_text(BOARD)
-            self.assertIn(R9_SENTENCE, board)
+            self.assertIn(R9_REVEAL, board)
+            self.assertNotIn(R9_SENTENCE, board)
             self.assertNotIn(R9_EARLIER, board)
 
 

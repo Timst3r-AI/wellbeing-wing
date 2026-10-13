@@ -49,6 +49,13 @@ K12_LANDING = "372287baa4e71bce4353bbdf9ce5e0f2aec93fe1"
 REGISTER_HOME = "governance/discriminating-review"
 REVEAL_HOME = "governance/discriminating-reveal"
 REGISTER_PATH = REGISTER_HOME + "/W8-D3-disposition-register.json"
+# K12's reveal limb as succeeded at the reveal landing (ADR-0059
+# Part G decision 27): the reveal home admits exactly the session
+# corpus.
+REVEAL_BASELINE = "317c0ba9de76853d454774085cdf18f3a638c02f"
+SESSION_CORPUS = "83253039ec274a2496b37b618949fd00d3cd7c8e"
+SESSION_MANIFEST = ("governance/discriminating-supplement/"
+                    "W8-S1-commitment-manifest.json")
 
 # Mechanics fixtures only — NOT cases, NOT authored, NOT governed content.
 SENTINEL_PAIRS = (
@@ -618,8 +625,20 @@ class K11K12_ReachAndAbsence(unittest.TestCase):
                                "published register"):
             self.assertEqual(in_home(tracked, REGISTER_HOME),
                              [REGISTER_PATH])
-        with self.subTest(fact="no reveal home is tracked"):
-            self.assertEqual(in_home(tracked, REVEAL_HOME), [])
+        with self.subTest(fact="no reveal home was tracked at the "
+                               "reveal landing's baseline"):
+            self.assertEqual(in_home(listed(REVEAL_BASELINE),
+                                     REVEAL_HOME), [])
+        with self.subTest(fact="the reveal home holds exactly the "
+                               "session corpus's identities"):
+            rows = json.loads(subprocess.run(
+                ["git", "cat-file", "-p", SESSION_CORPUS + ":"
+                 + SESSION_MANIFEST], cwd=ROOT, capture_output=True,
+                check=True).stdout)["rows"]
+            self.assertEqual(sorted(in_home(tracked, REVEAL_HOME)),
+                             sorted("%s/%s.json" % (REVEAL_HOME,
+                                                    r["case_id"])
+                                    for r in rows))
         homes = {"docs/decisions/0057-w8-disposition-reveal-calibration-law.md",
                  "docs/phases/W8-D3-synthetic-calibration-brief.md",
                  "tests/w8_review_packet.py", "tests/test_w8_calibration_law.py"}

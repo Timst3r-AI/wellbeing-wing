@@ -150,8 +150,12 @@ def tracked_text_files():
     out = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True,
                          text=True, check=True).stdout.split()
     home_rel = "governance/discriminating-instrument/"
+    # Succeeded at the reveal landing (ADR-0059 Part G decision 27):
+    # revealed records are authoring material about the cases, not
+    # reuse of them, so the reveal home is outside the guard's scope.
+    reveal_rel = "governance/discriminating-reveal/"
     return [p for p in out if p.endswith((".md", ".json"))
-            and not p.startswith(home_rel)]
+            and not p.startswith((home_rel, reveal_rel))]
 
 
 class C1_HomeClosure(unittest.TestCase):

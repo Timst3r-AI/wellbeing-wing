@@ -784,15 +784,22 @@ class V12_DoctrineCarriageAndAbsence(unittest.TestCase):
                 [p for p in tracked
                  if "W8-C-" in p and not p.startswith(
                      ("governance/discriminating-instrument/",
-                      "governance/discriminating-supplement/"))], [])
+                      "governance/discriminating-supplement/",
+                      "governance/discriminating-reveal/"))], [])
         with self.subTest(fact="no tracked file carries the authoring "
-                               "schema except this module and the law"):
+                               "schema except this module, the law "
+                               "and the reveal home"):
             offenders = []
             for p in tracked:
                 if p in ("docs/decisions/0055-w8-case-shape-evidence-"
                          "separation-blinding-law.md",
                          "tests/test_w8_discriminating_instrument_"
                          "envelope.py"):
+                    continue
+                # Succeeded at the reveal landing (ADR-0059 Part G
+                # decision 27): revealed records carry the schema by
+                # construction, so the reveal home is admitted.
+                if p.startswith("governance/discriminating-reveal/"):
                     continue
                 try:
                     data = (ROOT / p).read_bytes()

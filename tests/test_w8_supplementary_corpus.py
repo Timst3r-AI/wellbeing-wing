@@ -472,8 +472,13 @@ def variant_ngrams(case_bytes):
 
 
 def other_tracked_texts():
+    # Succeeded at the reveal landing (ADR-0059 Part G decision 27): the
+    # freshness scope excludes the reveal home, whose records are
+    # authoring material about these cases, not reuse of them.
     return [p for p in _git("ls-files").split()
-            if p.endswith((".md", ".json")) and not p.startswith(HOME + "/")]
+            if p.endswith((".md", ".json"))
+            and not p.startswith((HOME + "/",
+                                  "governance/discriminating-reveal/"))]
 
 
 SUCCESSION_ROW = re.compile(
