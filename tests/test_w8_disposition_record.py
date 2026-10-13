@@ -1098,10 +1098,12 @@ class H9_AbsenceAndFutureRefusal(unittest.TestCase):
         with self.subTest(fact="no reveal home, tracked or on disk"):
             self.assertEqual([p for p in tracked
                               if p.startswith(REVEAL_HOME + "/")], [])
-            self.assertFalse((ROOT / REVEAL_HOME).exists())
+            if commit is None:
+                self.assertFalse((ROOT / REVEAL_HOME).exists())
         with self.subTest(fact="no completion record and no later entry"):
             self.assertNotIn(COMPLETION_RECORD, tracked)
-            self.assertFalse((ROOT / COMPLETION_RECORD).exists())
+            if commit is None:
+                self.assertFalse((ROOT / COMPLETION_RECORD).exists())
             self.assertEqual({e["id"] for e in entries
                               if e["deliverable"] == "W8-D3"},
                              recovery.D3_ENTRIES | SESSION_ENTRIES)

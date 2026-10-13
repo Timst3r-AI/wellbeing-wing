@@ -4582,6 +4582,38 @@
       "content_hash": "sha256:3a1846c02434739c641c58f6428f6b7da4bab2e6a3b24e6b8bff4b4337df2b5a",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-HAC",
+      "aliases": [],
+      "title": "W8 - Historical-Absence Proof Correction",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": null,
+      "path": "docs/phases/W8-historical-absence-proof-correction.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-13",
+      "role": "A bounded phase-level proof-implementation correction, outside W8-D3, of the D3-C proof H9 of W8-D3-HDR: H9's two present-disk assertions, for the reveal home and the completion record, run only before the D3-C commit exists, its snapshot selection, fatal validation and historical absence assertions unchanged, so that it no longer refuses the reveal landing's authorised artefacts. Expressly settles its authority and scope against ADR-0059 decision 28 and the D3 brief's closed succession list: a separate governing act of the human authority, effective only on its own acceptance, publication and remote verification, authorising exactly this two-site change at its own landing, adding no succession to any D3 landing and amending no law. A prerequisite of the reveal landing, which stays paused before custody access until it is effective. No disposition, register, procedural account, custody access or later gate.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0059",
+        "W8-D3-HDR",
+        "W8-D3-SCB",
+        "ADR-0057",
+        "ADR-0058",
+        "ADR-0054",
+        "W8-HPC",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:a061bab8660d1c3c01e7003b05f89fe92d931b04d76c8d8f9b7aa0d33dab6cd9",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
