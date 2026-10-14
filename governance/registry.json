@@ -4692,6 +4692,43 @@
       "content_hash": "sha256:30a956dc21d98d20a6e9daf6c18d1e92dc76342b5522d8f3e0aafc0008c574eb",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "ADR-0060",
+      "aliases": [],
+      "title": "0060 - W8 Instrument Validation Law",
+      "type": "adr",
+      "phase": "W8",
+      "deliverable": "W8-D4",
+      "path": "docs/decisions/0060-w8-instrument-validation-law.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-14",
+      "role": "The W8-D4 instrument validation law, landed at D4-B before any validation case as the effective W8-D4-IVB requires: fixes six method labels and the authored classes each admits; a separately committed validation-construction record and its manifest; one validation corpus, W8-V1, of exactly eighteen fresh cases, with families of two or three permitted and every case reviewed in one session; the carriage of the commitment, custody, session, reveal and comparison law to that corpus by its own decisions, ADR-0055 and ADR-0057 byte-untouched; exactly the two permitted count kinds, with no count by method, family or class; and the closed, staged proof successions of the later landings, with proof obligations VL1 to VL12. The opening brief's VB7 W8-D4 entry set succeeds at this landing. Authors no case, touches no custody, holds no session and diagnoses nothing; W8-D5 to W8-D7 stay closed and no model is contacted.",
+      "governs": [],
+      "depends_on": [
+        "W8-D4-IVB",
+        "W8-AR",
+        "ADR-0054",
+        "ADR-0055",
+        "ADR-0057",
+        "ADR-0058",
+        "ADR-0059",
+        "W8-D2-CBC",
+        "W8-D3-SCB",
+        "W8-D3-CCR",
+        "W8-S1-SCR",
+        "W8-S1-CM-01",
+        "ADR-0050",
+        "ADR-0056",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:f4440effdab671b49572d14cf8ef14c7d2b1b711e33361cf4ddd59c7c855aae8",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

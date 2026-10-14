@@ -13,9 +13,9 @@ closed succession table; and the exact registry, board and census - each
 with planted-mutant or negative controls. Closed validators compare against
 trusted expected values held here, never against values read from the text
 being checked, and refuse unrecognised material rather than skip it. Every
-proof reads this landing's snapshot except one: the W8-D4 entry set of VB7,
-a present-state gate succeeded at each later W8-D4 landing that adds an
-entry.
+proof reads this landing's snapshot. VB7's W8-D4 entry set was a
+present-state gate until the D4-B landing moved it to the validation-law
+proof module (ADR-0060); it stays proven at the D4-A landing commit.
 
 THIS MODULE READS NO CUSTODY. It holds no case identity, schema literal or
 count as a literal, authors no case and performs no validation.
@@ -61,6 +61,9 @@ DOCTRINE = "docs/decisions/0054-generative-evaluation-maturity-doctrine.md"
 FIXED_CENSUS = frozenset({BRIEF, SELF_REL, RECOVERY, REGISTRY, BOARD})
 D4_ENTRIES = {"W8-D4-IVB"}
 LATER_THAN_D4 = ("W8-D5", "W8-D6", "W8-D7")
+# The D4-A landing commit, at which VB7's W8-D4 entry set stays proven
+# after its succession at the D4-B landing (ADR-0060 Part J).
+D4A_LANDING = "ad59925813f8b0c39789dac3b29383a5f6e25cea"
 
 # Published artefacts this landing must leave byte-unchanged (LF SHA-256).
 FIXED = {
@@ -927,10 +930,12 @@ class VB7_Registration(unittest.TestCase):
             self.assertEqual((e["status"], e["accepted_date"]), (state, date))
             if commit is None:
                 self.assertEqual(e["content_hash"], lf_hash(ROOT / BRIEF))
-        # The W8-D4 entry set: a present-state gate, succeeded at each later
-        # W8-D4 landing that adds an entry (W8-D4-IVB section 8).
-        present = json.loads(_lf((ROOT / REGISTRY).read_bytes()))["entries"]
-        with self.subTest(fact="W8-D4 entries are exactly this brief's"):
+        # Succeeded at the D4-B landing (ADR-0060 Part J): the W8-D4 entry
+        # set stays proven at the D4-A landing commit, and its present-state
+        # gate moves to the validation-law proof module.
+        present = json.loads(committed(D4A_LANDING, REGISTRY))["entries"]
+        with self.subTest(fact="W8-D4 entries were exactly this brief's at "
+                               "the D4-A landing"):
             self.assertEqual(d4_entry_set(present), D4_ENTRIES)
         # W8-D5 to W8-D7 stay refused in the present state by ADR-0058's
         # succeeded R9; this proof binds their absence at this landing only.
