@@ -785,7 +785,10 @@ class V12_DoctrineCarriageAndAbsence(unittest.TestCase):
                  if "W8-C-" in p and not p.startswith(
                      ("governance/discriminating-instrument/",
                       "governance/discriminating-supplement/",
-                      "governance/discriminating-reveal/"))], [])
+                      "governance/discriminating-reveal/",
+                      # Succeeded at the W8-D4 corpus landing (ADR-0060
+                      # Part J decision 38).
+                      "governance/validation-cases/"))], [])
         with self.subTest(fact="no tracked file carries the authoring "
                                "schema except this module, the law "
                                "and the reveal home"):
