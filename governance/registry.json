@@ -4813,6 +4813,38 @@
       "content_hash": "sha256:9c4c3e9d24953fb08458afacc504066fa4b21ae76b0d75a2d7d7b901103a57b3",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-CHC",
+      "aliases": [],
+      "title": "W8 - Case-Home Scope Correction",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": null,
+      "path": "docs/phases/W8-case-home-scope-correction.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-15",
+      "role": "A bounded phase-level proof-scope correction, outside W8-D4, of the envelope module's V12 case-home limb: its admitted-home tuple admits exactly the two validation reveal homes of ADR-0060 decision 23 beside its four existing homes, by one exact transformation of the effective corpus-landing post-image, its vacancy limb and every other line unchanged, so that the reveal landing meets only the successions decision 38 stages for it. Expressly settles its authority and scope against ADR-0060 decisions 38 and 39: a separate governing act of the human authority, effective only on its own acceptance, publication and remote verification, authorising exactly this one change at its own landing, adding no succession to any W8-D4 landing and amending no law; the validation law's VL10 keeps refusing every reveal path until the reveal landing. Proof obligations CH1 to CH8. A prerequisite of the reveal landing; D4-D preparation stays closed until separately authorised. No case, manifest, register, custody, session, reveal or diagnosis.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0060",
+        "W8-D4-VCR",
+        "W8-D4-IVB",
+        "ADR-0059",
+        "W8-HPC",
+        "W8-HAC",
+        "ADR-0054",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:1c416856a69d81a7d8f719b946787b98a98f25f76e1db5fec51ee0f346901925",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
