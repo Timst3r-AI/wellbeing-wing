@@ -91,6 +91,14 @@ CONSTRUCTION_MANIFEST = (VALIDATION_HOMES[0]
                          + "/W8-V1-construction-manifest.json")
 CORPUS_RECORD = LATER_RECORDS[0]
 CORPUS_IDS = frozenset({"W8-D4-VCR", "W8-V1-CM-01", "W8-V1-CM-02"})
+# Admitted at the session landing (ADR-0060 Part J decision 38): the
+# register home, the register, the session record and the two W8-D4
+# entries they add. The corpus-stage state stays proven at the corpus
+# landing commit.
+D4C_LANDING = "f638cca75ec4a192685bf5cd53f29451cfdbbdd9"
+SESSION_REGISTER = VALIDATION_HOMES[1] + "/W8-D4-validation-register.json"
+SESSION_RECORD = LATER_RECORDS[1]
+SESSION_IDS = frozenset({"W8-D4-VSR", "W8-D4-DR-01"})
 
 # Part E: the validation-construction record and its manifest.
 CONSTRUCTION_SCHEMA = "w8-validation-construction-v1"
@@ -686,18 +694,23 @@ def membership_violations(bound, steps, foreign=frozenset()):
 
 
 def staged_absence_violations(tracked, exists, entries, holders,
-                              corpus=None):
+                              corpus=None, session=None):
     """VL10's present-state gates: no later home, record, registry entry or
     new schema literal before its own landing. Succeeded at the corpus
     landing: `corpus` is that landing's admitted path set - the two
     manifests, the corpus record and the case files its commitment manifest
-    binds - or None for the state before it."""
-    admitted = frozenset(corpus or ())
+    binds - or None for the state before it. Succeeded at the session
+    landing: `session` is that landing's admitted path set - the
+    register and the session record - or None for the state before it."""
+    admitted = frozenset(corpus or ()) | frozenset(session or ())
     landed = corpus is not None
-    ids = D4_ENTRIES | (CORPUS_IDS if landed else frozenset())
+    held = session is not None
+    ids = (D4_ENTRIES | (CORPUS_IDS if landed else frozenset())
+           | (SESSION_IDS if held else frozenset()))
     holders_ok = {LAW, SELF_REL} | ({CONSTRUCTION_MANIFEST} if landed
                                     else set())
-    on_disk_ok = admitted | ({VALIDATION_HOMES[0]} if landed else set())
+    on_disk_ok = (admitted | ({VALIDATION_HOMES[0]} if landed else set())
+                  | ({VALIDATION_HOMES[1]} if held else set()))
     v = []
     homes = tuple(h + "/" for h in VALIDATION_HOMES)
     v += ["a later home is tracked: %s" % p for p in tracked
@@ -1243,9 +1256,10 @@ class VL9_VB7Succession(unittest.TestCase):
 class VL10_StagedAbsences(unittest.TestCase):
     def test_vl10_no_later_artefact_before_its_own_landing(self):
         # Present-state gates, each succeeded only by the later landing
-        # ADR-0060 Part J names. Succeeded at the corpus landing: the former
-        # absence stays proven at the D4-B landing commit, and the present
-        # admits exactly that landing's artefacts.
+        # ADR-0060 Part J names. Succeeded at the corpus landing and again at
+        # the session landing: each former state stays proven at its own
+        # landing commit, and the present admits exactly the landed
+        # artefacts.
         before = _git("ls-tree", "-r", "--name-only", D4B_LANDING).split()
         before_entries = json.loads(committed(D4B_LANDING, REGISTRY))[
             "entries"]
@@ -1255,6 +1269,19 @@ class VL10_StagedAbsences(unittest.TestCase):
             self.assertEqual(staged_absence_violations(
                 before, lambda p: False, before_entries, before_holders), [])
             self.assertEqual(sorted(before_holders), sorted([LAW, SELF_REL]))
+        at_corpus = _git("ls-tree", "-r", "--name-only", D4C_LANDING).split()
+        corpus_entries = json.loads(committed(D4C_LANDING, REGISTRY))[
+            "entries"]
+        corpus_holders = schema_holders(
+            at_corpus, lambda p: committed(D4C_LANDING, p))
+        corpus = corpus_admitted(lambda rel: committed(D4C_LANDING, rel))
+        with self.subTest(fact="nothing of the session existed at the corpus "
+                               "landing"):
+            self.assertEqual(staged_absence_violations(
+                at_corpus, lambda p: False, corpus_entries, corpus_holders,
+                corpus), [])
+            self.assertEqual(sorted(corpus_holders), sorted(
+                [LAW, SELF_REL, CONSTRUCTION_MANIFEST]))
         tracked = _git("ls-files").split()
         entries = json.loads(_lf((ROOT / REGISTRY).read_bytes()))["entries"]
 
@@ -1264,37 +1291,39 @@ class VL10_StagedAbsences(unittest.TestCase):
         def read(p):
             return (ROOT / p).read_bytes()
         holders = schema_holders(tracked, read)
-        adds = _git("log", "--diff-filter=A", "--format=%H", "--",
-                    CORPUS_RECORD).split()
-        corpus = corpus_admitted(
-            (lambda rel: committed(adds[-1], rel)) if adds
-            else (lambda rel: _lf(read(rel))))
-        with self.subTest(fact="exactly the corpus landing's artefacts are "
-                               "admitted"):
+        session = {SESSION_REGISTER, SESSION_RECORD}
+        with self.subTest(fact="exactly the corpus and session landings' "
+                               "artefacts are admitted"):
             self.assertEqual(staged_absence_violations(
-                tracked, exists, entries, holders, corpus), [])
+                tracked, exists, entries, holders, corpus, session), [])
         with self.subTest(fact="the new schema literals live in the law, "
                                "this module and the construction manifest"):
             self.assertEqual(sorted(holders), sorted(
                 [LAW, SELF_REL, CONSTRUCTION_MANIFEST]))
-        planted_entry = dict(entries[-1], id="W8-D4-VSR", deliverable="W8-D4")
+        planted_entry = dict(entries[-1], id="W8-D4-VRC", deliverable="W8-D4")
         for name, args in {
                 "an unbound case file": (
                     tracked + [VALIDATION_HOMES[0] + "/W8-C-x.json"], exists,
-                    entries, holders, corpus),
-                "a tracked register home": (
+                    entries, holders, corpus, session),
+                "an extra file in the register home": (
                     tracked + [VALIDATION_HOMES[1] + "/x.json"], exists,
-                    entries, holders, corpus),
-                "a session record on disk": (
-                    tracked, lambda p: p == LATER_RECORDS[1], entries,
-                    holders, corpus),
-                "a premature session entry": (
+                    entries, holders, corpus, session),
+                "a reveal-home path": (
+                    tracked + [VALIDATION_HOMES[2] + "/authoring/x.json"],
+                    exists, entries, holders, corpus, session),
+                "a validation record on disk": (
+                    tracked, lambda p: p == LATER_RECORDS[2], entries,
+                    holders, corpus, session),
+                "a premature validation-record entry": (
                     tracked, exists, entries + [planted_entry], holders,
-                    corpus),
+                    corpus, session),
                 "a schema literal elsewhere": (
-                    tracked, exists, entries, holders + [BOARD], corpus),
+                    tracked, exists, entries, holders + [BOARD], corpus,
+                    session),
                 "the corpus artefacts without their landing": (
-                    tracked, exists, entries, holders, None)}.items():
+                    tracked, exists, entries, holders, None, session),
+                "the session artefacts without their landing": (
+                    tracked, exists, entries, holders, corpus, None)}.items():
             with self.subTest(control="%s is refused" % name):
                 self.assertTrue(staged_absence_violations(*args))
 

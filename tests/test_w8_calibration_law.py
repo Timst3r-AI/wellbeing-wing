@@ -56,6 +56,13 @@ REVEAL_BASELINE = "317c0ba9de76853d454774085cdf18f3a638c02f"
 SESSION_CORPUS = "83253039ec274a2496b37b618949fd00d3cd7c8e"
 SESSION_MANIFEST = ("governance/discriminating-supplement/"
                     "W8-S1-commitment-manifest.json")
+# K12's register-schema limb as succeeded at the validation session
+# landing (ADR-0060 Part J decision 38): the validation register joins
+# the register schema's admitted instances beside the published register;
+# the former holders stay proven at that landing's baseline.
+VALIDATION_BASELINE = "a08ba584bea8e2576dd7450c6374a4ff4f0aa149"
+VALIDATION_REGISTER = ("governance/validation-review/"
+                       "W8-D4-validation-register.json")
 
 # Mechanics fixtures only — NOT cases, NOT authored, NOT governed content.
 SENTINEL_PAIRS = (
@@ -642,9 +649,20 @@ class K11K12_ReachAndAbsence(unittest.TestCase):
         homes = {"docs/decisions/0057-w8-disposition-reveal-calibration-law.md",
                  "docs/phases/W8-D3-synthetic-calibration-brief.md",
                  "tests/w8_review_packet.py", "tests/test_w8_calibration_law.py"}
+        with self.subTest(fact="the register schema lived only in the law, "
+                               "its code and the published register at the "
+                               "validation session landing's baseline"):
+            held = {p.split(":", 1)[1] for p in subprocess.run(
+                ["git", "grep", "-l", "-F", REGISTER_SCHEMA,
+                 VALIDATION_BASELINE], cwd=ROOT, capture_output=True,
+                text=True).stdout.split()}
+            self.assertIn(REGISTER_PATH, held)
+            self.assertNotIn(VALIDATION_REGISTER, held)
+            self.assertTrue(held <= homes | {REGISTER_PATH},
+                            sorted(held))
         for marker in (packet.PACKET_SCHEMA, REGISTER_SCHEMA):
-            allowed = homes | ({REGISTER_PATH} if marker == REGISTER_SCHEMA
-                               else set())
+            allowed = homes | ({REGISTER_PATH, VALIDATION_REGISTER}
+                               if marker == REGISTER_SCHEMA else set())
             with self.subTest(fact="%s lives only in the law, its code "
                                    "and its admitted instance" % marker):
                 found = []
