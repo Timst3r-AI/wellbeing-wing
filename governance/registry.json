@@ -4946,6 +4946,46 @@
       "content_hash": "sha256:55e680c31b3983be8b52bb2750dcb7f27fa812f4deb83439d50cf7358d5e327b",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-D4-CPR",
+      "aliases": [],
+      "title": "W8-D4 - Completion Record",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": "W8-D4",
+      "path": "docs/phases/W8-D4-completion-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-22",
+      "role": "The W8-D4 completion record of landing D4-F, without diagnosis by the human authority's decision, recorded verbatim under its dated label: every divergence recorded in W8-D3 and W8-D4 stays recorded and undiagnosed, no outcome of the closed diagnosis set is assigned to any case, nothing is corrected and no finding is taken to separate authority. Binds the W8-D4 programme as completed, each landing to the commit that added its record; keeps the dispositions, cases, manifests, revealed records and every earlier record byte-unchanged; names and characterises no case; derives no rate, score or readiness interpretation. Moves exactly the validation law's VL10 by exact transformation, ADR-0058's R9 sentence and constant preserved, with proof obligations CP1 to CP10. Opens none of W8-D5 to W8-D7.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0060",
+        "W8-D4-VRC",
+        "W8-D4-VSR",
+        "W8-D4-DR-01",
+        "W8-D4-VCR",
+        "W8-V1-CM-01",
+        "W8-V1-CM-02",
+        "W8-D4-IVB",
+        "W8-D3-CCR",
+        "W8-CHC",
+        "ADR-0057",
+        "ADR-0058",
+        "ADR-0054",
+        "ADR-0055",
+        "W8-D2-CBC",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:dd8a577de367946f5a7f5331a06a6a8df49fbe1b899dd6e6db2d527e62618471",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

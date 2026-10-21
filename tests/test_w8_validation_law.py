@@ -109,6 +109,12 @@ REVEAL_HOMES = (VALIDATION_HOMES[2] + "/authoring",
                 VALIDATION_HOMES[2] + "/construction")
 VALIDATION_RECORD = LATER_RECORDS[2]
 REVEAL_IDS = frozenset({"W8-D4-VRC"})
+# Admitted at the completion landing (ADR-0060 Part J decision 38): the
+# completion record and its W8-D4 entry. The reveal-stage state stays
+# proven at the reveal landing commit.
+D4E_LANDING = "67ed076503f1087cefed31dd163a706a87d3b8a6"
+COMPLETION_RECORD = LATER_RECORDS[3]
+COMPLETION_IDS = frozenset({"W8-D4-CPR"})
 
 # Part E: the validation-construction record and its manifest.
 CONSTRUCTION_SCHEMA = "w8-validation-construction-v1"
@@ -705,7 +711,7 @@ def membership_violations(bound, steps, foreign=frozenset()):
 
 def staged_absence_violations(tracked, exists, entries, holders,
                               corpus=None, session=None,
-                              reveal=None):
+                              reveal=None, completion=None):
     """VL10's present-state gates: no later home, record, registry entry or
     new schema literal before its own landing. Succeeded at the corpus
     landing: `corpus` is that landing's admitted path set - the two
@@ -715,15 +721,19 @@ def staged_absence_violations(tracked, exists, entries, holders,
     register and the session record - or None for the state before it.
     Succeeded at the reveal landing: `reveal` is that landing's admitted
     path set - both reveal homes' records and the validation record - or
-    None for the state before it."""
+    None for the state before it. Succeeded at the completion landing:
+    `completion` is that landing's admitted path set - the completion
+    record - or None for the state before it."""
     admitted = (frozenset(corpus or ()) | frozenset(session or ())
-                | frozenset(reveal or ()))
+                | frozenset(reveal or ()) | frozenset(completion or ()))
     landed = corpus is not None
     held = session is not None
     shown = reveal is not None
+    closed = completion is not None
     ids = (D4_ENTRIES | (CORPUS_IDS if landed else frozenset())
            | (SESSION_IDS if held else frozenset())
-           | (REVEAL_IDS if shown else frozenset()))
+           | (REVEAL_IDS if shown else frozenset())
+           | (COMPLETION_IDS if closed else frozenset()))
     holders_ok = {LAW, SELF_REL} | ({CONSTRUCTION_MANIFEST} if landed
                                     else set())
     if shown:
@@ -1324,6 +1334,21 @@ class VL10_StagedAbsences(unittest.TestCase):
                 session_holders, corpus, session), [])
             self.assertEqual(sorted(session_holders), sorted(
                 [LAW, SELF_REL, CONSTRUCTION_MANIFEST]))
+        at_reveal = _git("ls-tree", "-r", "--name-only", D4E_LANDING).split()
+        reveal_entries = json.loads(committed(D4E_LANDING, REGISTRY))[
+            "entries"]
+        reveal_holders = schema_holders(
+            at_reveal, lambda p: committed(D4E_LANDING, p))
+        reveal = reveal_admitted()
+        construction_reveal = sorted(p for p in reveal
+                                     if p.startswith(REVEAL_HOMES[1] + "/"))
+        with self.subTest(fact="nothing of the completion existed at the "
+                               "reveal landing"):
+            self.assertEqual(staged_absence_violations(
+                at_reveal, lambda p: False, reveal_entries, reveal_holders,
+                corpus, session, reveal), [])
+            self.assertEqual(sorted(reveal_holders), sorted(
+                [LAW, SELF_REL, CONSTRUCTION_MANIFEST] + construction_reveal))
         tracked = _git("ls-files").split()
         entries = json.loads(_lf((ROOT / REGISTRY).read_bytes()))["entries"]
 
@@ -1333,54 +1358,54 @@ class VL10_StagedAbsences(unittest.TestCase):
         def read(p):
             return (ROOT / p).read_bytes()
         holders = schema_holders(tracked, read)
-        reveal = reveal_admitted()
-        construction_reveal = sorted(p for p in reveal
-                                     if p.startswith(REVEAL_HOMES[1] + "/"))
-        with self.subTest(fact="exactly the corpus, session and reveal "
-                               "landings' artefacts are admitted"):
+        completion = {COMPLETION_RECORD}
+        with self.subTest(fact="exactly the corpus, session, reveal and "
+                               "completion landings' artefacts are admitted"):
             self.assertEqual(staged_absence_violations(
-                tracked, exists, entries, holders, corpus, session, reveal),
-                [])
+                tracked, exists, entries, holders, corpus, session, reveal,
+                completion), [])
         with self.subTest(fact="the new schema literals live in the law, "
                                "this module, the construction manifest and "
                                "the construction reveal home"):
             self.assertEqual(sorted(holders), sorted(
                 [LAW, SELF_REL, CONSTRUCTION_MANIFEST] + construction_reveal))
             self.assertEqual(len(construction_reveal), 18)
-        planted_entry = dict(entries[-1], id="W8-D4-CPR", deliverable="W8-D4")
+        planted_entry = dict(entries[-1], id="W8-D4-XYZ", deliverable="W8-D4")
         for name, args in {
                 "an unbound case file": (
                     tracked + [VALIDATION_HOMES[0] + "/W8-C-x.json"], exists,
-                    entries, holders, corpus, session, reveal),
+                    entries, holders, corpus, session, reveal, completion),
                 "an extra file in the register home": (
                     tracked + [VALIDATION_HOMES[1] + "/x.json"], exists,
-                    entries, holders, corpus, session, reveal),
+                    entries, holders, corpus, session, reveal, completion),
                 "an unbound reveal-home path": (
                     tracked + [REVEAL_HOMES[0] + "/W8-C-x.json"], exists,
-                    entries, holders, corpus, session, reveal),
+                    entries, holders, corpus, session, reveal, completion),
                 "a path under the reveal root itself": (
                     tracked + [VALIDATION_HOMES[2] + "/W8-C-x.json"], exists,
-                    entries, holders, corpus, session, reveal),
-                "a completion record on disk": (
-                    tracked, lambda p: p == LATER_RECORDS[3], entries,
-                    holders, corpus, session, reveal),
-                "a premature completion entry": (
+                    entries, holders, corpus, session, reveal, completion),
+                "an unlisted W8-D4 entry": (
                     tracked, exists, entries + [planted_entry], holders,
-                    corpus, session, reveal),
+                    corpus, session, reveal, completion),
                 "a schema literal elsewhere": (
                     tracked, exists, entries, holders + [BOARD], corpus,
-                    session, reveal),
+                    session, reveal, completion),
                 "a construction schema literal in the authoring home": (
                     tracked, exists, entries,
                     holders + [REVEAL_HOMES[0] + "/W8-C-x.json"], corpus,
-                    session, reveal),
+                    session, reveal, completion),
                 "the corpus artefacts without their landing": (
-                    tracked, exists, entries, holders, None, session, reveal),
+                    tracked, exists, entries, holders, None, session, reveal,
+                    completion),
                 "the session artefacts without their landing": (
-                    tracked, exists, entries, holders, corpus, None, reveal),
+                    tracked, exists, entries, holders, corpus, None, reveal,
+                    completion),
                 "the reveal artefacts without their landing": (
+                    tracked, exists, entries, holders, corpus, session, None,
+                    completion),
+                "the completion artefacts without their landing": (
                     tracked, exists, entries, holders, corpus, session,
-                    None)}.items():
+                    reveal, None)}.items():
             with self.subTest(control="%s is refused" % name):
                 self.assertTrue(staged_absence_violations(*args))
 
