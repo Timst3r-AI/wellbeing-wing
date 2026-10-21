@@ -4908,6 +4908,44 @@
       "content_hash": "sha256:89d55e2ac9de9531330faa9687385c0cedf2efcfff855d56b0b6e35ee01b25a0",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-D4-VRC",
+      "aliases": [],
+      "title": "W8-D4 - Validation Record",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": "W8-D4",
+      "path": "docs/phases/W8-D4-validation-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-21",
+      "role": "The W8-D4 validation record of landing D4-E, the reveal of the validation corpus W8-V1: every published authoring and construction commitment reproduced by hashing the exact retained bytes before any parse, the exact bytes copied to the two reveal homes of ADR-0060 decision 23, scanned there and never in custody, and parsed only after a clean scan; every revealed authoring record bound to its identity, filename, manifest row and published visible digest, every revealed construction record bound to its case, authored class and authoring commitment with methods admitted for their classes and family seeds verified, and the construction manifest bound in every direction. Carries exactly the case-level comparison of each human token to its authored intended token as agreement or divergence, and exactly the two permitted count kinds, each carrying its statement; organises no outcome by method or family; amends no disposition; diagnoses, explains away and corrects nothing; derives no rate, score or readiness interpretation. Moves exactly the envelope authoring-schema limb and the validation law's VL10 by exact transformation, with proof obligations VR1 to VR12. Diagnosis, if the human authority so decides, belongs to D4-F.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0060",
+        "W8-D4-VSR",
+        "W8-D4-DR-01",
+        "W8-D4-VCR",
+        "W8-V1-CM-01",
+        "W8-V1-CM-02",
+        "W8-D4-IVB",
+        "W8-CHC",
+        "ADR-0057",
+        "ADR-0058",
+        "ADR-0054",
+        "ADR-0055",
+        "W8-D2-CBC",
+        "ADR-0056",
+        "W8-AR",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:55e680c31b3983be8b52bb2750dcb7f27fa812f4deb83439d50cf7358d5e327b",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

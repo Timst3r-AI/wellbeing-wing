@@ -809,6 +809,11 @@ class V12_DoctrineCarriageAndAbsence(unittest.TestCase):
                 # construction, so the reveal home is admitted.
                 if p.startswith("governance/discriminating-reveal/"):
                     continue
+                # Succeeded at the W8-D4 reveal landing (ADR-0060 Part J
+                # decision 38): the validation authoring reveal home is
+                # admitted beside it.
+                if p.startswith("governance/validation-reveal/authoring/"):
+                    continue
                 try:
                     data = (ROOT / p).read_bytes()
                 except OSError:
