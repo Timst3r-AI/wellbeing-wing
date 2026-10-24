@@ -2,9 +2,9 @@
 
 A governance-first, privacy-first architecture for personal wellbeing systems.
 
-**Status:** The current published state is a governed, headless reference implementation and evaluation environment. **W0 is accepted; W1 through W7 are complete and closed. W8-D1 and W8-D2 are complete; W8-D3 through W8-D7 remain closed behind their own gates.**
+**Status:** The current published state is a governed, headless reference implementation and evaluation environment. **W0 is accepted; W1 through W7 are complete and closed. W8-D1 through W8-D4 are complete; W8-D5 through W8-D7 remain closed behind their own gates.**
 
-The repository now contains the local Health Vault and Health Profile foundations, enforceable room contracts, runtime governance machinery, a static review surface, synthetic generated-evaluation records with individual human dispositions, and a class-opaque W8 discriminating instrument. **No public model has been contacted at any point.**
+The repository now contains the local Health Vault and Health Profile foundations, enforceable room contracts, runtime governance machinery, a static review surface, synthetic generated-evaluation records with individual human dispositions, a class-opaque W8 discriminating instrument, and two further W8 corpora — a twelve-case supplementary corpus for synthetic calibration and an eighteen-case validation corpus — each dispositioned by the human authority in one session with the authoring records withheld, then revealed as exact retained bytes and compared case by case, with every recorded divergence left undiagnosed by the human authority's decision. **W7 closed without model contact; W8-D6, the contact decision, remains unopened and no W8 contact implementation is authorised before it; and the published W8 records, under ADR-0058's standing reservation, classify no exchange under ADR-0047 decision 3 and do not state whether model contact occurred.**
 
 There is not yet an end-user application, conversational assistant or hosted sync service, and the Wing does not provide medical, therapeutic, diagnostic or crisis-response functions.
 
@@ -57,7 +57,7 @@ The Wing does not diagnose, prescribe treatment, provide crisis response or make
 | **W5** | Runtime enforcement and behavioural evaluation | ✅ Closed (2026-08-17) |
 | **W6** | Governed presentation and review surfaces | ✅ Closed (2026-08-17) |
 | **W7** | First-contact governance and synthetic model evaluation | ✅ Closed (2026-10-01), with no public model contact |
-| **W8** | Generative evaluation maturity | 🟡 In progress — D1 doctrine and D2 discriminating instrument complete; D3–D7 closed |
+| **W8** | Generative evaluation maturity | 🟡 In progress — D1 doctrine, D2 discriminating instrument, D3 synthetic calibration and D4 instrument validation complete; D5–D7 closed |
 
 ### What exists now
 
@@ -68,7 +68,7 @@ The Wing does not diagnose, prescribe treatment, provide crisis response or make
 - A static generated review surface with deterministic traceability.
 - A governed synthetic-evaluation architecture and published synthetic evaluation records.
 - A human-review disposition layer in which individual generated-evaluation records receive explicit human dispositions without turning model output into authority.
-- A W8 evaluation doctrine and a twelve-case, class-opaque discriminating instrument with published integrity commitments and withheld authoring records held outside the repository until a separately gated reveal.
+- A W8 evaluation doctrine; a twelve-case, class-opaque discriminating instrument whose withheld authoring records stay sealed outside the repository under their own authority; and two further corpora — twelve supplementary cases and eighteen validation cases — each with published integrity commitments, one human disposition session with the authoring records withheld, a byte-exact reveal of every withheld record, and a published case-level comparison carrying only the two permitted count kinds.
 - Deterministic proofs, mutation controls, public-safety scanning and a machine-readable governance registry binding governed records by content hash.
 
 ### What does not exist
@@ -76,9 +76,9 @@ The Wing does not diagnose, prescribe treatment, provide crisis response or make
 - No end-user UI or user-facing command-line product.
 - No conversational assistant or relationship-oriented AI experience.
 - No hosted sync or hosted personal-data service.
-- No public model contact, model runtime, provider integration or model-generated public evidence.
+- No public model runtime, provider integration, transport, credentials or model-generated public evidence, and no W8 contact implementation before a lawful W8-D6 decision; ADR-0058's reservation on classifying any exchange stands.
 - No medical, diagnostic, therapeutic, clinical, crisis-response or safety-intervention capability.
-- No W8-D3 review session, calibration, reveal or later contact decision. Those remain separately gated.
+- No diagnosis of any recorded divergence, no W8-D5 evidence-adequacy finding, no W8-D6 contact decision and no W8-D7 closure. Those remain separately gated.
 
 ## Repository structure
 

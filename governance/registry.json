@@ -4986,6 +4986,41 @@
       "content_hash": "sha256:dd8a577de367946f5a7f5331a06a6a8df49fbe1b899dd6e6db2d527e62618471",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-DER",
+      "aliases": [],
+      "title": "W8 - Documentation Erratum",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": null,
+      "path": "docs/phases/W8-documentation-erratum.md",
+      "status": "accepted",
+      "accepted_date": "2026-10-24",
+      "role": "A phase-level documentation erratum under the phase entry checklist's rules 2, 4 and 10, outside every W8 deliverable: corrects six W8 statements in the root README and the tests README's dependency statement and family note to what the published record states, as exact pinned transformations of their baseline pre-images, every corrected statement mapped to cited published sources at the baseline, the ADR-0058 reservation on classifying any exchange preserved, with proof obligations DE1 to DE6. Changes no governing record, no proof module other than its own, no case, manifest, register, revealed record, custody or registry entry other than its own; flips no status; adds no capability, readiness, safety, correctness or approval claim; classifies no exchange and does not state whether model contact occurred; names the concept overview as a separate decision.",
+      "governs": [],
+      "depends_on": [
+        "ADR-0056",
+        "W8-AR",
+        "W8-D4-CPR",
+        "W8-D4-VRC",
+        "W8-D4-VSR",
+        "W8-D4-VCR",
+        "W8-D3-CCR",
+        "W8-D3-HDR",
+        "W8-S1-SCR",
+        "ADR-0058",
+        "ADR-0059",
+        "ADR-0008",
+        "W7-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:0eec519ea3d1d369bfd3f8231d09c8f09a24dde9749fa59480f900d5da45fd07",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }

@@ -2,13 +2,15 @@
 
 Tooling (not a governance document; not registered). Verification-only code: these tests check rules; nothing here does anything for a user.
 
-**Run:** `python -m unittest discover -s tests -v` — Python 3 standard library only. No dependencies, no manifest, ever. The verbose flag renders the Tier 3 skip ledger.
+**Run:** `python -m unittest discover -s tests -v` — Python 3 standard library plus the engine's entire third-party runtime surface, exact-pinned in `requirements.txt` (`PyNaCl==1.6.2`, `cffi==2.0.0`, `pycparser==3.0`), which the engine's crypto port imports and the engine tests need; no other dependency manifest is admitted. The verbose flag renders the Tier 3 skip ledger.
 
 ## The three tiers
 
 - **Tier 1 — repo-state assertions** (`test_repo_state.py`): the subject is the repository itself. Registry consistency (entries, paths, statuses, LF-normalised hashes, null-hash rule, reference resolution), the directory and manifest fences made executable, the public-safety scan invoked and asserted green, and fixture discipline (SYNTHETIC naming, marker blocks, non-empty grammar maps).
 - **Tier 2 — grammar validators against fixtures** (`test_d1_edges.py`, `test_d2_grants.py`, `test_d3_authority.py`): small pure conformance checks run over the synthetic fixture seed set — the flow whitelist refuses every anti-map row by absence; a grant missing any of the thirteen elements, carrying a blanket scope, or an unbounded duration is unconstructable; authority transitions gate on actor; staleness decays monotonically; expired serves as unknown; contradictions suspend visibly; absence never becomes a negative claim; repetition never promotes.
 - **Tier 3 — the pending ledger** (`test_pending_ledger.py`): every required-but-not-yet-runnable proof is a named skipped stub with an owner (a role or phase, never a person) and an unblocking condition. The skip list is the outstanding-proof ledger; a skipped test is honest, a missing test is invisible.
+
+Later phases added their own proof modules beside these three tiers: `test_w4_*`, `test_w6_*`, `test_w7_*`, `test_w8_*`, `test_engine_*`, `test_runtime_*` and `test_evaluation_*`. The three tiers remain the W2 skeleton they stand on.
 
 ## The transcription rule (source wins)
 
