@@ -17,9 +17,10 @@ values held here and refuse unrecognised material rather than skip it.
 Every proof reads this landing's fixed snapshot - the candidate over the
 baseline before the commit exists, the one commit that added the brief
 afterwards - and executes the helpers it relies on from that snapshot's
-bytes, in a private namespace. The one present-state gate is EA7's W8-D5
-entry set, which the review law's landing is expected to move, as the
-W8-D4 opening's moved. The residual live reach is disclosed exactly: each
+bytes, in a private namespace. EA7's W8-D5 entry set was a present-state
+gate until the D5-B landing moved it to the review-law proof module
+(ADR-0061); it stays proven at the D5-A landing commit. The residual live
+reach is disclosed exactly: each
 snapshot-executed helper module imports, at its own top level, the live
 modules it aliases for the fixed-law values it reads from them, and no
 more independence than that is claimed.
@@ -86,6 +87,9 @@ CONTACT_LAW = "docs/decisions/0047-first-contact-doctrine-and-named-not-performe
 FIXED_CENSUS = frozenset({BRIEF, SELF_REL, RECOVERY, REGISTRY, BOARD})
 D5_ENTRIES = frozenset({"W8-D5-EAB"})
 LATER_THAN_D5 = ("W8-D6", "W8-D7")
+# The D5-A landing commit, at which EA7's W8-D5 entry set stays proven
+# after its succession at the D5-B landing (ADR-0061 Part J).
+D5A_LANDING = "c8e13d47f305e0378609ffec1d31f890f629239d"
 FIXED_HOMES = ("governance/validation-cases", "governance/validation-review",
                "governance/validation-reveal",
                "governance/discriminating-instrument",
@@ -1198,15 +1202,15 @@ class EA7_EntrySet(unittest.TestCase):
             self.assertEqual([e["id"] for e in json.loads(
                 committed(BASELINE, REGISTRY))["entries"]
                 if e["deliverable"] in ("W8-D5",) + LATER_THAN_D5], [])
-        # The one present-state gate, until the review law's landing moves
-        # it: the W8-D5 entries are exactly this brief's, and no W8-D6 or
-        # W8-D7 entry exists.
-        live = json.loads(_lf((ROOT / REGISTRY).read_bytes()))["entries"]
-        with self.subTest(fact="present state: the W8-D5 entries are this "
-                               "brief's alone"):
-            self.assertEqual({e["id"] for e in live
+        # Succeeded at the D5-B landing (ADR-0061 Part J): the W8-D5 entry
+        # set stays proven at the D5-A landing commit, and its present-state
+        # gate moves to the review-law proof module.
+        at_landing = json.loads(committed(D5A_LANDING, REGISTRY))["entries"]
+        with self.subTest(fact="at the D5-A landing: the W8-D5 entries were "
+                               "this brief's alone"):
+            self.assertEqual({e["id"] for e in at_landing
                               if e["deliverable"] == "W8-D5"}, D5_ENTRIES)
-            self.assertEqual([e["id"] for e in live
+            self.assertEqual([e["id"] for e in at_landing
                               if e["deliverable"] in LATER_THAN_D5], [])
         base = at_snapshot[-1]
         for name, entries in {
