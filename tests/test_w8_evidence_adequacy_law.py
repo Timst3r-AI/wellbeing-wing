@@ -21,10 +21,15 @@ refuse unrecognised material rather than skip it.
 Every proof reads this landing's fixed snapshot - the candidate over the
 baseline before the commit exists, the one commit that added the law
 afterwards - and executes the helpers it relies on, the opening module among
-them, from that snapshot's bytes, in a private namespace. The present-state
-gates are EL7's staged absences alone, each succeeded only by the finding
-landing that ADR-0061 Part J names. The residual live reach is disclosed
-exactly: each snapshot-executed helper module imports, at its own top level,
+them, from that snapshot's bytes, in a private namespace. EL7's staged
+absences were the present-state gates until the finding landing (D5-C)
+succeeded them under ADR-0061 Part J: each former absence stays proven at
+this landing's own snapshot, and the admission of exactly the finding
+record, its proof module and the one W8-D5 entry that landing added - and
+still no W8-D6 or W8-D7 entry - is proven at that landing's own fixed
+snapshot. No present-state gate remains: W8-D6 and W8-D7 stay refused by
+ADR-0058's R9 alone. The residual live reach is disclosed exactly: each
+snapshot-executed helper module imports, at its own top level,
 the live modules it aliases for the fixed-law values it reads from them, and
 no more independence than that is claimed.
 
@@ -73,6 +78,10 @@ LATER_THAN_D5 = ("W8-D6", "W8-D7")
 # 34; both absent until that landing.
 FINDING_RECORD = "docs/phases/W8-D5-adequacy-finding-record.md"
 FINDING_MODULE = "tests/test_w8_evidence_adequacy_finding.py"
+# The finding landing's one W8-D5 entry, admitted with the record and its
+# module once that landing succeeded EL7's staged absences (Part J).
+FINDING_ENTRY = "W8-D5-AFR"
+D5_ENTRIES_AT_FINDING = D5_ENTRIES | {FINDING_ENTRY}
 FIXED_HOMES = ("governance/validation-cases", "governance/validation-review",
                "governance/validation-reveal",
                "governance/discriminating-instrument",
@@ -620,6 +629,31 @@ def snapshot_tracked(commit):
     return _git("ls-tree", "-r", "--name-only", commit).split()
 
 
+def finding_snapshot(law_commit):
+    """(commit, violations) for the finding landing (D5-C), the one landing
+    ADR-0061 Part J lets succeed EL7's staged absences. Before its commit
+    exists the snapshot is the candidate over a HEAD that must be this
+    landing's commit; afterwards it is the one commit that added the finding
+    record, whose sole parent must be this landing's commit. Once that
+    commit exists the snapshot is fixed: no later entry or path moves it."""
+    if law_commit is None:
+        return None, ["this landing is not yet committed"]
+    adds = _git("log", "--diff-filter=A", "--format=%H", "--",
+                FINDING_RECORD).split()
+    if not adds:
+        head = _git("rev-parse", "HEAD").strip()
+        return None, ([] if head == law_commit else
+                      ["uncommitted finding candidate is not over this "
+                       "landing's commit"])
+    if len(adds) != 1:
+        return None, ["the finding record was added more than once"]
+    parents = _git("rev-list", "--parents", "-n", "1", adds[0]).split()[1:]
+    if parents != [law_commit]:
+        return adds[0], ["the finding landing's sole parent is not this "
+                         "landing's commit"]
+    return adds[0], []
+
+
 def historical(read, rel):
     """One helper module as it stands in this landing's snapshot, executed in
     a fresh private namespace that is registered nowhere."""
@@ -889,16 +923,23 @@ def succession_violations(present, law, h, sites=None):
     return v + succession_table_violations(law, h)
 
 
-def staged_absence_violations(tracked, exists, entries):
+def staged_absence_violations(tracked, exists, entries, landed=False):
     """EL7: no finding record, no finding proof module, the W8-D5 entries
-    exactly the brief's and this record's, no W8-D6 or W8-D7 entry."""
+    exactly the brief's and this record's, no W8-D6 or W8-D7 entry - or,
+    once the finding landing has succeeded these absences (`landed`),
+    exactly that landing's record, module and one W8-D5 entry admitted,
+    and still no W8-D6 or W8-D7 entry."""
     v = []
     for p in (FINDING_RECORD, FINDING_MODULE):
-        if p in tracked or exists(p):
+        if landed and not (p in tracked and exists(p)):
+            v.append("a finding-landing path is missing: %s" % p)
+        if not landed and (p in tracked or exists(p)):
             v.append("a finding-landing path exists: %s" % p)
-    if {e["id"] for e in entries if e["deliverable"] == "W8-D5"} != D5_ENTRIES:
+    expected = D5_ENTRIES_AT_FINDING if landed else D5_ENTRIES
+    if {e["id"] for e in entries if e["deliverable"] == "W8-D5"} != expected:
         v.append("the W8-D5 entries are not exactly the brief's and this "
-                 "record's")
+                 "record's" + (" and the finding record's" if landed
+                               else ""))
     if [e["id"] for e in entries if e["deliverable"] in LATER_THAN_D5]:
         v.append("a W8-D6 or W8-D7 entry exists")
     return v
@@ -1404,16 +1445,22 @@ class EL7_StagedAbsences(unittest.TestCase):
                                "this landing's snapshot"):
             self.assertEqual(staged_absence_violations(
                 tracked, lambda p: False, at_snapshot), [])
-        # The present-state gates, each succeeded only by the finding
-        # landing (ADR-0061 Part J): no finding record, no finding module,
-        # the W8-D5 entries exactly the brief's and this record's, and no
-        # W8-D6 or W8-D7 entry.
-        live = json.loads(_lf((ROOT / REGISTRY).read_bytes()))["entries"]
-        with self.subTest(fact="present state: no finding-landing artefact "
-                               "and the W8-D5 entries exactly the two"):
+        # Succeeded at the finding landing (ADR-0061 Part J, decisions 34
+        # and 35): each former absence stays proven at this landing's
+        # snapshot above, and the admission of exactly the finding record,
+        # its proof module and the one W8-D5 entry that landing added - and
+        # still no W8-D6 or W8-D7 entry - is proven at that landing's own
+        # fixed snapshot. No present-state gate remains here: W8-D6 and
+        # W8-D7 stay refused by ADR-0058's R9 alone.
+        landing, problems = finding_snapshot(commit)
+        self.assertEqual(problems, [])
+        at_landing = json.loads(snapshot_bytes(landing, REGISTRY))["entries"]
+        landed_tracked = snapshot_tracked(landing)
+        with self.subTest(fact="at the finding landing's snapshot: exactly "
+                               "its record, module and W8-D5 entry admitted"):
             self.assertEqual(staged_absence_violations(
-                _git("ls-files").split(), lambda p: (ROOT / p).exists(),
-                live), [])
+                landed_tracked, lambda p: p in landed_tracked, at_landing,
+                landed=True), [])
         base = at_snapshot[-1]
         for name, args in {
                 "a finding record path": (
@@ -1431,6 +1478,33 @@ class EL7_StagedAbsences(unittest.TestCase):
                     [e for e in at_snapshot if e["id"] != "W8-D5-EAB"])}.items():
             with self.subTest(control="%s is refused" % name):
                 self.assertTrue(staged_absence_violations(*args))
+        # Historical controls over mutated copies of the finding landing's
+        # fixed snapshot: none reads the present registry or tree, and none
+        # demands the refusal of any genuinely later entry.
+        with self.subTest(control="the former absences at the finding "
+                                  "landing's snapshot are refused"):
+            self.assertTrue(staged_absence_violations(
+                landed_tracked, lambda p: p in landed_tracked, at_landing))
+        for name, args in {
+                "a fourth W8-D5 entry at the finding landing's snapshot": (
+                    landed_tracked, lambda p: p in landed_tracked,
+                    at_landing + [dict(base, id="W8-D5-SNT",
+                                       deliverable="W8-D5")]),
+                "a W8-D6 entry at the finding landing's snapshot": (
+                    landed_tracked, lambda p: p in landed_tracked,
+                    at_landing + [dict(base, id="W8-D6-SNT",
+                                       deliverable="W8-D6")]),
+                "the finding record missing at the finding landing's "
+                "snapshot": (
+                    [p for p in landed_tracked if p != FINDING_RECORD],
+                    lambda p: p != FINDING_RECORD and p in landed_tracked,
+                    at_landing),
+                "the finding entry missing at the finding landing's "
+                "snapshot": (
+                    landed_tracked, lambda p: p in landed_tracked,
+                    [e for e in at_landing if e["id"] != FINDING_ENTRY])}.items():
+            with self.subTest(control="%s is refused" % name):
+                self.assertTrue(staged_absence_violations(*args, landed=True))
 
 
 class EL8_RegistryAndBoard(unittest.TestCase):
