@@ -20,9 +20,12 @@ material rather than skip it.
 Every proof reads this landing's fixed snapshot - the candidate over the
 baseline before the commit exists, the one commit that added the brief
 afterwards - and executes the helpers it relies on from that snapshot's
-bytes, in a private namespace. CD7's W8-D6 entry set is the one
+bytes, in a private namespace. CD7's W8-D6 entry set was the one
 present-state gate, as the W8-D4 and W8-D5 openings' were, until the
-decision landing moves it. The residual live reach is disclosed exactly:
+decision landing (W8-D6-CDR) succeeded it, its W8-D7 limb included, to
+a historical proof at the D6-A landing commit; no present-state gate
+remains in this module, and W8-D7 stays refused by ADR-0058's R9
+alone. The residual live reach is disclosed exactly:
 each snapshot-executed helper module imports, at its own top level, the
 live modules it aliases for the fixed-law values it reads from them, and no
 more independence than that is claimed.
@@ -87,6 +90,10 @@ BASELINE = "2aa2c75d20363ca7e54095f49b328bdd4db1350a"
 # landing's baseline (as the W8-D3 completion was the W8-D4 opening's).
 D5_COMPLETION = "2aa2c75d20363ca7e54095f49b328bdd4db1350a"
 D4_COMPLETION = "ce78a242df25898d90debee9513bdce7e511471b"
+# The D6-A landing commit, at which CD7's W8-D6 entry set and its
+# W8-D7 limb stay proven after their succession at the decision
+# landing (W8-D6-CDR).
+D6A_LANDING = "753e6abea8d67a16332799af615fdcfa4aefa7b9"
 
 BRIEF = "docs/phases/W8-D6-contact-decision-brief.md"
 SELF_REL = "tests/test_w8_contact_decision_opening.py"
@@ -1502,13 +1509,15 @@ class CD7_EntrySet(unittest.TestCase):
             self.assertEqual([e["id"] for e in json.loads(
                 committed(BASELINE, REGISTRY))["entries"]
                 if e["deliverable"] in ("W8-D6",) + LATER_THAN_D6], [])
-        # The one present-state gate of this landing, as the W8-D4 and
-        # W8-D5 openings' were: the W8-D6 entries are exactly this brief's
-        # and no W8-D7 entry exists, until the decision landing moves it.
-        live = json.loads(_lf((ROOT / REGISTRY).read_bytes()))["entries"]
-        with self.subTest(fact="present state: the W8-D6 entries are this "
-                               "brief's alone and no W8-D7 entry exists"):
-            self.assertEqual(entry_violations(live, brief, h), [])
+        # Succeeded at the decision landing (W8-D6-CDR): the W8-D6 entry
+        # set and the absence of any W8-D7 entry stay proven at the D6-A
+        # landing commit. No present-state gate remains here; W8-D7 stays
+        # refused by ADR-0058's R9 alone.
+        at_landing = json.loads(committed(D6A_LANDING, REGISTRY))["entries"]
+        with self.subTest(fact="at the D6-A landing: the W8-D6 entries were "
+                               "this brief's alone and no W8-D7 entry "
+                               "existed"):
+            self.assertEqual(entry_violations(at_landing, brief, h), [])
         base = at_snapshot[-1]
         for name, entries in {
                 "a premature second W8-D6 entry": at_snapshot + [dict(

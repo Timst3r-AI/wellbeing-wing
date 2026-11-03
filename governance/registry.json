@@ -5228,6 +5228,45 @@
       "content_hash": "sha256:034483363a210df7a736749d5f30e6cf68a6e57c77b7b07001f3770f8567a196",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W8-D6-CDR",
+      "aliases": [],
+      "title": "W8-D6 - Contact Decision Record",
+      "type": "phase-record",
+      "phase": "W8",
+      "deliverable": "W8-D6",
+      "path": "docs/phases/W8-D6-contact-decision-record.md",
+      "status": "accepted",
+      "accepted_date": "2026-11-03",
+      "role": "The contact decision record of W8-D6, landing D6-B, the human authority's own act under the effective opening brief W8-D6-CDB: carries verbatim the human authority's stated choice in the runway's closed outcome form - the outcome contact, a decision that actual model contact is to be pursued which authorises no contact, credential, provider, transport, prompt, harness, implementation or contact surface and selects no route or model class; the human authority's reasons on the published basis and its disposition of the separate instruments, both by its express adoption of the architect's separately attributed assistance, with that assistance carried whole and the record of its adoption; the standing of every ADR-0047 precondition, unchanged, precondition 3 outstanding in its lawful resting state; and the separate instruments any contact would still need - a separately accepted implementation brief naming the first-contact gate, a Tier F crossing record of its own, every precondition holding together - named and not supplied and left unopened, no performing deliverable existing in the published law. Completes W8-D6 with the decision recorded; completion opens nothing. The opening module's CD7, its W8-D6 entry set and W8-D7 limb, succeeds to a historical proof at the D6-A landing, with proof obligations DR1 to DR9; ADR-0058's R9 sentence and constant stay unchanged and W8-D7 stays refused by R9 alone. Reopens no finding, diagnoses nothing, reads no custody and contacts no model; W8-D7 stays closed.",
+      "governs": [],
+      "depends_on": [
+        "W8-D6-CDB",
+        "W8-AR",
+        "W8-D5-AFR",
+        "ADR-0061",
+        "W8-D5-EAB",
+        "ADR-0047",
+        "ADR-0046",
+        "ADR-0033",
+        "ADR-0034",
+        "ADR-0049",
+        "ADR-0051",
+        "ADR-0054",
+        "ADR-0058",
+        "W8-D4-CPR",
+        "W7-CR",
+        "W7-D3-MBB",
+        "ADR-0056"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:c7381ac0bbfeac59b94057b9de359fdd072cc2003e1f06179e833492be71bfa3",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
