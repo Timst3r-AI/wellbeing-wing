@@ -108,6 +108,9 @@ D4_COMPLETION = "ce78a242df25898d90debee9513bdce7e511471b"
 # absence of every W8-D6 and W8-D7 entry stays proven at the W8-D5
 # completion.
 D5_COMPLETION = "2aa2c75d20363ca7e54095f49b328bdd4db1350a"
+# Succeeded again at the W8-D7 opening (W8-D7-CAB section 15): the
+# absence of every W8-D7 entry stays proven at the W8-D6 completion.
+D6_COMPLETION = "e76be12b537f67a1041422ee73c22cbbfcf8b8c5"
 
 REQUIRED = (
     "The attempted D3-C session is void and non-recordable.",
@@ -627,8 +630,17 @@ class R9_LaterLandingsBlocked(unittest.TestCase):
                 "entries"]
             self.assertEqual([e["id"] for e in at_d5
                               if e["deliverable"] in LATER[2:]], [])
-        with self.subTest(fact="no registry entry opens W8-D7"):
-            self.assertEqual([e["id"] for e in entries
+        # Succeeded again at the W8-D7 opening landing: the absence of
+        # every W8-D7 entry stays proven at the W8-D6 completion commit;
+        # W8-D7's entry set moves to that landing's own proof module. No
+        # deliverable later than W8-D7 exists in the runway's table, so
+        # no live later-deliverable limb remains here.
+        with self.subTest(fact="no registry entry opened W8-D7 at the "
+                               "W8-D6 completion"):
+            at_d6 = json.loads(packet.committed_object_bytes(
+                ROOT, D6_COMPLETION, "governance/registry.json"))[
+                "entries"]
+            self.assertEqual([e["id"] for e in at_d6
                               if e["deliverable"] in LATER[3:]], [])
         # Succeeded at the session landing: the earlier sentence stays
         # proven at the derived baseline, and the board now carries the
