@@ -25,9 +25,10 @@ unrecognised material rather than skip it.
 Every proof reads this landing's fixed snapshot - the candidate over the
 baseline before the commit exists, the one commit that added the brief
 afterwards - and executes the helpers it relies on from that snapshot's
-bytes, in a private namespace. CA7's W8-D7 entry set is the one
+bytes, in a private namespace. CA7's W8-D7 entry set was the one
 present-state gate, as the W8-D4, W8-D5 and W8-D6 openings' were, until
-the assessment landing (W8-D7-CAR) succeeds it. The residual live reach is
+the assessment landing (W8-D7-CAR) succeeded it to a historical proof at
+this landing's own published commit. The residual live reach is
 disclosed exactly: each snapshot-executed helper module imports, at its own
 top level, the live modules it aliases for the fixed-law values it reads
 from them, and no more independence than that is claimed.
@@ -100,6 +101,11 @@ D4_COMPLETION = "ce78a242df25898d90debee9513bdce7e511471b"
 D3_COMPLETION = "3c34246a5b6989aaa6c5e19621964fa0c7799cdd"
 D6A_LANDING = "753e6abea8d67a16332799af615fdcfa4aefa7b9"
 W7_CLOSURE = "7d4ff5792b20a037fdb73ec6a2c5813d744d5bf3"
+# Succeeded at the W8-D7 assessment landing (W8-D7-CAR; W8-D7-CAB section
+# 15, item 60): CA7's W8-D7 entry set and its no-later-phase limb stay
+# proven at this landing's own published commit; the live gates move to
+# the assessment landing's proof module.
+D7A_LANDING = "cf2012669b97b323cdbfb182bc10865d444c79c1"
 
 BRIEF = "docs/phases/W8-D7-A-closure-authorisation-brief.md"
 SELF_REL = "tests/test_w8_closure_opening.py"
@@ -1755,12 +1761,16 @@ class CA7_EntrySet(unittest.TestCase):
             self.assertEqual([e["id"] for e in json.loads(
                 committed(BASELINE, REGISTRY))["entries"]
                 if e["deliverable"] == "W8-D7"], [])
-        # The one present-state gate of this module, until the assessment
-        # landing (W8-D7-CAR) succeeds it to a historical proof at this
-        # landing's commit.
-        live = json.loads(_lf((ROOT / REGISTRY).read_bytes()))["entries"]
-        with self.subTest(fact="the W8-D7 entries are this brief's alone"):
-            self.assertEqual(entry_violations(live, brief, h), [])
+        # Succeeded at the assessment landing (W8-D7-CAR): the W8-D7 entry
+        # set and the no-later-phase limb stay proven at this landing's own
+        # published commit, D7A_LANDING; the live gates live in the
+        # assessment landing's proof module until the closure record's
+        # landing succeeds them in turn.
+        at_landing = json.loads(committed(D7A_LANDING, REGISTRY))["entries"]
+        with self.subTest(fact="the W8-D7 entries were this brief's alone at "
+                               "this landing's published commit"):
+            self.assertEqual(commit, D7A_LANDING)
+            self.assertEqual(entry_violations(at_landing, brief, h), [])
         base = at_snapshot[-1]
         for name, entries in {
                 "a premature second W8-D7 entry": at_snapshot + [dict(
