@@ -31,9 +31,10 @@ Every proof reads this landing's fixed snapshot - the candidate over the
 baseline before the commit exists, the one commit that added the record
 afterwards - and executes the helpers it relies on from that snapshot's
 bytes, in a private namespace. CB7's W8-D7 entry set and its no-later-phase
-limb are this module's present-state gates, moved here from the opening
-module's CA7 at this landing, until the closure record's landing succeeds
-them. The residual live reach is disclosed exactly: each snapshot-executed
+limb were this module's present-state gates, moved here from the opening
+module's CA7 at this landing, until the closure record's landing (W8-CR)
+succeeded them to a historical proof at this landing's own published
+commit. The residual live reach is disclosed exactly: each snapshot-executed
 helper module imports, at its own top level, the live modules it aliases for
 the fixed-law values it reads from them, and no more independence than that
 is claimed.
@@ -87,6 +88,11 @@ SELF = Path(__file__).resolve()
 # the no-later-phase limb proven after this landing's succession.
 BASELINE = "cf2012669b97b323cdbfb182bc10865d444c79c1"
 D7A_LANDING = "cf2012669b97b323cdbfb182bc10865d444c79c1"
+# Succeeded at the W8 closure landing (W8-CR; W8-D7-CAB section 15, item
+# 60; W8-D7-CAR section 11, item 46): CB7's W8-D7 entry set and its
+# no-later-phase limb stay proven at this landing's own published commit;
+# the live gates move to the closure record's proof module.
+D7B_LANDING = "6ee0127e91f755d39b7fdc5af08bb1bcf1b16437"
 D6_COMPLETION = "e76be12b537f67a1041422ee73c22cbbfcf8b8c5"
 D6A_LANDING = "753e6abea8d67a16332799af615fdcfa4aefa7b9"
 D5_COMPLETION = "2aa2c75d20363ca7e54095f49b328bdd4db1350a"
@@ -2753,13 +2759,16 @@ class CB7_EntrySet(unittest.TestCase):
             self.assertEqual([e["id"] for e in json.loads(
                 committed(BASELINE, REGISTRY))["entries"]
                 if e["deliverable"] == "W8-D7"], ["W8-D7-CAB"])
-        # The present-state gates of this module, moved here from the
-        # opening module's CA7, until the closure record's landing
-        # succeeds them to a historical proof at this landing's commit.
-        live = json.loads(_lf((ROOT / REGISTRY).read_bytes()))["entries"]
-        with self.subTest(fact="the W8-D7 entries are the brief's and this "
-                               "record's, and no later phase's entry exists"):
-            self.assertEqual(entry_violations(live, record, h), [])
+        # Succeeded at the closure landing (W8-CR): the W8-D7 entry set and
+        # the no-later-phase limb stay proven at this landing's own published
+        # commit, D7B_LANDING; the live gates live in the closure record's
+        # proof module until a later accepted act lawfully succeeds them.
+        at_landing = json.loads(committed(D7B_LANDING, REGISTRY))["entries"]
+        with self.subTest(fact="the W8-D7 entries were the brief's and this "
+                               "record's, and no later phase's entry existed, "
+                               "at this landing's published commit"):
+            self.assertEqual(commit, D7B_LANDING)
+            self.assertEqual(entry_violations(at_landing, record, h), [])
         base = at_snapshot[-1]
         for name, entries in {
                 "a premature third W8-D7 entry": at_snapshot + [dict(
