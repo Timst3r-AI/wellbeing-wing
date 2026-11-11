@@ -5461,6 +5461,46 @@
       "content_hash": "sha256:d532715256c415e5b0895b3f1aeeb50cde9185b15336677f0e43db98aaa62bcc",
       "hash_exclusion_reason": null,
       "errata": []
+    },
+    {
+      "id": "W9-AR",
+      "aliases": [],
+      "title": "W9 - Application Release Scope and Contract (Phase Runway)",
+      "type": "phase-record",
+      "phase": "W9",
+      "deliverable": null,
+      "path": "docs/phases/W9-runway-application-release-scope-and-contract.md",
+      "status": "accepted",
+      "accepted_date": "2026-11-11",
+      "role": "The W9 phase runway and gate document two of the standing three-document entry gate, authorising W9 briefs only and never implementation, a directory or dependency crossing, model contact or a release, effective on publication and remote verification. W9 is the scope-and-contract phase for a public reference release: it settles, on paper and from source, what such a release would be, what authority each capability needs and what evidence each claim would require. Seven deliverables behind their own briefs - application boundary doctrine, capability and authority baseline, release scope, workflow scope, integration posture, release contract, and closure. The W7 public/private boundary and synthetic-only law are inherited whole; the W8-D5 finding stays undetermined and the W8-D6 decision authorises nothing; ADR-0047 precondition 3 remains outstanding in its lawful resting state; the W8-CR section 9 inventory is inherited whole, each row at its published standing, the completed closure programme distinguished from the matters carried forward, and none of it reopened, solved or reclassified by this runway; the proposed release criteria and the proposed later labels are drafts accepted by nothing here; and nothing is built and no model is contacted by anything this runway authorises.",
+      "governs": [],
+      "depends_on": [
+        "W0",
+        "W1-D1",
+        "W1-D2",
+        "W2-D3",
+        "ADR-0003",
+        "ADR-0004",
+        "ADR-0006",
+        "ADR-0008",
+        "ADR-0010",
+        "ADR-0043",
+        "ADR-0046",
+        "ADR-0047",
+        "ADR-0051",
+        "W4-D2",
+        "W4-D3",
+        "W4-D4",
+        "W4-D5",
+        "W8-CR"
+      ],
+      "resolves": [],
+      "id_namespaces": [],
+      "implementation_permission": "none",
+      "open_decisions": [],
+      "content_hash": "sha256:cce825c276b5a07042525d438de5a38fb06af4a41772396e153e01f4ab337c3d",
+      "hash_exclusion_reason": null,
+      "errata": []
     }
   ]
 }
